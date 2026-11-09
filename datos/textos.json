@@ -1,0 +1,809 @@
+{
+ "_leeme": [
+  "TEXTOS EDITABLES DEL SITIO «Ciencia uruguaya».",
+  "Este archivo se edita a mano. El script de actualización de datos (scripts/R/actualizar_ciencia_uruguay.R) nunca lo escribe: al cambiar los datos, los textos se mantienen.",
+  "Cómo funciona: cada texto que se escribe aquí reemplaza al que trae el sitio; si un campo está vacío (null o \"\") se usa el del sitio. Las claves que empiezan con «_» son notas o catálogos de referencia y no se aplican.",
+  "Gráficos y capítulos: para cambiar un título, una bajada o una explicación, copiar la entrada desde «_catalogo_graficos» o «_catalogo_capitulos» a «graficos» o «capitulos», con la misma clave, y editarla. Dejar solo los campos que se quieren cambiar.",
+  "Cuidado con las cifras: «qué se observa» se calcula siempre con los datos; si se escribe un número fijo en un título o una explicación, no se actualiza con los datos nuevos.",
+  "Párrafos: separar con una línea en blanco (\\n\\n).",
+  "Después de editar, validar que el archivo siga siendo JSON correcto (por ejemplo, en jsonlint.com) y recargar el sitio."
+ ],
+ "sitio": {
+  "nombre": "Ciencia uruguaya",
+  "nombre_fino": "Ciencia",
+  "nombre_fuerte": "uruguaya",
+  "pie": null
+ },
+ "inicio": {
+  "rotulo": "Unidad Nacional de Evaluación",
+  "titulo_fino": "La ciencia",
+  "titulo_fuerte": "uruguaya",
+  "lema": "Una mirada a partir de los investigadores.",
+  "bajada": null,
+  "nota": "Solo se publican datos agregados: no hay nombres, documentos ni información de personas individuales.",
+  "rotulo_analisis": "Cuatro análisis",
+  "titulo_analisis": "Elija por dónde empezar"
+ },
+ "analisis": {
+  "sni": {
+   "nombre": "Sistema Nacional de Investigadores",
+   "universo": "Personas categorizadas en el SNI (el 100 % de los perfiles)",
+   "descripcion": "Quiénes integran el SNI, cómo se formaron, qué producen, cómo se financian, por dónde circulan y qué brechas de género persisten.",
+   "subtitulo": null,
+   "bajada": null
+  },
+  "no-categorizados": {
+   "nombre": "Investigación fuera del SNI",
+   "universo": "Personas con CV vigente en CVUy que no integran el SNI",
+   "descripcion": "Las personas con CV vigente en CVUy que no integran el SNI: quiénes son, cómo se formaron, dónde trabajan y qué producen.",
+   "subtitulo": null,
+   "bajada": null
+  },
+  "produccion": {
+   "nombre": "Producción científica",
+   "universo": "SNI y personas fuera del SNI con CV actualizado en los últimos 24 meses",
+   "descripcion": "Qué se investiga y cómo se produce: áreas, temas y conceptos, su evolución, los temas que crecen y el listado de ítems.",
+   "subtitulo": "Qué se investiga en Uruguay y cómo se produce: de las grandes áreas a los temas y los conceptos.",
+   "bajada": null
+  },
+  "ecosistema": {
+   "nombre": "Ecosistema institucional",
+   "universo": "Instituciones donde trabajan las personas del SNI y de fuera del SNI",
+   "descripcion": "Universidades, institutos, programas y fuentes de financiamiento: qué función cumple cada institución y cómo se vinculan.",
+   "subtitulo": "Universidades, institutos, programas y fuentes de financiamiento, y la función de cada uno",
+   "bajada": null
+  }
+ },
+ "capitulos": {
+  "_nota": "Clave «análisis/id del capítulo». Campos: titulo, intro (texto plano; reemplaza la introducción, que en el sitio incluye cifras calculadas)."
+ },
+ "graficos": {
+  "_nota": "Clave «análisis/id del gráfico». Campos: titulo, bajada, nota, muestra, leer. Ejemplo: \"sni/grafico-2\": {\"titulo\": \"Una estructura de base amplia\"}"
+ },
+ "editorial": {
+  "_nota": "Bloques de texto que usan las vistas. Se pueden editar libremente; el script de actualización no los toca.",
+  "institucion": {
+   "nombre": "Unidad Nacional de Evaluación del Sistema de Ciencia, Tecnología e Innovación",
+   "sigla": "UNE · U+I",
+   "logo": "marca/une-vertical.png"
+  },
+  "historia_desde": 1990,
+  "areas": [
+   {
+    "id": "naturales",
+    "nombre": "Ciencias Naturales y Exactas",
+    "corto": "Naturales y Exactas",
+    "color": "#25408d",
+    "tinta": "#ffffff"
+   },
+   {
+    "id": "ingenieria",
+    "nombre": "Ingeniería y Tecnología",
+    "corto": "Ingeniería",
+    "color": "#8e3a80",
+    "tinta": "#ffffff"
+   },
+   {
+    "id": "medicas",
+    "nombre": "Ciencias Médicas y de la Salud",
+    "corto": "Salud",
+    "color": "#e87722",
+    "tinta": "#ffffff"
+   },
+   {
+    "id": "agricolas",
+    "nombre": "Ciencias Agrícolas",
+    "corto": "Agro",
+    "color": "#7ab800",
+    "tinta": "#ffffff"
+   },
+   {
+    "id": "sociales",
+    "nombre": "Ciencias Sociales",
+    "corto": "Sociales",
+    "color": "#0072bc",
+    "tinta": "#ffffff"
+   },
+   {
+    "id": "humanidades",
+    "nombre": "Humanidades",
+    "corto": "Humanidades",
+    "color": "#00a3e0",
+    "tinta": "#ffffff"
+   }
+  ],
+  "hitos": [
+   {
+    "anio": "1849",
+    "titulo": "Nace la Universidad de la República",
+    "texto": "La primera universidad del país, que todavía concentra la mayor parte de la investigación nacional."
+   },
+   {
+    "anio": "1927",
+    "titulo": "Clemente Estable abre su laboratorio",
+    "texto": "El origen del actual Instituto de Investigaciones Biológicas Clemente Estable."
+   },
+   {
+    "anio": "1961",
+    "titulo": "Se crea el CONICYT",
+    "texto": "Primer consejo nacional dedicado a la investigación científica y técnica."
+   },
+   {
+    "anio": "1986",
+    "titulo": "PEDECIBA",
+    "texto": "El Programa de Desarrollo de las Ciencias Básicas reconstruye los posgrados tras la dictadura y recupera científicos del exilio."
+   },
+   {
+    "anio": "1989",
+    "titulo": "INIA",
+    "texto": "El Instituto Nacional de Investigación Agropecuaria institucionaliza la ciencia del agro."
+   },
+   {
+    "anio": "1990",
+    "titulo": "Facultad de Ciencias",
+    "texto": "La ciencia básica tiene su propia facultad dentro de la UdelaR."
+   },
+   {
+    "anio": "1996",
+    "titulo": "Más de mil publicaciones en un año",
+    "texto": "Quienes hoy integran el SNI superan por primera vez las 1.000 publicaciones anuales (hoja B04).",
+    "tipo": "dato"
+   },
+   {
+    "anio": "2006",
+    "titulo": "Institut Pasteur de Montevideo",
+    "texto": "Un centro internacional de biomedicina con sede en Uruguay."
+   },
+   {
+    "anio": "2007",
+    "titulo": "Se crea el SNI",
+    "texto": "La ley de Rendición de Cuentas crea el Sistema Nacional de Investigadores, administrado por la ANII."
+   },
+   {
+    "anio": "2009",
+    "titulo": "Más de cinco mil",
+    "texto": "La producción anual pasa las 5.000 publicaciones (hoja B04).",
+    "tipo": "dato"
+   },
+   {
+    "anio": "2018",
+    "titulo": "Un cuarto en acceso abierto",
+    "texto": "El 25 % de los artículos de ese año se publica en acceso abierto (hoja B04).",
+    "tipo": "dato"
+   },
+   {
+    "anio": "2018",
+    "titulo": "Mayoría con autora",
+    "texto": "Por primera vez, la mitad o más de los artículos tiene al menos una autora del SNI (hoja B04).",
+    "tipo": "dato"
+   },
+   {
+    "anio": "2020",
+    "titulo": "Ciencia en la pandemia",
+    "texto": "Equipos de la UdelaR y el Institut Pasteur desarrollan el test nacional de COVID-19."
+   },
+   {
+    "anio": "2020",
+    "titulo": "El doctorado se vuelve local",
+    "texto": "En la cohorte 2020–2024, el 57,2 % de los nuevos doctores se formó en Uruguay (hoja B05).",
+    "tipo": "dato"
+   }
+  ],
+  "niveles": [
+   {
+    "nombre": "Iniciación",
+    "resumen": "La puerta de entrada",
+    "texto": "Para quienes empiezan una carrera de investigación con producción propia y formación de posgrado en curso o reciente."
+   },
+   {
+    "nombre": "Nivel I",
+    "resumen": "Investigación independiente",
+    "texto": "Investigadores con trayectoria demostrada, producción original sostenida y participación en formación de recursos humanos."
+   },
+   {
+    "nombre": "Nivel II",
+    "resumen": "Liderazgo de líneas",
+    "texto": "Trayectoria consolidada, liderazgo de grupos y líneas de investigación, y reconocimiento en su comunidad."
+   },
+   {
+    "nombre": "Nivel III",
+    "resumen": "Referencia internacional",
+    "texto": "Producción de impacto internacional y contribución decisiva a la formación de investigadores y al desarrollo de su disciplina."
+   },
+   {
+    "nombre": "Emérito",
+    "resumen": "Una vida dedicada a la ciencia",
+    "texto": "Reconocimiento a trayectorias excepcionales de investigadores de larga actuación en el sistema."
+   }
+  ],
+  "desafios": [
+   {
+    "titulo": "Relevo generacional",
+    "indicadores": "% menores de 40, % de 65 y más, investigadores en Iniciación por cada nivel III."
+   },
+   {
+    "titulo": "Equidad de género",
+    "indicadores": "% mujeres en el total frente al nivel III, y responsables de proyectos."
+   },
+   {
+    "titulo": "Concentración territorial",
+    "indicadores": "% en Montevideo y departamentos con menos de 10 investigadores."
+   },
+   {
+    "titulo": "Concentración institucional",
+    "indicadores": "Peso de la institución más grande e índice HHI."
+   },
+   {
+    "titulo": "Dedicación y fragmentación",
+    "indicadores": "Dedicación total, multipertenencia y más de 60 horas declaradas."
+   },
+   {
+    "titulo": "Vinculación con el sector productivo",
+    "indicadores": "Vínculo con empresas y producción técnica por investigador."
+   },
+   {
+    "titulo": "Visibilidad y apertura",
+    "indicadores": "% en WoS o Scopus y % en acceso abierto."
+   },
+   {
+    "titulo": "Productividad",
+    "indicadores": "% sin artículos en la ventana."
+   },
+   {
+    "titulo": "Formación doctoral",
+    "indicadores": "Tesis por cada 100 investigadores, y doctorados nacionales recientes frente a los anteriores."
+   },
+   {
+    "titulo": "Financiamiento",
+    "indicadores": "ANII, internacional y sin financiador declarado."
+   },
+   {
+    "titulo": "Atracción de talento",
+    "indicadores": "% con nacionalidad extranjera."
+   },
+   {
+    "titulo": "Colaboración",
+    "indicadores": "% de artículos con autores de más de una institución."
+   },
+   {
+    "titulo": "Calidad del dato",
+    "indicadores": "% de CV desactualizados."
+   }
+  ],
+  "cautelas": [
+   {
+    "titulo": "A quiénes estamos mirando",
+    "texto": "Los datos provienen de los CV de quienes integran el SNI al corte del 21 de octubre de 2026. Describen al núcleo categorizado: quedan fuera técnicos, becarios sin categorización y personas que investigan fuera del SNI. No equivalen a toda la ciencia del país."
+   },
+   {
+    "titulo": "Qué cuenta cada cifra",
+    "texto": "Una persona, un vínculo y una publicación son unidades distintas. Una persona puede tener varios vínculos y un artículo puede figurar en varios CV. La producción y los proyectos nacionales cuentan ítems depurados; sumar registros individuales los infla."
+   },
+   {
+    "titulo": "Por qué las instituciones no siempre suman",
+    "texto": "Cada persona tiene una institución principal, pero puede pertenecer a varias. Un artículo compartido cuenta en cada institución participante y una vez en el país. Las publicaciones se atribuyen a la inserción actual de los autores, aunque se hayan escrito en otro lugar."
+   },
+   {
+    "titulo": "Qué historia cuentan las curvas",
+    "texto": "Reconstruyen el pasado de quienes hoy están en el SNI. Omiten a quienes salieron y cubren menos los años antiguos. Una curva ascendente combina crecimiento y cambios de cobertura; no muestra toda la evolución histórica del país."
+   },
+   {
+    "titulo": "Qué comparaciones ayudan",
+    "texto": "Las áreas difieren en cómo publican y forman investigadores. Conviene comparar dentro de una misma área y mirar tamaño, edad y misión institucional. La indexación mide presencia en bases de revistas; no resume calidad ni permite ordenar instituciones."
+   },
+   {
+    "titulo": "Cómo leer las brechas de género",
+    "texto": "El género es el registrado en CVUy. Los porcentajes por nivel describen grupos diferentes en el presente; no muestran cuántas personas ascendieron. Para interpretar diferencias en liderazgo y reconocimiento hay que considerar también área, edad y trayectoria."
+   },
+   {
+    "titulo": "Qué significa un dato faltante",
+    "texto": "La información es autodeclarada y depende de la actualización de cada CV. Sin financiador declarado no significa sin recursos. Un vínculo sin fecha de fin se considera vigente y puede alargar una permanencia. Las patentes no se usan por su cobertura insuficiente."
+   },
+   {
+    "titulo": "Qué período comparamos",
+    "texto": "La ventana 2022–2026 incluye un año incompleto. Las series anuales muestran hasta 2025 para comparar años cerrados. En grupos pequeños, una sola persona cambia mucho un porcentaje: hay que leerlo junto con el conteo y los datos protegidos."
+   }
+  ],
+  "fuentes": [
+   {
+    "label": "Sistema Nacional de Investigadores",
+    "url": "https://sni.org.uy"
+   },
+   {
+    "label": "ANII — Agencia Nacional de Investigación e Innovación",
+    "url": "https://www.anii.org.uy"
+   },
+   {
+    "label": "Res. Nº 5444 — Informe SNI evaluación ingresos 2024",
+    "url": "https://sni.org.uy/wp-content/uploads/2025/05/Res.-Nº-5444-Informe-SNI-evaluación-ingresos-2024.pdf"
+   },
+   {
+    "label": "Res. Nº 5443 — Informe SNI evaluación permanencias 2024",
+    "url": "https://sni.org.uy/wp-content/uploads/2025/05/Res.-Nº-5443-Informe-SNI-evaluacion-permanencias-2024.pdf"
+   }
+  ],
+  "aviso": "Datos agregados del diagnóstico del SNI elaborado a partir de los CV en CVUy. El sitio no muestra información de investigadores individuales y oculta los grupos con menos de cinco personas. Proyecto independiente, sin afiliación oficial con la ANII.",
+  "cvuy": {
+   "perfiles_creados": 34678,
+   "perfiles_accesibles": 17861,
+   "nota": "Perfiles creados en CVUy y perfiles con acceso irrestricto (no SNI y SNI), según la UNE."
+  }
+ },
+ "_catalogo_capitulos": {
+  "sni/personas": {
+   "titulo": "Quiénes integran el SNI",
+   "intro": "El Sistema Nacional de Investigadores (SNI) reúne a 2.447 personas que se dedican a la investigación en todas las áreas del conocimiento. La mitad son mujeres, la edad mediana es de 47 años y 92 % tiene doctorado. Este capítulo describe cómo se distribuyen entre niveles, áreas, sectores, edades y regiones del país."
+  },
+  "sni/formacion": {
+   "titulo": "Formación",
+   "intro": "La formación doctoral es la puerta de entrada a la investigación. Hoy 53 % de los doctores del SNI se formó fuera del país, pero las generaciones recientes se doctoran mayoritariamente en Uruguay. A su vez, el sistema forma a las próximas generaciones dirigiendo tesis."
+  },
+  "sni/produccion": {
+   "titulo": "Producción científica del SNI",
+   "intro": "Los CV registran 148.669 publicaciones a lo largo de las trayectorias. Entre 2022 y 2026 se publicaron 12.367 artículos arbitrados, 78 % de ellos en revistas indexadas en las bases internacionales. Este capítulo muestra cómo creció la producción, cómo se publica y en qué se especializa cada campo."
+  },
+  "sni/proyectos": {
+   "titulo": "Proyectos y financiamiento",
+   "intro": "Hay 9.369 proyectos en marcha y 4.457 comenzaron entre 2022 y 2026. El financiamiento combina la agencia nacional, los fondos universitarios, la cooperación internacional y otras fuentes; una parte de los proyectos no declara financiador."
+  },
+  "sni/circulacion": {
+   "titulo": "Trayectorias y movilidad",
+   "intro": "Las personas investigadoras trabajan en 37 instituciones principales distintas, que aquí se agrupan por sector —academia, centros de investigación, sector público, empresas y exterior— sin comparar instituciones entre sí. Las carreras rara vez transcurren en un solo lugar: a partir de las trayectorias declaradas en los CV, este capítulo muestra dónde trabajaron, cómo se mueven entre sectores y con el exterior, y cuántas personas combinan vínculos en más de un sector a la vez."
+  },
+  "sni/genero": {
+   "titulo": "Brechas de género",
+   "intro": "El SNI está prácticamente en paridad: 49 % son mujeres. Pero la paridad del total convive con diferencias en los niveles más altos, en algunos indicadores de trayectoria y en el liderazgo de proyectos. Este capítulo reúne los indicadores de género del diagnóstico."
+  },
+  "no-categorizados/depuracion": {
+   "titulo": "Universo y actividad",
+   "intro": "Este análisis reúne a las personas que registran su trayectoria en CVUy sin integrar el SNI y que actualizaron su CV en los últimos 24 meses: 10.063 personas, a las que aquí se llama «no categorizadas». Todos los gráficos se refieren a ellas. Este primer capítulo las compara con el SNI y muestra qué tipo de actividad declaran."
+  },
+  "no-categorizados/personas": {
+   "titulo": "Quiénes son",
+   "intro": "Las personas no categorizadas son una población joven y mayoritariamente femenina: 60 % son mujeres y la edad mediana es de 39 años. Este capítulo describe cómo se distribuyen entre áreas, sectores, géneros y edades, y qué las distingue del SNI."
+  },
+  "no-categorizados/formacion": {
+   "titulo": "Formación",
+   "intro": "Solo 12 % tiene doctorado: la maestría y el grado son las formaciones más frecuentes. Muchas personas siguen estudiando, y quienes ya tienen posgrado dirigen tesis de grado y de maestría. Este capítulo muestra la formación alcanzada, la que está en curso y dónde se obtuvo."
+  },
+  "no-categorizados/trabajo": {
+   "titulo": "Inserción laboral",
+   "intro": "Las personas no categorizadas trabajan en 63 instituciones principales distintas, que aquí se agrupan por sector sin compararlas entre sí. 17 % tiene un vínculo activo con empresas y solo 10 % trabaja con dedicación total."
+  },
+  "no-categorizados/produccion": {
+   "titulo": "Producción científica fuera del SNI",
+   "intro": "Entre 2022 y 2026 las personas no categorizadas publicaron 7.583 artículos arbitrados, 60 % de ellos en revistas de WoS o Scopus. Pero la producción está concentrada: 67 % no publicó ningún artículo arbitrado en esos años, y los trabajos en eventos y la producción técnica pesan tanto como los artículos."
+  },
+  "no-categorizados/proyectos": {
+   "titulo": "Proyectos y financiamiento",
+   "intro": "Hay 2.052 proyectos en marcha con participación de personas no categorizadas. Este capítulo muestra cuántos empiezan cada año y cómo se financian."
+  },
+  "no-categorizados/genero": {
+   "titulo": "Brechas de género",
+   "intro": "Fuera del SNI las mujeres son mayoría: 60 %, frente a 49 % dentro del sistema. Este capítulo compara sus condiciones con las de los varones y muestra en qué campos la mayoría femenina se acentúa o se invierte."
+  },
+  "produccion/cascada": {
+   "titulo": "Áreas, temas y conceptos",
+   "intro": "La producción se ordena en tres niveles: las 6 áreas del conocimiento, sus 60 temas y los 1.055 conceptos más característicos de cada tema. Lo que elija aquí —y los filtros de la barra superior— se mantiene en todo el recorrido."
+  },
+  "produccion/tiempo": {
+   "titulo": "Cómo crece y cómo se produce",
+   "intro": "Cómo crecieron año a año los temas y conceptos de la selección, y con qué tipos de producción se trabaja en cada uno: artículos, libros y capítulos, eventos y otros documentos, proyectos y líneas de investigación."
+  },
+  "produccion/tendencias": {
+   "titulo": "Qué temas crecen y cuáles emergen",
+   "intro": "La comparación entre dos quinquenios a elección: qué temas ganan o pierden peso y qué conceptos emergen, con las instituciones que los trabajan."
+  },
+  "produccion/red": {
+   "titulo": "Las instituciones de cada concepto",
+   "intro": "Para cada concepto de la selección, qué parte de sus ítems involucra a cada tipo de institución —universidades públicas y privadas, institutos de investigación, organismos públicos, empresas y exterior— o a cada institución. El perfil temático de cada institución está en el análisis Ecosistema institucional."
+  },
+  "produccion/listado": {
+   "titulo": "Listado de la producción",
+   "intro": "Las publicaciones, proyectos y líneas de investigación que corresponden a la selección y a los filtros, con su título, palabras clave y descripción. Se pueden buscar dentro de la selección y descargar en CSV."
+  },
+  "ecosistema/eco-mapa": {
+   "titulo": "Especialización y funciones",
+   "intro": "La investigación en Uruguay se apoya en instituciones con funciones distintas: la universidad pública, las universidades privadas, institutos como el IIBCE, el Institut Pasteur, el INIA o el LATU, organismos del Estado, empresas y organizaciones de la sociedad civil. Esta vista las describe a partir del trabajo de sus investigadores —dentro y fuera del SNI—: en qué áreas se especializa cada una y qué función cumple en el sistema. El PEDECIBA y la ANII no se analizan como instituciones: el primero es un programa al que se afilian investigadores que trabajan en otras instituciones, y la segunda categoriza y financia, pero no emplea a quienes la declaran; ambos aparecen como fuentes de financiamiento."
+  },
+  "ecosistema/eco-perfil": {
+   "titulo": "Portafolio de investigación",
+   "intro": "El perfil temático de cada institución —en qué temas trabaja frente al país y qué conceptos la caracterizan— y qué parte de su actividad sostienen las personas del SNI y las que investigan fuera de él. Seleccione una institución en el selector superior o en cualquier gráfico. Las tendencias temáticas del país están en el análisis Producción científica."
+  },
+  "ecosistema/eco-colaboracion": {
+   "titulo": "Vínculos y financiamiento",
+   "intro": "Las instituciones se relacionan de tres maneras: cooperan en publicaciones y proyectos, comparten investigadores, o una financia proyectos que ejecuta la otra. Esta sección muestra esos vínculos y de dónde proviene el financiamiento de cada institución."
+  },
+  "ecosistema/eco-udelar": {
+   "titulo": "La Universidad de la República por dentro",
+   "intro": "La Udelar reúne a la mayoría de las personas del SNI. Sus facultades, centros regionales y servicios tienen tamaños e intensidades de proyectos muy distintos."
+  }
+ },
+ "_catalogo_graficos": {
+  "sni/grafico-1": {
+   "titulo": "Quiénes integran el SNI",
+   "bajada": "Personas investigadoras del SNI según área, nivel, género y sector. Cada punto representa a una persona.",
+   "muestra": "Las 2.447 personas que integran hoy el Sistema Nacional de Investigadores, dibujadas una por una. Pueden agruparse por área del conocimiento, nivel del SNI, género o sector de la institución principal.",
+   "leer": "Cada punto representa a una persona y el color indica su grupo. Al cambiar el criterio, los puntos se reacomodan: el tamaño de cada bloque es proporcional a la cantidad de personas. Pase el puntero por un grupo para ver su número exacto."
+  },
+  "sni/grafico-2": {
+   "titulo": "Una estructura de base amplia",
+   "bajada": "Personas investigadoras de cada nivel del SNI y su porcentaje sobre el total del sistema",
+   "muestra": "Cuántas personas hay en cada nivel del SNI, de Iniciación a Nivel III. Incluye todas las categorías: activos, asociados en el exterior y eméritos.",
+   "leer": "Cada barra es un nivel, con Iniciación abajo y Nivel III arriba; su largo es la cantidad de personas, de modo que la forma del gráfico es la pirámide del sistema. A la derecha, la cantidad y el porcentaje sobre el total. Pase el puntero sobre una barra para ver su valor.",
+   "nota": "Incluye todas las categorías: activos, asociados en el exterior y eméritos. Iniciación: la puerta de entrada. Nivel I: investigación independiente. Nivel II: liderazgo de líneas. Nivel III: referencia internacional. Emérito: una vida dedicada a la ciencia."
+  },
+  "sni/grafico-3": {
+   "titulo": "Perfil de áreas",
+   "bajada": "Indicadores del perfil de las personas investigadoras y de su producción, para cada área o sector frente al total del sistema",
+   "muestra": "El perfil de un grupo —un área del conocimiento o un sector— en once indicadores de edad, formación, nivel, dedicación, vínculos y producción, frente al total del país.",
+   "leer": "Seleccione el grupo en la lista. Cada pista tiene su propia escala: la línea vertical es el total del país y el punto, el grupo elegido (azul si está por encima, ocre si está por debajo). Los puntos tenues son los demás grupos, para ver el rango.",
+   "nota": "La edad del total es la mediana nacional; el resto, promedios ponderados de las áreas."
+  },
+  "sni/grafico-4": {
+   "titulo": "El nivel en el SNI avanza con la edad",
+   "bajada": "Personas investigadoras de cada nivel según tramo de edad, a cada lado de los 55 años, con la edad mediana estimada de cada nivel; para el total y por género",
+   "muestra": "La composición por edad de cada nivel del SNI, de Iniciación a Nivel III, para el conjunto del sistema y por separado para mujeres y varones. Complementa el gráfico 2 —que muestra cuántas personas hay en cada nivel— con la etapa de la vida en que llegan a él, y permite comparar a mujeres y varones.",
+   "leer": "Cada fila es un nivel. La línea vertical marca los 55 años: hacia la izquierda, quienes tienen menos (los tramos más jóvenes, más claros, quedan más lejos de la línea); hacia la derecha, quienes tienen 55 o más. Los porcentajes de cada lado suman 100 % por nivel. Bajo el nombre del nivel figura la edad mediana: la edad a la que se llega a la mitad de las personas del nivel. Al pasar el puntero sobre un tramo se ve su porcentaje.",
+   "nota": "Edad a la fecha de corte, calculada desde la fecha de nacimiento declarada. Se excluyen las personas sin edad o sin nivel informado y las celdas con menos de 5 personas. La edad mediana se estima por interpolación dentro de los tramos de edad (se toma 25 años como inicio del primer tramo y 80 como cierre del último), por lo que es aproximada."
+  },
+  "sni/grafico-5": {
+   "titulo": "Distribución territorial",
+   "bajada": "Personas del SNI según la región del país donde está su institución principal",
+   "muestra": "En qué región del país está la institución principal de las personas del SNI.",
+   "leer": "Cada región reúne varios departamentos y su color es más intenso cuanto más personas tiene. Un punto sobre cada región la une con su rótulo, a los costados del mapa, con el porcentaje y la cantidad de personas. Pase el puntero por una región o por su rótulo para resaltarla y ver sus departamentos."
+  },
+  "sni/grafico-6": {
+   "titulo": "La formación doctoral se realiza cada vez más en Uruguay",
+   "bajada": "Porcentaje de cada cohorte de doctores que obtuvo el título en Uruguay, para el total y por área",
+   "muestra": "Para las personas que hoy integran el SNI, qué parte de cada cohorte de doctores —agrupada por quinquenio de obtención del título— se doctoró en Uruguay.",
+   "leer": "Cada punto es un quinquenio. Cuando la línea supera el 50 %, la mayoría de esa cohorte se formó en el país. Seleccione un área para compararla con el total del SNI (línea gris) y pase el puntero para ver los valores.",
+   "nota": "Cohortes según el quinquenio de obtención del doctorado. Se omiten las cohortes con menos de 10 doctores o con datos reservados."
+  },
+  "sni/grafico-7": {
+   "titulo": "Dónde obtuvieron el doctorado",
+   "bajada": "Doctores del SNI según dónde obtuvieron el título —Uruguay o el exterior, región y país— y su participación por área del conocimiento",
+   "muestra": "Dónde obtuvieron su doctorado las personas del SNI que tienen ese título como máxima formación —en Uruguay o en el exterior, y en qué región y país— y, para lo que se elija, cómo se reparte entre las áreas del conocimiento.",
+   "leer": "Funciona en cascada: la primera columna separa Uruguay y el exterior; al elegir «Exterior» aparecen las regiones y, al elegir una región, sus países. Cada fila muestra el porcentaje sobre todos los doctores y la cantidad. A la derecha, la participación por área del conocimiento de lo elegido.",
+   "nota": "Haberse formado afuera no implica trabajar hoy en el exterior."
+  },
+  "sni/grafico-8": {
+   "titulo": "La dirección de tesis doctorales varía entre áreas",
+   "bajada": "Tesis de doctorado dirigidas en 2022–2026 por cada 100 personas investigadoras, total y por área",
+   "muestra": "Cuántas tesis de doctorado dirigieron entre 2022 y 2026 las personas investigadoras de cada área, por cada 100 investigadores. Mide la capacidad de formar nuevas generaciones de doctores.",
+   "leer": "Cada pétalo es un área y su largo es la tasa. Al expresarse por cada 100 investigadores, permite comparar áreas de distinto tamaño. Pase el puntero por un pétalo para ver el valor.",
+   "nota": "Se cuentan registros de dirección: una tesis con dos cotutores del SNI puede aparecer dos veces. La ventana incluye 2026, todavía incompleto."
+  },
+  "sni/grafico-9": {
+   "titulo": "La evolución de la producción desde 1990",
+   "bajada": "Indicadores anuales en dos grupos: cantidades (publicaciones, artículos y proyectos de cada año) y porcentajes (calculados siempre sobre los artículos arbitrados publicados ese año)",
+   "muestra": "Ocho indicadores anuales de la producción de las personas que hoy integran el SNI: volumen de publicaciones y artículos, indexación internacional, acceso abierto, colaboración y proyectos iniciados. Los hitos marcan momentos institucionales del sistema.",
+   "leer": "Seleccione un indicador con las pestañas: las de arriba son cantidades y las de abajo, porcentajes sobre los artículos arbitrados del año. Debajo de las pestañas se indica qué mide cada uno y el eje vertical muestra su unidad. Acote el período con el selector inferior. Pase el puntero por la curva para ver el valor de cada año y por los marcadores para leer los hitos. La serie es retrospectiva: describe a quienes hoy están en el SNI, por lo que los primeros años están subrepresentados.",
+   "nota": "El año en curso, incompleto, no se muestra."
+  },
+  "sni/grafico-10": {
+   "titulo": "La producción crece en todas las áreas",
+   "bajada": "Artículos arbitrados por año y área del conocimiento. Elija un área para ver sus subáreas.",
+   "muestra": "Los artículos arbitrados publicados cada año por las personas del SNI, según el área del conocimiento del trabajo o, al elegir un área, según sus subáreas.",
+   "leer": "El grosor de cada corriente en un año es la cantidad de artículos de esa área o subárea; el grosor total del río es el volumen del año. Con el selector se pasa de las áreas a las subáreas de un área (las ocho con más artículos y el resto agrupado). Seleccione una corriente para aislarla y use el selector de período para acercarse a un tramo."
+  },
+  "sni/grafico-11": {
+   "titulo": "Visibilidad internacional y acceso abierto por área",
+   "bajada": "Porcentaje de artículos arbitrados de 2022–2026 indexados en Scopus, total y por área",
+   "muestra": "Qué parte de los artículos arbitrados de 2022 a 2026 de cada área está indexada en cada base —Web of Science y Scopus, internacionales; SciELO y Latindex, regionales—, cuál no declara indexación y cuál está en acceso abierto. Un indicador por vez.",
+   "leer": "Elija el indicador con el filtro. Cada barra es un área y su largo es el porcentaje de sus artículos con esa característica, sobre una escala de 0 a 100 %. La primera barra es el total."
+  },
+  "sni/grafico-12": {
+   "titulo": "La evolución de los proyectos",
+   "bajada": "Proyectos iniciados cada año desde 1990, en total y por área del conocimiento",
+   "muestra": "Cuántos proyectos de investigación comenzaron cada año, en total y por área del conocimiento o según la fuente que los financia.",
+   "leer": "Cada línea es un área o una fuente de financiamiento. El eje vertical es la cantidad de proyectos iniciados en el año y se ajusta a las series visibles. Con los botones de «Series» se muestra u oculta cada línea; el total, que es mucho mayor, empieza oculto para que las demás se lean mejor. Con «Ver» se cambia entre áreas y financiamiento; pase el puntero para ver los valores de cada año y use el selector de período para acercarse a un tramo.",
+   "nota": "Proyectos únicos (un proyecto declarado por varias personas cuenta una vez), según su año de inicio. El último año completo es el más reciente."
+  },
+  "sni/grafico-13": {
+   "titulo": "Fuentes de financiamiento por área",
+   "muestra": "Cómo se financian los proyectos de cada área: la agencia nacional (ANII), la comisión de investigación de la Udelar (CSIC), fuentes internacionales, otros financiadores o ninguno declarado.",
+   "leer": "El anillo completo es el 100 % de los proyectos; cada sector, una fuente. Elija un área con el filtro. Pase el puntero por un sector o por la lista para ver su cantidad; al elegir un área, la lista indica también el valor del total.",
+   "nota": "Los porcentajes cuentan proyectos, no montos. La ausencia de un financiador declarado no implica que el proyecto carezca de recursos."
+  },
+  "sni/grafico-14": {
+   "titulo": "Inserción laboral por sector, año a año",
+   "bajada": "Personas del SNI según el sector de su vínculo laboral principal en cada año",
+   "muestra": "Cuántas personas del SNI tenían, en cada año, un vínculo laboral en cada sector: academia pública y privada, centros de investigación, empresas, sector público no académico y otros. Una persona puede tener vínculos en varios sectores a la vez.",
+   "leer": "Cada línea es un sector. Use el selector de período para acercarse a un tramo y pase el puntero para ver los valores de un año. Como se reconstruye la trayectoria de quienes están hoy, las curvas crecen también porque las personas se van incorporando.",
+   "nota": "Las trayectorias describen a quienes hoy integran el SNI. Los vínculos sin fecha de fin se consideran vigentes hasta hoy."
+  },
+  "sni/grafico-15": {
+   "titulo": "Movilidad entre sectores, por década",
+   "bajada": "Cambios del sector del vínculo laboral principal, agrupados por década",
+   "muestra": "Cada vez que una persona cambió el sector de su vínculo laboral principal: de dónde salió y a dónde llegó, década por década.",
+   "leer": "A la izquierda está el sector de origen y a la derecha el de destino; el grosor de cada banda es la cantidad de movimientos. Seleccione una década o presione reproducir para ver cómo cambian los circuitos. Pase el puntero por una banda para ver su valor."
+  },
+  "sni/grafico-16": {
+   "titulo": "Cuántas personas trabajaron en el exterior y cuántas volvieron",
+   "bajada": "Personas de cada nivel del SNI según su experiencia laboral en el exterior (% del nivel)",
+   "muestra": "Para las personas de cada nivel del SNI, su relación laboral con el exterior, en cuatro grupos que no se superponen: quienes trabajaron afuera y volvieron, quienes trabajan afuera hoy, quienes tuvieron un vínculo secundario con el exterior y quienes nunca tuvieron un vínculo laboral afuera.",
+   "leer": "Cada barra es un nivel y suma 100 %; el valor a la derecha es el % que tuvo alguna vez un vínculo afuera. Fue y volvió: su trabajo principal estuvo en el exterior y hoy trabaja en Uruguay. Afuera hoy: reside y trabaja en el exterior (asociados en el exterior del SNI). Vínculo secundario con el exterior: tuvo vínculos en el exterior —estancias, cargos o empleos secundarios— mientras su trabajo principal seguía en Uruguay. Sin vínculo afuera: nunca trabajó en el exterior.",
+   "nota": "Se reconstruye con todos los vínculos laborales declarados en los CV, activos y terminados. «Afuera hoy» corresponde a la categoría de asociado en el exterior del SNI. Quienes empezaron su carrera en el exterior y luego se instalaron en Uruguay también figuran en «Fue y volvió»."
+  },
+  "sni/grafico-17": {
+   "titulo": "Vínculos simultáneos entre la academia y otros sectores",
+   "bajada": "Personas con vínculos simultáneos en la academia y otro sector, por año",
+   "muestra": "Las personas que en un mismo año tienen a la vez un vínculo académico y otro en el sector público no académico, en un centro de investigación o en una empresa.",
+   "leer": "Cada línea es un tipo de doble vínculo. Use el selector de período para acercarse a un tramo y pase el puntero para ver los valores de cada año."
+  },
+  "sni/grafico-18": {
+   "titulo": "La participación de las mujeres disminuye al subir de nivel",
+   "bajada": "Porcentaje de mujeres y de varones en cada nivel del SNI (curva tijera), total y por área",
+   "muestra": "El porcentaje de mujeres y de varones en cada nivel del SNI, desde Iniciación hasta Nivel III. Es el llamado «diagrama de tijera», usado internacionalmente para describir la segregación vertical por género en la ciencia.",
+   "leer": "Si hubiera paridad en todos los niveles, las dos líneas estarían juntas en 50 %. Cuando se abren hacia la derecha —como las hojas de una tijera— la participación de las mujeres disminuye a medida que se sube de nivel. Seleccione un área para ver su propia tijera.",
+   "nota": "La comparación muestra la composición actual del SNI; no sigue a una misma generación ni mide por sí sola las causas de la brecha."
+  },
+  "sni/grafico-19": {
+   "titulo": "Condiciones de trabajo y producción de mujeres y varones",
+   "bajada": "Indicadores de formación, dedicación y producción de mujeres y varones del SNI, total y por área",
+   "muestra": "Nueve indicadores de trayectoria, producción y formación para mujeres y para varones del SNI. En la vista por área se sigue un indicador en el total y en cada una de las seis áreas.",
+   "leer": "Cada fila tiene dos puntos: mujeres y varones. Lo importante es la distancia entre ellos. En la vista total cada fila usa su propia escala; en la vista por área todas comparten la escala del indicador elegido.",
+   "nota": "Son grupos actuales: la edad, menor entre las mujeres, explica parte de las diferencias de nivel y trayectoria. El gráfico describe, no controla por edad."
+  },
+  "sni/grafico-20": {
+   "titulo": "Mujeres investigadoras y responsables de proyectos, por área",
+   "bajada": "En 4 de 6 áreas, las mujeres lideran proyectos por debajo de su peso entre los investigadores. Porcentaje de mujeres entre los investigadores de cada área y entre los responsables de sus proyectos en marcha.",
+   "muestra": "Para cada área, el peso de las mujeres entre las personas investigadoras y entre quienes son responsables de los proyectos en marcha.",
+   "leer": "Si el liderazgo acompañara la composición, los dos puntos coincidirían. Cuando el punto de responsables queda a la izquierda, las mujeres lideran menos proyectos de lo que su peso haría esperar."
+  },
+  "sni/grafico-21": {
+   "titulo": "Aumentan las publicaciones con autoría mixta",
+   "bajada": "Artículos arbitrados según la composición por género de sus autores del SNI, por año",
+   "muestra": "Los artículos de cada año según el género de sus autores que integran el SNI: solo varones, solo mujeres o autoría mixta. No se considera a coautores fuera del sistema.",
+   "leer": "Cada línea es un tipo de composición, como porcentaje de las publicaciones del año. Use el selector de período para acercarse a un tramo y pase el puntero para ver los valores.",
+   "nota": "El género de los autores se asigna cruzando nombre y apellido con la hoja de investigadores; los homónimos exactos pueden asignarse mal."
+  },
+  "no-categorizados/grafico-1": {
+   "titulo": "El SNI y los no categorizados en diez indicadores",
+   "bajada": "No categorizados con CV vigente y SNI, en diez indicadores",
+   "muestra": "Diez rasgos de las 10.063 personas no categorizadas con CV vigente frente a las 2.447 del SNI: género, edad, formación, dedicación, vínculos, producción y proyectos.",
+   "leer": "Cada fila tiene su propia escala. El punto celeste son los no categorizados y el azul, el SNI; la distancia entre ambos es la diferencia entre las dos comunidades.",
+   "nota": "Los promedios que no están en las cifras clave se calculan ponderando las áreas por su cantidad de investigadores."
+  },
+  "no-categorizados/grafico-2": {
+   "titulo": "Tipos de actividad declarada",
+   "bajada": "Personas no categorizadas con CV vigente según la actividad que declaran. Cada cuadro equivale al 1 %.",
+   "muestra": "Una clasificación de las personas no categorizadas según lo que muestran sus CV: si producen, si hacen I+D sin publicar, si se están formando, si hacen docencia o si su CV no refleja actividad científica.",
+   "leer": "La grilla tiene 100 cuadros; los tonos azules son perfiles con actividad de investigación, los verdes y ocres, perfiles en formación o docencia, y el terracota, perfiles sin producción ni vínculo científico. Seleccione un área en las pestañas.",
+   "nota": "7.771 personas con CV actualizado en los últimos 24 meses, según la planilla No_SNI.xlsx. La tipología combina la producción reciente, los vínculos y la formación en curso."
+  },
+  "no-categorizados/grafico-3": {
+   "titulo": "Quiénes investigan fuera del SNI",
+   "bajada": "Personas no categorizadas con CV vigente según área, sector y género. Cada punto representa a cinco personas.",
+   "muestra": "Las 10.063 personas no categorizadas con el CV actualizado en los últimos dos años, agrupadas por área del conocimiento, sector de su institución principal, género o tramo de edad.",
+   "leer": "Cada punto equivale a cinco personas y el color indica el grupo. Al cambiar el criterio los puntos se reacomodan; el tamaño de cada bloque es proporcional a la cantidad de personas. Pase el puntero por un grupo para resaltarlo.",
+   "nota": "Las personas sin área, sector, género o edad informados cuentan en el total pero no se dibujan en esa agrupación."
+  },
+  "no-categorizados/grafico-4": {
+   "titulo": "Cada área y sector tiene un perfil propio",
+   "bajada": "Indicadores de cada área o sector frente al total de personas no categorizadas",
+   "muestra": "El perfil de un área o de un sector en once indicadores de edad, formación, dedicación, vínculos y producción, frente al conjunto de los no categorizados.",
+   "leer": "Seleccione el grupo en la lista. Cada pista tiene su propia escala: la línea vertical es el total y el punto, el grupo elegido (azul si está por encima, ocre si está por debajo). Los puntos tenues son los demás grupos.",
+   "nota": "La edad del total es la mediana general; el resto, promedios ponderados de las áreas."
+  },
+  "no-categorizados/grafico-5": {
+   "titulo": "Una población más joven y con más mujeres",
+   "bajada": "Personas por tramo de edad y género, en el SNI y entre los no categorizados",
+   "muestra": "La distribución por edad y género de las personas del SNI y de las no categorizadas con CV vigente.",
+   "leer": "Cada fila es un tramo de edad, con las mujeres a un lado y los varones al otro. Con «Total» se ve el conjunto de quienes investigan; seleccione un grupo para compararlos."
+  },
+  "no-categorizados/grafico-6": {
+   "titulo": "Edad por área, dentro y fuera del SNI",
+   "bajada": "Edad de las personas no categorizadas y del SNI, por área",
+   "muestra": "Para cada área, la proporción de personas menores de 40 años, la edad mediana o la proporción de 65 años y más, entre los no categorizados y en el SNI.",
+   "leer": "Seleccione un indicador. Cada fila es un área; el punto celeste son los no categorizados y el azul, el SNI. Una distancia grande en «menores de 40» indica una base joven amplia fuera del sistema."
+  },
+  "no-categorizados/grafico-7": {
+   "titulo": "Formación máxima, dentro y fuera del SNI",
+   "bajada": "Máximo nivel de formación concluido. Cada cuadro equivale al 1 % de las personas.",
+   "muestra": "El título más alto que obtuvieron las personas de cada grupo: doctorado, maestría, especialización, grado u otros (posgrados sin nivel informado o tecnicaturas).",
+   "leer": "Seleccione el grupo con las pestañas. La grilla tiene 100 cuadros y cada color es un nivel de formación. Pase el puntero por un nivel en la leyenda para resaltarlo."
+  },
+  "no-categorizados/grafico-8": {
+   "titulo": "Predominan la maestría y el grado",
+   "bajada": "Máximo nivel de formación concluido, total y por área",
+   "muestra": "El nivel de formación más alto que declara cada persona —doctorado, maestría, especialización, grado o tecnicatura— en cada área del conocimiento.",
+   "leer": "Cada barra es un área y suma 100 %. Los tonos azules son posgrados; los naranjas, grado y tecnicatura. Las áreas están ordenadas por la proporción de doctores. Pase el puntero por un tramo para ver su porcentaje.",
+   "nota": "Se excluyen las personas sin máxima formación informada. El valor a la derecha es el porcentaje con doctorado."
+  },
+  "no-categorizados/grafico-9": {
+   "titulo": "Una comunidad en formación de posgrado",
+   "bajada": "Formaciones en curso declaradas, según el nivel, total y por área. Cada cuadro equivale al 1 %.",
+   "muestra": "Las formaciones que las personas no categorizadas declaran tener en curso: doctorados, maestrías, especializaciones, carreras de grado y tecnicaturas, para el total y para cada área.",
+   "leer": "La grilla tiene 100 cuadros, uno por cada punto porcentual; cada color es un nivel. Seleccione un área con las pestañas y pase el puntero por un nivel en la leyenda para resaltarlo.",
+   "nota": "Una persona puede declarar más de una formación en curso."
+  },
+  "no-categorizados/grafico-10": {
+   "titulo": "Doctorados obtenidos en Uruguay, por cohorte",
+   "bajada": "Porcentaje de cada cohorte de doctores que obtuvo el título en Uruguay",
+   "muestra": "Entre quienes tienen doctorado, la proporción de cada cohorte que lo obtuvo en Uruguay, para el SNI y para los no categorizados.",
+   "leer": "Cada punto es un quinquenio. Cuando la línea supera el 50 %, la mayoría de esa cohorte se doctoró en el país.",
+   "nota": "Cohortes según el quinquenio de obtención del doctorado, con al menos 10 doctores. El total reúne todas las cohortes graficadas."
+  },
+  "no-categorizados/grafico-11": {
+   "titulo": "Dónde obtuvieron el doctorado",
+   "bajada": "Doctores no categorizados según el país donde obtuvieron el título. Cada cuadro equivale al 1 %.",
+   "muestra": "El país donde obtuvieron su doctorado las personas no categorizadas que tienen ese título como máxima formación: Uruguay, los destinos externos más frecuentes y el resto.",
+   "leer": "La grilla tiene 100 cuadros, uno por cada punto porcentual; cada color es un país. Pase el puntero por un país en la leyenda para resaltar sus cuadros.",
+   "nota": "Haberse formado afuera no implica trabajar hoy en el exterior."
+  },
+  "no-categorizados/grafico-12": {
+   "titulo": "Dirección de tesis por área",
+   "bajada": "Tutorías de tesis por cada 100 personas, total y por área",
+   "muestra": "Cuántas tesis y trabajos finales dirigieron o dirigen las personas no categorizadas, por cada 100 personas de cada área: de grado, de maestría y de doctorado.",
+   "leer": "Seleccione el tipo de tutoría. Cada pétalo es un área y su largo es la tasa; al expresarse por cada 100 personas, se comparan áreas de distinto tamaño.",
+   "nota": "Se cuentan registros de tutoría declarados en los CV a lo largo de toda la trayectoria (concluidas) o vigentes (en marcha)."
+  },
+  "no-categorizados/grafico-13": {
+   "titulo": "Sector de la institución principal, dentro y fuera del SNI",
+   "bajada": "Sector de la institución principal",
+   "muestra": "El sector de la institución principal de las personas de cada grupo: academia, sector público no académico, sector privado, exterior o no informado. No se identifican instituciones.",
+   "leer": "Cada barra suma 100 % y cada color es un sector. La comparación muestra cuánto más diversa es la inserción fuera del SNI."
+  },
+  "no-categorizados/grafico-14": {
+   "titulo": "Sector de inserción laboral por área",
+   "bajada": "Sector de la institución principal, total y por área",
+   "muestra": "En qué tipo de institución trabajan principalmente las personas no categorizadas de cada área: academia, sector público no académico, sector privado o exterior.",
+   "leer": "Cada barra es un área y suma 100 %; el valor de la derecha es el porcentaje en la academia. Pase el puntero por un tramo para ver su porcentaje.",
+   "nota": "Se excluyen las personas sin sector informado. Los sectores agrupan instituciones por su naturaleza: no se comparan instituciones entre sí."
+  },
+  "no-categorizados/grafico-15": {
+   "titulo": "Vínculo con empresas y dedicación por área",
+   "bajada": "Porcentaje de personas con vínculo en empresas, dedicación total o varias instituciones, total y por área",
+   "muestra": "Qué parte de las personas de cada área tiene un vínculo laboral activo con empresas, trabaja con dedicación total o declara vínculos simultáneos con varias instituciones.",
+   "leer": "Seleccione un indicador con las pestañas. Cada barra es un área, ordenadas de mayor a menor; el color identifica el área."
+  },
+  "no-categorizados/grafico-16": {
+   "titulo": "Vínculo con el sector privado",
+   "bajada": "Personas no categorizadas con CV vigente según su relación laboral con empresas y organizaciones privadas",
+   "muestra": "Si las personas no categorizadas trabajan hoy en el sector privado (solas o combinándolo con la academia u otros sectores), si lo hicieron en el pasado o si nunca tuvieron ese vínculo.",
+   "leer": "Cada cuadro es el 1 % de las personas; los tonos cálidos son vínculos actuales con el sector privado. Seleccione un área en las pestañas."
+  },
+  "no-categorizados/grafico-17": {
+   "titulo": "La producción, dentro y fuera del SNI",
+   "bajada": "Indicadores anuales de producción de cada grupo",
+   "muestra": "La producción registrada en los CV de las personas del SNI y de las no categorizadas con CV vigente, año a año: publicaciones, artículos arbitrados, indexación, acceso abierto y proyectos iniciados.",
+   "leer": "Seleccione un indicador con las pestañas y acote los años con el selector de período. Cada línea es un grupo; pase el puntero para ver los valores de un año.",
+   "nota": "Las publicaciones de cada grupo se cuentan una vez, pero un trabajo firmado por personas de los dos grupos aparece en ambas series. El año en curso no se muestra."
+  },
+  "no-categorizados/grafico-18": {
+   "titulo": "La evolución de la producción desde 1990",
+   "bajada": "Indicadores anuales de publicaciones, artículos y proyectos",
+   "muestra": "La producción anual de las personas no categorizadas con CV vigente, en dos grupos de indicadores: cantidades (publicaciones, artículos arbitrados y proyectos iniciados, en valores absolutos) y porcentajes calculados sobre los artículos arbitrados de cada año (indexación en WoS o Scopus, acceso abierto y autoría femenina).",
+   "leer": "Seleccione un indicador en las pestañas: las de la izquierda son cantidades y las de la derecha, porcentajes. Bajo las pestañas se indica la unidad del eje y qué mide el indicador. Acote el período con el selector inferior y pase el puntero por la curva para ver el valor de cada año.",
+   "nota": "El año en curso, incompleto, no se muestra. Cada publicación se cuenta una vez aunque tenga varios autores no categorizados."
+  },
+  "no-categorizados/grafico-19": {
+   "titulo": "Tipos de producción a lo largo del tiempo",
+   "bajada": "Publicaciones únicas por año y tipo de producción",
+   "muestra": "Las publicaciones de cada año según su tipo: trabajos en eventos, artículos arbitrados, producción técnica, capítulos, documentos de trabajo, libros y otros.",
+   "leer": "El grosor de cada corriente en un año es la cantidad de publicaciones de ese tipo; el grosor total es el volumen del año. Seleccione una corriente para aislarla y use el selector de período para acercarse a un tramo."
+  },
+  "no-categorizados/grafico-20": {
+   "titulo": "La producción 2022–2026, por tipo y calidad",
+   "bajada": "Publicaciones únicas de 2022–2026 por tipo y, para los artículos, según su indexación. Cada cuadro equivale al 1 %.",
+   "muestra": "La composición de las publicaciones únicas de 2022 a 2026: primero por tipo y luego, para los artículos arbitrados, según la base en la que está indexada la revista.",
+   "leer": "Seleccione la vista: todas las publicaciones o solo los artículos arbitrados. La grilla tiene 100 cuadros, uno por cada punto porcentual; pase el puntero por un color de la leyenda para resaltarlo."
+  },
+  "no-categorizados/grafico-21": {
+   "titulo": "Indexación y acceso abierto por área",
+   "bajada": "Porcentaje de artículos arbitrados de 2022–2026 en cada base y en acceso abierto, total y por área",
+   "muestra": "Para los artículos arbitrados de 2022 a 2026 de cada área, el porcentaje publicado en revistas indexadas en la base elegida y el porcentaje disponible en acceso abierto.",
+   "leer": "Seleccione una base. Cada fila es un área; los dos puntos son los dos porcentajes sobre una escala de 0 a 100 %, y la línea que los une muestra su distancia."
+  },
+  "no-categorizados/grafico-22": {
+   "titulo": "La evolución de los proyectos",
+   "bajada": "Proyectos iniciados cada año desde 1990, en total y según su financiamiento",
+   "muestra": "Cuántos proyectos en los que participan personas no categorizadas comenzaron cada año, en total y según quién los financia: la agencia nacional (ANII), la comisión de investigación de la Udelar (CSIC), fuentes internacionales, otras fuentes o ninguna declarada.",
+   "leer": "Cada línea es una fuente de financiamiento; la línea gruesa oscura es el total. El eje vertical es la cantidad de proyectos iniciados en el año. Pase el puntero para ver los valores de cada año y use el selector de período para acercarse a un tramo.",
+   "nota": "Proyectos únicos (un proyecto declarado por varias personas no categorizadas cuenta una vez), según su año de inicio. La ausencia de financiador declarado no implica que el proyecto carezca de recursos."
+  },
+  "no-categorizados/grafico-23": {
+   "titulo": "Fuentes de financiamiento por área",
+   "bajada": "Proyectos en marcha según la fuente de financiamiento, total y por área. Cada cuadro equivale al 1 %.",
+   "muestra": "Para los proyectos en marcha de cada área, qué parte declara financiamiento de ANII, de la CSIC, de fuentes internacionales, de otras fuentes o de ninguna.",
+   "leer": "Seleccione un área con las pestañas. La grilla tiene 100 cuadros, uno por cada punto porcentual; pase el puntero por un color para resaltarlo.",
+   "nota": "Los porcentajes cuentan proyectos, no montos."
+  },
+  "no-categorizados/grafico-24": {
+   "titulo": "Condiciones de trabajo y producción de mujeres y varones",
+   "bajada": "Indicadores de formación, dedicación y producción de mujeres y varones no categorizados",
+   "muestra": "Las 6.082 mujeres y los 3.877 varones no categorizados comparados en formación, dedicación, vínculos, producción y edad.",
+   "leer": "Cada fila tiene su propia escala. El punto rosa son las mujeres y el azul, los varones; la línea entre ambos es la brecha."
+  },
+  "no-categorizados/grafico-25": {
+   "titulo": "La brecha de género varía según el área",
+   "bajada": "Indicadores de mujeres y varones no categorizados, total y por área",
+   "muestra": "Para cada área, un indicador de formación, dedicación, vínculo o producción, separado para mujeres y varones.",
+   "leer": "Seleccione un indicador. Cada fila es un área; el punto rosa son las mujeres y el azul, los varones."
+  },
+  "no-categorizados/grafico-26": {
+   "titulo": "Subáreas feminizadas y masculinizadas",
+   "bajada": "Porcentaje de mujeres por subárea, respecto de la paridad (subáreas con al menos 20 personas)",
+   "muestra": "La proporción de mujeres en cada subárea del conocimiento entre las personas no categorizadas. Permite ver en qué campos la mayoría femenina se acentúa y en cuáles se invierte.",
+   "leer": "La línea central es la paridad (50 %). Las barras hacia la derecha son subáreas con mayoría de mujeres; hacia la izquierda, con mayoría de varones. Seleccione un área para filtrar."
+  },
+  "no-categorizados/grafico-27": {
+   "titulo": "Composición por género de la autoría",
+   "bajada": "Publicaciones por año según el género de las personas no categorizadas que las registran",
+   "muestra": "Las publicaciones de cada año según si las registran solo mujeres, solo varones o ambos, entre las personas no categorizadas.",
+   "leer": "Cada columna es un año, apilada por composición. Acote el período con el selector y pase el puntero por un tramo para ver su valor.",
+   "nota": "Se considera el género de los autores no categorizados con CV vigente; los coautores externos no se cuentan, por lo que las publicaciones mixtas están subestimadas."
+  },
+  "produccion/evolucion": {
+   "titulo": "Cómo evoluciona cada área",
+   "bajada": "Ítems por año de los 6 áreas con más producción",
+   "muestra": "La cantidad de ítems por año de cada uno de los áreas del mapa, con los filtros de la página (los tipos se pueden cambiar en el propio gráfico).",
+   "leer": "El grosor de cada corriente es la cantidad de ítems de ese año; el grosor total, el volumen del nivel. Al elegir otro nodo en la cascada, el río se rearma con sus hijos.",
+   "nota": "Un ítem con varios conceptos aporta a cada uno de ellos. El último año puede estar incompleto."
+  },
+  "produccion/composicion": {
+   "titulo": "Cómo se produce en cada área",
+   "bajada": "Tipo de producción de los áreas, en cinco grupos. El valor de la derecha es el porcentaje de artículos.",
+   "muestra": "Qué parte de los ítems de cada área son artículos, libros y capítulos, eventos y otros documentos, proyectos o líneas de investigación. Con «Detalle» se abre un grupo en sus tipos.",
+   "leer": "Cada barra suma 100 %. Con «Grupos», los tramos son los cinco grupos de producción; al elegir un grupo, los tramos son sus tipos (por ejemplo, artículos arbitrados y no arbitrados). Las barras se ordenan según el peso del primer tramo. Los tipos marcados arriba son los mismos filtros de toda la página."
+  },
+  "produccion/temas-crecen": {
+   "titulo": "Qué temas crecen en el país",
+   "bajada": "Ítems por tema en 2016–2020 y en 2021–2025; la flecha marca si subió o cayó",
+   "muestra": "Cómo cambió la producción de los principales temas del país entre dos quinquenios que usted elige, desde 2001 hasta el último quinquenio completo.",
+   "leer": "Cada fila es un tema. La marca gris es la cantidad de ítems en el primer quinquenio y la flecha llega a la del segundo: azul y hacia la derecha si creció, terracota y hacia la izquierda si cayó. A la derecha, el cambio en porcentaje y los ítems del segundo quinquenio."
+  },
+  "produccion/temas-emergentes": {
+   "titulo": "Temas emergentes y quién los trabaja",
+   "bajada": "Conceptos cuya producción al menos se duplicó entre 2016–2020 y 2021–2025, y las instituciones con más ítems en cada uno",
+   "muestra": "Los conceptos que más crecieron en la producción reciente —líneas de trabajo nuevas o temas que ganan atención— y qué instituciones los desarrollan.",
+   "leer": "Cada fila es un concepto: la flecha va de sus ítems en el primer quinquenio a los del segundo. A la derecha, las instituciones con más ítems en ese concepto: seleccione una para filtrar el resto de la página por ella."
+  },
+  "ecosistema/grafico-1": {
+   "titulo": "En qué se especializa cada institución",
+   "bajada": "Cuánto pesa cada área en la producción de la institución frente a su peso en el país, por tipo de institución. Instituciones con al menos 300 ítems.",
+   "muestra": "El perfil temático de cada institución, agrupadas por tipo: si cada área del conocimiento pesa en su producción más o menos que en el conjunto del país.",
+   "leer": "Las instituciones se agrupan por tipo (universidades públicas, privadas, institutos, organismos públicos y otras) y el filtro deja ver un solo tipo. En cada celda, la línea central es el peso del área en el país: la barra azul hacia la derecha indica que el área pesa más en la institución (especialización) y la terracota hacia la izquierda, que pesa menos; el número dice cuántas veces. Seleccione un área para ordenar por ella, o una fila para fijar la institución."
+  },
+  "ecosistema/grafico-2": {
+   "titulo": "Qué función cumple cada institución",
+   "bajada": "Participación de cada institución en cuatro funciones del sistema, en relación con su tamaño (1 = proporcional a su peso en investigadores)",
+   "muestra": "No todas las instituciones hacen lo mismo. Para cuatro funciones —formar doctores, producir artículos, ejecutar proyectos y financiarlos— se compara la parte del total nacional que aporta cada institución con su peso en la base de investigadores del SNI.",
+   "leer": "Cada franja es una función y cada punto una institución; su tamaño es la cantidad de personas del SNI. La línea vertical marca el valor 1: a la derecha, la institución aporta a esa función más de lo que corresponde a su tamaño; a la izquierda, menos. La escala es logarítmica (cada marca duplica o divide por dos). En la franja de financiamiento, la ANII y el PEDECIBA —que no se cuentan como instituciones porque no tienen investigadores propios— aparecen con su parte de los proyectos con financiador declarado. Pase el puntero sobre un punto o selecciónelo para fijar la institución."
+  },
+  "ecosistema/grafico-3": {
+   "titulo": "El portafolio de investigación de Udelar",
+   "bajada": "Proporción de la producción de la institución en cada tema (barra) frente a la del país (marca negra), según quién firma los ítems",
+   "muestra": "En qué temas trabaja Universidad de la República, cuánto pesa cada tema en su producción, cuánto pesa ese mismo tema en el país y quiénes firman esa producción: personas del SNI, personas no categorizadas o ambas.",
+   "leer": "Cada barra es un tema y su largo, la proporción de la producción de la institución en él; los colores separan los ítems según quién los firma. La marca negra indica cuánto pesa el tema en el país: si la barra la supera, la institución se especializa en ese tema. A la derecha, el índice de especialización. El selector cambia el orden de las filas."
+  },
+  "ecosistema/grafico-4": {
+   "titulo": "Cómo opera cada institución dentro y fuera del SNI",
+   "bajada": "Porcentaje de las personas que investigan en cada institución que integran el SNI (izquierda) y que no lo integran (derecha)",
+   "muestra": "Qué parte de la actividad de cada institución sostienen las personas del SNI y qué parte personas que investigan sin integrarlo, medida por las personas vinculadas o por la autoría de su producción.",
+   "leer": "Cada fila es una institución, agrupadas por tipo (universidades públicas, privadas, institutos, organismos públicos y otras); dentro de cada grupo se ordenan de mayor a menor peso de lo que ocurre fuera del SNI. La barra azul, hacia la izquierda, es el porcentaje dentro del SNI; la ocre, hacia la derecha, el porcentaje fuera. La línea punteada marca el total. El selector cambia entre personas y producción.",
+   "nota": "Una persona con vínculos en varias instituciones cuenta en cada una."
+  },
+  "ecosistema/grafico-5": {
+   "titulo": "Quién se vincula con quién",
+   "bajada": "Copublicaciones y proyectos conjuntos entre cada par de instituciones, agrupadas por tipo",
+   "muestra": "Las relaciones entre instituciones, según tres tipos de vínculo: la cooperación científica (publican o ejecutan proyectos juntas), las personas que comparten y el financiamiento (una financia proyectos que ejecuta la otra).",
+   "leer": "Las instituciones se agrupan por tipo (franjas de color arriba y líneas de separación). En cooperación y personas, filas y columnas son las mismas instituciones y el punto en el cruce crece con la intensidad del vínculo. En financiamiento, las filas son las fuentes —entre ellas la ANII y el PEDECIBA, resaltadas, que no se cuentan como instituciones porque no tienen investigadores propios— y las columnas, las instituciones que ejecutan los proyectos. Al seleccionar una institución se resalta su columna."
+  },
+  "ecosistema/grafico-6": {
+   "titulo": "Quién financia los proyectos de cada institución",
+   "bajada": "Composición del financiamiento de los proyectos de cada institución (100 % = sus proyectos con financiador declarado)",
+   "muestra": "De dónde proviene el financiamiento de los proyectos que ejecuta cada institución: fondos de la Udelar, la ANII, la cooperación internacional, el INIA, el PEDECIBA, el MEC y otras fuentes.",
+   "leer": "Cada barra es una institución ejecutora, dividida según las fuentes de sus proyectos. Con «Proyectos» se compara el volumen; con «Composición», la mezcla de fuentes de cada institución. Seleccione una fuente en la leyenda para resaltarla.",
+   "nota": "No se incluyen los proyectos sin financiador declarado. Un proyecto con varias fuentes cuenta en cada una; se cuentan proyectos, no montos."
+  },
+  "ecosistema/grafico-7": {
+   "titulo": "La Udelar por dentro: tamaño e intensidad de proyectos",
+   "bajada": "Personas del SNI con la Udelar como institución principal, por servicio",
+   "muestra": "Cómo se distribuye la investigación dentro de la Universidad de la República: el tamaño de cada facultad, centro regional o servicio y su intensidad en proyectos.",
+   "leer": "Cada barra es un servicio, ordenado de mayor a menor; la primera fila es el total de la Udelar. Con el selector se cambia entre el tamaño (personas del SNI, en valores absolutos) y la intensidad (proyectos ejecutados por persona). Pase el puntero sobre una barra para ver los dos valores."
+  }
+ }
+}

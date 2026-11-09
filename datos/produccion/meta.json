@@ -1,13 +1,13 @@
 {
-  "generado": "2026-11-08",
-  "fecha_corte": "2026-11-08",
+  "generado": "2026-11-09",
+  "fecha_corte": "2026-11-04",
   "ejemplo": false,
   "criterio": "Ítems únicos declarados por el SNI y por los no categorizados con CV de hasta 24 meses; publicaciones y proyectos desde 2000.",
   "personas": {
-    "sni": 2603,
-    "no_categorizados": 7763
+    "sni": 2447,
+    "no_categorizados": 7748
   },
-  "total": 259217,
+  "total": 251308,
   "columnas": ["t", "y", "a", "s", "ti", "pc", "de", "co", "doi", "q", "oa", "u", "n", "e", "i"],
   "dic": {
     "tipo": ["Artículo arbitrado", "Artículo no arbitrado", "Capítulo de libro", "Documento de trabajo", "Libro", "Libro compilado", "Línea de investigación", "Producción técnica", "Proyecto de desarrollo", "Proyecto de investigación", "Trabajo en evento", "Proyecto de extensión u otro"],
@@ -16,7 +16,7 @@
     "calidad": ["", "Arbitrado en Latindex o Redalyc", "Arbitrado en SciELO", "Arbitrado en Scopus (no WoS)", "Arbitrado en WoS", "Arbitrado sin indexación declarada", "Con referato", "Evento arbitrado", "Evento no arbitrado", "No aplica", "No arbitrado", "Sin referato declarado"],
     "autoria": ["No categorizado", "SNI", "SNI y no categorizados"],
     "estado": ["", "Activa", "Concluido", "En marcha", "Finalizada"],
-    "institucion": ["Udelar", "Empresas", "Exterior", "Otros organismos públicos", "ANEP", "Organizaciones sin fines de lucro", "Universidad Católica del Uruguay", "UTEC", "Institut Pasteur de Montevideo", "ASSE", "INIA", "IIBCE", "MEC", "Intendencia de Montevideo", "Universidad ORT Uruguay", "Educación primaria y secundaria privada", "Universidad de Montevideo", "MGAP", "MSP", "CLAEH", "Universidad de la Empresa", "LATU", "CUDIM", "FLACSO", "Instituto Universitario Asociación Cristiana de Jóvenes", "Institutos privados de enseñanza técnico profesional", "Otra", "Institutos Terciarios no Universitarios", "Instituto Universitario CEDIIAP", "Instituto Universitario Monseñor Mariano Soler", "Asociación Psicoanalítica del Uruguay"]
+    "institucion": ["Udelar", "Empresas", "Exterior", "Otros organismos públicos", "ANEP", "Organizaciones sin fines de lucro", "Universidad Católica del Uruguay", "UTEC", "Institut Pasteur de Montevideo", "ASSE", "INIA", "IIBCE", "MEC", "Intendencia de Montevideo", "Universidad ORT Uruguay", "Educación primaria y secundaria privada", "Universidad de Montevideo", "MGAP", "MSP", "CLAEH", "Universidad de la Empresa", "LATU", "CUDIM", "FLACSO", "Instituto Universitario Asociación Cristiana de Jóvenes", "Institutos privados de enseñanza técnico profesional", "Otra", "Instituto Universitario CEDIIAP", "Instituto Universitario Monseñor Mariano Soler", "Institutos Terciarios no Universitarios"]
   },
   "bloques": [
     {
@@ -29,133 +29,133 @@
       "archivo": "p-2025-2025.json",
       "desde": 2025,
       "hasta": 2025,
-      "n": 11675
+      "n": 11613
     },
     {
       "archivo": "p-2024-2024.json",
       "desde": 2024,
       "hasta": 2024,
-      "n": 12643
+      "n": 12569
     },
     {
       "archivo": "p-2023-2023.json",
       "desde": 2023,
       "hasta": 2023,
-      "n": 13348
+      "n": 13251
     },
     {
       "archivo": "p-2022-2022.json",
       "desde": 2022,
       "hasta": 2022,
-      "n": 12380
+      "n": 12224
     },
     {
       "archivo": "p-2021-2021.json",
       "desde": 2021,
       "hasta": 2021,
-      "n": 12560
+      "n": 12312
     },
     {
       "archivo": "p-2020-2020.json",
       "desde": 2020,
       "hasta": 2020,
-      "n": 10462
+      "n": 10240
     },
     {
       "archivo": "p-2019-2019.json",
       "desde": 2019,
       "hasta": 2019,
-      "n": 13064
+      "n": 12743
     },
     {
       "archivo": "p-2018-2018.json",
       "desde": 2018,
       "hasta": 2018,
-      "n": 12460
+      "n": 12056
     },
     {
       "archivo": "p-2017-2017.json",
       "desde": 2017,
       "hasta": 2017,
-      "n": 12341
+      "n": 11970
     },
     {
       "archivo": "p-2016-2016.json",
       "desde": 2016,
       "hasta": 2016,
-      "n": 12041
+      "n": 11612
     },
     {
       "archivo": "p-2015-2015.json",
       "desde": 2015,
       "hasta": 2015,
-      "n": 12111
+      "n": 11679
     },
     {
       "archivo": "p-2014-2014.json",
       "desde": 2014,
       "hasta": 2014,
-      "n": 12098
+      "n": 11620
     },
     {
       "archivo": "p-2013-2013.json",
       "desde": 2013,
       "hasta": 2013,
-      "n": 11431
+      "n": 11004
     },
     {
       "archivo": "p-2012-2012.json",
       "desde": 2012,
       "hasta": 2012,
-      "n": 11040
+      "n": 10609
     },
     {
       "archivo": "p-2011-2011.json",
       "desde": 2011,
       "hasta": 2011,
-      "n": 11359
+      "n": 10903
     },
     {
       "archivo": "p-2010-2010.json",
       "desde": 2010,
       "hasta": 2010,
-      "n": 10775
+      "n": 10346
     },
     {
       "archivo": "p-2009-2009.json",
       "desde": 2009,
       "hasta": 2009,
-      "n": 10136
+      "n": 9727
     },
     {
       "archivo": "p-2008-2008.json",
       "desde": 2008,
       "hasta": 2008,
-      "n": 8692
+      "n": 8304
     },
     {
       "archivo": "p-2007-2007.json",
       "desde": 2007,
       "hasta": 2007,
-      "n": 8081
+      "n": 7734
     },
     {
       "archivo": "p-2005-2006.json",
       "desde": 2005,
       "hasta": 2006,
-      "n": 12828
+      "n": 12228
     },
     {
       "archivo": "p-2002-2004.json",
       "desde": 2002,
       "hasta": 2004,
-      "n": 13404
+      "n": 12725
     },
     {
       "archivo": "p-1954-2001.json",
       "desde": 1954,
       "hasta": 2001,
-      "n": 8455
+      "n": 8006
     },
     {
       "archivo": "p-sin-anio.json",

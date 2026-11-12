@@ -1,7 +1,7 @@
 {
   "meta": {
-    "generado": "2026-11-09",
-    "personas": 15299,
+    "generado": "2026-11-12",
+    "personas": 15300,
     "vigentes": 7748,
     "meses": 24,
     "minimo": 5
@@ -10,8 +10,8 @@
     "orden": ["Investigador/a con producción reciente", "En formación de posgrado", "Bajo interés: sin producción ni vínculo científico", "Docencia o trabajo académico sin producción reciente", "Actividad de I+D sin producción reciente", "Perfil tecnológico o de innovación", "Trayectoria con producción histórica, sin actividad reciente"],
     "total": {
       "Actividad de I+D sin producción reciente": 344,
-      "Bajo interés: sin producción ni vínculo científico": 902,
-      "Docencia o trabajo académico sin producción reciente": 775,
+      "Bajo interés: sin producción ni vínculo científico": 905,
+      "Docencia o trabajo académico sin producción reciente": 772,
       "En formación de posgrado": 1100,
       "Investigador/a con producción reciente": 4398,
       "Perfil tecnológico o de innovación": 142,
@@ -71,7 +71,7 @@
       [
         "Ciencias Sociales",
         "Bajo interés: sin producción ni vínculo científico",
-        144
+        145
       ],
       [
         "Humanidades",
@@ -86,7 +86,7 @@
       [
         "Sin área informada",
         "Bajo interés: sin producción ni vínculo científico",
-        443
+        445
       ],
       [
         "Ciencias Agrícolas",
@@ -106,7 +106,7 @@
       [
         "Ciencias Sociales",
         "Docencia o trabajo académico sin producción reciente",
-        158
+        157
       ],
       [
         "Humanidades",
@@ -121,7 +121,7 @@
       [
         "Sin área informada",
         "Docencia o trabajo académico sin producción reciente",
-        161
+        159
       ],
       [
         "Ciencias Agrícolas",
@@ -263,10 +263,10 @@
   },
   "privado": {
     "total": {
-      "Privado y academia": 1034,
+      "Privado y academia": 1030,
       "Privado y otros sectores": 195,
       "Sin vínculo con el sector privado": 4647,
-      "Solo sector privado": 480,
+      "Solo sector privado": 484,
       "Vínculo privado solo en el pasado": 1392
     },
     "por_area": [
@@ -283,7 +283,7 @@
       [
         "Ciencias Naturales y Exactas",
         "Privado y academia",
-        139
+        135
       ],
       [
         "Ciencias Sociales",
@@ -318,12 +318,12 @@
       [
         "Ciencias Naturales y Exactas",
         "Privado y otros sectores",
-        26
+        27
       ],
       [
         "Ciencias Sociales",
         "Privado y otros sectores",
-        54
+        53
       ],
       [
         "Humanidades",
@@ -388,12 +388,12 @@
       [
         "Ciencias Naturales y Exactas",
         "Solo sector privado",
-        65
+        68
       ],
       [
         "Ciencias Sociales",
         "Solo sector privado",
-        96
+        97
       ],
       [
         "Humanidades",

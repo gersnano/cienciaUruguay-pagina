@@ -49,8 +49,8 @@
   "ecosistema": {
    "nombre": "Ecosistema institucional",
    "universo": "Instituciones donde trabajan las personas del SNI y de fuera del SNI",
-   "descripcion": "Universidades, institutos, programas y fuentes de financiamiento: qué función cumple cada institución y cómo se vinculan.",
-   "subtitulo": "Universidades, institutos, programas y fuentes de financiamiento, y la función de cada uno",
+   "descripcion": "Las instituciones donde se investiga: cuántas personas del SNI y no SNI trabajan en cada una, en qué áreas producen y cómo se conectan.",
+   "subtitulo": "Las instituciones donde se investiga, en qué áreas trabajan y cómo se conectan",
    "bajada": null
   }
  },
@@ -146,7 +146,7 @@
    {
     "anio": "1996",
     "titulo": "Más de mil publicaciones en un año",
-    "texto": "Quienes hoy integran el SNI superan por primera vez las 1.000 publicaciones anuales (hoja B04).",
+    "texto": "Quienes hoy integran el SNI superan por primera vez las 1.000 publicaciones anuales.",
     "tipo": "dato"
    },
    {
@@ -162,19 +162,19 @@
    {
     "anio": "2009",
     "titulo": "Más de cinco mil",
-    "texto": "La producción anual pasa las 5.000 publicaciones (hoja B04).",
+    "texto": "La producción anual pasa las 5.000 publicaciones.",
     "tipo": "dato"
    },
    {
     "anio": "2018",
     "titulo": "Un cuarto en acceso abierto",
-    "texto": "El 25 % de los artículos de ese año se publica en acceso abierto (hoja B04).",
+    "texto": "El 25 % de los artículos de ese año se publica en acceso abierto.",
     "tipo": "dato"
    },
    {
     "anio": "2018",
     "titulo": "Mayoría con autora",
-    "texto": "Por primera vez, la mitad o más de los artículos tiene al menos una autora del SNI (hoja B04).",
+    "texto": "Por primera vez, la mitad o más de los artículos tiene al menos una autora del SNI.",
     "tipo": "dato"
    },
    {
@@ -185,7 +185,7 @@
    {
     "anio": "2020",
     "titulo": "El doctorado se vuelve local",
-    "texto": "En la cohorte 2020–2024, el 57,2 % de los nuevos doctores se formó en Uruguay (hoja B05).",
+    "texto": "En la cohorte 2020–2024, el 57,2 % de los nuevos doctores se formó en Uruguay.",
     "tipo": "dato"
    }
   ],

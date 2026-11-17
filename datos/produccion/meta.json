@@ -1,21 +1,21 @@
 {
-  "generado": "2026-11-12",
+  "generado": "2026-11-16",
   "fecha_corte": "2026-11-04",
   "ejemplo": false,
-  "criterio": "Ítems únicos declarados por el SNI y por los no categorizados con CV de hasta 24 meses; publicaciones y proyectos desde 2000.",
+  "criterio": "Ítems únicos declarados por el SNI y por los no SNI con CV de hasta 24 meses; publicaciones y proyectos desde 2000.",
   "personas": {
     "sni": 2447,
     "no_categorizados": 7748
   },
-  "total": 251308,
+  "total": 251648,
   "columnas": ["t", "y", "a", "s", "di", "ti", "pc", "de", "co", "doi", "q", "oa", "u", "n", "e", "i"],
   "dic": {
-    "tipo": ["Artículo arbitrado", "Artículo no arbitrado", "Capítulo de libro", "Documento de trabajo", "Libro", "Libro compilado", "Línea de investigación", "Producción técnica", "Proyecto de desarrollo", "Proyecto de investigación", "Trabajo en evento", "Proyecto de extensión u otro"],
+    "tipo": ["Artículo arbitrado", "Artículo no arbitrado", "Capítulo de libro", "Documento de trabajo", "Libro", "Libro compilado", "Línea de investigación", "Patente", "Producción técnica", "Proyecto de desarrollo", "Proyecto de investigación", "Trabajo en evento", "Proyecto de extensión u otro"],
     "area": ["", "Ciencias Agrícolas", "Ciencias Médicas y de la Salud", "Ciencias Naturales y Exactas", "Ciencias Sociales", "Humanidades", "Ingeniería y Tecnología"],
     "subarea": ["", "Agricultura, Silvicultura y Pesca", "Arte", "Biotecnología Agropecuaria", "Biotecnología de la Salud", "Biotecnología del Medio Ambiente", "Biotecnología Industrial", "Ciencia Política", "Ciencias Biológicas", "Ciencias de la Computación e Información", "Ciencias de la Educación", "Ciencias de la Salud", "Ciencias de la Tierra y relacionadas con el Medio Ambiente", "Ciencias Físicas", "Ciencias Químicas", "Ciencias Veterinarias", "Comunicación y Medios", "Derecho", "Economía y Negocios", "Filosofía, Ética y Religión", "Geografía Económica y Social", "Historia y Arqueología", "Ingeniería Civil", "Ingeniería de los Materiales", "Ingeniería del Medio Ambiente", "Ingeniería Eléctrica, Ingeniería Electrónica e Ingeniería de la Información", "Ingeniería Mecánica", "Ingeniería Médica", "Ingeniería Química", "Lengua y Literatura", "Matemáticas", "Medicina Básica", "Medicina Clínica", "Nanotecnología", "Otras Ciencias Agrícolas", "Otras Ciencias Médicas", "Otras Ciencias Naturales", "Otras Ciencias Sociales", "Otras Humanidades", "Otras Ingenierías y Tecnologías", "Producción Animal y Lechería", "Psicología", "Sociología"],
     "disciplina": ["", "Abuso de Sustancias", "Administración Pública", "Agricultura", "Agronomía, reproducción y protección de plantas", "Alimentos y Bebidas", "Anatomía y Morfología", "Anestesiología", "Antropología, Etnología", "Arqueología", "Arte", "Arte, Historia del Arte", "Astronomía", "Bibliotecología", "Biofísica", "Biología Celular, Microbiología", "Biología del Desarrollo", "Biología Marina, Limnología", "Biología Reproductiva", "Biología y Biología de la Evolución", "Biomateriales", "Bioprocesamiento Tecnológico, Biocatálisis, Fermentación", "Bioproductos, Biomateriales, Bioplásticos, Biocombustibles, Bioderivados, etc.", "Bioquímica y Biología Molecular", "Bioremediación, Diagnóstico Biotecnológico en Gestión Medioambiental", "Biotecnología Agrícola y Biotecnología Alimentaria", "Biotecnología Agropecuaria", "Biotecnología de la Salud", "Biotecnología del Medio Ambiente", "Biotecnología Medioambiental", "Biotecnología relacionada con la Salud", "Cerámicos", "Ciencia Animal y Lechería", "Ciencia Forense", "Ciencia Política", "Ciencias Biológicas", "Ciencias Biomédicas Sociales", "Ciencias de la Computación", "Ciencias de la Computación e Información", "Ciencias de la Educación", "Ciencias de la Información", "Ciencias de la Información y Bioinformática", "Ciencias de la Salud", "Ciencias de la Tierra y relacionadas con el Medio Ambiente", "Ciencias de las Plantas, Botánica", "Ciencias del Deporte", "Ciencias del Suelo", "Ciencias Físicas", "Ciencias Medioambientales", "Ciencias Químicas", "Ciencias Sociales Interdisciplinarias", "Ciencias Veterinarias", "Ciencias y Servicios de Cuidado de la Salud", "Cirugía", "Compuestos", "Comunicación de Medios y Socio-cultural", "Comunicación y Medios", "Conservación de la Biodiversidad", "Control Automático y Robótica", "Cría Animal", "Demografía", "Derecho", "Dermatología y Enfermedades Venéreas", "Diseño Arquitectónico", "Ecología", "Economía y Negocios", "Economía, Econometría", "Educación Especial", "Educación General", "Endocrinología y Metabolismo", "Enfermedades Infecciosas", "Enfermería", "Epidemiología", "Estadística y Probabilidad", "Estudios de Performance Artística", "Estudios del Folklore", "Estudios Generales de Literatura", "Estudios Generales del Lenguaje", "Estudios Religiosos", "Estudios sobre Cine, Radio y Televisión", "Estudios Urbanos", "Ética", "Ética Médica", "Farmacología y Farmacia", "Filosofía, Ética y Religión", "Filosofía, Historia y Filosofía de la Ciencia y la Tecnología", "Física Atómica, Molecular y Química", "Física de los Fluidos y Plasma", "Física de los Materiales Condensados", "Física de Partículas y Campos", "Física Nuclear", "Físico-Química, Ciencia de los Polímeros, Electroquímica", "Fisiología", "Gastroenterología y Hepatología", "Genética Humana", "Genética y Herencia", "Geociencias multidisciplinaria", "Geografía Cultural y Económica", "Geografía Económica y Social", "Geografía Física", "Geología", "Geoquímica y Geofísica", "Hardware y Arquitectura de Computadoras", "Hematología", "Historia", "Horticultura, Viticultura", "Ingeniería Arquitectónica", "Ingeniería Civil", "Ingeniería de la Construcción", "Ingeniería de los Materiales", "Ingeniería de Procesos Químicos", "Ingeniería de Sistemas y Comunicaciones", "Ingeniería del Medio Ambiente", "Ingeniería del Petróleo, Energía y Combustibles", "Ingeniería del Transporte", "Ingeniería Eléctrica y Electrónica", "Ingeniería Eléctrica, Ingeniería Electrónica e Ingeniería de la Información", "Ingeniería Marina, Recipientes del Mar", "Ingeniería Mecánica", "Ingeniería Médica", "Ingeniería Medioambiental y Geológica, Geotécnicas", "Ingeniería Municipal y Estructural", "Ingeniería Oceanográfica", "Ingeniería Química", "Inmunología", "Investigación Climatológica", "Lengua y Literatura", "Lenguajes Específicos", "Lingüística", "Literaturas Específicas", "Matemática Aplicada", "Matemática Pura", "Mecánica Aplicada", "Medicina Clínica", "Medicina Critica y de Emergencia", "Medicina General e Interna", "Medicina Integral y Complementaria", "Medicina Química", "Medicina Tropical", "Meteorología y Ciencias Atmosféricas", "Métodos de Investigación en Bioquímica", "Micología", "Nano-materiales", "Nano-procesamiento", "Negocios y Administración", "Neurociencias", "Neurología Clínica", "NO CORRESPONDE", "Nutrición, Dietética", "Obstetricia y Ginecología", "Oceanografía, Hidrología, Recursos Acuáticos", "Odontología, Medicina y Cirugía Oral", "Oncología", "Óptica, Acústica", "Organización Industrial", "Ortopedia", "Otorrinolaringología", "Otras Ciencias Agrícolas", "Otras Ciencias Médicas", "Otras Ciencias Naturales", "Otras Ciencias Sociales", "Otras disciplinas", "Otras Humanidades", "Otras Ingenierías y Tecnologías", "Otros tipos de Medicina Clínica", "Otros Tópicos Biológicos", "Paleontología", "Papel y Madera", "Parasitología", "Patología", "Pediatría", "Periodismo", "Pesca", "Planeamiento y aspectos sociales del Transporte", "Politicas y Servicios de Salud", "Producción Animal y Lechería", "Psicología", "Psicología especial", "Psiquiatría", "Química Analítica", "Química Coloidal", "Química Inorgánica y Nuclear", "Química Orgánica", "Radiología, Medicina Nuclear y Diagnóstico por Imágenes", "Recubrimientos y Películas", "Reumatología", "Salud Ocupacional", "Salud Pública y Medioambiental", "Sensores Remotos", "Silvicultura", "Sistema Respiratorio", "Sistemas Cardíaco y Cardiovascular", "Sistemas de Automatización y Control", "Sociología", "Tecnología GM, clonación de ganado, selección asistida, diagnósticos, etc.", "Tecnologías que involucran la identificación de ADN, proteínas y enzimas", "Tecnologías que involucran la manipulación de células, tejidos, órganos o todo el org", "Telecomunicaciones", "Teología", "Teoría Literaria", "Teoría Organizacional", "Termodinámica", "Tópicos Sociales", "Toxicología", "Transplantes", "Urología y Nefrología", "Virología", "Zoología, Ornitología, Entomología, Etología"],
     "calidad": ["", "Arbitrado en Latindex o Redalyc", "Arbitrado en SciELO", "Arbitrado en Scopus (no WoS)", "Arbitrado en WoS", "Arbitrado sin indexación declarada", "Con referato", "Evento arbitrado", "Evento no arbitrado", "No aplica", "No arbitrado", "Sin referato declarado"],
-    "autoria": ["No categorizado", "SNI", "SNI y no categorizados"],
+    "autoria": ["No SNI", "SNI", "SNI y no SNI"],
     "estado": ["", "Activa", "Concluido", "En marcha", "Finalizada"],
     "institucion": ["Udelar", "Empresas", "Exterior", "Otros organismos públicos", "ANEP", "Organizaciones sin fines de lucro", "Universidad Católica del Uruguay", "UTEC", "Institut Pasteur de Montevideo", "ASSE", "INIA", "IIBCE", "MEC", "Intendencia de Montevideo", "Universidad ORT Uruguay", "Educación primaria y secundaria privada", "Universidad de Montevideo", "MGAP", "MSP", "CLAEH", "Universidad de la Empresa", "LATU", "CUDIM", "FLACSO", "Instituto Universitario Asociación Cristiana de Jóvenes", "Institutos privados de enseñanza técnico profesional", "Otra", "Instituto Universitario CEDIIAP", "Instituto Universitario Monseñor Mariano Soler", "Institutos Terciarios no Universitarios"]
   },
@@ -24,139 +24,127 @@
       "archivo": "p-2026-2026.json",
       "desde": 2026,
       "hasta": 2026,
-      "n": 5832
+      "n": 5834
     },
     {
       "archivo": "p-2025-2025.json",
       "desde": 2025,
       "hasta": 2025,
-      "n": 11613
+      "n": 11627
     },
     {
       "archivo": "p-2024-2024.json",
       "desde": 2024,
       "hasta": 2024,
-      "n": 12569
+      "n": 12579
     },
     {
       "archivo": "p-2023-2023.json",
       "desde": 2023,
       "hasta": 2023,
-      "n": 13251
+      "n": 13263
     },
     {
       "archivo": "p-2022-2022.json",
       "desde": 2022,
       "hasta": 2022,
-      "n": 12224
+      "n": 12235
     },
     {
       "archivo": "p-2021-2021.json",
       "desde": 2021,
       "hasta": 2021,
-      "n": 12312
+      "n": 12326
     },
     {
       "archivo": "p-2020-2020.json",
       "desde": 2020,
       "hasta": 2020,
-      "n": 10240
+      "n": 10252
     },
     {
       "archivo": "p-2019-2019.json",
       "desde": 2019,
       "hasta": 2019,
-      "n": 12743
+      "n": 12763
     },
     {
       "archivo": "p-2018-2018.json",
       "desde": 2018,
       "hasta": 2018,
-      "n": 12056
+      "n": 12068
     },
     {
       "archivo": "p-2017-2017.json",
       "desde": 2017,
       "hasta": 2017,
-      "n": 11970
+      "n": 11982
     },
     {
       "archivo": "p-2016-2016.json",
       "desde": 2016,
       "hasta": 2016,
-      "n": 11612
+      "n": 11629
     },
     {
       "archivo": "p-2015-2015.json",
       "desde": 2015,
       "hasta": 2015,
-      "n": 11679
+      "n": 11689
     },
     {
       "archivo": "p-2014-2014.json",
       "desde": 2014,
       "hasta": 2014,
-      "n": 11620
+      "n": 11633
     },
     {
       "archivo": "p-2013-2013.json",
       "desde": 2013,
       "hasta": 2013,
-      "n": 11004
+      "n": 11016
     },
     {
       "archivo": "p-2012-2012.json",
       "desde": 2012,
       "hasta": 2012,
-      "n": 10609
+      "n": 10628
     },
     {
       "archivo": "p-2011-2011.json",
       "desde": 2011,
       "hasta": 2011,
-      "n": 10903
+      "n": 10915
     },
     {
       "archivo": "p-2010-2010.json",
       "desde": 2010,
       "hasta": 2010,
-      "n": 10346
+      "n": 10354
     },
     {
       "archivo": "p-2009-2009.json",
       "desde": 2009,
       "hasta": 2009,
-      "n": 9727
+      "n": 9746
     },
     {
-      "archivo": "p-2008-2008.json",
-      "desde": 2008,
-      "hasta": 2008,
-      "n": 8304
-    },
-    {
-      "archivo": "p-2007-2007.json",
+      "archivo": "p-2007-2008.json",
       "desde": 2007,
-      "hasta": 2007,
-      "n": 7734
+      "hasta": 2008,
+      "n": 16072
     },
     {
-      "archivo": "p-2005-2006.json",
-      "desde": 2005,
+      "archivo": "p-2004-2006.json",
+      "desde": 2004,
       "hasta": 2006,
-      "n": 12228
+      "n": 17012
     },
     {
-      "archivo": "p-2002-2004.json",
-      "desde": 2002,
-      "hasta": 2004,
-      "n": 12725
-    },
-    {
-      "archivo": "p-1954-2001.json",
+      "archivo": "p-1954-2003.json",
       "desde": 1954,
-      "hasta": 2001,
-      "n": 8006
+      "hasta": 2003,
+      "n": 16024
     },
     {
       "archivo": "p-sin-anio.json",

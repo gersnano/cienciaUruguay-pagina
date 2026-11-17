@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generado": "2026-11-12",
+    "generado": "2026-11-16",
     "personas": 15300,
     "vigentes": 7748,
     "meses": 24,
@@ -9,44 +9,44 @@
   "tipologia": {
     "orden": ["Investigador/a con producción reciente", "En formación de posgrado", "Bajo interés: sin producción ni vínculo científico", "Docencia o trabajo académico sin producción reciente", "Actividad de I+D sin producción reciente", "Perfil tecnológico o de innovación", "Trayectoria con producción histórica, sin actividad reciente"],
     "total": {
-      "Actividad de I+D sin producción reciente": 344,
+      "Actividad de I+D sin producción reciente": 342,
       "Bajo interés: sin producción ni vínculo científico": 905,
-      "Docencia o trabajo académico sin producción reciente": 772,
+      "Docencia o trabajo académico sin producción reciente": 771,
       "En formación de posgrado": 1100,
       "Investigador/a con producción reciente": 4398,
-      "Perfil tecnológico o de innovación": 142,
+      "Perfil tecnológico o de innovación": 145,
       "Trayectoria con producción histórica, sin actividad reciente": 87
     },
     "por_area": [
       [
         "Ciencias Agrícolas",
         "Actividad de I+D sin producción reciente",
-        23
+        22
       ],
       [
         "Ciencias Médicas y de la Salud",
         "Actividad de I+D sin producción reciente",
-        70
+        63
       ],
       [
         "Ciencias Naturales y Exactas",
         "Actividad de I+D sin producción reciente",
-        72
+        70
       ],
       [
         "Ciencias Sociales",
         "Actividad de I+D sin producción reciente",
-        78
+        84
       ],
       [
         "Humanidades",
         "Actividad de I+D sin producción reciente",
-        18
+        21
       ],
       [
         "Ingeniería y Tecnología",
         "Actividad de I+D sin producción reciente",
-        43
+        42
       ],
       [
         "Sin área informada",
@@ -56,32 +56,32 @@
       [
         "Ciencias Agrícolas",
         "Bajo interés: sin producción ni vínculo científico",
-        39
+        37
       ],
       [
         "Ciencias Médicas y de la Salud",
         "Bajo interés: sin producción ni vínculo científico",
-        87
+        84
       ],
       [
         "Ciencias Naturales y Exactas",
         "Bajo interés: sin producción ni vínculo científico",
-        60
+        58
       ],
       [
         "Ciencias Sociales",
         "Bajo interés: sin producción ni vínculo científico",
-        145
+        146
       ],
       [
         "Humanidades",
         "Bajo interés: sin producción ni vínculo científico",
-        51
+        52
       ],
       [
         "Ingeniería y Tecnología",
         "Bajo interés: sin producción ni vínculo científico",
-        78
+        83
       ],
       [
         "Sin área informada",
@@ -91,32 +91,32 @@
       [
         "Ciencias Agrícolas",
         "Docencia o trabajo académico sin producción reciente",
-        55
+        47
       ],
       [
         "Ciencias Médicas y de la Salud",
         "Docencia o trabajo académico sin producción reciente",
-        154
+        148
       ],
       [
         "Ciencias Naturales y Exactas",
         "Docencia o trabajo académico sin producción reciente",
-        110
+        103
       ],
       [
         "Ciencias Sociales",
         "Docencia o trabajo académico sin producción reciente",
-        157
+        160
       ],
       [
         "Humanidades",
         "Docencia o trabajo académico sin producción reciente",
-        66
+        72
       ],
       [
         "Ingeniería y Tecnología",
         "Docencia o trabajo académico sin producción reciente",
-        71
+        82
       ],
       [
         "Sin área informada",
@@ -126,32 +126,32 @@
       [
         "Ciencias Agrícolas",
         "En formación de posgrado",
-        107
+        99
       ],
       [
         "Ciencias Médicas y de la Salud",
         "En formación de posgrado",
-        173
+        161
       ],
       [
         "Ciencias Naturales y Exactas",
         "En formación de posgrado",
-        198
+        196
       ],
       [
         "Ciencias Sociales",
         "En formación de posgrado",
-        321
+        320
       ],
       [
         "Humanidades",
         "En formación de posgrado",
-        97
+        109
       ],
       [
         "Ingeniería y Tecnología",
         "En formación de posgrado",
-        90
+        101
       ],
       [
         "Sin área informada",
@@ -161,32 +161,32 @@
       [
         "Ciencias Agrícolas",
         "Investigador/a con producción reciente",
-        520
+        474
       ],
       [
         "Ciencias Médicas y de la Salud",
         "Investigador/a con producción reciente",
-        815
+        747
       ],
       [
         "Ciencias Naturales y Exactas",
         "Investigador/a con producción reciente",
-        848
+        855
       ],
       [
         "Ciencias Sociales",
         "Investigador/a con producción reciente",
-        1253
+        1251
       ],
       [
         "Humanidades",
         "Investigador/a con producción reciente",
-        389
+        453
       ],
       [
         "Ingeniería y Tecnología",
         "Investigador/a con producción reciente",
-        352
+        397
       ],
       [
         "Sin área informada",
@@ -196,7 +196,7 @@
       [
         "Ciencias Agrícolas",
         "Perfil tecnológico o de innovación",
-        16
+        13
       ],
       [
         "Ciencias Médicas y de la Salud",
@@ -206,12 +206,12 @@
       [
         "Ciencias Naturales y Exactas",
         "Perfil tecnológico o de innovación",
-        24
+        25
       ],
       [
         "Ciencias Sociales",
         "Perfil tecnológico o de innovación",
-        34
+        32
       ],
       [
         "Humanidades",
@@ -221,7 +221,7 @@
       [
         "Ingeniería y Tecnología",
         "Perfil tecnológico o de innovación",
-        21
+        28
       ],
       [
         "Sin área informada",
@@ -231,7 +231,7 @@
       [
         "Ciencias Agrícolas",
         "Trayectoria con producción histórica, sin actividad reciente",
-        12
+        11
       ],
       [
         "Ciencias Médicas y de la Salud",
@@ -251,7 +251,7 @@
       [
         "Ingeniería y Tecnología",
         "Trayectoria con producción histórica, sin actividad reciente",
-        5
+        6
       ],
       [
         "Sin área informada",
@@ -273,17 +273,17 @@
       [
         "Ciencias Agrícolas",
         "Privado y academia",
-        63
+        57
       ],
       [
         "Ciencias Médicas y de la Salud",
         "Privado y academia",
-        332
+        314
       ],
       [
         "Ciencias Naturales y Exactas",
         "Privado y academia",
-        135
+        137
       ],
       [
         "Ciencias Sociales",
@@ -293,12 +293,12 @@
       [
         "Humanidades",
         "Privado y academia",
-        79
+        86
       ],
       [
         "Ingeniería y Tecnología",
         "Privado y academia",
-        89
+        104
       ],
       [
         "Sin área informada",
@@ -308,32 +308,32 @@
       [
         "Ciencias Agrícolas",
         "Privado y otros sectores",
-        11
+        10
       ],
       [
         "Ciencias Médicas y de la Salud",
         "Privado y otros sectores",
-        52
+        51
       ],
       [
         "Ciencias Naturales y Exactas",
         "Privado y otros sectores",
-        27
+        26
       ],
       [
         "Ciencias Sociales",
         "Privado y otros sectores",
-        53
+        51
       ],
       [
         "Humanidades",
         "Privado y otros sectores",
-        19
+        20
       ],
       [
         "Ingeniería y Tecnología",
         "Privado y otros sectores",
-        18
+        22
       ],
       [
         "Sin área informada",
@@ -343,32 +343,32 @@
       [
         "Ciencias Agrícolas",
         "Sin vínculo con el sector privado",
-        529
+        478
       ],
       [
         "Ciencias Médicas y de la Salud",
         "Sin vínculo con el sector privado",
-        682
+        636
       ],
       [
         "Ciencias Naturales y Exactas",
         "Sin vínculo con el sector privado",
-        866
+        869
       ],
       [
         "Ciencias Sociales",
         "Sin vínculo con el sector privado",
-        1087
+        1089
       ],
       [
         "Humanidades",
         "Sin vínculo con el sector privado",
-        424
+        475
       ],
       [
         "Ingeniería y Tecnología",
         "Sin vínculo con el sector privado",
-        326
+        367
       ],
       [
         "Sin área informada",
@@ -378,32 +378,32 @@
       [
         "Ciencias Agrícolas",
         "Solo sector privado",
-        47
+        43
       ],
       [
         "Ciencias Médicas y de la Salud",
         "Solo sector privado",
-        86
+        79
       ],
       [
         "Ciencias Naturales y Exactas",
         "Solo sector privado",
-        68
+        63
       ],
       [
         "Ciencias Sociales",
         "Solo sector privado",
-        97
+        101
       ],
       [
         "Humanidades",
         "Solo sector privado",
-        16
+        19
       ],
       [
         "Ingeniería y Tecnología",
         "Solo sector privado",
-        73
+        82
       ],
       [
         "Sin área informada",
@@ -413,32 +413,32 @@
       [
         "Ciencias Agrícolas",
         "Vínculo privado solo en el pasado",
-        122
+        115
       ],
       [
         "Ciencias Médicas y de la Salud",
         "Vínculo privado solo en el pasado",
-        182
+        158
       ],
       [
         "Ciencias Naturales y Exactas",
         "Vínculo privado solo en el pasado",
-        228
+        224
       ],
       [
         "Ciencias Sociales",
         "Vínculo privado solo en el pasado",
-        511
+        512
       ],
       [
         "Humanidades",
         "Vínculo privado solo en el pasado",
-        102
+        126
       ],
       [
         "Ingeniería y Tecnología",
         "Vínculo privado solo en el pasado",
-        154
+        164
       ],
       [
         "Sin área informada",

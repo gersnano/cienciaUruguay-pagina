@@ -42,7 +42,7 @@
   "produccion": {
    "nombre": "Producción científica",
    "universo": "SNI y personas fuera del SNI con CV actualizado en los últimos 24 meses",
-   "descripcion": "Qué se investiga y cómo se produce: áreas, temas y conceptos, su evolución, los temas que crecen y el listado de ítems.",
+   "descripcion": "Qué se investiga y cómo se produce: áreas y subáreas, sus disciplinas y conceptos, su evolución, lo que crece y las patentes.",
    "subtitulo": "Qué se investiga en Uruguay y cómo se produce: de las grandes áreas a los temas y los conceptos.",
    "bajada": null
   },
@@ -356,11 +356,11 @@
   },
   "no-categorizados/depuracion": {
    "titulo": "Universo y actividad",
-   "intro": "Este análisis reúne a las personas que registran su trayectoria en CVUy sin integrar el SNI y que actualizaron su CV en los últimos 24 meses: 10.063 personas, a las que aquí se llama «no categorizadas». Todos los gráficos se refieren a ellas. Este primer capítulo las compara con el SNI y muestra qué tipo de actividad declaran."
+   "intro": "Este análisis reúne a las personas que registran su trayectoria en CVUy sin integrar el SNI y que actualizaron su CV en los últimos 24 meses: 10.063 personas, a las que aquí se llama «no SNI». Todos los gráficos se refieren a ellas. Este primer capítulo las compara con el SNI y muestra qué tipo de actividad declaran."
   },
   "no-categorizados/personas": {
    "titulo": "Quiénes son",
-   "intro": "Las personas no categorizadas son una población joven y mayoritariamente femenina: 60 % son mujeres y la edad mediana es de 39 años. Este capítulo describe cómo se distribuyen entre áreas, sectores, géneros y edades, y qué las distingue del SNI."
+   "intro": "Las personas no SNI son una población joven y mayoritariamente femenina: 60 % son mujeres y la edad mediana es de 39 años. Este capítulo describe cómo se distribuyen entre áreas, sectores, géneros y edades, y qué las distingue del SNI."
   },
   "no-categorizados/formacion": {
    "titulo": "Formación",
@@ -368,23 +368,23 @@
   },
   "no-categorizados/trabajo": {
    "titulo": "Inserción laboral",
-   "intro": "Las personas no categorizadas trabajan en 63 instituciones principales distintas, que aquí se agrupan por sector sin compararlas entre sí. 17 % tiene un vínculo activo con empresas y solo 10 % trabaja con dedicación total."
+   "intro": "Las personas no SNI trabajan en 63 instituciones principales distintas, que aquí se agrupan por sector sin compararlas entre sí. 17 % tiene un vínculo activo con empresas y solo 10 % trabaja con dedicación total."
   },
   "no-categorizados/produccion": {
    "titulo": "Producción científica fuera del SNI",
-   "intro": "Entre 2022 y 2026 las personas no categorizadas publicaron 7.583 artículos arbitrados, 60 % de ellos en revistas de WoS o Scopus. Pero la producción está concentrada: 67 % no publicó ningún artículo arbitrado en esos años, y los trabajos en eventos y la producción técnica pesan tanto como los artículos."
+   "intro": "Entre 2022 y 2026 las personas no SNI publicaron 7.583 artículos arbitrados, 60 % de ellos en revistas de WoS o Scopus. Pero la producción está concentrada: 67 % no publicó ningún artículo arbitrado en esos años, y los trabajos en eventos y la producción técnica pesan tanto como los artículos."
   },
   "no-categorizados/proyectos": {
    "titulo": "Proyectos y financiamiento",
-   "intro": "Hay 2.052 proyectos en marcha con participación de personas no categorizadas. Este capítulo muestra cuántos empiezan cada año y cómo se financian."
+   "intro": "Hay 2.052 proyectos en marcha con participación de personas no SNI. Este capítulo muestra cuántos empiezan cada año y cómo se financian."
   },
   "no-categorizados/genero": {
    "titulo": "Brechas de género",
    "intro": "Fuera del SNI las mujeres son mayoría: 60 %, frente a 49 % dentro del sistema. Este capítulo compara sus condiciones con las de los varones y muestra en qué campos la mayoría femenina se acentúa o se invierte."
   },
   "produccion/cascada": {
-   "titulo": "Áreas, temas y conceptos",
-   "intro": "La producción se ordena en tres niveles: las 6 áreas del conocimiento, sus 60 temas y los 1.055 conceptos más característicos de cada tema. Lo que elija aquí —y los filtros de la barra superior— se mantiene en todo el recorrido."
+   "titulo": "Áreas y subáreas",
+   "intro": "La producción se ordena en dos niveles: las áreas del conocimiento y sus subáreas. Al elegir una subárea se abre su ficha: allí la disciplina funciona como filtro y se listan los conceptos más frecuentes. (El sitio completa las cifras con los datos.)"
   },
   "produccion/tiempo": {
    "titulo": "Cómo crece y cómo se produce",
@@ -560,44 +560,44 @@
    "nota": "El género de los autores se asigna cruzando nombre y apellido con la hoja de investigadores; los homónimos exactos pueden asignarse mal."
   },
   "no-categorizados/grafico-1": {
-   "titulo": "El SNI y los no categorizados en diez indicadores",
-   "bajada": "No categorizados con CV vigente y SNI, en diez indicadores",
-   "muestra": "Diez rasgos de las 10.063 personas no categorizadas con CV vigente frente a las 2.447 del SNI: género, edad, formación, dedicación, vínculos, producción y proyectos.",
-   "leer": "Cada fila tiene su propia escala. El punto celeste son los no categorizados y el azul, el SNI; la distancia entre ambos es la diferencia entre las dos comunidades.",
+   "titulo": "El SNI y los no SNI en diez indicadores",
+   "bajada": "No SNI con CV vigente y SNI, en diez indicadores",
+   "muestra": "Diez rasgos de las 10.063 personas no SNI con CV vigente frente a las 2.447 del SNI: género, edad, formación, dedicación, vínculos, producción y proyectos.",
+   "leer": "Cada fila tiene su propia escala. El punto celeste son los no SNI y el azul, el SNI; la distancia entre ambos es la diferencia entre las dos comunidades.",
    "nota": "Los promedios que no están en las cifras clave se calculan ponderando las áreas por su cantidad de investigadores."
   },
   "no-categorizados/grafico-2": {
    "titulo": "Tipos de actividad declarada",
-   "bajada": "Personas no categorizadas con CV vigente según la actividad que declaran. Cada cuadro equivale al 1 %.",
-   "muestra": "Una clasificación de las personas no categorizadas según lo que muestran sus CV: si producen, si hacen I+D sin publicar, si se están formando, si hacen docencia o si su CV no refleja actividad científica.",
+   "bajada": "Personas no SNI con CV vigente según la actividad que declaran. Cada cuadro equivale al 1 %.",
+   "muestra": "Una clasificación de las personas no SNI según lo que muestran sus CV: si producen, si hacen I+D sin publicar, si se están formando, si hacen docencia o si su CV no refleja actividad científica.",
    "leer": "La grilla tiene 100 cuadros; los tonos azules son perfiles con actividad de investigación, los verdes y ocres, perfiles en formación o docencia, y el terracota, perfiles sin producción ni vínculo científico. Seleccione un área en las pestañas.",
    "nota": "7.771 personas con CV actualizado en los últimos 24 meses, según la planilla No_SNI.xlsx. La tipología combina la producción reciente, los vínculos y la formación en curso."
   },
   "no-categorizados/grafico-3": {
    "titulo": "Quiénes investigan fuera del SNI",
-   "bajada": "Personas no categorizadas con CV vigente según área, sector y género. Cada punto representa a cinco personas.",
-   "muestra": "Las 10.063 personas no categorizadas con el CV actualizado en los últimos dos años, agrupadas por área del conocimiento, sector de su institución principal, género o tramo de edad.",
+   "bajada": "Personas no SNI con CV vigente según área, sector y género. Cada punto representa a cinco personas.",
+   "muestra": "Las 10.063 personas no SNI con el CV actualizado en los últimos dos años, agrupadas por área del conocimiento, sector de su institución principal, género o tramo de edad.",
    "leer": "Cada punto equivale a cinco personas y el color indica el grupo. Al cambiar el criterio los puntos se reacomodan; el tamaño de cada bloque es proporcional a la cantidad de personas. Pase el puntero por un grupo para resaltarlo.",
    "nota": "Las personas sin área, sector, género o edad informados cuentan en el total pero no se dibujan en esa agrupación."
   },
   "no-categorizados/grafico-4": {
    "titulo": "Cada área y sector tiene un perfil propio",
-   "bajada": "Indicadores de cada área o sector frente al total de personas no categorizadas",
-   "muestra": "El perfil de un área o de un sector en once indicadores de edad, formación, dedicación, vínculos y producción, frente al conjunto de los no categorizados.",
+   "bajada": "Indicadores de cada área o sector frente al total de personas no SNI",
+   "muestra": "El perfil de un área o de un sector en once indicadores de edad, formación, dedicación, vínculos y producción, frente al conjunto de los no SNI.",
    "leer": "Seleccione el grupo en la lista. Cada pista tiene su propia escala: la línea vertical es el total y el punto, el grupo elegido (azul si está por encima, ocre si está por debajo). Los puntos tenues son los demás grupos.",
    "nota": "La edad del total es la mediana general; el resto, promedios ponderados de las áreas."
   },
   "no-categorizados/grafico-5": {
    "titulo": "Una población más joven y con más mujeres",
-   "bajada": "Personas por tramo de edad y género, en el SNI y entre los no categorizados",
-   "muestra": "La distribución por edad y género de las personas del SNI y de las no categorizadas con CV vigente.",
+   "bajada": "Personas por tramo de edad y género, en el SNI y entre los no SNI",
+   "muestra": "La distribución por edad y género de las personas del SNI y de las no SNI con CV vigente.",
    "leer": "Cada fila es un tramo de edad, con las mujeres a un lado y los varones al otro. Con «Total» se ve el conjunto de quienes investigan; seleccione un grupo para compararlos."
   },
   "no-categorizados/grafico-6": {
    "titulo": "Edad por área, dentro y fuera del SNI",
-   "bajada": "Edad de las personas no categorizadas y del SNI, por área",
-   "muestra": "Para cada área, la proporción de personas menores de 40 años, la edad mediana o la proporción de 65 años y más, entre los no categorizados y en el SNI.",
-   "leer": "Seleccione un indicador. Cada fila es un área; el punto celeste son los no categorizados y el azul, el SNI. Una distancia grande en «menores de 40» indica una base joven amplia fuera del sistema."
+   "bajada": "Edad de las personas no SNI y del SNI, por área",
+   "muestra": "Para cada área, la proporción de personas menores de 40 años, la edad mediana o la proporción de 65 años y más, entre los no SNI y en el SNI.",
+   "leer": "Seleccione un indicador. Cada fila es un área; el punto celeste son los no SNI y el azul, el SNI. Una distancia grande en «menores de 40» indica una base joven amplia fuera del sistema."
   },
   "no-categorizados/grafico-7": {
    "titulo": "Formación máxima, dentro y fuera del SNI",
@@ -615,28 +615,28 @@
   "no-categorizados/grafico-9": {
    "titulo": "Una comunidad en formación de posgrado",
    "bajada": "Formaciones en curso declaradas, según el nivel, total y por área. Cada cuadro equivale al 1 %.",
-   "muestra": "Las formaciones que las personas no categorizadas declaran tener en curso: doctorados, maestrías, especializaciones, carreras de grado y tecnicaturas, para el total y para cada área.",
+   "muestra": "Las formaciones que las personas no SNI declaran tener en curso: doctorados, maestrías, especializaciones, carreras de grado y tecnicaturas, para el total y para cada área.",
    "leer": "La grilla tiene 100 cuadros, uno por cada punto porcentual; cada color es un nivel. Seleccione un área con las pestañas y pase el puntero por un nivel en la leyenda para resaltarlo.",
    "nota": "Una persona puede declarar más de una formación en curso."
   },
   "no-categorizados/grafico-10": {
    "titulo": "Doctorados obtenidos en Uruguay, por cohorte",
    "bajada": "Porcentaje de cada cohorte de doctores que obtuvo el título en Uruguay",
-   "muestra": "Entre quienes tienen doctorado, la proporción de cada cohorte que lo obtuvo en Uruguay, para el SNI y para los no categorizados.",
+   "muestra": "Entre quienes tienen doctorado, la proporción de cada cohorte que lo obtuvo en Uruguay, para el SNI y para los no SNI.",
    "leer": "Cada punto es un quinquenio. Cuando la línea supera el 50 %, la mayoría de esa cohorte se doctoró en el país.",
    "nota": "Cohortes según el quinquenio de obtención del doctorado, con al menos 10 doctores. El total reúne todas las cohortes graficadas."
   },
   "no-categorizados/grafico-11": {
    "titulo": "Dónde obtuvieron el doctorado",
-   "bajada": "Doctores no categorizados según el país donde obtuvieron el título. Cada cuadro equivale al 1 %.",
-   "muestra": "El país donde obtuvieron su doctorado las personas no categorizadas que tienen ese título como máxima formación: Uruguay, los destinos externos más frecuentes y el resto.",
+   "bajada": "Doctores no SNI según el país donde obtuvieron el título. Cada cuadro equivale al 1 %.",
+   "muestra": "El país donde obtuvieron su doctorado las personas no SNI que tienen ese título como máxima formación: Uruguay, los destinos externos más frecuentes y el resto.",
    "leer": "La grilla tiene 100 cuadros, uno por cada punto porcentual; cada color es un país. Pase el puntero por un país en la leyenda para resaltar sus cuadros.",
    "nota": "Haberse formado afuera no implica trabajar hoy en el exterior."
   },
   "no-categorizados/grafico-12": {
    "titulo": "Dirección de tesis por área",
    "bajada": "Tutorías de tesis por cada 100 personas, total y por área",
-   "muestra": "Cuántas tesis y trabajos finales dirigieron o dirigen las personas no categorizadas, por cada 100 personas de cada área: de grado, de maestría y de doctorado.",
+   "muestra": "Cuántas tesis y trabajos finales dirigieron o dirigen las personas no SNI, por cada 100 personas de cada área: de grado, de maestría y de doctorado.",
    "leer": "Seleccione el tipo de tutoría. Cada pétalo es un área y su largo es la tasa; al expresarse por cada 100 personas, se comparan áreas de distinto tamaño.",
    "nota": "Se cuentan registros de tutoría declarados en los CV a lo largo de toda la trayectoria (concluidas) o vigentes (en marcha)."
   },
@@ -649,7 +649,7 @@
   "no-categorizados/grafico-14": {
    "titulo": "Sector de inserción laboral por área",
    "bajada": "Sector de la institución principal, total y por área",
-   "muestra": "En qué tipo de institución trabajan principalmente las personas no categorizadas de cada área: academia, sector público no académico, sector privado o exterior.",
+   "muestra": "En qué tipo de institución trabajan principalmente las personas no SNI de cada área: academia, sector público no académico, sector privado o exterior.",
    "leer": "Cada barra es un área y suma 100 %; el valor de la derecha es el porcentaje en la academia. Pase el puntero por un tramo para ver su porcentaje.",
    "nota": "Se excluyen las personas sin sector informado. Los sectores agrupan instituciones por su naturaleza: no se comparan instituciones entre sí."
   },
@@ -661,23 +661,23 @@
   },
   "no-categorizados/grafico-16": {
    "titulo": "Vínculo con el sector privado",
-   "bajada": "Personas no categorizadas con CV vigente según su relación laboral con empresas y organizaciones privadas",
-   "muestra": "Si las personas no categorizadas trabajan hoy en el sector privado (solas o combinándolo con la academia u otros sectores), si lo hicieron en el pasado o si nunca tuvieron ese vínculo.",
+   "bajada": "Personas no SNI con CV vigente según su relación laboral con empresas y organizaciones privadas",
+   "muestra": "Si las personas no SNI trabajan hoy en el sector privado (solas o combinándolo con la academia u otros sectores), si lo hicieron en el pasado o si nunca tuvieron ese vínculo.",
    "leer": "Cada cuadro es el 1 % de las personas; los tonos cálidos son vínculos actuales con el sector privado. Seleccione un área en las pestañas."
   },
   "no-categorizados/grafico-17": {
    "titulo": "La producción, dentro y fuera del SNI",
    "bajada": "Indicadores anuales de producción de cada grupo",
-   "muestra": "La producción registrada en los CV de las personas del SNI y de las no categorizadas con CV vigente, año a año: publicaciones, artículos arbitrados, indexación, acceso abierto y proyectos iniciados.",
+   "muestra": "La producción registrada en los CV de las personas del SNI y de las no SNI con CV vigente, año a año: publicaciones, artículos arbitrados, indexación, acceso abierto y proyectos iniciados.",
    "leer": "Seleccione un indicador con las pestañas y acote los años con el selector de período. Cada línea es un grupo; pase el puntero para ver los valores de un año.",
    "nota": "Las publicaciones de cada grupo se cuentan una vez, pero un trabajo firmado por personas de los dos grupos aparece en ambas series. El año en curso no se muestra."
   },
   "no-categorizados/grafico-18": {
    "titulo": "La evolución de la producción desde 1990",
    "bajada": "Indicadores anuales de publicaciones, artículos y proyectos",
-   "muestra": "La producción anual de las personas no categorizadas con CV vigente, en dos grupos de indicadores: cantidades (publicaciones, artículos arbitrados y proyectos iniciados, en valores absolutos) y porcentajes calculados sobre los artículos arbitrados de cada año (indexación en WoS o Scopus, acceso abierto y autoría femenina).",
+   "muestra": "La producción anual de las personas no SNI con CV vigente, en dos grupos de indicadores: cantidades (publicaciones, artículos arbitrados y proyectos iniciados, en valores absolutos) y porcentajes calculados sobre los artículos arbitrados de cada año (indexación en WoS o Scopus, acceso abierto y autoría femenina).",
    "leer": "Seleccione un indicador en las pestañas: las de la izquierda son cantidades y las de la derecha, porcentajes. Bajo las pestañas se indica la unidad del eje y qué mide el indicador. Acote el período con el selector inferior y pase el puntero por la curva para ver el valor de cada año.",
-   "nota": "El año en curso, incompleto, no se muestra. Cada publicación se cuenta una vez aunque tenga varios autores no categorizados."
+   "nota": "El año en curso, incompleto, no se muestra. Cada publicación se cuenta una vez aunque tenga varios autores no SNI."
   },
   "no-categorizados/grafico-19": {
    "titulo": "Tipos de producción a lo largo del tiempo",
@@ -700,9 +700,9 @@
   "no-categorizados/grafico-22": {
    "titulo": "La evolución de los proyectos",
    "bajada": "Proyectos iniciados cada año desde 1990, en total y según su financiamiento",
-   "muestra": "Cuántos proyectos en los que participan personas no categorizadas comenzaron cada año, en total y según quién los financia: la agencia nacional (ANII), la comisión de investigación de la Udelar (CSIC), fuentes internacionales, otras fuentes o ninguna declarada.",
+   "muestra": "Cuántos proyectos en los que participan personas no SNI comenzaron cada año, en total y según quién los financia: la agencia nacional (ANII), la comisión de investigación de la Udelar (CSIC), fuentes internacionales, otras fuentes o ninguna declarada.",
    "leer": "Cada línea es una fuente de financiamiento; la línea gruesa oscura es el total. El eje vertical es la cantidad de proyectos iniciados en el año. Pase el puntero para ver los valores de cada año y use el selector de período para acercarse a un tramo.",
-   "nota": "Proyectos únicos (un proyecto declarado por varias personas no categorizadas cuenta una vez), según su año de inicio. La ausencia de financiador declarado no implica que el proyecto carezca de recursos."
+   "nota": "Proyectos únicos (un proyecto declarado por varias personas no SNI cuenta una vez), según su año de inicio. La ausencia de financiador declarado no implica que el proyecto carezca de recursos."
   },
   "no-categorizados/grafico-23": {
    "titulo": "Fuentes de financiamiento por área",
@@ -713,28 +713,28 @@
   },
   "no-categorizados/grafico-24": {
    "titulo": "Condiciones de trabajo y producción de mujeres y varones",
-   "bajada": "Indicadores de formación, dedicación y producción de mujeres y varones no categorizados",
-   "muestra": "Las 6.082 mujeres y los 3.877 varones no categorizados comparados en formación, dedicación, vínculos, producción y edad.",
+   "bajada": "Indicadores de formación, dedicación y producción de mujeres y varones no SNI",
+   "muestra": "Las 6.082 mujeres y los 3.877 varones no SNI comparados en formación, dedicación, vínculos, producción y edad.",
    "leer": "Cada fila tiene su propia escala. El punto rosa son las mujeres y el azul, los varones; la línea entre ambos es la brecha."
   },
   "no-categorizados/grafico-25": {
    "titulo": "La brecha de género varía según el área",
-   "bajada": "Indicadores de mujeres y varones no categorizados, total y por área",
+   "bajada": "Indicadores de mujeres y varones no SNI, total y por área",
    "muestra": "Para cada área, un indicador de formación, dedicación, vínculo o producción, separado para mujeres y varones.",
    "leer": "Seleccione un indicador. Cada fila es un área; el punto rosa son las mujeres y el azul, los varones."
   },
   "no-categorizados/grafico-26": {
    "titulo": "Subáreas feminizadas y masculinizadas",
    "bajada": "Porcentaje de mujeres por subárea, respecto de la paridad (subáreas con al menos 20 personas)",
-   "muestra": "La proporción de mujeres en cada subárea del conocimiento entre las personas no categorizadas. Permite ver en qué campos la mayoría femenina se acentúa y en cuáles se invierte.",
+   "muestra": "La proporción de mujeres en cada subárea del conocimiento entre las personas no SNI. Permite ver en qué campos la mayoría femenina se acentúa y en cuáles se invierte.",
    "leer": "La línea central es la paridad (50 %). Las barras hacia la derecha son subáreas con mayoría de mujeres; hacia la izquierda, con mayoría de varones. Seleccione un área para filtrar."
   },
   "no-categorizados/grafico-27": {
    "titulo": "Composición por género de la autoría",
-   "bajada": "Publicaciones por año según el género de las personas no categorizadas que las registran",
-   "muestra": "Las publicaciones de cada año según si las registran solo mujeres, solo varones o ambos, entre las personas no categorizadas.",
+   "bajada": "Publicaciones por año según el género de las personas no SNI que las registran",
+   "muestra": "Las publicaciones de cada año según si las registran solo mujeres, solo varones o ambos, entre las personas no SNI.",
    "leer": "Cada columna es un año, apilada por composición. Acote el período con el selector y pase el puntero por un tramo para ver su valor.",
-   "nota": "Se considera el género de los autores no categorizados con CV vigente; los coautores externos no se cuentan, por lo que las publicaciones mixtas están subestimadas."
+   "nota": "Se considera el género de los autores no SNI con CV vigente; los coautores externos no se cuentan, por lo que las publicaciones mixtas están subestimadas."
   },
   "produccion/evolucion": {
    "titulo": "Cómo evoluciona cada área",
@@ -776,7 +776,7 @@
   "ecosistema/grafico-3": {
    "titulo": "El portafolio de investigación de Udelar",
    "bajada": "Proporción de la producción de la institución en cada tema (barra) frente a la del país (marca negra), según quién firma los ítems",
-   "muestra": "En qué temas trabaja Universidad de la República, cuánto pesa cada tema en su producción, cuánto pesa ese mismo tema en el país y quiénes firman esa producción: personas del SNI, personas no categorizadas o ambas.",
+   "muestra": "En qué temas trabaja Universidad de la República, cuánto pesa cada tema en su producción, cuánto pesa ese mismo tema en el país y quiénes firman esa producción: personas del SNI, personas no SNI o ambas.",
    "leer": "Cada barra es un tema y su largo, la proporción de la producción de la institución en él; los colores separan los ítems según quién los firma. La marca negra indica cuánto pesa el tema en el país: si la barra la supera, la institución se especializa en ese tema. A la derecha, el índice de especialización. El selector cambia el orden de las filas."
   },
   "ecosistema/grafico-4": {

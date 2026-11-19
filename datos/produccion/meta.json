@@ -1,13 +1,13 @@
 {
-  "generado": "2026-11-16",
-  "fecha_corte": "2026-11-04",
+  "generado": "2026-11-19",
+  "fecha_corte": "2026-11-18",
   "ejemplo": false,
-  "criterio": "Ítems únicos declarados por el SNI y por los no SNI con CV de hasta 24 meses; publicaciones y proyectos desde 2000.",
+  "criterio": "Ítems únicos declarados por el SNI y por los no SNI con CV de hasta 24 meses; publicaciones y proyectos desde 1990.",
   "personas": {
-    "sni": 2447,
-    "no_categorizados": 7748
+    "sni": 2457,
+    "no_categorizados": 7726
   },
-  "total": 251648,
+  "total": 265879,
   "columnas": ["t", "y", "a", "s", "di", "ti", "pc", "de", "co", "doi", "q", "oa", "u", "n", "e", "i"],
   "dic": {
     "tipo": ["Artículo arbitrado", "Artículo no arbitrado", "Capítulo de libro", "Documento de trabajo", "Libro", "Libro compilado", "Línea de investigación", "Patente", "Producción técnica", "Proyecto de desarrollo", "Proyecto de investigación", "Trabajo en evento", "Proyecto de extensión u otro"],
@@ -24,127 +24,133 @@
       "archivo": "p-2026-2026.json",
       "desde": 2026,
       "hasta": 2026,
-      "n": 5834
+      "n": 5861
     },
     {
       "archivo": "p-2025-2025.json",
       "desde": 2025,
       "hasta": 2025,
-      "n": 11627
+      "n": 11643
     },
     {
       "archivo": "p-2024-2024.json",
       "desde": 2024,
       "hasta": 2024,
-      "n": 12579
+      "n": 12594
     },
     {
       "archivo": "p-2023-2023.json",
       "desde": 2023,
       "hasta": 2023,
-      "n": 13263
+      "n": 13283
     },
     {
       "archivo": "p-2022-2022.json",
       "desde": 2022,
       "hasta": 2022,
-      "n": 12235
+      "n": 12247
     },
     {
       "archivo": "p-2021-2021.json",
       "desde": 2021,
       "hasta": 2021,
-      "n": 12326
+      "n": 12342
     },
     {
       "archivo": "p-2020-2020.json",
       "desde": 2020,
       "hasta": 2020,
-      "n": 10252
+      "n": 10254
     },
     {
       "archivo": "p-2019-2019.json",
       "desde": 2019,
       "hasta": 2019,
-      "n": 12763
+      "n": 12774
     },
     {
       "archivo": "p-2018-2018.json",
       "desde": 2018,
       "hasta": 2018,
-      "n": 12068
+      "n": 12086
     },
     {
       "archivo": "p-2017-2017.json",
       "desde": 2017,
       "hasta": 2017,
-      "n": 11982
+      "n": 11990
     },
     {
       "archivo": "p-2016-2016.json",
       "desde": 2016,
       "hasta": 2016,
-      "n": 11629
+      "n": 11638
     },
     {
       "archivo": "p-2015-2015.json",
       "desde": 2015,
       "hasta": 2015,
-      "n": 11689
+      "n": 11716
     },
     {
       "archivo": "p-2014-2014.json",
       "desde": 2014,
       "hasta": 2014,
-      "n": 11633
+      "n": 11663
     },
     {
       "archivo": "p-2013-2013.json",
       "desde": 2013,
       "hasta": 2013,
-      "n": 11016
+      "n": 11033
     },
     {
       "archivo": "p-2012-2012.json",
       "desde": 2012,
       "hasta": 2012,
-      "n": 10628
+      "n": 10638
     },
     {
       "archivo": "p-2011-2011.json",
       "desde": 2011,
       "hasta": 2011,
-      "n": 10915
+      "n": 10909
     },
     {
       "archivo": "p-2010-2010.json",
       "desde": 2010,
       "hasta": 2010,
-      "n": 10354
+      "n": 10330
     },
     {
       "archivo": "p-2009-2009.json",
       "desde": 2009,
       "hasta": 2009,
-      "n": 9746
+      "n": 9743
     },
     {
       "archivo": "p-2007-2008.json",
       "desde": 2007,
       "hasta": 2008,
-      "n": 16072
+      "n": 16066
     },
     {
       "archivo": "p-2004-2006.json",
       "desde": 2004,
       "hasta": 2006,
-      "n": 17012
+      "n": 16996
     },
     {
-      "archivo": "p-1954-2003.json",
-      "desde": 1954,
+      "archivo": "p-1999-2003.json",
+      "desde": 1999,
       "hasta": 2003,
-      "n": 16024
+      "n": 16946
+    },
+    {
+      "archivo": "p-1990-1998.json",
+      "desde": 1990,
+      "hasta": 1998,
+      "n": 13126
     },
     {
       "archivo": "p-sin-anio.json",

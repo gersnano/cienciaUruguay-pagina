@@ -1,21 +1,21 @@
 {
   "meta": {
-    "generado": "2026-11-16",
-    "personas": 15300,
-    "vigentes": 7748,
+    "generado": "2026-11-19",
+    "personas": 15309,
+    "vigentes": 7726,
     "meses": 24,
     "minimo": 5
   },
   "tipologia": {
     "orden": ["Investigador/a con producción reciente", "En formación de posgrado", "Bajo interés: sin producción ni vínculo científico", "Docencia o trabajo académico sin producción reciente", "Actividad de I+D sin producción reciente", "Perfil tecnológico o de innovación", "Trayectoria con producción histórica, sin actividad reciente"],
     "total": {
-      "Actividad de I+D sin producción reciente": 342,
-      "Bajo interés: sin producción ni vínculo científico": 905,
-      "Docencia o trabajo académico sin producción reciente": 771,
-      "En formación de posgrado": 1100,
-      "Investigador/a con producción reciente": 4398,
+      "Actividad de I+D sin producción reciente": 340,
+      "Bajo interés: sin producción ni vínculo científico": 901,
+      "Docencia o trabajo académico sin producción reciente": 767,
+      "En formación de posgrado": 1096,
+      "Investigador/a con producción reciente": 4391,
       "Perfil tecnológico o de innovación": 145,
-      "Trayectoria con producción histórica, sin actividad reciente": 87
+      "Trayectoria con producción histórica, sin actividad reciente": 86
     },
     "por_area": [
       [
@@ -26,7 +26,7 @@
       [
         "Ciencias Médicas y de la Salud",
         "Actividad de I+D sin producción reciente",
-        63
+        62
       ],
       [
         "Ciencias Naturales y Exactas",
@@ -36,7 +36,7 @@
       [
         "Ciencias Sociales",
         "Actividad de I+D sin producción reciente",
-        84
+        83
       ],
       [
         "Humanidades",
@@ -61,7 +61,7 @@
       [
         "Ciencias Médicas y de la Salud",
         "Bajo interés: sin producción ni vínculo científico",
-        84
+        83
       ],
       [
         "Ciencias Naturales y Exactas",
@@ -71,7 +71,7 @@
       [
         "Ciencias Sociales",
         "Bajo interés: sin producción ni vínculo científico",
-        146
+        145
       ],
       [
         "Humanidades",
@@ -86,7 +86,7 @@
       [
         "Sin área informada",
         "Bajo interés: sin producción ni vínculo científico",
-        445
+        443
       ],
       [
         "Ciencias Agrícolas",
@@ -96,7 +96,7 @@
       [
         "Ciencias Médicas y de la Salud",
         "Docencia o trabajo académico sin producción reciente",
-        148
+        147
       ],
       [
         "Ciencias Naturales y Exactas",
@@ -106,7 +106,7 @@
       [
         "Ciencias Sociales",
         "Docencia o trabajo académico sin producción reciente",
-        160
+        159
       ],
       [
         "Humanidades",
@@ -121,7 +121,7 @@
       [
         "Sin área informada",
         "Docencia o trabajo académico sin producción reciente",
-        159
+        157
       ],
       [
         "Ciencias Agrícolas",
@@ -141,12 +141,12 @@
       [
         "Ciencias Sociales",
         "En formación de posgrado",
-        320
+        317
       ],
       [
         "Humanidades",
         "En formación de posgrado",
-        109
+        108
       ],
       [
         "Ingeniería y Tecnología",
@@ -161,12 +161,12 @@
       [
         "Ciencias Agrícolas",
         "Investigador/a con producción reciente",
-        474
+        473
       ],
       [
         "Ciencias Médicas y de la Salud",
         "Investigador/a con producción reciente",
-        747
+        746
       ],
       [
         "Ciencias Naturales y Exactas",
@@ -176,22 +176,22 @@
       [
         "Ciencias Sociales",
         "Investigador/a con producción reciente",
-        1251
+        1248
       ],
       [
         "Humanidades",
         "Investigador/a con producción reciente",
-        453
+        454
       ],
       [
         "Ingeniería y Tecnología",
         "Investigador/a con producción reciente",
-        397
+        396
       ],
       [
         "Sin área informada",
         "Investigador/a con producción reciente",
-        221
+        219
       ],
       [
         "Ciencias Agrícolas",
@@ -236,7 +236,7 @@
       [
         "Ciencias Médicas y de la Salud",
         "Trayectoria con producción histórica, sin actividad reciente",
-        20
+        19
       ],
       [
         "Ciencias Naturales y Exactas",
@@ -265,9 +265,9 @@
     "total": {
       "Privado y academia": 1030,
       "Privado y otros sectores": 195,
-      "Sin vínculo con el sector privado": 4647,
-      "Solo sector privado": 484,
-      "Vínculo privado solo en el pasado": 1392
+      "Sin vínculo con el sector privado": 4635,
+      "Solo sector privado": 482,
+      "Vínculo privado solo en el pasado": 1384
     },
     "por_area": [
       [
@@ -348,7 +348,7 @@
       [
         "Ciencias Médicas y de la Salud",
         "Sin vínculo con el sector privado",
-        636
+        632
       ],
       [
         "Ciencias Naturales y Exactas",
@@ -358,7 +358,7 @@
       [
         "Ciencias Sociales",
         "Sin vínculo con el sector privado",
-        1089
+        1085
       ],
       [
         "Humanidades",
@@ -373,7 +373,7 @@
       [
         "Sin área informada",
         "Sin vínculo con el sector privado",
-        733
+        729
       ],
       [
         "Ciencias Agrícolas",
@@ -403,22 +403,22 @@
       [
         "Ingeniería y Tecnología",
         "Solo sector privado",
-        82
+        81
       ],
       [
         "Sin área informada",
         "Solo sector privado",
-        97
+        96
       ],
       [
         "Ciencias Agrícolas",
         "Vínculo privado solo en el pasado",
-        115
+        114
       ],
       [
         "Ciencias Médicas y de la Salud",
         "Vínculo privado solo en el pasado",
-        158
+        157
       ],
       [
         "Ciencias Naturales y Exactas",
@@ -428,7 +428,7 @@
       [
         "Ciencias Sociales",
         "Vínculo privado solo en el pasado",
-        512
+        507
       ],
       [
         "Humanidades",
@@ -443,7 +443,7 @@
       [
         "Sin área informada",
         "Vínculo privado solo en el pasado",
-        93
+        92
       ]
     ]
   }

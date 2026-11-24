@@ -48,9 +48,9 @@
   },
   "ecosistema": {
    "nombre": "Ecosistema institucional",
-   "universo": "Instituciones donde trabajan las personas del SNI y de fuera del SNI",
-   "descripcion": "Las instituciones donde se investiga: cuántas personas del SNI y no SNI trabajan en cada una, en qué áreas producen y cómo se conectan.",
-   "subtitulo": "Las instituciones donde se investiga, en qué áreas trabajan y cómo se conectan",
+   "universo": "Las instituciones vistas desde sus investigadores, del SNI y de fuera del SNI",
+   "descripcion": "Dónde están las capacidades de investigación: quiénes investigan en cada institución, en qué áreas, cómo producen y con quién colaboran.",
+   "subtitulo": "Las instituciones vistas desde sus investigadores: dónde están las capacidades de investigación del país",
    "bajada": null
   }
  },
@@ -348,7 +348,7 @@
   },
   "sni/circulacion": {
    "titulo": "Trayectorias y movilidad",
-   "intro": "Las personas investigadoras trabajan en 37 instituciones principales distintas, que aquí se agrupan por sector —academia, centros de investigación, sector público, empresas y exterior— sin comparar instituciones entre sí. Las carreras rara vez transcurren en un solo lugar: a partir de las trayectorias declaradas en los CV, este capítulo muestra dónde trabajaron, cómo se mueven entre sectores y con el exterior, y cuántas personas combinan vínculos en más de un sector a la vez."
+   "intro": "Los investigadores trabajan en 37 instituciones principales distintas, que aquí se agrupan por sector —academia, centros de investigación, sector público, empresas y exterior— sin comparar instituciones entre sí. Las carreras rara vez transcurren en un solo lugar: a partir de las trayectorias declaradas en los CV, este capítulo muestra dónde trabajaron, cómo se mueven entre sectores y con el exterior, y cuántas personas combinan vínculos en más de un sector a la vez."
   },
   "sni/genero": {
    "titulo": "Brechas de género",
@@ -401,48 +401,32 @@
   "produccion/listado": {
    "titulo": "Listado de la producción",
    "intro": "Las publicaciones, proyectos y líneas de investigación que corresponden a la selección y a los filtros, con su título, palabras clave y descripción. Se pueden buscar dentro de la selección y descargar en CSV."
-  },
-  "ecosistema/eco-mapa": {
-   "titulo": "Especialización y funciones",
-   "intro": "La investigación en Uruguay se apoya en instituciones con funciones distintas: la universidad pública, las universidades privadas, institutos como el IIBCE, el Institut Pasteur, el INIA o el LATU, organismos del Estado, empresas y organizaciones de la sociedad civil. Esta vista las describe a partir del trabajo de sus investigadores —dentro y fuera del SNI—: en qué áreas se especializa cada una y qué función cumple en el sistema. El PEDECIBA y la ANII no se analizan como instituciones: el primero es un programa al que se afilian investigadores que trabajan en otras instituciones, y la segunda categoriza y financia, pero no emplea a quienes la declaran; ambos aparecen como fuentes de financiamiento."
-  },
-  "ecosistema/eco-perfil": {
-   "titulo": "Portafolio de investigación",
-   "intro": "El perfil temático de cada institución —en qué temas trabaja frente al país y qué conceptos la caracterizan— y qué parte de su actividad sostienen las personas del SNI y las que investigan fuera de él. Seleccione una institución en el selector superior o en cualquier gráfico. Las tendencias temáticas del país están en el análisis Producción científica."
-  },
-  "ecosistema/eco-colaboracion": {
-   "titulo": "Vínculos y financiamiento",
-   "intro": "Las instituciones se relacionan de tres maneras: cooperan en publicaciones y proyectos, comparten investigadores, o una financia proyectos que ejecuta la otra. Esta sección muestra esos vínculos y de dónde proviene el financiamiento de cada institución."
-  },
-  "ecosistema/eco-udelar": {
-   "titulo": "La Universidad de la República por dentro",
-   "intro": "La Udelar reúne a la mayoría de las personas del SNI. Sus facultades, centros regionales y servicios tienen tamaños e intensidades de proyectos muy distintos."
   }
  },
  "_catalogo_graficos": {
   "sni/grafico-1": {
    "titulo": "Quiénes integran el SNI",
-   "bajada": "Personas investigadoras del SNI según área, nivel, género y sector. Cada punto representa a una persona.",
+   "bajada": "Investigadores del SNI según área, nivel, género y sector. Cada punto representa a una persona.",
    "muestra": "Las 2.447 personas que integran hoy el Sistema Nacional de Investigadores, dibujadas una por una. Pueden agruparse por área del conocimiento, nivel del SNI, género o sector de la institución principal.",
    "leer": "Cada punto representa a una persona y el color indica su grupo. Al cambiar el criterio, los puntos se reacomodan: el tamaño de cada bloque es proporcional a la cantidad de personas. Pase el puntero por un grupo para ver su número exacto."
   },
   "sni/grafico-2": {
    "titulo": "Una estructura de base amplia",
-   "bajada": "Personas investigadoras de cada nivel del SNI y su porcentaje sobre el total del sistema",
+   "bajada": "Investigadores de cada nivel del SNI y su porcentaje sobre el total del sistema",
    "muestra": "Cuántas personas hay en cada nivel del SNI, de Iniciación a Nivel III. Incluye todas las categorías: activos, asociados en el exterior y eméritos.",
    "leer": "Cada barra es un nivel, con Iniciación abajo y Nivel III arriba; su largo es la cantidad de personas, de modo que la forma del gráfico es la pirámide del sistema. A la derecha, la cantidad y el porcentaje sobre el total. Pase el puntero sobre una barra para ver su valor.",
    "nota": "Incluye todas las categorías: activos, asociados en el exterior y eméritos. Iniciación: la puerta de entrada. Nivel I: investigación independiente. Nivel II: liderazgo de líneas. Nivel III: referencia internacional. Emérito: una vida dedicada a la ciencia."
   },
   "sni/grafico-3": {
    "titulo": "Perfil de áreas",
-   "bajada": "Indicadores del perfil de las personas investigadoras y de su producción, para cada área o sector frente al total del sistema",
+   "bajada": "Indicadores del perfil de los investigadores y de su producción, para cada área o sector frente al total del sistema",
    "muestra": "El perfil de un grupo —un área del conocimiento o un sector— en once indicadores de edad, formación, nivel, dedicación, vínculos y producción, frente al total del país.",
    "leer": "Seleccione el grupo en la lista. Cada pista tiene su propia escala: la línea vertical es el total del país y el punto, el grupo elegido (azul si está por encima, ocre si está por debajo). Los puntos tenues son los demás grupos, para ver el rango.",
    "nota": "La edad del total es la mediana nacional; el resto, promedios ponderados de las áreas."
   },
   "sni/grafico-4": {
    "titulo": "El nivel en el SNI avanza con la edad",
-   "bajada": "Personas investigadoras de cada nivel según tramo de edad, a cada lado de los 55 años, con la edad mediana estimada de cada nivel; para el total y por género",
+   "bajada": "Investigadores de cada nivel según tramo de edad, a cada lado de los 55 años, con la edad mediana estimada de cada nivel; para el total y por género",
    "muestra": "La composición por edad de cada nivel del SNI, de Iniciación a Nivel III, para el conjunto del sistema y por separado para mujeres y varones. Complementa el gráfico 2 —que muestra cuántas personas hay en cada nivel— con la etapa de la vida en que llegan a él, y permite comparar a mujeres y varones.",
    "leer": "Cada fila es un nivel. La línea vertical marca los 55 años: hacia la izquierda, quienes tienen menos (los tramos más jóvenes, más claros, quedan más lejos de la línea); hacia la derecha, quienes tienen 55 o más. Los porcentajes de cada lado suman 100 % por nivel. Bajo el nombre del nivel figura la edad mediana: la edad a la que se llega a la mitad de las personas del nivel. Al pasar el puntero sobre un tramo se ve su porcentaje.",
    "nota": "Edad a la fecha de corte, calculada desde la fecha de nacimiento declarada. Se excluyen las personas sin edad o sin nivel informado y las celdas con menos de 5 personas. La edad mediana se estima por interpolación dentro de los tramos de edad (se toma 25 años como inicio del primer tramo y 80 como cierre del último), por lo que es aproximada."
@@ -469,8 +453,8 @@
   },
   "sni/grafico-8": {
    "titulo": "La dirección de tesis doctorales varía entre áreas",
-   "bajada": "Tesis de doctorado dirigidas en 2022–2026 por cada 100 personas investigadoras, total y por área",
-   "muestra": "Cuántas tesis de doctorado dirigieron entre 2022 y 2026 las personas investigadoras de cada área, por cada 100 investigadores. Mide la capacidad de formar nuevas generaciones de doctores.",
+   "bajada": "Tesis de doctorado dirigidas en 2022–2026 por cada 100 investigadores, total y por área",
+   "muestra": "Cuántas tesis de doctorado dirigieron entre 2022 y 2026 los investigadores de cada área, por cada 100 investigadores. Mide la capacidad de formar nuevas generaciones de doctores.",
    "leer": "Cada pétalo es un área y su largo es la tasa. Al expresarse por cada 100 investigadores, permite comparar áreas de distinto tamaño. Pase el puntero por un pétalo para ver el valor.",
    "nota": "Se cuentan registros de dirección: una tesis con dos cotutores del SNI puede aparecer dos veces. La ventana incluye 2026, todavía incompleto."
   },
@@ -549,7 +533,7 @@
   "sni/grafico-20": {
    "titulo": "Mujeres investigadoras y responsables de proyectos, por área",
    "bajada": "En 4 de 6 áreas, las mujeres lideran proyectos por debajo de su peso entre los investigadores. Porcentaje de mujeres entre los investigadores de cada área y entre los responsables de sus proyectos en marcha.",
-   "muestra": "Para cada área, el peso de las mujeres entre las personas investigadoras y entre quienes son responsables de los proyectos en marcha.",
+   "muestra": "Para cada área, el peso de las mujeres entre los investigadores y entre quienes son responsables de los proyectos en marcha.",
    "leer": "Si el liderazgo acompañara la composición, los dos puntos coincidirían. Cuando el punto de responsables queda a la izquierda, las mujeres lideran menos proyectos de lo que su peso haría esperar."
   },
   "sni/grafico-21": {
@@ -760,50 +744,6 @@
    "bajada": "Conceptos cuya producción al menos se duplicó entre 2016–2020 y 2021–2025, y las instituciones con más ítems en cada uno",
    "muestra": "Los conceptos que más crecieron en la producción reciente —líneas de trabajo nuevas o temas que ganan atención— y qué instituciones los desarrollan.",
    "leer": "Cada fila es un concepto: la flecha va de sus ítems en el primer quinquenio a los del segundo. A la derecha, las instituciones con más ítems en ese concepto: seleccione una para filtrar el resto de la página por ella."
-  },
-  "ecosistema/grafico-1": {
-   "titulo": "En qué se especializa cada institución",
-   "bajada": "Cuánto pesa cada área en la producción de la institución frente a su peso en el país, por tipo de institución. Instituciones con al menos 300 ítems.",
-   "muestra": "El perfil temático de cada institución, agrupadas por tipo: si cada área del conocimiento pesa en su producción más o menos que en el conjunto del país.",
-   "leer": "Las instituciones se agrupan por tipo (universidades públicas, privadas, institutos, organismos públicos y otras) y el filtro deja ver un solo tipo. En cada celda, la línea central es el peso del área en el país: la barra azul hacia la derecha indica que el área pesa más en la institución (especialización) y la terracota hacia la izquierda, que pesa menos; el número dice cuántas veces. Seleccione un área para ordenar por ella, o una fila para fijar la institución."
-  },
-  "ecosistema/grafico-2": {
-   "titulo": "Qué función cumple cada institución",
-   "bajada": "Participación de cada institución en cuatro funciones del sistema, en relación con su tamaño (1 = proporcional a su peso en investigadores)",
-   "muestra": "No todas las instituciones hacen lo mismo. Para cuatro funciones —formar doctores, producir artículos, ejecutar proyectos y financiarlos— se compara la parte del total nacional que aporta cada institución con su peso en la base de investigadores del SNI.",
-   "leer": "Cada franja es una función y cada punto una institución; su tamaño es la cantidad de personas del SNI. La línea vertical marca el valor 1: a la derecha, la institución aporta a esa función más de lo que corresponde a su tamaño; a la izquierda, menos. La escala es logarítmica (cada marca duplica o divide por dos). En la franja de financiamiento, la ANII y el PEDECIBA —que no se cuentan como instituciones porque no tienen investigadores propios— aparecen con su parte de los proyectos con financiador declarado. Pase el puntero sobre un punto o selecciónelo para fijar la institución."
-  },
-  "ecosistema/grafico-3": {
-   "titulo": "El portafolio de investigación de Udelar",
-   "bajada": "Proporción de la producción de la institución en cada tema (barra) frente a la del país (marca negra), según quién firma los ítems",
-   "muestra": "En qué temas trabaja Universidad de la República, cuánto pesa cada tema en su producción, cuánto pesa ese mismo tema en el país y quiénes firman esa producción: personas del SNI, personas no SNI o ambas.",
-   "leer": "Cada barra es un tema y su largo, la proporción de la producción de la institución en él; los colores separan los ítems según quién los firma. La marca negra indica cuánto pesa el tema en el país: si la barra la supera, la institución se especializa en ese tema. A la derecha, el índice de especialización. El selector cambia el orden de las filas."
-  },
-  "ecosistema/grafico-4": {
-   "titulo": "Cómo opera cada institución dentro y fuera del SNI",
-   "bajada": "Porcentaje de las personas que investigan en cada institución que integran el SNI (izquierda) y que no lo integran (derecha)",
-   "muestra": "Qué parte de la actividad de cada institución sostienen las personas del SNI y qué parte personas que investigan sin integrarlo, medida por las personas vinculadas o por la autoría de su producción.",
-   "leer": "Cada fila es una institución, agrupadas por tipo (universidades públicas, privadas, institutos, organismos públicos y otras); dentro de cada grupo se ordenan de mayor a menor peso de lo que ocurre fuera del SNI. La barra azul, hacia la izquierda, es el porcentaje dentro del SNI; la ocre, hacia la derecha, el porcentaje fuera. La línea punteada marca el total. El selector cambia entre personas y producción.",
-   "nota": "Una persona con vínculos en varias instituciones cuenta en cada una."
-  },
-  "ecosistema/grafico-5": {
-   "titulo": "Quién se vincula con quién",
-   "bajada": "Copublicaciones y proyectos conjuntos entre cada par de instituciones, agrupadas por tipo",
-   "muestra": "Las relaciones entre instituciones, según tres tipos de vínculo: la cooperación científica (publican o ejecutan proyectos juntas), las personas que comparten y el financiamiento (una financia proyectos que ejecuta la otra).",
-   "leer": "Las instituciones se agrupan por tipo (franjas de color arriba y líneas de separación). En cooperación y personas, filas y columnas son las mismas instituciones y el punto en el cruce crece con la intensidad del vínculo. En financiamiento, las filas son las fuentes —entre ellas la ANII y el PEDECIBA, resaltadas, que no se cuentan como instituciones porque no tienen investigadores propios— y las columnas, las instituciones que ejecutan los proyectos. Al seleccionar una institución se resalta su columna."
-  },
-  "ecosistema/grafico-6": {
-   "titulo": "Quién financia los proyectos de cada institución",
-   "bajada": "Composición del financiamiento de los proyectos de cada institución (100 % = sus proyectos con financiador declarado)",
-   "muestra": "De dónde proviene el financiamiento de los proyectos que ejecuta cada institución: fondos de la Udelar, la ANII, la cooperación internacional, el INIA, el PEDECIBA, el MEC y otras fuentes.",
-   "leer": "Cada barra es una institución ejecutora, dividida según las fuentes de sus proyectos. Con «Proyectos» se compara el volumen; con «Composición», la mezcla de fuentes de cada institución. Seleccione una fuente en la leyenda para resaltarla.",
-   "nota": "No se incluyen los proyectos sin financiador declarado. Un proyecto con varias fuentes cuenta en cada una; se cuentan proyectos, no montos."
-  },
-  "ecosistema/grafico-7": {
-   "titulo": "La Udelar por dentro: tamaño e intensidad de proyectos",
-   "bajada": "Personas del SNI con la Udelar como institución principal, por servicio",
-   "muestra": "Cómo se distribuye la investigación dentro de la Universidad de la República: el tamaño de cada facultad, centro regional o servicio y su intensidad en proyectos.",
-   "leer": "Cada barra es un servicio, ordenado de mayor a menor; la primera fila es el total de la Udelar. Con el selector se cambia entre el tamaño (personas del SNI, en valores absolutos) y la intensidad (proyectos ejecutados por persona). Pase el puntero sobre una barra para ver los dos valores."
   }
  }
 }

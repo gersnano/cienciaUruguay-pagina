@@ -1,334 +1,352 @@
 {
   "meta": {
-    "generado": "2026-11-24",
-    "personas": 15309,
-    "vigentes": 7726,
-    "meses": 24,
+    "generado": "2026-11-26",
+    "candidatos": 15088,
+    "incluidos": 7524,
+    "criterio": "05 Más líneas y proyectos",
+    "ventana": [2022, 2026],
+    "definicion": "El grupo No SNI comprende personas con CV en CVUy fuera del padrón SNI utilizado, con evidencia de producción científica o de participación en líneas o proyectos de investigación durante los últimos cinco años, registrada en su propio CV o en el de otros integrantes que lo identifican por documento, pasaporte u ORCID, o por su nombre completo cuando corresponde a un único CV y se confirma por una institución compartida o por reciprocidad. La fecha de actualización del CV no constituye, por sí sola, un criterio de inclusión o exclusión.",
     "minimo": 5
   },
   "tipologia": {
-    "orden": ["Investigador/a con producción reciente", "En formación de posgrado", "Bajo interés: sin producción ni vínculo científico", "Docencia o trabajo académico sin producción reciente", "Actividad de I+D sin producción reciente", "Perfil tecnológico o de innovación", "Trayectoria con producción histórica, sin actividad reciente"],
+    "orden": ["Investigador/a con producción reciente", "CV sin actualizar, con actividad de investigación reciente", "En formación de posgrado", "Docencia o trabajo académico sin producción reciente", "Actividad de I+D sin producción reciente", "Perfil tecnológico o de innovación", "Bajo interés: sin producción ni vínculo científico", "Trayectoria con producción histórica, sin actividad reciente"],
     "total": {
-      "Actividad de I+D sin producción reciente": 340,
-      "Bajo interés: sin producción ni vínculo científico": 901,
-      "Docencia o trabajo académico sin producción reciente": 767,
-      "En formación de posgrado": 1096,
-      "Investigador/a con producción reciente": 4391,
-      "Perfil tecnológico o de innovación": 145,
-      "Trayectoria con producción histórica, sin actividad reciente": 86
+      "Actividad de I+D sin producción reciente": 249,
+      "Bajo interés: sin producción ni vínculo científico": 89,
+      "CV sin actualizar, con actividad de investigación reciente": 1442,
+      "Docencia o trabajo académico sin producción reciente": 269,
+      "En formación de posgrado": 581,
+      "Investigador/a con producción reciente": 4768,
+      "Perfil tecnológico o de innovación": 97,
+      "Trayectoria con producción histórica, sin actividad reciente": 29
     },
     "por_area": [
       [
         "Ciencias Agrícolas",
         "Actividad de I+D sin producción reciente",
+        18
+      ],
+      [
+        "Ciencias Médicas y de la Salud",
+        "Actividad de I+D sin producción reciente",
+        45
+      ],
+      [
+        "Ciencias Naturales y Exactas",
+        "Actividad de I+D sin producción reciente",
+        55
+      ],
+      [
+        "Ciencias Sociales",
+        "Actividad de I+D sin producción reciente",
+        61
+      ],
+      [
+        "Humanidades",
+        "Actividad de I+D sin producción reciente",
+        15
+      ],
+      [
+        "Ingeniería y Tecnología",
+        "Actividad de I+D sin producción reciente",
+        33
+      ],
+      [
+        "Sin área informada",
+        "Actividad de I+D sin producción reciente",
         22
       ],
       [
-        "Ciencias Médicas y de la Salud",
-        "Actividad de I+D sin producción reciente",
-        62
-      ],
-      [
-        "Ciencias Naturales y Exactas",
-        "Actividad de I+D sin producción reciente",
-        70
-      ],
-      [
-        "Ciencias Sociales",
-        "Actividad de I+D sin producción reciente",
-        83
-      ],
-      [
-        "Humanidades",
-        "Actividad de I+D sin producción reciente",
-        21
-      ],
-      [
-        "Ingeniería y Tecnología",
-        "Actividad de I+D sin producción reciente",
-        42
-      ],
-      [
-        "Sin área informada",
-        "Actividad de I+D sin producción reciente",
-        40
-      ],
-      [
         "Ciencias Agrícolas",
         "Bajo interés: sin producción ni vínculo científico",
-        37
+        8
       ],
       [
         "Ciencias Médicas y de la Salud",
         "Bajo interés: sin producción ni vínculo científico",
-        83
-      ],
-      [
-        "Ciencias Naturales y Exactas",
-        "Bajo interés: sin producción ni vínculo científico",
-        58
-      ],
-      [
-        "Ciencias Sociales",
-        "Bajo interés: sin producción ni vínculo científico",
-        145
-      ],
-      [
-        "Humanidades",
-        "Bajo interés: sin producción ni vínculo científico",
-        52
-      ],
-      [
-        "Ingeniería y Tecnología",
-        "Bajo interés: sin producción ni vínculo científico",
-        83
-      ],
-      [
-        "Sin área informada",
-        "Bajo interés: sin producción ni vínculo científico",
-        443
-      ],
-      [
-        "Ciencias Agrícolas",
-        "Docencia o trabajo académico sin producción reciente",
-        47
-      ],
-      [
-        "Ciencias Médicas y de la Salud",
-        "Docencia o trabajo académico sin producción reciente",
-        147
-      ],
-      [
-        "Ciencias Naturales y Exactas",
-        "Docencia o trabajo académico sin producción reciente",
-        103
-      ],
-      [
-        "Ciencias Sociales",
-        "Docencia o trabajo académico sin producción reciente",
-        159
-      ],
-      [
-        "Humanidades",
-        "Docencia o trabajo académico sin producción reciente",
-        72
-      ],
-      [
-        "Ingeniería y Tecnología",
-        "Docencia o trabajo académico sin producción reciente",
-        82
-      ],
-      [
-        "Sin área informada",
-        "Docencia o trabajo académico sin producción reciente",
-        157
-      ],
-      [
-        "Ciencias Agrícolas",
-        "En formación de posgrado",
-        99
-      ],
-      [
-        "Ciencias Médicas y de la Salud",
-        "En formación de posgrado",
-        161
-      ],
-      [
-        "Ciencias Naturales y Exactas",
-        "En formación de posgrado",
-        196
-      ],
-      [
-        "Ciencias Sociales",
-        "En formación de posgrado",
-        317
-      ],
-      [
-        "Humanidades",
-        "En formación de posgrado",
-        108
-      ],
-      [
-        "Ingeniería y Tecnología",
-        "En formación de posgrado",
-        101
-      ],
-      [
-        "Sin área informada",
-        "En formación de posgrado",
-        114
-      ],
-      [
-        "Ciencias Agrícolas",
-        "Investigador/a con producción reciente",
-        473
-      ],
-      [
-        "Ciencias Médicas y de la Salud",
-        "Investigador/a con producción reciente",
-        746
-      ],
-      [
-        "Ciencias Naturales y Exactas",
-        "Investigador/a con producción reciente",
-        855
-      ],
-      [
-        "Ciencias Sociales",
-        "Investigador/a con producción reciente",
-        1248
-      ],
-      [
-        "Humanidades",
-        "Investigador/a con producción reciente",
-        454
-      ],
-      [
-        "Ingeniería y Tecnología",
-        "Investigador/a con producción reciente",
-        396
-      ],
-      [
-        "Sin área informada",
-        "Investigador/a con producción reciente",
-        219
-      ],
-      [
-        "Ciencias Agrícolas",
-        "Perfil tecnológico o de innovación",
-        13
-      ],
-      [
-        "Ciencias Médicas y de la Salud",
-        "Perfil tecnológico o de innovación",
-        15
-      ],
-      [
-        "Ciencias Naturales y Exactas",
-        "Perfil tecnológico o de innovación",
-        25
-      ],
-      [
-        "Ciencias Sociales",
-        "Perfil tecnológico o de innovación",
-        32
-      ],
-      [
-        "Humanidades",
-        "Perfil tecnológico o de innovación",
-        17
-      ],
-      [
-        "Ingeniería y Tecnología",
-        "Perfil tecnológico o de innovación",
-        28
-      ],
-      [
-        "Sin área informada",
-        "Perfil tecnológico o de innovación",
-        15
-      ],
-      [
-        "Ciencias Agrícolas",
-        "Trayectoria con producción histórica, sin actividad reciente",
-        11
-      ],
-      [
-        "Ciencias Médicas y de la Salud",
-        "Trayectoria con producción histórica, sin actividad reciente",
         19
       ],
       [
         "Ciencias Naturales y Exactas",
-        "Trayectoria con producción histórica, sin actividad reciente",
+        "Bajo interés: sin producción ni vínculo científico",
+        8
+      ],
+      [
+        "Ciencias Sociales",
+        "Bajo interés: sin producción ni vínculo científico",
+        13
+      ],
+      [
+        "Ingeniería y Tecnología",
+        "Bajo interés: sin producción ni vínculo científico",
+        7
+      ],
+      [
+        "Sin área informada",
+        "Bajo interés: sin producción ni vínculo científico",
+        32
+      ],
+      [
+        "Ciencias Agrícolas",
+        "CV sin actualizar, con actividad de investigación reciente",
+        190
+      ],
+      [
+        "Ciencias Médicas y de la Salud",
+        "CV sin actualizar, con actividad de investigación reciente",
+        314
+      ],
+      [
+        "Ciencias Naturales y Exactas",
+        "CV sin actualizar, con actividad de investigación reciente",
+        299
+      ],
+      [
+        "Ciencias Sociales",
+        "CV sin actualizar, con actividad de investigación reciente",
+        273
+      ],
+      [
+        "Humanidades",
+        "CV sin actualizar, con actividad de investigación reciente",
+        82
+      ],
+      [
+        "Ingeniería y Tecnología",
+        "CV sin actualizar, con actividad de investigación reciente",
+        148
+      ],
+      [
+        "Sin área informada",
+        "CV sin actualizar, con actividad de investigación reciente",
+        136
+      ],
+      [
+        "Ciencias Agrícolas",
+        "Docencia o trabajo académico sin producción reciente",
+        27
+      ],
+      [
+        "Ciencias Médicas y de la Salud",
+        "Docencia o trabajo académico sin producción reciente",
+        57
+      ],
+      [
+        "Ciencias Naturales y Exactas",
+        "Docencia o trabajo académico sin producción reciente",
+        47
+      ],
+      [
+        "Ciencias Sociales",
+        "Docencia o trabajo académico sin producción reciente",
+        37
+      ],
+      [
+        "Humanidades",
+        "Docencia o trabajo académico sin producción reciente",
+        18
+      ],
+      [
+        "Ingeniería y Tecnología",
+        "Docencia o trabajo académico sin producción reciente",
+        39
+      ],
+      [
+        "Sin área informada",
+        "Docencia o trabajo académico sin producción reciente",
+        44
+      ],
+      [
+        "Ciencias Agrícolas",
+        "En formación de posgrado",
+        68
+      ],
+      [
+        "Ciencias Médicas y de la Salud",
+        "En formación de posgrado",
+        102
+      ],
+      [
+        "Ciencias Naturales y Exactas",
+        "En formación de posgrado",
+        138
+      ],
+      [
+        "Ciencias Sociales",
+        "En formación de posgrado",
+        141
+      ],
+      [
+        "Humanidades",
+        "En formación de posgrado",
+        46
+      ],
+      [
+        "Ingeniería y Tecnología",
+        "En formación de posgrado",
+        59
+      ],
+      [
+        "Sin área informada",
+        "En formación de posgrado",
+        27
+      ],
+      [
+        "Ciencias Agrícolas",
+        "Investigador/a con producción reciente",
+        521
+      ],
+      [
+        "Ciencias Médicas y de la Salud",
+        "Investigador/a con producción reciente",
+        825
+      ],
+      [
+        "Ciencias Naturales y Exactas",
+        "Investigador/a con producción reciente",
+        937
+      ],
+      [
+        "Ciencias Sociales",
+        "Investigador/a con producción reciente",
+        1333
+      ],
+      [
+        "Humanidades",
+        "Investigador/a con producción reciente",
+        478
+      ],
+      [
+        "Ingeniería y Tecnología",
+        "Investigador/a con producción reciente",
+        443
+      ],
+      [
+        "Sin área informada",
+        "Investigador/a con producción reciente",
+        231
+      ],
+      [
+        "Ciencias Agrícolas",
+        "Perfil tecnológico o de innovación",
+        7
+      ],
+      [
+        "Ciencias Médicas y de la Salud",
+        "Perfil tecnológico o de innovación",
         12
+      ],
+      [
+        "Ciencias Naturales y Exactas",
+        "Perfil tecnológico o de innovación",
+        18
+      ],
+      [
+        "Ciencias Sociales",
+        "Perfil tecnológico o de innovación",
+        21
+      ],
+      [
+        "Humanidades",
+        "Perfil tecnológico o de innovación",
+        10
+      ],
+      [
+        "Ingeniería y Tecnología",
+        "Perfil tecnológico o de innovación",
+        21
+      ],
+      [
+        "Sin área informada",
+        "Perfil tecnológico o de innovación",
+        8
+      ],
+      [
+        "Ciencias Médicas y de la Salud",
+        "Trayectoria con producción histórica, sin actividad reciente",
+        9
+      ],
+      [
+        "Ciencias Naturales y Exactas",
+        "Trayectoria con producción histórica, sin actividad reciente",
+        9
       ],
       [
         "Ciencias Sociales",
         "Trayectoria con producción histórica, sin actividad reciente",
-        29
-      ],
-      [
-        "Ingeniería y Tecnología",
-        "Trayectoria con producción histórica, sin actividad reciente",
-        6
-      ],
-      [
-        "Sin área informada",
-        "Trayectoria con producción histórica, sin actividad reciente",
-        7
+        5
       ]
     ],
     "interes": []
   },
   "privado": {
     "total": {
-      "Privado y academia": 1030,
-      "Privado y otros sectores": 195,
-      "Sin vínculo con el sector privado": 4635,
-      "Solo sector privado": 482,
-      "Vínculo privado solo en el pasado": 1384
+      "Privado y academia": 1102,
+      "Privado y otros sectores": 207,
+      "Sin vínculo con el sector privado": 4419,
+      "Solo sector privado": 360,
+      "Vínculo privado solo en el pasado": 1436
     },
     "por_area": [
       [
         "Ciencias Agrícolas",
         "Privado y academia",
-        57
+        61
       ],
       [
         "Ciencias Médicas y de la Salud",
         "Privado y academia",
-        314
+        358
       ],
       [
         "Ciencias Naturales y Exactas",
         "Privado y academia",
-        137
+        151
       ],
       [
         "Ciencias Sociales",
         "Privado y academia",
-        269
+        273
       ],
       [
         "Humanidades",
         "Privado y academia",
-        86
+        85
       ],
       [
         "Ingeniería y Tecnología",
         "Privado y academia",
-        104
+        123
       ],
       [
         "Sin área informada",
         "Privado y academia",
-        63
+        51
       ],
       [
         "Ciencias Agrícolas",
         "Privado y otros sectores",
-        10
+        13
       ],
       [
         "Ciencias Médicas y de la Salud",
         "Privado y otros sectores",
-        51
+        71
       ],
       [
         "Ciencias Naturales y Exactas",
         "Privado y otros sectores",
-        26
+        35
       ],
       [
         "Ciencias Sociales",
         "Privado y otros sectores",
-        51
+        36
       ],
       [
         "Humanidades",
         "Privado y otros sectores",
-        20
+        19
       ],
       [
         "Ingeniería y Tecnología",
@@ -338,112 +356,112 @@
       [
         "Sin área informada",
         "Privado y otros sectores",
-        15
+        11
       ],
       [
         "Ciencias Agrícolas",
         "Sin vínculo con el sector privado",
-        478
+        591
       ],
       [
         "Ciencias Médicas y de la Salud",
         "Sin vínculo con el sector privado",
-        632
+        706
       ],
       [
         "Ciencias Naturales y Exactas",
         "Sin vínculo con el sector privado",
-        869
+        981
       ],
       [
         "Ciencias Sociales",
         "Sin vínculo con el sector privado",
-        1085
+        992
       ],
       [
         "Humanidades",
         "Sin vínculo con el sector privado",
-        475
+        408
       ],
       [
         "Ingeniería y Tecnología",
         "Sin vínculo con el sector privado",
-        367
+        375
       ],
       [
         "Sin área informada",
         "Sin vínculo con el sector privado",
-        729
+        366
       ],
       [
         "Ciencias Agrícolas",
         "Solo sector privado",
-        43
+        48
       ],
       [
         "Ciencias Médicas y de la Salud",
         "Solo sector privado",
-        79
+        82
       ],
       [
         "Ciencias Naturales y Exactas",
         "Solo sector privado",
-        63
+        76
       ],
       [
         "Ciencias Sociales",
         "Solo sector privado",
-        101
+        64
       ],
       [
         "Humanidades",
         "Solo sector privado",
-        19
+        14
       ],
       [
         "Ingeniería y Tecnología",
         "Solo sector privado",
-        81
+        54
       ],
       [
         "Sin área informada",
         "Solo sector privado",
-        96
+        22
       ],
       [
         "Ciencias Agrícolas",
         "Vínculo privado solo en el pasado",
-        114
+        130
       ],
       [
         "Ciencias Médicas y de la Salud",
         "Vínculo privado solo en el pasado",
-        157
+        166
       ],
       [
         "Ciencias Naturales y Exactas",
         "Vínculo privado solo en el pasado",
-        224
+        268
       ],
       [
         "Ciencias Sociales",
         "Vínculo privado solo en el pasado",
-        507
+        519
       ],
       [
         "Humanidades",
         "Vínculo privado solo en el pasado",
-        126
+        125
       ],
       [
         "Ingeniería y Tecnología",
         "Vínculo privado solo en el pasado",
-        164
+        178
       ],
       [
         "Sin área informada",
         "Vínculo privado solo en el pasado",
-        92
+        50
       ]
     ]
   }

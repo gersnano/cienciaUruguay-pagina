@@ -11,7 +11,7 @@
   "sitio": {
     "buscador_url": "",
     "_buscador_url": "Dirección del webhook de n8n del buscador (Producción URL del nodo «Webhook buscador»). Vacía: el buscador funciona por coincidencia de palabras, sin IA.",
-    "registro_url": "",
+    "registro_url": "https://script.google.com/macros/s/AKfycbwgGSFBcm8HELZ7eh-VWx2vFgNG66nJyKZ7DZj3Nvmr5aa4JBEC5fdneLTUzQIxy4-DYw/exec",
     "_registro_url": "Dirección de la aplicación web de Apps Script de la planilla (termina en /exec). Con ella el sitio guarda cada búsqueda, con o sin resultado, sin datos personales. Vacía: no se guarda nada.",
     "nombre": "Ciencia uruguaya",
     "nombre_fino": "Ciencia",

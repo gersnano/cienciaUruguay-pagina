@@ -23599,12 +23599,12 @@ async function consultarIA8(url, cuerpo) {
   }
 }
 // Registro de consultas (textos.json → sitio.registro_url: aplicación web de Apps Script de la planilla).
-// Se registran las búsquedas sin resultado, excepto las marcadas como [prueba].
+// Se envía cada búsqueda, con o sin resultado, ya anonimizada; no se envían las vacías ni las [prueba].
 // Envío sin respuesta (no-cors): si la planilla no responde, la búsqueda sigue igual.
 function registrarConsulta8(url, consulta, aclaracion, r, ruta) {
-  if (!url || r?.estado !== "sin_resultado" || /^\s*\[prueba\]/i.test(consulta)) return !1;
+  if (!url || !r || /^\s*\[prueba\]/i.test(consulta) || !["resultado", "sin_resultado", "aclaracion"].includes(r.estado)) return !1;
   const texto = aclaracion ? `${aclaracion.consulta} ${aclaracion.opcion}` : consulta,
-    mostrado = r.cercano,
+    mostrado = r.estado === "resultado" ? r.resultado : r.estado === "sin_resultado" ? r.cercano : null,
     it = r.interpretacion || {},
     cs = MOTOR8.conceptos(texto),
     up = MOTOR8.universoPedido(cs),
@@ -23613,16 +23613,16 @@ function registrarConsulta8(url, consulta, aclaracion, r, ruta) {
   const cuerpo = {
     id_consulta: idConsulta8(texto),
     consulta: MOTOR8.anonimizar(texto),
-    resultado: "sin resultado",
-    motivo: r.motivo || "",
-    que_falta: MOTOR8.anonimizar(r.falta || ""),
-    se_mostro: mostrado ? mostrado.titulo : "",
+    resultado: r.estado === "resultado" ? "con resultado" : r.estado === "sin_resultado" ? "sin resultado" : "pidió aclaración",
+    motivo: r.estado === "sin_resultado" ? r.motivo || "" : "",
+    que_falta: r.estado === "sin_resultado" ? MOTOR8.anonimizar(r.falta || "") : "",
+    se_mostro: mostrado ? mostrado.titulo : r.estado === "aclaracion" ? r.aclaracion.pregunta : "",
     enlace: mostrado ? mostrado.url_relativa : "",
     alternativas: (r.alternativas || []).map((f) => f.titulo).join(" / "),
-    aclaracion: aclaracion ? MOTOR8.anonimizar(`${aclaracion.pregunta} → ${aclaracion.opcion}`) : "",
+    aclaracion: aclaracion ? `${aclaracion.pregunta} → ${aclaracion.opcion}` : "",
     busqueda: r.modo === "ia" ? "IA" : "palabras",
     pagina: (typeof location != "undefined" && location.hash.replace(/^#/, "").split(/[/?]/)[0]) || ruta || "inicio",
-    clave_grupo: MOTOR8.claveGrupo({ motivo: r.motivo, consulta: texto, tema: it.tema || "", indicador: it.indicador || "", grupo, desglose: it.desglose || dims }),
+    clave_grupo: r.estado === "sin_resultado" ? MOTOR8.claveGrupo({ motivo: r.motivo, consulta: texto, tema: it.tema || "", indicador: it.indicador || "", grupo, desglose: it.desglose || dims }) : "",
   };
   try {
     fetch(url, { method: "POST", mode: "no-cors", keepalive: !0, headers: { "Content-Type": "text/plain;charset=utf-8" }, body: JSON.stringify(cuerpo) }).catch(() => {});
@@ -23831,7 +23831,7 @@ function Buscador8({ variante: variante8 = "cabecera" } = {}) {
                             className: "buscador8__otros",
                             children: [l.jsx("p", { className: "buscador8__rotulo-visible", children: "Lo más cercano" }), l.jsx(EnlaceResultado8, { f: e.cercano, cerrar })],
                           }),
-                        e.registrada && l.jsx("p", { className: "buscador8__nota", children: "Enviamos esta consulta para identificar qué información sumar al portal." }),
+                        e.registrada && l.jsx("p", { className: "buscador8__nota", children: "Registramos la consulta, sin datos personales, para evaluar nuevo contenido." }),
                       ],
                     }),
                   e.estado === "error" && l.jsx("p", { className: "buscador8__pregunta", children: e.detalle || "No pudimos completar la búsqueda." }),

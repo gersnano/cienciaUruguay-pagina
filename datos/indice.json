@@ -1,0 +1,3170 @@
+{
+ "meta": {
+  "generado": "2026-11-27T19:11:46.981Z",
+  "sitio": "https://gersnano.github.io/cienciaUruguay-pagina/",
+  "fecha_corte": "2026-11-18",
+  "version_datos": "2026-11-26",
+  "entradas": 96,
+  "nota": "Archivo generado por pruebas/generar_indice.cjs: no editar. Solo incluye ubicaciones verificadas."
+ },
+ "entradas": [
+  {
+   "id": "sni",
+   "tipo": "analisis",
+   "ruta": "sni",
+   "ancla": null,
+   "analisis": "Sistema Nacional de Investigadores",
+   "titulo": "Sistema Nacional de Investigadores",
+   "descripcion": "Quiénes integran el SNI, qué producen y cómo se financian, a partir de sus CV en CVUy",
+   "verificado": true,
+   "url_relativa": "#sni"
+  },
+  {
+   "id": "sni/personas",
+   "tipo": "capitulo",
+   "ruta": "sni",
+   "ancla": "personas",
+   "analisis": "Sistema Nacional de Investigadores",
+   "titulo": "Quiénes integran el SNI",
+   "descripcion": "El Sistema Nacional de Investigadores (SNI) reúne a 2.457 investigadores —activos, asociados y eméritos— en todas las áreas del conocimiento. La mitad son mujeres, la edad mediana es de 47 años y 92 % tiene doctorado. Este capítulo describe cómo se distribuyen entre niveles, áreas, sectores, edades y regiones del país.",
+   "verificado": true,
+   "url_relativa": "#sni/personas"
+  },
+  {
+   "id": "sni/formacion",
+   "tipo": "capitulo",
+   "ruta": "sni",
+   "ancla": "formacion",
+   "analisis": "Sistema Nacional de Investigadores",
+   "titulo": "Formación",
+   "descripcion": "La formación doctoral es la puerta de entrada a la investigación. Hoy 53 % de los doctores del SNI se formó fuera del país, pero las generaciones recientes se doctoran mayoritariamente en Uruguay. A su vez, el sistema forma a las próximas generaciones dirigiendo tesis.",
+   "verificado": true,
+   "url_relativa": "#sni/formacion"
+  },
+  {
+   "id": "sni/produccion",
+   "tipo": "capitulo",
+   "ruta": "sni",
+   "ancla": "produccion",
+   "analisis": "Sistema Nacional de Investigadores",
+   "titulo": "Producción científica del SNI",
+   "descripcion": "Entre 1990 y 2025, los CV registran 143.622 publicaciones únicas: el mismo período y la misma cifra del gráfico 9. Entre 2022 y 2026 se publicaron 12.437 artículos arbitrados, 78 % de ellos en revistas indexadas en las bases internacionales. Este capítulo muestra cómo creció la producción, cómo se publica y en qué se especializa cada campo. Esta sección cuenta lo que declaran las personas del SNI. La producción de todo el sistema —SNI y fuera del SNI, sin duplicados— se explora en el análisis Producción científica →",
+   "verificado": true,
+   "url_relativa": "#sni/produccion"
+  },
+  {
+   "id": "sni/proyectos",
+   "tipo": "capitulo",
+   "ruta": "sni",
+   "ancla": "proyectos",
+   "analisis": "Sistema Nacional de Investigadores",
+   "titulo": "Proyectos y financiamiento",
+   "descripcion": "Están en marcha 3.433 de los 4.467 proyectos iniciados entre 2022 y 2026. El financiamiento combina la agencia nacional, los fondos universitarios, la cooperación internacional y otras fuentes; una parte de los proyectos no declara financiador.",
+   "verificado": true,
+   "url_relativa": "#sni/proyectos"
+  },
+  {
+   "id": "sni/circulacion",
+   "tipo": "capitulo",
+   "ruta": "sni",
+   "ancla": "circulacion",
+   "analisis": "Sistema Nacional de Investigadores",
+   "titulo": "Trayectorias y movilidad",
+   "descripcion": "Los investigadores trabajan en 49 instituciones principales distintas, que aquí se agrupan por sector —academia, centros de investigación, sector público, empresas y exterior— sin comparar instituciones entre sí. Las carreras rara vez transcurren en un solo lugar: a partir de las trayectorias declaradas en los CV, este capítulo muestra dónde trabajaron, cómo se mueven entre sectores y con el exterior, y cuántas personas combinan vínculos en más de un sector a la vez.",
+   "verificado": true,
+   "url_relativa": "#sni/circulacion"
+  },
+  {
+   "id": "sni/genero",
+   "tipo": "capitulo",
+   "ruta": "sni",
+   "ancla": "genero",
+   "analisis": "Sistema Nacional de Investigadores",
+   "titulo": "Brechas de género",
+   "descripcion": "El SNI está prácticamente en paridad: 49 % son mujeres. Pero la paridad del total convive con diferencias en los niveles más altos, en algunos indicadores de trayectoria y en el liderazgo de proyectos. Este capítulo reúne los indicadores de género del diagnóstico.",
+   "verificado": true,
+   "url_relativa": "#sni/genero"
+  },
+  {
+   "id": "sni/grafico-1",
+   "tipo": "grafico",
+   "ruta": "sni",
+   "ancla": "grafico-1",
+   "analisis": "Sistema Nacional de Investigadores",
+   "numero": 1,
+   "titulo": "Quiénes integran el SNI",
+   "bajada": "Investigadores del SNI según área, nivel, género y tipo de institución. Cada punto representa a una persona.",
+   "ficha": "SNI · a la fecha de corte (18/11/2026) · % sobre el total del SNI",
+   "universo": "SNI",
+   "periodo": "a la fecha de corte (18/11/2026)",
+   "capitulo": "personas",
+   "capitulo_titulo": "Quiénes integran el SNI",
+   "muestra": "Los 2.457 investigadores que integran hoy el Sistema Nacional de Investigadores, agrupados por área del conocimiento, nivel del SNI, género o tipo de su institución principal. El área y la subárea son las de su categorización en el SNI. Niveles: Iniciación (inicio de la carrera), Nivel I (trayectoria demostrada), Nivel II (trayectoria consolidada) y Nivel III (trayectoria destacada). Categorías: activos, asociados (residen en el exterior) y eméritos. El tipo de institución sigue la clasificación",
+   "observa": "Ciencias Naturales y Exactas es el área más grande, con 32 % de los investigadores. Del total, 2.256 son activos, 167 asociados y 32 eméritos (199 no activos). El Nivel III reúne a 160 investigadores: 123 activos, 32 eméritos y 5 asociados; los asociados se reparten en todos los niveles. El 73 % tiene su institución principal en la academia (universidades públicas y privadas).",
+   "leer": "Cada punto es un investigador y el color indica su grupo; el tamaño de cada bloque es proporcional a la cantidad de investigadores. Sobre un área se ven sus subáreas y sobre un tipo de institución, sus instituciones.",
+   "nota": "",
+   "desgloses": [
+    {
+     "rotulo": "Agrupar por",
+     "opciones": [
+      "Área",
+      "Nivel",
+      "Género",
+      "Tipo de institución"
+     ]
+    }
+   ],
+   "columnas": [
+    "Agrupación",
+    "Grupo",
+    "Investigadores"
+   ],
+   "sin_datos": false,
+   "verificado": true,
+   "url_relativa": "#sni/grafico-1"
+  },
+  {
+   "id": "sni/grafico-2",
+   "tipo": "grafico",
+   "ruta": "sni",
+   "ancla": "grafico-2",
+   "analisis": "Sistema Nacional de Investigadores",
+   "numero": 2,
+   "titulo": "Perfil de áreas",
+   "bajada": "Indicadores del perfil de los investigadores y de su producción, para cada área o sector frente al total del sistema",
+   "ficha": "SNI · a la fecha de corte; producción 2022–2026 (2026 parcial) · % sobre los investigadores del área · comparación: total del SNI",
+   "universo": "SNI",
+   "periodo": "a la fecha de corte; producción 2022–2026 (2026 parcial)",
+   "capitulo": "personas",
+   "capitulo_titulo": "Quiénes integran el SNI",
+   "muestra": "El perfil de los investigadores de cada área del conocimiento o sector, en once indicadores de edad, formación, nivel, dedicación, vínculos y producción, frente al total del país. El área es la de su categorización en el SNI; el sector, el de su institución principal.",
+   "observa": "Las áreas difieren entre sí. En Humanidades, Ciencias Sociales y Ciencias Agrícolas, la mayoría de los investigadores con doctorado obtuvo el título en el exterior (82 %, 81 % y 53 %). Ingeniería y Tecnología tiene la mayor proporción de investigadores menores de 40 años (28 %); Ingeniería y Tecnología, la menor proporción de mujeres (38 %); y Ciencias Médicas y de la Salud, la mayor proporción co",
+   "leer": "Seleccione el grupo en la lista. Cada variable tiene su propia escala: la línea vertical es el total del país y el punto, el grupo elegido (azul si está por encima, ocre si está por debajo). Los puntos tenues son los demás grupos.",
+   "nota": "La edad del total es la mediana nacional; el resto, promedios ponderados de las áreas.",
+   "desgloses": [
+    {
+     "rotulo": "Comparar por",
+     "opciones": [
+      "Área",
+      "Sector"
+     ]
+    },
+    {
+     "rotulo": "Área",
+     "opciones": [
+      "Ciencias Naturales y Exactas (794)",
+      "Ciencias Sociales (492)",
+      "Ciencias Agrícolas (369)",
+      "Ciencias Médicas y de la Salud (307)",
+      "Humanidades (255)",
+      "Ingeniería y Tecnología (240)"
+     ]
+    }
+   ],
+   "columnas": [
+    "Área",
+    "Investigadores",
+    "% mujeres",
+    "Edad (mediana)",
+    "% menores de 40",
+    "% 65 y más",
+    "% doctorado en el exterior",
+    "% niveles II y III",
+    "% dedicación total",
+    "% en varias instituciones",
+    "% con vínculo en empresas",
+    "Artículos 2022–26 por persona",
+    "Proyectos en marcha por persona"
+   ],
+   "sin_datos": false,
+   "verificado": true,
+   "url_relativa": "#sni/grafico-2"
+  },
+  {
+   "id": "sni/grafico-3",
+   "tipo": "grafico",
+   "ruta": "sni",
+   "ancla": "grafico-3",
+   "analisis": "Sistema Nacional de Investigadores",
+   "numero": 3,
+   "titulo": "El nivel en el SNI avanza con la edad",
+   "bajada": "Investigadores de cada nivel según tramo de edad, tomando como referencia los 55 años, con la edad (mediana) de cada nivel; para el total y por género",
+   "ficha": "SNI · a la fecha de corte (18/11/2026) · % sobre los investigadores del nivel con edad informada",
+   "universo": "SNI",
+   "periodo": "a la fecha de corte (18/11/2026)",
+   "capitulo": "personas",
+   "capitulo_titulo": "Quiénes integran el SNI",
+   "muestra": "La composición por edad de los investigadores de cada nivel del SNI, en total y para mujeres y varones. Niveles: Iniciación (inicio de la carrera), Nivel I (trayectoria demostrada), Nivel II (trayectoria consolidada) y Nivel III (trayectoria destacada).",
+   "observa": "La edad acompaña la progresión en la carrera: el 73 % de quienes están en Iniciación tiene menos de 45 años, mientras que en el Nivel III el 55 % tiene 65 años o más. En el Nivel II, el 67 % de las mujeres tiene 55 años o más, frente al 53 % de los varones.",
+   "leer": "Cada fila es un nivel. La línea vertical marca los 55 años: a la izquierda, los investigadores de menos de 55 (menos de 35, 35 a 44 y 45 a 54 años); a la derecha, los de 55 o más (55 a 64 y 65 o más). Los porcentajes de cada lado suman 100 % por nivel. Bajo el nombre del nivel figura la edad (median",
+   "nota": "Edad a la fecha de corte, calculada desde la fecha de nacimiento declarada; se excluyen los investigadores sin edad o sin nivel informado y las celdas con menos de 5 personas. Tramos: menos de 35, 35 a 44, 45 a 54, 55 a 64 y 65 años o más. La referencia de 55 años es el límite entre los tramos decenales 45–54 y 55–64 y separa la etapa de consolidación de la carrera de la etapa avanzada. La edad (m",
+   "desgloses": [
+    {
+     "rotulo": "Ver",
+     "opciones": [
+      "Total",
+      "Mujeres",
+      "Varones"
+     ]
+    }
+   ],
+   "columnas": [
+    "Grupo",
+    "Nivel",
+    "Menos de 35",
+    "35 a 44",
+    "45 a 54",
+    "55 a 64",
+    "65 y más"
+   ],
+   "sin_datos": false,
+   "verificado": true,
+   "url_relativa": "#sni/grafico-3"
+  },
+  {
+   "id": "sni/grafico-4",
+   "tipo": "grafico",
+   "ruta": "sni",
+   "ancla": "grafico-4",
+   "analisis": "Sistema Nacional de Investigadores",
+   "numero": 4,
+   "titulo": "Distribución territorial",
+   "bajada": "Personas del SNI según el departamento de su filiación principal (la dirección institucional declarada en el CV), agrupado en regiones",
+   "ficha": "SNI · a la fecha de corte (18/11/2026) · % sobre el total del SNI",
+   "universo": "SNI",
+   "periodo": "a la fecha de corte (18/11/2026)",
+   "capitulo": "personas",
+   "capitulo_titulo": "Quiénes integran el SNI",
+   "muestra": "En qué departamento —agrupado en regiones— está la filiación principal de las personas del SNI, según la dirección institucional que declaran en su CV.",
+   "observa": "La investigación se concentra en la capital: 77 % de las personas del SNI trabaja en una institución de Montevideo; fuera de ella, la región con más personas es Litoral Norte (5 %).",
+   "leer": "Cada región reúne varios departamentos; su color es más intenso cuanto más investigadores tiene. Seleccione una región para ver sus departamentos.",
+   "nota": "",
+   "desgloses": [],
+   "columnas": [
+    "Región",
+    "Departamentos",
+    "Personas",
+    "% del total"
+   ],
+   "sin_datos": false,
+   "verificado": true,
+   "url_relativa": "#sni/grafico-4"
+  },
+  {
+   "id": "sni/grafico-5",
+   "tipo": "grafico",
+   "ruta": "sni",
+   "ancla": "grafico-5",
+   "analisis": "Sistema Nacional de Investigadores",
+   "numero": 5,
+   "titulo": "Formación máxima de los investigadores, por área",
+   "bajada": "Máximo nivel de formación concluido de los investigadores del SNI, con el posdoctorado como escalón propio, en total y por área. Cada cuadro equivale al 1 % de los investigadores.",
+   "ficha": "SNI · a la fecha de corte (18/11/2026) · % sobre los investigadores del área con formación informada",
+   "universo": "SNI",
+   "periodo": "a la fecha de corte (18/11/2026)",
+   "capitulo": "formacion",
+   "capitulo_titulo": "Formación",
+   "muestra": "El nivel de formación más alto que concluyeron los investigadores del SNI, en total y por área del conocimiento: doctorado, maestría, especialización o grado. El posdoctorado se muestra aparte de los demás doctores.",
+   "observa": "El 93 % de los investigadores del SNI tiene doctorado (el 27 % además con posdoctorado). La proporción es menor en Ciencias Médicas y de la Salud (88 %), donde la maestría alcanza el 7 %, y mayor en Ingeniería y Tecnología (97 %).",
+   "leer": "Seleccione el total del SNI o un área con las pestañas. La grilla tiene 100 cuadros y cada color es un nivel de formación.",
+   "nota": "Formación concluida declarada en CVUy. Posdoctorado: doctores que además declaran al menos un posdoctorado concluido (en CVUy se registra como formación complementaria, no como título). «Otro»: posgrados sin nivel informado y formación no informada. Las celdas con menos de 5 personas no se publican.",
+   "desgloses": [
+    {
+     "rotulo": "Grupo",
+     "opciones": [
+      "Total del SNI",
+      "Ciencias Naturales y Exactas",
+      "Ciencias Sociales",
+      "Ciencias Agrícolas",
+      "Ciencias Médicas y de la Salud",
+      "Humanidades",
+      "Ingeniería y Tecnología"
+     ]
+    }
+   ],
+   "columnas": [
+    "Área",
+    "Posdoctorado (%)",
+    "Doctorado (%)",
+    "Maestría (%)",
+    "Especialización (%)",
+    "Grado (%)",
+    "Investigadores"
+   ],
+   "sin_datos": false,
+   "verificado": true,
+   "url_relativa": "#sni/grafico-5"
+  },
+  {
+   "id": "sni/grafico-6",
+   "tipo": "grafico",
+   "ruta": "sni",
+   "ancla": "grafico-6",
+   "analisis": "Sistema Nacional de Investigadores",
+   "numero": 6,
+   "titulo": "La formación doctoral se realiza cada vez más en Uruguay",
+   "bajada": "Porcentaje de cada cohorte de doctores que obtuvo el título en Uruguay, para el total y por área",
+   "ficha": "SNI · por quinquenio de obtención del doctorado · % sobre los doctores de cada quinquenio",
+   "universo": "SNI",
+   "periodo": "por quinquenio de obtención del doctorado",
+   "capitulo": "formacion",
+   "capitulo_titulo": "Formación",
+   "muestra": "Qué parte de los investigadores del SNI con doctorado obtuvo el título en Uruguay, según el quinquenio en que lo obtuvo.",
+   "observa": "En la cohorte 2020–24, por primera vez, la mayoría de los investigadores del SNI que se doctoraron en ese período obtuvo el título en Uruguay (57 %), frente a 30 % en 1990–94. El cambio no es parejo entre áreas: en Ciencias Sociales y Ciencias Agrícolas y Humanidades, la mayoría de los investigadores con doctorado obtuvo el título en el exterior.",
+   "leer": "Cada punto es un quinquenio. Cuando la línea supera el 50 %, la mayoría de esa cohorte se formó en el país.",
+   "nota": "Cohortes según el quinquenio de obtención del doctorado. Se omiten las cohortes con menos de 10 doctores o con datos reservados.",
+   "desgloses": [
+    {
+     "rotulo": "Comparar con",
+     "opciones": [
+      "Total",
+      "Ciencias Médicas y de la Salud",
+      "Ciencias Naturales y Exactas",
+      "Ciencias Agrícolas",
+      "Ciencias Sociales",
+      "Humanidades",
+      "Ingeniería y Tecnología"
+     ]
+    }
+   ],
+   "columnas": [
+    "Quinquenio",
+    "En Uruguay",
+    "En el exterior",
+    "% en Uruguay"
+   ],
+   "sin_datos": false,
+   "verificado": true,
+   "url_relativa": "#sni/grafico-6"
+  },
+  {
+   "id": "sni/grafico-7",
+   "tipo": "grafico",
+   "ruta": "sni",
+   "ancla": "grafico-7",
+   "analisis": "Sistema Nacional de Investigadores",
+   "numero": 7,
+   "titulo": "Dónde obtuvieron el doctorado",
+   "bajada": "Doctores del SNI según dónde obtuvieron el título —Uruguay o el exterior, región y país— y su participación por área del conocimiento",
+   "ficha": "SNI · a la fecha de corte (18/11/2026) · % sobre los doctores del SNI",
+   "universo": "SNI",
+   "periodo": "a la fecha de corte (18/11/2026)",
+   "capitulo": "formacion",
+   "capitulo_titulo": "Formación",
+   "muestra": "Dónde obtuvieron el doctorado los investigadores del SNI —en Uruguay o en el exterior, en qué región y país— y cómo se reparten entre las áreas del conocimiento.",
+   "observa": "De los investigadores del SNI con doctorado, el 47 % obtuvo el título en Uruguay y el 53 % en el exterior. Europa es la región que más doctores formó (24 %), seguida de América Latina (20 %). Los países más frecuentes son España, Argentina, Estados Unidos, Brasil.",
+   "leer": "Cada fila muestra el porcentaje sobre todos los doctores y la cantidad. A la derecha, la participación por área del conocimiento de lo elegido.",
+   "nota": "Haberse formado afuera no implica trabajar hoy en el exterior.",
+   "desgloses": [],
+   "columnas": [
+    "Región",
+    "País",
+    "Doctores"
+   ],
+   "sin_datos": false,
+   "verificado": true,
+   "url_relativa": "#sni/grafico-7"
+  },
+  {
+   "id": "sni/grafico-8",
+   "tipo": "grafico",
+   "ruta": "sni",
+   "ancla": "grafico-8",
+   "analisis": "Sistema Nacional de Investigadores",
+   "numero": 8,
+   "titulo": "La dirección de tesis doctorales varía entre áreas",
+   "bajada": "Tesis de doctorado dirigidas en 2022–2026 por cada 100 investigadores, total y por área",
+   "ficha": "SNI · 2022–2026 (2026 parcial) · tesis por cada 100 investigadores del área",
+   "universo": "SNI",
+   "periodo": "2022–2026 (2026 parcial)",
+   "capitulo": "formacion",
+   "capitulo_titulo": "Formación",
+   "muestra": "Cuántas tesis de doctorado dirigieron entre 2022 y 2026 los investigadores de cada área, por cada 100 investigadores.",
+   "observa": "En el total hay 49 tesis por cada 100 investigadores. Ciencias Agrícolas y Ciencias Naturales y Exactas tienen las tasas más altas; Humanidades y Ciencias Sociales, las más bajas. Hoy hay 2.396 tutorías de doctorado en marcha.",
+   "leer": "Cada barra corresponde a un área (o a una subárea) y su largo es la tasa; al expresarse por cada 100 investigadores, permite comparar áreas de distinto tamaño. Al elegir un área, el gráfico se abre en sus subáreas.",
+   "nota": "Se cuentan registros de dirección: una tesis con dos cotutores del SNI puede aparecer dos veces. La ventana incluye 2026, todavía incompleto.",
+   "desgloses": [
+    {
+     "rotulo": "Área",
+     "opciones": [
+      "Todas",
+      "Ciencias Agrícolas",
+      "Ciencias Naturales y Exactas",
+      "Ciencias Médicas y de la Salud",
+      "Ingeniería y Tecnología",
+      "Ciencias Sociales",
+      "Humanidades"
+     ]
+    }
+   ],
+   "columnas": [
+    "Área",
+    "Tesis por cada 100 investigadores"
+   ],
+   "sin_datos": false,
+   "verificado": true,
+   "url_relativa": "#sni/grafico-8"
+  },
+  {
+   "id": "sni/grafico-9",
+   "tipo": "grafico",
+   "ruta": "sni",
+   "ancla": "grafico-9",
+   "analisis": "Sistema Nacional de Investigadores",
+   "numero": 9,
+   "titulo": "La evolución de la producción",
+   "bajada": "Período 1990–2025. Indicadores anuales en tres grupos: cantidades totales (publicaciones y proyectos), cantidades por tipo de producción (artículos, libros, eventos y documentos) y porcentajes (calculados siempre sobre los artículos arbitrados publicados ese año)",
+   "ficha": "SNI · 1990–2025 · % sobre los artículos arbitrados de cada año (indicadores en %)",
+   "universo": "SNI",
+   "periodo": "1990–2025",
+   "capitulo": "produccion",
+   "capitulo_titulo": "Producción científica del SNI",
+   "muestra": "La producción anual de los investigadores que hoy integran el SNI: publicaciones por tipo, indexación internacional, acceso abierto, colaboración y proyectos iniciados. Los hitos marcan momentos institucionales y cifras de la propia serie.",
+   "observa": "Las publicaciones pasaron de 445 en 1990 a 6.213 en 2025, con un máximo de 7.102 en 2019; los artículos arbitrados, de 125 a 2.586. En acceso abierto estaba el 1 % de los artículos arbitrados en 2000 y el 46 % en 2025; en revistas de WoS o Scopus, el 78 % en 2025.",
+   "leer": "Cada pestaña es un indicador; debajo se indica qué mide y el eje vertical muestra su unidad. La serie es retrospectiva: describe a quienes hoy están en el SNI, por lo que los primeros años están subrepresentados.",
+   "nota": "Período: 1990 a 2025, el último año completo; el año en curso, incompleto, no se incluye. Las cifras de la introducción del capítulo usan el mismo período.",
+   "desgloses": [
+    {
+     "rotulo": "Cantidades por año",
+     "opciones": [
+      "Publicaciones",
+      "Proyectos iniciados",
+      "Coautores por artículo"
+     ]
+    },
+    {
+     "rotulo": "Por tipo de producción (cantidades por año)",
+     "opciones": [
+      "Artículos arbitrados",
+      "Artículos no arbitrados",
+      "Libros y capítulos",
+      "Trabajos en eventos",
+      "Documentos y producción técnica"
+     ]
+    },
+    {
+     "rotulo": "Porcentajes sobre los artículos arbitrados del año",
+     "opciones": [
+      "En WoS o Scopus",
+      "En acceso abierto",
+      "Con más de un autor del SNI",
+      "Con autores de varias instituciones"
+     ]
+    }
+   ],
+   "columnas": [
+    "Año",
+    "Publicaciones",
+    "Artículos arbitrados",
+    "Artículos no arbitrados",
+    "Libros y capítulos",
+    "Trabajos en eventos",
+    "Documentos y producción técnica",
+    "Proyectos iniciados",
+    "Coautores por artículo",
+    "En WoS o Scopus",
+    "En acceso abierto",
+    "Con más de un autor del SNI",
+    "Con autores de varias instituciones"
+   ],
+   "sin_datos": false,
+   "verificado": true,
+   "url_relativa": "#sni/grafico-9"
+  },
+  {
+   "id": "sni/grafico-10",
+   "tipo": "grafico",
+   "ruta": "sni",
+   "ancla": "grafico-10",
+   "analisis": "Sistema Nacional de Investigadores",
+   "numero": 10,
+   "titulo": "La producción crece en todas las áreas",
+   "bajada": "Artículos arbitrados por año y área del conocimiento. Elija un área para ver sus subáreas.",
+   "ficha": "SNI · 1990–2026 (2026 parcial)",
+   "universo": "SNI",
+   "periodo": "1990–2026 (2026 parcial)",
+   "capitulo": "produccion",
+   "capitulo_titulo": "Producción científica del SNI",
+   "muestra": "Los artículos arbitrados publicados cada año por las personas del SNI, según el área del conocimiento del trabajo o, al elegir un área, según sus subáreas.",
+   "observa": "Todas las áreas crecen, a ritmos distintos: entre 2005 y 2025, Ciencias Sociales multiplicó sus artículos por 5,7 y Humanidades por 5,0. Ciencias Naturales y Exactas sigue siendo la corriente más ancha, pero su peso relativo disminuye a medida que las demás áreas se consolidan.",
+   "leer": "El grosor de cada corriente en un año es la cantidad de artículos de esa área o subárea; el grosor total del río es el volumen del año. Con el selector se pasa de las áreas a las subáreas de un área (las ocho con más artículos y el resto agrupado). Seleccione una corriente para aislarla y use el sel",
+   "nota": "",
+   "desgloses": [
+    {
+     "rotulo": "Ver",
+     "opciones": [
+      "Todas las áreas",
+      "Subáreas de Ciencias Naturales y Exactas",
+      "Subáreas de Ciencias Médicas y de la Salud",
+      "Subáreas de Humanidades",
+      "Subáreas de Ciencias Sociales",
+      "Subáreas de Ingeniería y Tecnología",
+      "Subáreas de Ciencias Agrícolas"
+     ]
+    }
+   ],
+   "columnas": [
+    "Año",
+    "Ciencias Naturales y Exactas",
+    "Ciencias Médicas y de la Salud",
+    "Humanidades",
+    "Ciencias Sociales",
+    "Ingeniería y Tecnología",
+    "Ciencias Agrícolas"
+   ],
+   "sin_datos": false,
+   "verificado": true,
+   "url_relativa": "#sni/grafico-10"
+  },
+  {
+   "id": "sni/grafico-11",
+   "tipo": "grafico",
+   "ruta": "sni",
+   "ancla": "grafico-11",
+   "analisis": "Sistema Nacional de Investigadores",
+   "numero": 11,
+   "titulo": "Visibilidad internacional y acceso abierto por área",
+   "bajada": "Porcentaje de artículos arbitrados de 2022–2026 indexados en Scopus, total y por área",
+   "ficha": "SNI · 2022–2026 (2026 parcial) · % sobre los artículos arbitrados del área",
+   "universo": "SNI",
+   "periodo": "2022–2026 (2026 parcial)",
+   "capitulo": "produccion",
+   "capitulo_titulo": "Producción científica del SNI",
+   "muestra": "Qué parte de los artículos arbitrados de 2022–2026 de cada área está indexada en bases internacionales (Web of Science, Scopus) o regionales (SciELO, Latindex), cuál no declara indexación y cuál está en acceso abierto.",
+   "observa": "Las ciencias naturales, agrícolas, médicas e ingenierías publican mayoritariamente en revistas indexadas en Scopus; en Humanidades la proporción es mucho menor (33 %) y pesan más las bases regionales: son tradiciones de publicación diferentes, no necesariamente de distinta calidad. En el total, 74 % está en Scopus y 41 % en acceso abierto.",
+   "leer": "Elija el indicador con el filtro. Cada barra es un área y su largo es el porcentaje de sus artículos con esa característica, sobre una escala de 0 a 100 %. La primera barra es el total.",
+   "nota": "",
+   "desgloses": [
+    {
+     "rotulo": "Indicador",
+     "opciones": [
+      "Web of Science",
+      "Scopus",
+      "SciELO",
+      "Latindex",
+      "Sin indexación",
+      "Acceso abierto"
+     ]
+    }
+   ],
+   "columnas": [
+    "Área",
+    "% Web of Science",
+    "% Scopus",
+    "% SciELO",
+    "% Latindex",
+    "% Sin indexación",
+    "% Acceso abierto"
+   ],
+   "sin_datos": false,
+   "verificado": true,
+   "url_relativa": "#sni/grafico-11"
+  },
+  {
+   "id": "sni/grafico-12",
+   "tipo": "grafico",
+   "ruta": "sni",
+   "ancla": "grafico-12",
+   "analisis": "Sistema Nacional de Investigadores",
+   "numero": 12,
+   "titulo": "Líneas de investigación activas",
+   "bajada": "Líneas de investigación activas declaradas por los investigadores del SNI, por área",
+   "ficha": "SNI · a la fecha de corte (18/11/2026)",
+   "universo": "SNI",
+   "periodo": "a la fecha de corte (18/11/2026)",
+   "capitulo": "produccion",
+   "capitulo_titulo": "Producción científica del SNI",
+   "muestra": "Las líneas de investigación vigentes de los investigadores del SNI, en total y por área o subárea, y cuántas tiene cada investigador. Son temas de trabajo en curso, no producción terminada.",
+   "observa": "Los investigadores del SNI declaran 5.853 líneas de investigación activas, 2,4 por investigador; el 75 % declara al menos una. El área con más líneas por investigador es Ingeniería y Tecnología (2,6).",
+   "leer": "Cada barra es un área (o una subárea, si se elige un área); su largo es la cantidad de líneas activas o, con «Por investigador», el promedio de líneas por investigador.",
+   "nota": "Una línea declarada por varios investigadores cuenta una vez por cada uno (registros de líneas, no líneas únicas). El área y la subárea son las de la categorización del investigador en el SNI.",
+   "desgloses": [
+    {
+     "rotulo": "Medida",
+     "opciones": [
+      "Líneas activas",
+      "Por investigador"
+     ]
+    },
+    {
+     "rotulo": "Área",
+     "opciones": [
+      "Todas",
+      "Ciencias Naturales y Exactas",
+      "Ciencias Sociales",
+      "Ciencias Médicas y de la Salud",
+      "Ciencias Agrícolas",
+      "Ingeniería y Tecnología",
+      "Humanidades"
+     ]
+    }
+   ],
+   "columnas": [
+    "Área",
+    "Líneas activas",
+    "Investigadores",
+    "Con líneas activas",
+    "Líneas por investigador"
+   ],
+   "sin_datos": false,
+   "verificado": true,
+   "url_relativa": "#sni/grafico-12"
+  },
+  {
+   "id": "sni/grafico-13",
+   "tipo": "grafico",
+   "ruta": "sni",
+   "ancla": "grafico-13",
+   "analisis": "Sistema Nacional de Investigadores",
+   "numero": 13,
+   "titulo": "Producción por investigador, por área",
+   "bajada": "Ítems por cada 100 investigadores del área (artículos arbitrados, 2022–2026), SNI",
+   "ficha": "SNI · 2022–2026 (2026 parcial) · ítems por cada 100 investigadores del área · comparación: total del SNI",
+   "universo": "SNI",
+   "periodo": "2022–2026 (2026 parcial)",
+   "capitulo": "produccion",
+   "capitulo_titulo": "Producción científica del SNI",
+   "muestra": "Cuánto produce cada área en relación con la cantidad de personas que investigan en ella. Así se comparan áreas grandes y chicas en pie de igualdad.",
+   "observa": "En artículos arbitrados, el total es de 506,2 ítems por cada 100 investigadores. Ciencias Médicas y de la Salud registra 662,5, más que el total; Ingeniería y Tecnología, 422,5, menos que el total. Las diferencias reflejan también formas de publicar propias de cada campo, no solo intensidad de trabajo.",
+   "leer": "Cada barra es un área; la primera es el total. Con «Por 100 investigadores», el largo es la cantidad de ítems del tipo elegido por cada 100 investigadores del área; con «Cantidad», el total de ítems. El tipo de producción se elige arriba.",
+   "nota": "Ítems de 2022–2026 de cada tipo, divididos entre los investigadores del área (personas del SNI, por su área de categorización) y multiplicados por 100. Cada ítem cuenta una vez en su área; «Todas las publicaciones» suma los tipos de publicación, sin proyectos. Las áreas con menos de 5 investigadores no se publican.",
+   "desgloses": [
+    {
+     "rotulo": "Tipo de producción",
+     "opciones": [
+      "Todas las publicaciones",
+      "Artículos arbitrados",
+      "Otros artículos",
+      "Libros y capítulos",
+      "Trabajos en eventos",
+      "Documentos de trabajo",
+      "Producción técnica",
+      "Proyectos iniciados"
+     ]
+    },
+    {
+     "rotulo": "Indicador",
+     "opciones": [
+      "Por 100 investigadores",
+      "Cantidad"
+     ]
+    }
+   ],
+   "columnas": [
+    "Área",
+    "Ítems (2022–2026)",
+    "Investigadores",
+    "Por 100 investigadores"
+   ],
+   "sin_datos": false,
+   "verificado": true,
+   "url_relativa": "#sni/grafico-13"
+  },
+  {
+   "id": "sni/grafico-14",
+   "tipo": "grafico",
+   "ruta": "sni",
+   "ancla": "grafico-14",
+   "analisis": "Sistema Nacional de Investigadores",
+   "numero": 14,
+   "titulo": "La evolución de los proyectos",
+   "bajada": "Proyectos iniciados cada año desde 1990, en total y por área del conocimiento",
+   "ficha": "SNI · 1990–2026 (2026 parcial)",
+   "universo": "SNI",
+   "periodo": "1990–2026 (2026 parcial)",
+   "capitulo": "proyectos",
+   "capitulo_titulo": "Proyectos y financiamiento",
+   "muestra": "Cuántos proyectos comenzaron cada año, en total, por área del conocimiento o según quién los financia.",
+   "observa": "Se iniciaron 843 proyectos en 2025, frente a 653 en 2005; el máximo fue en 2023. Ciencias Naturales y Exactas es el área con más proyectos en todo el período, seguida por Ciencias Sociales.",
+   "leer": "Cada línea es un área o una fuente de financiamiento. El eje vertical es la cantidad de proyectos iniciados en el año y se ajusta a las series visibles. Con los botones de «Series» se muestra u oculta cada línea; el total, que es mucho mayor, empieza oculto para que las demás se lean mejor.",
+   "nota": "Proyectos únicos (un proyecto declarado por varias personas cuenta una vez), según su año de inicio. El total incluye todos los proyectos iniciados, como la serie de producción; los que no informan área se muestran en «Sin área informada». El año en curso, incompleto, no se muestra.",
+   "desgloses": [
+    {
+     "rotulo": "Ver",
+     "opciones": [
+      "Por área",
+      "Por financiamiento"
+     ]
+    },
+    {
+     "rotulo": "Series visibles",
+     "opciones": [
+      "Total",
+      "Ciencias Naturales y Exactas",
+      "Ciencias Sociales",
+      "Ciencias Agrícolas",
+      "Ingeniería y Tecnología",
+      "Ciencias Médicas y de la Salud",
+      "Humanidades",
+      "Sin área informada"
+     ]
+    }
+   ],
+   "columnas": [
+    "Año",
+    "Total",
+    "Ciencias Naturales y Exactas",
+    "Ciencias Sociales",
+    "Ciencias Agrícolas",
+    "Ingeniería y Tecnología",
+    "Ciencias Médicas y de la Salud",
+    "Humanidades",
+    "Sin área informada"
+   ],
+   "sin_datos": false,
+   "verificado": true,
+   "url_relativa": "#sni/grafico-14"
+  },
+  {
+   "id": "sni/grafico-15",
+   "tipo": "grafico",
+   "ruta": "sni",
+   "ancla": "grafico-15",
+   "analisis": "Sistema Nacional de Investigadores",
+   "numero": 15,
+   "titulo": "Fuentes de financiamiento por área",
+   "bajada": "Proyectos en marcha de todas las áreas, según su fuente de financiamiento (% del total de proyectos)",
+   "ficha": "SNI · a la fecha de corte (18/11/2026) · % sobre los proyectos del área",
+   "universo": "SNI",
+   "periodo": "a la fecha de corte (18/11/2026)",
+   "capitulo": "proyectos",
+   "capitulo_titulo": "Proyectos y financiamiento",
+   "muestra": "Cómo se financian los proyectos en marcha de cada área: la agencia nacional (ANII), la comisión de investigación de la Udelar (CSIC), fuentes internacionales, otros financiadores o ninguno declarado.",
+   "observa": "En el conjunto de las áreas, la fuente más frecuente es CSIC (Udelar) (20 % de los proyectos) y 30 % no declara financiador.",
+   "leer": "El anillo completo es el 100 % de los proyectos; cada sector, una fuente. Elija un área con el filtro.",
+   "nota": "Los porcentajes cuentan proyectos, no montos. La ausencia de un financiador declarado no implica que el proyecto carezca de recursos.",
+   "desgloses": [
+    {
+     "rotulo": "Área",
+     "opciones": [
+      "Total",
+      "Ciencias Agrícolas",
+      "Ciencias Médicas y de la Salud",
+      "Ciencias Naturales y Exactas",
+      "Ciencias Sociales",
+      "Humanidades",
+      "Ingeniería y Tecnología"
+     ]
+    }
+   ],
+   "columnas": [
+    "Área",
+    "Proyectos",
+    "ANII (%)",
+    "ANII e internacional (%)",
+    "CSIC (Udelar) (%)",
+    "Internacional (%)",
+    "Otros financiadores (%)",
+    "Sin financiador declarado (%)"
+   ],
+   "sin_datos": false,
+   "verificado": true,
+   "url_relativa": "#sni/grafico-15"
+  },
+  {
+   "id": "sni/grafico-16",
+   "tipo": "grafico",
+   "ruta": "sni",
+   "ancla": "grafico-16",
+   "analisis": "Sistema Nacional de Investigadores",
+   "numero": 16,
+   "titulo": "Inserción laboral por sector, año a año",
+   "bajada": "Investigadores actuales del SNI según el sector de su vínculo laboral principal en cada año",
+   "ficha": "SNI · 1990–2026 (2026 parcial)",
+   "universo": "SNI",
+   "periodo": "1990–2026 (2026 parcial)",
+   "capitulo": "circulacion",
+   "capitulo_titulo": "Trayectorias y movilidad",
+   "muestra": "Cuántos investigadores del SNI tenían, cada año, un vínculo laboral en cada sector. Sectores: academia pública y privada, centros de investigación (Institut Pasteur, IIBCE, INIA, LATU y CUDIM), empresas, sector público no académico, enseñanza no universitaria (primaria, media y técnica), privado sin fines de lucro y exterior. Una persona puede tener vínculos en varios sectores a la vez.",
+   "observa": "En 2025, 1.870 investigadores tenían vínculo con la academia pública; 404, con centros de investigación; 300, con la academia privada, y 136, con empresas.",
+   "leer": "Cada línea es un sector. Como se reconstruye la trayectoria de quienes están hoy, las curvas crecen también porque las personas se van incorporando.",
+   "nota": "Las trayectorias describen a quienes hoy integran el SNI. Los vínculos sin fecha de fin se consideran vigentes hasta hoy.",
+   "desgloses": [],
+   "columnas": [
+    "Año",
+    "Academia pública",
+    "Academia privada",
+    "Centros de investigación",
+    "Empresas",
+    "Sector público (no académico)",
+    "Enseñanza no universitaria"
+   ],
+   "sin_datos": false,
+   "verificado": true,
+   "url_relativa": "#sni/grafico-16"
+  },
+  {
+   "id": "sni/grafico-17",
+   "tipo": "grafico",
+   "ruta": "sni",
+   "ancla": "grafico-17",
+   "analisis": "Sistema Nacional de Investigadores",
+   "numero": 17,
+   "titulo": "Movilidad entre sectores, por década",
+   "bajada": "Vínculos laborales de los investigadores actuales del SNI: cada cambio de sector de su vínculo principal, por década. Una persona aparece tantas veces como cambió de sector en el período",
+   "ficha": "SNI · a la fecha de corte (18/11/2026)",
+   "universo": "SNI",
+   "periodo": "a la fecha de corte (18/11/2026)",
+   "capitulo": "circulacion",
+   "capitulo_titulo": "Trayectorias y movilidad",
+   "muestra": "Cada cambio de sector del vínculo laboral principal de los investigadores que hoy integran el SNI: de dónde salieron y a dónde llegaron, por década. Se cuentan movimientos, no personas. Sectores: academia pública y privada, centros de investigación (Institut Pasteur, IIBCE, INIA, LATU y CUDIM), empresas, sector público no académico, enseñanza no universitaria (primaria, media y técnica), privado sin fines de lucro y exterior.",
+   "observa": "61 % de los movimientos tiene al exterior como origen o destino. El circuito más frecuente es Academia pública ↔ Exterior (42 % de los movimientos, sumando ambos sentidos).",
+   "leer": "A la izquierda está el sector de origen y a la derecha el de destino; el grosor de cada banda es la cantidad de movimientos. Seleccione una década o presione reproducir para ver cómo cambian los circuitos.",
+   "nota": "",
+   "desgloses": [
+    {
+     "rotulo": "Década",
+     "opciones": [
+      "1990s",
+      "2000s",
+      "2010s",
+      "2020s"
+     ]
+    }
+   ],
+   "columnas": [
+    "Década",
+    "Origen",
+    "Destino",
+    "Transiciones"
+   ],
+   "sin_datos": false,
+   "verificado": true,
+   "url_relativa": "#sni/grafico-17"
+  },
+  {
+   "id": "sni/grafico-18",
+   "tipo": "grafico",
+   "ruta": "sni",
+   "ancla": "grafico-18",
+   "analisis": "Sistema Nacional de Investigadores",
+   "numero": 18,
+   "titulo": "Cuántos investigadores trabajaron en el exterior y cuántos volvieron",
+   "bajada": "Investigadores del SNI en 2026 según su experiencia laboral en el exterior a lo largo de toda su trayectoria declarada (% del nivel)",
+   "ficha": "SNI · a la fecha de corte (18/11/2026) · % sobre los investigadores de cada nivel",
+   "universo": "SNI",
+   "periodo": "a la fecha de corte (18/11/2026)",
+   "capitulo": "circulacion",
+   "capitulo_titulo": "Trayectorias y movilidad",
+   "muestra": "La relación laboral con el exterior de los investigadores de cada nivel del SNI, en cuatro grupos: «Fue y volvió», «Afuera hoy» (asociados del SNI, que residen en el exterior), «Vínculo secundario con el exterior» y «Sin vínculo con el exterior». Considera toda su historia laboral, no un período. Niveles del SNI: Iniciación (inicio de la carrera), Nivel I (trayectoria demostrada), Nivel II (trayectoria consolidada) y Nivel III (trayectoria destacada).",
+   "observa": "En el total del SNI, el 46 % trabajó afuera y volvió, el 7 % trabaja afuera hoy y el 17 % tuvo un vínculo secundario con el exterior; el 30 % nunca tuvo un vínculo laboral con el exterior. La experiencia internacional crece con el nivel: del 62 % en Iniciación al 79 % en Nivel III.",
+   "leer": "Cada barra es un nivel y suma 100 %; el valor a la derecha es el % que tuvo alguna vez un vínculo con el exterior. Fue y volvió: su trabajo principal estuvo en el exterior y hoy trabaja en Uruguay. Afuera hoy: reside y trabaja en el exterior (asociados en el exterior del SNI). Vínculo secundario con",
+   "nota": "No es un período: se mira la historia laboral completa de quienes integran el SNI en 2026, con todos los vínculos declarados en sus CV, activos y terminados, y se observa si alguna vez tuvieron un vínculo en el exterior y dónde trabajan hoy. «Afuera hoy» corresponde a la categoría de asociado del SNI. Quienes empezaron su carrera en el exterior y luego se instalaron en Uruguay también figuran en «",
+   "desgloses": [],
+   "columnas": [
+    "Nivel",
+    "Personas",
+    "Fue y volvió (%)",
+    "Afuera hoy (%)",
+    "Vínculo secundario con el exterior (%)",
+    "Sin vínculo con el exterior (%)"
+   ],
+   "sin_datos": false,
+   "verificado": true,
+   "url_relativa": "#sni/grafico-18"
+  },
+  {
+   "id": "sni/grafico-19",
+   "tipo": "grafico",
+   "ruta": "sni",
+   "ancla": "grafico-19",
+   "analisis": "Sistema Nacional de Investigadores",
+   "numero": 19,
+   "titulo": "Vínculos simultáneos entre la academia y otros sectores",
+   "bajada": "Personas con vínculos simultáneos en la academia y otro sector, por año",
+   "ficha": "SNI · 1990–2026 (2026 parcial) · % sobre los investigadores con algún vínculo laboral ese año",
+   "universo": "SNI",
+   "periodo": "1990–2026 (2026 parcial)",
+   "capitulo": "circulacion",
+   "capitulo_titulo": "Trayectorias y movilidad",
+   "muestra": "Los investigadores que en un mismo año tienen a la vez un vínculo en la academia (educación superior pública o privada) y otro en un centro de investigación, en el sector público no académico o en una empresa, como porcentaje de quienes tienen algún vínculo laboral ese año. Los centros de investigación (Institut Pasteur, IIBCE, INIA, LATU y CUDIM) forman una categoría propia.",
+   "observa": "En 2025, 166 investigadores combinaban academia y sector público, y 245 academia y centros de investigación. El doble vínculo con empresas es el menos frecuente y bajó en proporción: 7 % en 2005, 6 % en 2015 y 5 % en 2025 de los investigadores con vínculo laboral ese año.",
+   "leer": "Cada línea es un tipo de doble vínculo.",
+   "nota": "",
+   "desgloses": [],
+   "columnas": [
+    "Año",
+    "Academia y sector público",
+    "Academia y centros",
+    "Academia y empresas"
+   ],
+   "sin_datos": false,
+   "verificado": true,
+   "url_relativa": "#sni/grafico-19"
+  },
+  {
+   "id": "sni/grafico-20",
+   "tipo": "grafico",
+   "ruta": "sni",
+   "ancla": "grafico-20",
+   "analisis": "Sistema Nacional de Investigadores",
+   "numero": 20,
+   "titulo": "La participación de las mujeres disminuye al subir de nivel",
+   "bajada": "Porcentaje de mujeres y de varones en cada nivel del SNI (curva tijera), total y por área",
+   "ficha": "SNI · a la fecha de corte (18/11/2026) · % sobre los investigadores del nivel con género informado",
+   "universo": "SNI",
+   "periodo": "a la fecha de corte (18/11/2026)",
+   "capitulo": "genero",
+   "capitulo_titulo": "Brechas de género",
+   "muestra": "El porcentaje de mujeres y de varones en cada nivel del SNI: el llamado «diagrama de tijera», usado para describir la segregación vertical por género en la ciencia. Niveles del SNI: Iniciación (inicio de la carrera), Nivel I (trayectoria demostrada), Nivel II (trayectoria consolidada) y Nivel III (trayectoria destacada).",
+   "observa": "En el conjunto del SNI las mujeres son 57 % en Iniciación y 31 % en Nivel III. Comparando el porcentaje de mujeres en el Nivel III con el de todos los investigadores de su área, la mayor diferencia está en Ciencias Médicas y de la Salud (−30 puntos porcentuales) y en Ciencias Naturales y Exactas (−27 puntos porcentuales). En Ciencias Sociales (+4 puntos porcentuales), la proporción de mujeres en e",
+   "leer": "Si hubiera paridad en todos los niveles, las dos líneas estarían juntas en 50 %. Cuando se abren hacia la derecha —como las hojas de una tijera— la participación de las mujeres disminuye a medida que se sube de nivel. Seleccione un área para ver su propia tijera.",
+   "nota": "Brecha en el Nivel III: porcentaje de mujeres en el Nivel III menos porcentaje de mujeres entre todos los investigadores del área, en puntos porcentuales. La comparación describe la composición actual del SNI; no sigue a una misma generación.",
+   "desgloses": [
+    {
+     "rotulo": "Área",
+     "opciones": [
+      "Total",
+      "Ciencias Agrícolas",
+      "Ciencias Médicas y de la Salud",
+      "Ciencias Naturales y Exactas",
+      "Ciencias Sociales",
+      "Humanidades",
+      "Ingeniería y Tecnología"
+     ]
+    }
+   ],
+   "columnas": [
+    "Nivel",
+    "% mujeres",
+    "% varones"
+   ],
+   "sin_datos": false,
+   "verificado": true,
+   "url_relativa": "#sni/grafico-20"
+  },
+  {
+   "id": "sni/grafico-21",
+   "tipo": "grafico",
+   "ruta": "sni",
+   "ancla": "grafico-21",
+   "analisis": "Sistema Nacional de Investigadores",
+   "numero": 21,
+   "titulo": "Condiciones de trabajo y producción de mujeres y varones",
+   "bajada": "Indicadores de formación, dedicación y producción de mujeres y varones del SNI, total y por área",
+   "ficha": "SNI · a la fecha de corte (18/11/2026) · comparación: mujeres frente a varones",
+   "universo": "SNI",
+   "periodo": "a la fecha de corte (18/11/2026)",
+   "capitulo": "genero",
+   "capitulo_titulo": "Brechas de género",
+   "muestra": "Nueve indicadores de trayectoria, producción y formación para mujeres y para varones del SNI. En la vista por área se sigue un indicador en el total y en cada una de las seis áreas.",
+   "observa": "El 16 % de las mujeres está en los niveles II y III, frente al 29 % de los varones. Publicaron 7,2 artículos arbitrados por persona en 2022–2026 (los varones, 8,9) y tienen 4,9 proyectos en marcha por persona (los varones, 4,6).",
+   "leer": "Cada fila tiene dos puntos: mujeres y varones. Lo importante es la distancia entre ellos. En la vista total cada fila usa su propia escala; en la vista por área todas comparten la escala del indicador elegido.",
+   "nota": "Compara a las mujeres y los varones que hoy integran el SNI. Los dos grupos tienen distinta composición por edad y por área; el gráfico no ajusta por esas variables, por lo que las diferencias no deben atribuirse solo al género.",
+   "desgloses": [
+    {
+     "rotulo": "Ver",
+     "opciones": [
+      "Total del SNI",
+      "Un indicador por área"
+     ]
+    }
+   ],
+   "columnas": [
+    "Indicador",
+    "Mujeres",
+    "Varones"
+   ],
+   "sin_datos": false,
+   "verificado": true,
+   "url_relativa": "#sni/grafico-21"
+  },
+  {
+   "id": "sni/grafico-22",
+   "tipo": "grafico",
+   "ruta": "sni",
+   "ancla": "grafico-22",
+   "analisis": "Sistema Nacional de Investigadores",
+   "numero": 22,
+   "titulo": "Mujeres investigadoras y responsables de proyectos, por área",
+   "bajada": "Porcentaje de mujeres entre los investigadores de cada área y entre los responsables de sus proyectos en marcha. En 5 de 6 áreas, la proporción de proyectos con responsable mujer es menor que la de mujeres entre los investigadores.",
+   "ficha": "SNI · a la fecha de corte (18/11/2026) · % sobre los investigadores y los responsables de proyectos del área",
+   "universo": "SNI",
+   "periodo": "a la fecha de corte (18/11/2026)",
+   "capitulo": "genero",
+   "capitulo_titulo": "Brechas de género",
+   "muestra": "Para cada área, el peso de las mujeres entre los investigadores y entre quienes son responsables de los proyectos en marcha.",
+   "observa": "La distancia más grande está en Ciencias Agrícolas: el 52 % de sus investigadores son mujeres, y ellas son responsables del 41 % de los proyectos en marcha. Solo en Humanidades (49 % de investigadoras y 53 % de proyectos con responsable mujer) la proporción de proyectos con responsable mujer iguala o supera el peso de las mujeres entre los investigadores.",
+   "leer": "Si el liderazgo acompañara la composición, los dos puntos coincidirían. Cuando el punto de responsables queda a la izquierda, las mujeres lideran menos proyectos de lo que su peso haría esperar.",
+   "nota": "",
+   "desgloses": [],
+   "columnas": [
+    "Área",
+    "% mujeres investigadoras",
+    "% proyectos con responsable mujer"
+   ],
+   "sin_datos": false,
+   "verificado": true,
+   "url_relativa": "#sni/grafico-22"
+  },
+  {
+   "id": "sni/grafico-23",
+   "tipo": "grafico",
+   "ruta": "sni",
+   "ancla": "grafico-23",
+   "analisis": "Sistema Nacional de Investigadores",
+   "numero": 23,
+   "titulo": "Aumentan los artículos arbitrados con autoría mixta",
+   "bajada": "Artículos arbitrados según la composición por género de sus autores del SNI, por año",
+   "ficha": "SNI · 1990–2026 (2026 parcial) · % sobre los artículos del año con algún autor del SNI",
+   "universo": "SNI",
+   "periodo": "1990–2026 (2026 parcial)",
+   "capitulo": "genero",
+   "capitulo_titulo": "Brechas de género",
+   "muestra": "Los artículos arbitrados de cada año según el género de sus autores que integran el SNI: solo varones, solo mujeres o autoría mixta (al menos una mujer y un varón del SNI).",
+   "observa": "La autoría mixta pasó de 6 % en 1990 a 23 % en 2025, y la firmada solo por varones bajó de 75 % a 47 %.",
+   "leer": "Cada línea es un tipo de composición, como porcentaje de los artículos arbitrados del año.",
+   "nota": "Se cuentan artículos arbitrados únicos. El género es el que declara en su CV cada autor que integra el SNI; los coautores fuera del sistema no se consideran.",
+   "desgloses": [],
+   "columnas": [
+    "Año",
+    "Solo varones (%)",
+    "Solo mujeres (%)",
+    "Mixta (%)"
+   ],
+   "sin_datos": false,
+   "verificado": true,
+   "url_relativa": "#sni/grafico-23"
+  },
+  {
+   "id": "sni/notas",
+   "tipo": "notas",
+   "ruta": "sni",
+   "ancla": "notas",
+   "analisis": "Sistema Nacional de Investigadores",
+   "titulo": "Notas metodológicas · Sistema Nacional de Investigadores",
+   "descripcion": "Fuente: Elaborado por UNE-CTI con base en datos de CVUy. Corresponde a los CV de quienes integran el SNI. La producción, los proyectos y las trayectorias corresponden a lo declarado por las personas que integran hoy el sistema. Datos agregados: El sitio publica solo datos agregados y no presenta comparaciones ni rankings entre instituciones. Cada gráfico permite ver su tabla, descargarla en CSV o copiar los datos. Ventanas temporales: «2022–2026» refiere a la producción de los últimos cinco años. Las series anuales terminan en el último año completo. Clasificaciones: Las áreas siguen la clasificación de la OCDE según el área principal declarada. Los sectores agrupan a las instituciones por su naturaleza: academia pública y privada, centros de investigación, organismos públicos, empresas, organizaciones sin fines de lucro y exterior.",
+   "apartados": [
+    "Fuente",
+    "Datos agregados",
+    "Ventanas temporales",
+    "Clasificaciones"
+   ],
+   "verificado": true,
+   "url_relativa": "#sni/notas"
+  },
+  {
+   "id": "no-categorizados",
+   "tipo": "analisis",
+   "ruta": "no-categorizados",
+   "ancla": null,
+   "analisis": "Investigación fuera del SNI",
+   "titulo": "Investigación fuera del SNI",
+   "descripcion": "Quiénes son, cómo se formaron, dónde trabajan y qué producen las personas que investigan sin estar categorizadas",
+   "verificado": true,
+   "url_relativa": "#no-categorizados"
+  },
+  {
+   "id": "no-categorizados/depuracion",
+   "tipo": "capitulo",
+   "ruta": "no-categorizados",
+   "ancla": "depuracion",
+   "analisis": "Investigación fuera del SNI",
+   "titulo": "Universo",
+   "descripcion": "Este análisis reúne a las personas que registran su trayectoria en CVUy sin integrar el SNI y con evidencia de investigación en los últimos cinco años: 7.524 personas, a las que aquí se llama «no SNI». Todos los gráficos se refieren a ellas. Este primer capítulo las compara con el SNI.",
+   "verificado": true,
+   "url_relativa": "#no-categorizados/depuracion"
+  },
+  {
+   "id": "no-categorizados/personas",
+   "tipo": "capitulo",
+   "ruta": "no-categorizados",
+   "ancla": "personas",
+   "analisis": "Investigación fuera del SNI",
+   "titulo": "Quiénes son",
+   "descripcion": "Las personas no SNI son una población joven y mayoritariamente femenina: 60 % son mujeres y la edad mediana es de 40 años. Este capítulo describe cómo se distribuyen entre áreas, sectores, géneros y edades, y qué las distingue del SNI.",
+   "verificado": true,
+   "url_relativa": "#no-categorizados/personas"
+  },
+  {
+   "id": "no-categorizados/formacion",
+   "tipo": "capitulo",
+   "ruta": "no-categorizados",
+   "ancla": "formacion",
+   "analisis": "Investigación fuera del SNI",
+   "titulo": "Formación",
+   "descripcion": "Solo 15 % tiene doctorado: la maestría y el grado son las formaciones más frecuentes. Muchas personas siguen estudiando, y quienes ya tienen posgrado dirigen tesis de grado y de maestría. Este capítulo muestra la formación alcanzada, la que está en curso y dónde se obtuvo.",
+   "verificado": true,
+   "url_relativa": "#no-categorizados/formacion"
+  },
+  {
+   "id": "no-categorizados/trabajo",
+   "tipo": "capitulo",
+   "ruta": "no-categorizados",
+   "ancla": "trabajo",
+   "analisis": "Investigación fuera del SNI",
+   "titulo": "Inserción laboral",
+   "descripcion": "Las personas no SNI trabajan en 74 instituciones principales distintas, que aquí se agrupan por sector sin compararlas entre sí. 16 % tiene un vínculo activo con empresas y solo 10 % trabaja con dedicación total.",
+   "verificado": true,
+   "url_relativa": "#no-categorizados/trabajo"
+  },
+  {
+   "id": "no-categorizados/produccion",
+   "tipo": "capitulo",
+   "ruta": "no-categorizados",
+   "ancla": "produccion",
+   "analisis": "Investigación fuera del SNI",
+   "titulo": "Producción científica fuera del SNI",
+   "descripcion": "Entre 2022 y 2026 las personas no SNI publicaron 7.586 artículos arbitrados, 60 % de ellos en revistas de WoS o Scopus. Pero la producción está concentrada: 56 % no publicó ningún artículo arbitrado en esos años, y los trabajos en eventos y la producción técnica pesan tanto como los artículos. Esta sección cuenta lo que declaran las personas que investigan fuera del SNI. La producción de todo el sistema —SNI y fuera del SNI, sin duplicados— se explora en el análisis Producción científica →",
+   "verificado": true,
+   "url_relativa": "#no-categorizados/produccion"
+  },
+  {
+   "id": "no-categorizados/proyectos",
+   "tipo": "capitulo",
+   "ruta": "no-categorizados",
+   "ancla": "proyectos",
+   "analisis": "Investigación fuera del SNI",
+   "titulo": "Proyectos y financiamiento",
+   "descripcion": "Están en marcha 2.317 de los 3.240 proyectos con participación de personas no SNI iniciados entre 2022 y 2026. Este capítulo muestra cuántos empiezan cada año y cómo se financian.",
+   "verificado": true,
+   "url_relativa": "#no-categorizados/proyectos"
+  },
+  {
+   "id": "no-categorizados/genero",
+   "tipo": "capitulo",
+   "ruta": "no-categorizados",
+   "ancla": "genero",
+   "analisis": "Investigación fuera del SNI",
+   "titulo": "Brechas de género",
+   "descripcion": "Fuera del SNI las mujeres son mayoría: 60 %, frente a 49 % dentro del sistema. Este capítulo compara sus condiciones con las de los varones y muestra en qué campos la mayoría femenina se acentúa o se invierte.",
+   "verificado": true,
+   "url_relativa": "#no-categorizados/genero"
+  },
+  {
+   "id": "no-categorizados/grafico-1",
+   "tipo": "grafico",
+   "ruta": "no-categorizados",
+   "ancla": "grafico-1",
+   "analisis": "Investigación fuera del SNI",
+   "numero": 1,
+   "titulo": "El SNI y los no SNI en diez indicadores",
+   "bajada": "No SNI con evidencia de investigación reciente y SNI, en diez indicadores",
+   "ficha": "SNI y no SNI · a la fecha de corte; producción 2022–2026 (2026 parcial) · % sobre las personas de cada grupo · comparación: SNI frente a no SNI",
+   "universo": "SNI y no SNI",
+   "periodo": "a la fecha de corte; producción 2022–2026 (2026 parcial)",
+   "capitulo": "depuracion",
+   "capitulo_titulo": "Universo",
+   "muestra": "Diez rasgos de las 7.524 personas no SNI con evidencia de investigación reciente frente a las 2.457 del SNI: género, edad, formación, dedicación, vínculos, producción y proyectos.",
+   "observa": "Los no SNI son más jóvenes (edad mediana 40 frente a 47 en el SNI) y con más mujeres (60 %). Solo 15 % tiene doctorado y 10 % dedicación total, frente a 92 % y 58 % en el SNI. Tienen más vínculo con empresas y publican menos: 56 % no tiene artículos arbitrados recientes.",
+   "leer": "Cada fila tiene su propia escala. El punto celeste son los no SNI y el azul, el SNI; la distancia entre ambos es la diferencia entre las dos comunidades.",
+   "nota": "Los promedios que no están en las cifras clave se calculan ponderando las áreas por su cantidad de investigadores.",
+   "desgloses": [],
+   "columnas": [
+    "Indicador",
+    "No SNI",
+    "SNI"
+   ],
+   "sin_datos": false,
+   "verificado": true,
+   "url_relativa": "#no-categorizados/grafico-1"
+  },
+  {
+   "id": "no-categorizados/grafico-3",
+   "tipo": "grafico",
+   "ruta": "no-categorizados",
+   "ancla": "grafico-3",
+   "analisis": "Investigación fuera del SNI",
+   "numero": 3,
+   "titulo": "Quiénes investigan fuera del SNI",
+   "bajada": "Personas no SNI con evidencia de investigación reciente según área, sector y género. Cada punto representa a cinco personas.",
+   "ficha": "No SNI · a la fecha de corte (18/11/2026) · % sobre las personas no SNI",
+   "universo": "No SNI",
+   "periodo": "a la fecha de corte (18/11/2026)",
+   "capitulo": "personas",
+   "capitulo_titulo": "Quiénes son",
+   "muestra": "Las 7.524 personas no SNI con evidencia de investigación en los últimos cinco años, agrupadas por área del conocimiento, sector de su institución principal, género o tramo de edad.",
+   "observa": "Ciencias Sociales es el área más grande (27 % de quienes declaran área). 60 % son mujeres y 64 % tiene menos de 45 años. La academia es el lugar de trabajo de 58 %, pero el sector público no académico y el privado pesan más que en el SNI.",
+   "leer": "Cada punto equivale a cinco personas y el color indica el grupo. Al cambiar el criterio los puntos se reacomodan; el tamaño de cada bloque es proporcional a la cantidad de personas.",
+   "nota": "Las personas sin área, sector, género o edad informados cuentan en el total pero no se dibujan en esa agrupación.",
+   "desgloses": [
+    {
+     "rotulo": "Agrupar por",
+     "opciones": [
+      "Área",
+      "Sector",
+      "Género",
+      "Edad"
+     ]
+    }
+   ],
+   "columnas": [
+    "Agrupación",
+    "Grupo",
+    "Personas"
+   ],
+   "sin_datos": false,
+   "verificado": true,
+   "url_relativa": "#no-categorizados/grafico-3"
+  },
+  {
+   "id": "no-categorizados/grafico-4",
+   "tipo": "grafico",
+   "ruta": "no-categorizados",
+   "ancla": "grafico-4",
+   "analisis": "Investigación fuera del SNI",
+   "numero": 4,
+   "titulo": "Cada área y sector tiene un perfil propio",
+   "bajada": "Indicadores de cada área o sector frente al total de personas no SNI",
+   "ficha": "No SNI · a la fecha de corte; producción 2022–2026 (2026 parcial) · % sobre las personas del área o sector · comparación: total no SNI",
+   "universo": "No SNI",
+   "periodo": "a la fecha de corte; producción 2022–2026 (2026 parcial)",
+   "capitulo": "personas",
+   "capitulo_titulo": "Quiénes son",
+   "muestra": "El perfil de un área o de un sector en once indicadores de edad, formación, dedicación, vínculos y producción, frente al conjunto de los no SNI.",
+   "observa": "La formación doctoral es más frecuente en Ciencias Naturales y Exactas (21 %) y el vínculo con empresas, en Ciencias Médicas y de la Salud (32 %). Entre quienes trabajan en el sector privado, 96 % tiene un vínculo activo con empresas y 65 % no publicó artículos arbitrados en 2022–2026.",
+   "leer": "Seleccione el grupo en la lista. Cada pista tiene su propia escala: la línea vertical es el total y el punto, el grupo elegido (azul si está por encima, ocre si está por debajo). Los puntos tenues son los demás grupos.",
+   "nota": "La edad del total es la mediana general; el resto, promedios ponderados de las áreas.",
+   "desgloses": [
+    {
+     "rotulo": "Comparar por",
+     "opciones": [
+      "Área",
+      "Sector"
+     ]
+    },
+    {
+     "rotulo": "Área",
+     "opciones": [
+      "Ciencias Sociales (1.884)",
+      "Ciencias Naturales y Exactas (1.511)",
+      "Ciencias Médicas y de la Salud (1.383)",
+      "Ciencias Agrícolas (843)",
+      "Ingeniería y Tecnología (752)",
+      "Humanidades (651)"
+     ]
+    }
+   ],
+   "columnas": [
+    "Área",
+    "Personas",
+    "% mujeres",
+    "Edad mediana",
+    "% menores de 40",
+    "% con doctorado",
+    "% con maestría",
+    "% dedicación total",
+    "% en varias instituciones",
+    "% con vínculo en empresas",
+    "Artículos 2022–26 por persona",
+    "% sin artículos 2022–26",
+    "Proyectos en marcha por persona"
+   ],
+   "sin_datos": false,
+   "verificado": true,
+   "url_relativa": "#no-categorizados/grafico-4"
+  },
+  {
+   "id": "no-categorizados/grafico-5",
+   "tipo": "grafico",
+   "ruta": "no-categorizados",
+   "ancla": "grafico-5",
+   "analisis": "Investigación fuera del SNI",
+   "numero": 5,
+   "titulo": "Una población más joven y con más mujeres",
+   "bajada": "Personas por tramo de edad y género, en el SNI y entre los no SNI",
+   "ficha": "SNI y no SNI · a la fecha de corte (18/11/2026) · % sobre el total de cada grupo · comparación: SNI frente a no SNI",
+   "universo": "SNI y no SNI",
+   "periodo": "a la fecha de corte (18/11/2026)",
+   "capitulo": "personas",
+   "capitulo_titulo": "Quiénes son",
+   "muestra": "La distribución por edad y género de las personas del SNI y de las no SNI con evidencia de investigación reciente.",
+   "observa": "Entre los no SNI 31 % tiene menos de 35 años, frente a 5 % en el SNI, y las mujeres son mayoría en todos los tramos menores de 65 años. Es la cantera de la que se nutre el sistema.",
+   "leer": "Cada fila es un tramo de edad, con las mujeres a un lado y los varones al otro. Con «Total» se ve el conjunto de quienes investigan; seleccione un grupo para compararlos.",
+   "nota": "",
+   "desgloses": [
+    {
+     "rotulo": "Grupo",
+     "opciones": [
+      "No SNI",
+      "SNI",
+      "Total"
+     ]
+    }
+   ],
+   "columnas": [
+    "Grupo",
+    "Edad",
+    "Mujeres",
+    "Varones"
+   ],
+   "sin_datos": false,
+   "verificado": true,
+   "url_relativa": "#no-categorizados/grafico-5"
+  },
+  {
+   "id": "no-categorizados/grafico-6",
+   "tipo": "grafico",
+   "ruta": "no-categorizados",
+   "ancla": "grafico-6",
+   "analisis": "Investigación fuera del SNI",
+   "numero": 6,
+   "titulo": "Edad por área, dentro y fuera del SNI",
+   "bajada": "Edad de las personas no SNI y del SNI, por área",
+   "ficha": "SNI y no SNI · a la fecha de corte (18/11/2026) · comparación: SNI frente a no SNI",
+   "universo": "SNI y no SNI",
+   "periodo": "a la fecha de corte (18/11/2026)",
+   "capitulo": "personas",
+   "capitulo_titulo": "Quiénes son",
+   "muestra": "Para cada área, la proporción de personas menores de 40 años, la edad mediana o la proporción de 65 años y más, entre los no SNI y en el SNI.",
+   "observa": "En todas las áreas los no SNI son más jóvenes. La diferencia en menores de 40 (%) es mayor en Ciencias Naturales y Exactas (60 % entre los no SNI, frente a 25 % en el SNI), un área con una base amplia que podría alimentar el relevo del SNI.",
+   "leer": "Seleccione un indicador. Cada fila es un área; el punto celeste son los no SNI y el azul, el SNI. Una distancia grande en «menores de 40» indica una base joven amplia fuera del sistema.",
+   "nota": "",
+   "desgloses": [
+    {
+     "rotulo": "Indicador",
+     "opciones": [
+      "Menores de 40 (%)",
+      "Edad mediana",
+      "65 años y más (%)"
+     ]
+    }
+   ],
+   "columnas": [
+    "Área",
+    "No SNI",
+    "SNI"
+   ],
+   "sin_datos": false,
+   "verificado": true,
+   "url_relativa": "#no-categorizados/grafico-6"
+  },
+  {
+   "id": "no-categorizados/grafico-7",
+   "tipo": "grafico",
+   "ruta": "no-categorizados",
+   "ancla": "grafico-7",
+   "analisis": "Investigación fuera del SNI",
+   "numero": 7,
+   "titulo": "Formación máxima, dentro y fuera del SNI",
+   "bajada": "Máximo nivel de formación concluido. Cada cuadro equivale al 1 % de las personas.",
+   "ficha": "SNI y no SNI · a la fecha de corte (18/11/2026) · % sobre las personas del área con formación informada · comparación: SNI frente a no SNI",
+   "universo": "SNI y no SNI",
+   "periodo": "a la fecha de corte (18/11/2026)",
+   "capitulo": "formacion",
+   "capitulo_titulo": "Formación",
+   "muestra": "El título más alto que obtuvieron las personas de cada grupo: doctorado, maestría, especialización, grado u otros (posgrados sin nivel informado o tecnicaturas).",
+   "observa": "En el SNI 93 % tiene doctorado; entre los no SNI, 15 %. Fuera del SNI predominan la maestría (35 %) y el grado (29 %): una comunidad en formación, de la que surge buena parte de los futuros ingresos al sistema.",
+   "leer": "Seleccione el grupo con las pestañas. La grilla tiene 100 cuadros y cada color es un nivel de formación.",
+   "nota": "",
+   "desgloses": [
+    {
+     "rotulo": "Grupo",
+     "opciones": [
+      "No SNI",
+      "SNI"
+     ]
+    }
+   ],
+   "columnas": [
+    "Nivel",
+    "No SNI",
+    "SNI"
+   ],
+   "sin_datos": false,
+   "verificado": true,
+   "url_relativa": "#no-categorizados/grafico-7"
+  },
+  {
+   "id": "no-categorizados/grafico-8",
+   "tipo": "grafico",
+   "ruta": "no-categorizados",
+   "ancla": "grafico-8",
+   "analisis": "Investigación fuera del SNI",
+   "numero": 8,
+   "titulo": "Predominan la maestría y el grado",
+   "bajada": "Máximo nivel de formación concluido, total y por área",
+   "ficha": "No SNI · a la fecha de corte (18/11/2026) · % sobre las personas del área con formación informada",
+   "universo": "No SNI",
+   "periodo": "a la fecha de corte (18/11/2026)",
+   "capitulo": "formacion",
+   "capitulo_titulo": "Formación",
+   "muestra": "El nivel de formación más alto que declara cada persona —doctorado, maestría, especialización, grado o tecnicatura— en cada área del conocimiento.",
+   "observa": "En el conjunto, 39 % tiene una maestría como formación máxima y 31 % no tiene posgrado; los doctores son 17 %. Ciencias Naturales y Exactas es el área con más doctores (23 %) y Humanidades, la de menos (13 %).",
+   "leer": "Cada barra es un área y suma 100 %. Los tonos azules son posgrados; los naranjas, grado y tecnicatura. Las áreas están ordenadas por la proporción de doctores.",
+   "nota": "Se excluyen las personas sin máxima formación informada. El valor a la derecha es el porcentaje con doctorado.",
+   "desgloses": [],
+   "columnas": [
+    "Área",
+    "Doctorado",
+    "Maestría",
+    "Especialización",
+    "Posgrado (nivel no informado)",
+    "Grado",
+    "Tecnicatura"
+   ],
+   "sin_datos": false,
+   "verificado": true,
+   "url_relativa": "#no-categorizados/grafico-8"
+  },
+  {
+   "id": "no-categorizados/grafico-9",
+   "tipo": "grafico",
+   "ruta": "no-categorizados",
+   "ancla": "grafico-9",
+   "analisis": "Investigación fuera del SNI",
+   "numero": 9,
+   "titulo": "Una comunidad en formación de posgrado",
+   "bajada": "Formaciones en curso declaradas, según el nivel, total y por área. Cada cuadro equivale al 1 %.",
+   "ficha": "No SNI · a la fecha de corte (18/11/2026)",
+   "universo": "No SNI",
+   "periodo": "a la fecha de corte (18/11/2026)",
+   "capitulo": "formacion",
+   "capitulo_titulo": "Formación",
+   "muestra": "Las formaciones que las personas no SNI declaran tener en curso: doctorados, maestrías, especializaciones, carreras de grado y tecnicaturas, para el total y para cada área.",
+   "observa": "Hay 4.286 formaciones en curso declaradas. 78 % son maestrías o doctorados: 1.453 personas están haciendo un doctorado, 61 % de ellas mujeres. Es la cantera más directa para el ingreso futuro al SNI.",
+   "leer": "La grilla tiene 100 cuadros, uno por cada punto porcentual; cada color es un nivel.",
+   "nota": "Una persona puede declarar más de una formación en curso.",
+   "desgloses": [
+    {
+     "rotulo": "Grupo",
+     "opciones": [
+      "Total",
+      "Ciencias Sociales",
+      "Ciencias Naturales y Exactas",
+      "Ciencias Médicas y de la Salud",
+      "Ciencias Agrícolas",
+      "Humanidades",
+      "Ingeniería y Tecnología"
+     ]
+    }
+   ],
+   "columnas": [
+    "Área",
+    "Doctorado",
+    "Maestría",
+    "Especialización",
+    "Posgrado (nivel no informado)",
+    "Grado",
+    "Tecnicatura"
+   ],
+   "sin_datos": false,
+   "verificado": true,
+   "url_relativa": "#no-categorizados/grafico-9"
+  },
+  {
+   "id": "no-categorizados/grafico-10",
+   "tipo": "grafico",
+   "ruta": "no-categorizados",
+   "ancla": "grafico-10",
+   "analisis": "Investigación fuera del SNI",
+   "numero": 10,
+   "titulo": "Doctorados obtenidos en Uruguay, por cohorte",
+   "bajada": "Porcentaje de cada cohorte de doctores que obtuvo el título en Uruguay",
+   "ficha": "SNI y no SNI · por quinquenio de obtención del doctorado · % sobre los doctores de cada quinquenio · comparación: SNI frente a no SNI",
+   "universo": "SNI y no SNI",
+   "periodo": "por quinquenio de obtención del doctorado",
+   "capitulo": "formacion",
+   "capitulo_titulo": "Formación",
+   "muestra": "Entre quienes tienen doctorado, la proporción de cada cohorte que lo obtuvo en Uruguay, para el SNI y para los no SNI.",
+   "observa": "Sumando todas las cohortes desde 1990, 46 % de los doctores del SNI y 39 % de los no SNI obtuvieron el título en Uruguay. Las dos líneas suben: la formación doctoral nacional crece dentro y fuera del SNI. En 2020-2024, 57 % de los nuevos doctores del SNI se formó en Uruguay, frente a 46 % entre los no SNI, que siguen doctorándose más en el exterior.",
+   "leer": "Cada punto es un quinquenio. Cuando la línea supera el 50 %, la mayoría de los doctores de esa cohorte obtuvo el título en el país.",
+   "nota": "Cohortes según el quinquenio de obtención del doctorado, con al menos 10 doctores. El total reúne todas las cohortes graficadas.",
+   "desgloses": [],
+   "columnas": [
+    "Quinquenio",
+    "No SNI (%)",
+    "SNI (%)"
+   ],
+   "sin_datos": false,
+   "verificado": true,
+   "url_relativa": "#no-categorizados/grafico-10"
+  },
+  {
+   "id": "no-categorizados/grafico-11",
+   "tipo": "grafico",
+   "ruta": "no-categorizados",
+   "ancla": "grafico-11",
+   "analisis": "Investigación fuera del SNI",
+   "numero": 11,
+   "titulo": "Dónde obtuvieron el doctorado",
+   "bajada": "Doctores no SNI según el país donde obtuvieron el título. Cada cuadro equivale al 1 %.",
+   "ficha": "No SNI · a la fecha de corte (18/11/2026) · % sobre los doctores con país informado",
+   "universo": "No SNI",
+   "periodo": "a la fecha de corte (18/11/2026)",
+   "capitulo": "formacion",
+   "capitulo_titulo": "Formación",
+   "muestra": "El país donde obtuvieron su doctorado las personas no SNI que tienen ese título como máxima formación: Uruguay, los destinos externos más frecuentes y el resto.",
+   "observa": "De 1.125 doctores, el 42 % obtuvo el título en Uruguay. Los destinos externos más frecuentes son Brasil, España, Argentina, Estados Unidos.",
+   "leer": "La grilla tiene 100 cuadros, uno por cada punto porcentual; cada color es un país.",
+   "nota": "Haberse formado afuera no implica trabajar hoy en el exterior.",
+   "desgloses": [],
+   "columnas": [
+    "País",
+    "Doctores"
+   ],
+   "sin_datos": false,
+   "verificado": true,
+   "url_relativa": "#no-categorizados/grafico-11"
+  },
+  {
+   "id": "no-categorizados/grafico-12",
+   "tipo": "grafico",
+   "ruta": "no-categorizados",
+   "ancla": "grafico-12",
+   "analisis": "Investigación fuera del SNI",
+   "numero": 12,
+   "titulo": "Dirección de tesis por área",
+   "bajada": "Tutorías de tesis por cada 100 personas, total y por área",
+   "ficha": "No SNI · a la fecha de corte (18/11/2026)",
+   "universo": "No SNI",
+   "periodo": "a la fecha de corte (18/11/2026)",
+   "capitulo": "formacion",
+   "capitulo_titulo": "Formación",
+   "muestra": "Cuántas tesis y trabajos finales dirigieron o dirigen las personas no SNI, por cada 100 personas de cada área: de grado, de maestría y de doctorado.",
+   "observa": "Declaran 11.204 tutorías de grado y 2.393 de maestría concluidas, y 536 de doctorado en marcha. En grado concluidas, la tasa más alta está en Total (148,9 cada 100 personas).",
+   "leer": "Seleccione el tipo de tutoría. Cada pétalo es un área y su largo es la tasa; al expresarse por cada 100 personas, se comparan áreas de distinto tamaño.",
+   "nota": "Se cuentan registros de tutoría declarados en los CV a lo largo de toda la trayectoria (concluidas) o vigentes (en marcha).",
+   "desgloses": [
+    {
+     "rotulo": "Tutorías",
+     "opciones": [
+      "Grado concluidas",
+      "Maestría concluidas",
+      "Maestría en marcha",
+      "Doctorado en marcha"
+     ]
+    }
+   ],
+   "columnas": [
+    "Área",
+    "Grado concluidas",
+    "Maestría concluidas",
+    "Maestría en marcha",
+    "Doctorado en marcha",
+    "Personas"
+   ],
+   "sin_datos": false,
+   "verificado": true,
+   "url_relativa": "#no-categorizados/grafico-12"
+  },
+  {
+   "id": "no-categorizados/grafico-13",
+   "tipo": "grafico",
+   "ruta": "no-categorizados",
+   "ancla": "grafico-13",
+   "analisis": "Investigación fuera del SNI",
+   "numero": 13,
+   "titulo": "Sector de la institución principal, dentro y fuera del SNI",
+   "bajada": "Sector de la institución principal",
+   "ficha": "SNI y no SNI · a la fecha de corte (18/11/2026) · % sobre las personas de cada grupo · comparación: SNI frente a no SNI",
+   "universo": "SNI y no SNI",
+   "periodo": "a la fecha de corte (18/11/2026)",
+   "capitulo": "trabajo",
+   "capitulo_titulo": "Inserción laboral",
+   "muestra": "El sector de la institución principal de las personas de cada grupo: academia, sector público no académico, sector privado, exterior o no informado. No se identifican instituciones.",
+   "observa": "La academia sigue siendo el lugar principal, pero con menos peso fuera del SNI (60 % frente a 73 %). Entre los no SNI gana espacio el sector público no académico (21 %) y el privado (12 %).",
+   "leer": "Cada barra suma 100 % y cada color es un sector. La comparación muestra cuánto más diversa es la inserción fuera del SNI.",
+   "nota": "",
+   "desgloses": [],
+   "columnas": [
+    "Grupo",
+    "Academia",
+    "Sector público no académico",
+    "Sector privado",
+    "Exterior",
+    "No informado"
+   ],
+   "sin_datos": false,
+   "verificado": true,
+   "url_relativa": "#no-categorizados/grafico-13"
+  },
+  {
+   "id": "no-categorizados/grafico-14",
+   "tipo": "grafico",
+   "ruta": "no-categorizados",
+   "ancla": "grafico-14",
+   "analisis": "Investigación fuera del SNI",
+   "numero": 14,
+   "titulo": "Sector de inserción laboral por área",
+   "bajada": "Sector de la institución principal, total y por área",
+   "ficha": "No SNI · a la fecha de corte (18/11/2026) · % sobre las personas del área",
+   "universo": "No SNI",
+   "periodo": "a la fecha de corte (18/11/2026)",
+   "capitulo": "trabajo",
+   "capitulo_titulo": "Inserción laboral",
+   "muestra": "En qué tipo de institución trabajan principalmente las personas no SNI de cada área: academia, sector público no académico, sector privado o exterior.",
+   "observa": "La academia reúne a 61 % del total, con su mayor peso en Ciencias Naturales y Exactas. El sector público no académico se destaca en Humanidades (27 %) y el privado en Ingeniería y Tecnología (20 %).",
+   "leer": "Cada barra es un área y suma 100 %; el valor de la derecha es el porcentaje en la academia.",
+   "nota": "Se excluyen las personas sin sector informado. Los sectores agrupan instituciones por su naturaleza: no se comparan instituciones entre sí.",
+   "desgloses": [],
+   "columnas": [
+    "Área",
+    "Academia",
+    "Sector público no académico",
+    "Sector privado",
+    "Exterior"
+   ],
+   "sin_datos": false,
+   "verificado": true,
+   "url_relativa": "#no-categorizados/grafico-14"
+  },
+  {
+   "id": "no-categorizados/grafico-15",
+   "tipo": "grafico",
+   "ruta": "no-categorizados",
+   "ancla": "grafico-15",
+   "analisis": "Investigación fuera del SNI",
+   "numero": 15,
+   "titulo": "Vínculo con empresas y dedicación por área",
+   "bajada": "Porcentaje de personas con vínculo en empresas, dedicación total o varias instituciones, total y por área",
+   "ficha": "No SNI · a la fecha de corte (18/11/2026) · % sobre las personas del área",
+   "universo": "No SNI",
+   "periodo": "a la fecha de corte (18/11/2026)",
+   "capitulo": "trabajo",
+   "capitulo_titulo": "Inserción laboral",
+   "muestra": "Qué parte de las personas de cada área tiene un vínculo laboral activo con empresas, trabaja con dedicación total o declara vínculos simultáneos con varias instituciones.",
+   "observa": "En vínculo con empresas, el promedio es 16 %: Total encabeza con 16 % y Ciencias Naturales y Exactas queda al final con 8 %. La dedicación total es poco frecuente en todas las áreas: la mayoría combina la investigación con otros trabajos.",
+   "leer": "Seleccione un indicador con las pestañas. Cada barra es un área, ordenadas de mayor a menor; el color identifica el área.",
+   "nota": "",
+   "desgloses": [
+    {
+     "rotulo": "Indicador",
+     "opciones": [
+      "Vínculo con empresas",
+      "Dedicación total",
+      "Varias instituciones"
+     ]
+    }
+   ],
+   "columnas": [
+    "Área",
+    "% vínculo con empresas",
+    "% dedicación total",
+    "% varias instituciones"
+   ],
+   "sin_datos": false,
+   "verificado": true,
+   "url_relativa": "#no-categorizados/grafico-15"
+  },
+  {
+   "id": "no-categorizados/grafico-16",
+   "tipo": "grafico",
+   "ruta": "no-categorizados",
+   "ancla": "grafico-16",
+   "analisis": "Investigación fuera del SNI",
+   "numero": 16,
+   "titulo": "Vínculo con el sector privado",
+   "bajada": "Personas no SNI con evidencia de investigación reciente según su relación laboral con empresas y organizaciones privadas",
+   "ficha": "No SNI · a la fecha de corte (18/11/2026) · % sobre las personas no SNI",
+   "universo": "No SNI",
+   "periodo": "a la fecha de corte (18/11/2026)",
+   "capitulo": "trabajo",
+   "capitulo_titulo": "Inserción laboral",
+   "muestra": "Si las personas no SNI trabajan hoy en el sector privado (solas o combinándolo con la academia u otros sectores), si lo hicieron en el pasado o si nunca tuvieron ese vínculo.",
+   "observa": "22 % tiene hoy un vínculo con el sector privado: 15 % lo combina con la academia y 5 % trabaja solo en el sector privado.",
+   "leer": "Cada cuadro es el 1 % de las personas; los tonos cálidos son vínculos actuales con el sector privado. Seleccione un área en las pestañas.",
+   "nota": "",
+   "desgloses": [
+    {
+     "rotulo": "Grupo",
+     "opciones": [
+      "Total",
+      "Ciencias Agrícolas",
+      "Ciencias Médicas y de la Salud",
+      "Ciencias Naturales y Exactas",
+      "Ciencias Sociales",
+      "Humanidades",
+      "Ingeniería y Tecnología"
+     ]
+    }
+   ],
+   "columnas": [
+    "Vínculo",
+    "Personas"
+   ],
+   "sin_datos": false,
+   "verificado": true,
+   "url_relativa": "#no-categorizados/grafico-16"
+  },
+  {
+   "id": "no-categorizados/grafico-17",
+   "tipo": "grafico",
+   "ruta": "no-categorizados",
+   "ancla": "grafico-17",
+   "analisis": "Investigación fuera del SNI",
+   "numero": 17,
+   "titulo": "La producción, dentro y fuera del SNI",
+   "bajada": "Indicadores anuales de producción de cada grupo",
+   "ficha": "SNI y no SNI · 1990–2026 (2026 parcial) · % sobre los artículos arbitrados de cada año (indicadores en %) · comparación: SNI frente a no SNI",
+   "universo": "SNI y no SNI",
+   "periodo": "1990–2026 (2026 parcial)",
+   "capitulo": "produccion",
+   "capitulo_titulo": "Producción científica fuera del SNI",
+   "muestra": "La producción registrada en los CV de las personas del SNI y de las no SNI con evidencia de investigación reciente, año a año: publicaciones, artículos arbitrados, indexación, acceso abierto y proyectos iniciados.",
+   "observa": "En 2025, las personas no SNI registraron 4.812 en «publicaciones», frente a 6.213 del SNI. Fuera del sistema se publica en volumen comparable, pero con menor proporción de artículos en revistas indexadas internacionalmente.",
+   "leer": "Seleccione un indicador con las pestañas y acote los años con el selector de período.",
+   "nota": "Las publicaciones de cada grupo se cuentan una vez, pero un trabajo firmado por personas de los dos grupos aparece en ambas series. El año en curso no se muestra.",
+   "desgloses": [
+    {
+     "rotulo": "Indicador",
+     "opciones": [
+      "Publicaciones",
+      "Artículos arbitrados",
+      "Artículos en WoS o Scopus (%)",
+      "Acceso abierto (%)",
+      "Proyectos iniciados"
+     ]
+    }
+   ],
+   "columnas": [
+    "Año",
+    "No SNI",
+    "SNI"
+   ],
+   "sin_datos": false,
+   "verificado": true,
+   "url_relativa": "#no-categorizados/grafico-17"
+  },
+  {
+   "id": "no-categorizados/grafico-18",
+   "tipo": "grafico",
+   "ruta": "no-categorizados",
+   "ancla": "grafico-18",
+   "analisis": "Investigación fuera del SNI",
+   "numero": 18,
+   "titulo": "La evolución de la producción desde 1990",
+   "bajada": "Indicadores anuales de publicaciones, artículos y proyectos",
+   "ficha": "No SNI · 1990–2026 (2026 parcial) · % sobre los artículos arbitrados de cada año (indicadores en %)",
+   "universo": "No SNI",
+   "periodo": "1990–2026 (2026 parcial)",
+   "capitulo": "produccion",
+   "capitulo_titulo": "Producción científica fuera del SNI",
+   "muestra": "La producción anual de las personas no SNI con evidencia de investigación reciente: cantidades (publicaciones, artículos arbitrados y proyectos iniciados) y porcentajes sobre los artículos arbitrados de cada año (indexación en WoS o Scopus, acceso abierto y autoría femenina).",
+   "observa": "Las publicaciones pasaron de 261 en 1990 a 4.812 en 2025, con un máximo de 5.209 en 2019. El acceso abierto llegó a 43 % de los artículos de 2025 y 62 % está en WoS o Scopus.",
+   "leer": "Seleccione un indicador en las pestañas: las de la izquierda son cantidades y las de la derecha, porcentajes. Bajo las pestañas se indica la unidad del eje y qué mide el indicador.",
+   "nota": "El año en curso, incompleto, no se muestra. Cada publicación se cuenta una vez aunque tenga varios autores no SNI.",
+   "desgloses": [
+    {
+     "rotulo": "Cantidades por año",
+     "opciones": [
+      "Publicaciones",
+      "Artículos arbitrados",
+      "Proyectos iniciados"
+     ]
+    },
+    {
+     "rotulo": "Porcentajes sobre los artículos arbitrados del año",
+     "opciones": [
+      "En WoS o Scopus",
+      "En acceso abierto",
+      "Con al menos una autora"
+     ]
+    }
+   ],
+   "columnas": [
+    "Año",
+    "Publicaciones",
+    "Artículos arbitrados",
+    "Proyectos iniciados",
+    "En WoS o Scopus",
+    "En acceso abierto",
+    "Con al menos una autora"
+   ],
+   "sin_datos": false,
+   "verificado": true,
+   "url_relativa": "#no-categorizados/grafico-18"
+  },
+  {
+   "id": "no-categorizados/grafico-19",
+   "tipo": "grafico",
+   "ruta": "no-categorizados",
+   "ancla": "grafico-19",
+   "analisis": "Investigación fuera del SNI",
+   "numero": 19,
+   "titulo": "Tipos de producción a lo largo del tiempo",
+   "bajada": "Publicaciones únicas por año y tipo de producción",
+   "ficha": "No SNI · 1990–2026 (2026 parcial)",
+   "universo": "No SNI",
+   "periodo": "1990–2026 (2026 parcial)",
+   "capitulo": "produccion",
+   "capitulo_titulo": "Producción científica fuera del SNI",
+   "muestra": "Las publicaciones de cada año según su tipo: trabajos en eventos, artículos arbitrados, producción técnica, capítulos, documentos de trabajo, libros y otros.",
+   "observa": "Fuera del SNI la producción es más diversa: los trabajos presentados en eventos y la producción técnica pesan tanto como los artículos. En 2025, los artículos arbitrados fueron 35 % de las publicaciones, frente a 20 % en 2005.",
+   "leer": "El grosor de cada corriente en un año es la cantidad de publicaciones de ese tipo; el grosor total es el volumen del año. Seleccione una corriente para aislarla y use el selector de período para acercarse a un tramo.",
+   "nota": "",
+   "desgloses": [],
+   "columnas": [
+    "Año",
+    "Trabajo en evento",
+    "Artículo arbitrado",
+    "Producción técnica",
+    "Capítulo de libro",
+    "Documento de trabajo",
+    "Artículo no arbitrado",
+    "Libro",
+    "Libro compilado"
+   ],
+   "sin_datos": false,
+   "verificado": true,
+   "url_relativa": "#no-categorizados/grafico-19"
+  },
+  {
+   "id": "no-categorizados/grafico-20",
+   "tipo": "grafico",
+   "ruta": "no-categorizados",
+   "ancla": "grafico-20",
+   "analisis": "Investigación fuera del SNI",
+   "numero": 20,
+   "titulo": "La producción 2022–2026, por tipo y calidad",
+   "bajada": "Publicaciones únicas de 2022–2026 por tipo y, para los artículos, según su indexación. Cada cuadro equivale al 1 %.",
+   "ficha": "No SNI · 2022–2026 (2026 parcial)",
+   "universo": "No SNI",
+   "periodo": "2022–2026 (2026 parcial)",
+   "capitulo": "produccion",
+   "capitulo_titulo": "Producción científica fuera del SNI",
+   "muestra": "La composición de las publicaciones únicas de 2022 a 2026: primero por tipo y luego, para los artículos arbitrados, según la base en la que está indexada la revista.",
+   "observa": "De 22.538 publicaciones, los artículos arbitrados son 34 %. Entre ellos, 49 % está en revistas de Web of Science y 23 % en revistas sin indexación declarada.",
+   "leer": "Seleccione la vista: todas las publicaciones o solo los artículos arbitrados.",
+   "nota": "",
+   "desgloses": [
+    {
+     "rotulo": "Vista",
+     "opciones": [
+      "Por tipo",
+      "Artículos por indexación"
+     ]
+    }
+   ],
+   "columnas": [
+    "Tipo o indexación",
+    "Publicaciones"
+   ],
+   "sin_datos": false,
+   "verificado": true,
+   "url_relativa": "#no-categorizados/grafico-20"
+  },
+  {
+   "id": "no-categorizados/grafico-21",
+   "tipo": "grafico",
+   "ruta": "no-categorizados",
+   "ancla": "grafico-21",
+   "analisis": "Investigación fuera del SNI",
+   "numero": 21,
+   "titulo": "Indexación y acceso abierto por área",
+   "bajada": "Porcentaje de artículos arbitrados de 2022–2026 en cada base y en acceso abierto, total y por área",
+   "ficha": "No SNI · 2022–2026 (2026 parcial) · % sobre los artículos arbitrados del área",
+   "universo": "No SNI",
+   "periodo": "2022–2026 (2026 parcial)",
+   "capitulo": "produccion",
+   "capitulo_titulo": "Producción científica fuera del SNI",
+   "muestra": "Para los artículos arbitrados de 2022 a 2026 de cada área, el porcentaje publicado en revistas indexadas en la base elegida y el porcentaje disponible en acceso abierto.",
+   "observa": "En Scopus, la mayor proporción está en Total (53 %). Las bases regionales cuentan otra historia: en Ciencias Sociales 44 % de los artículos está en Latindex. Son circuitos de publicación distintos, no necesariamente de distinta calidad.",
+   "leer": "Seleccione una base. Cada fila es un área; los dos puntos son los dos porcentajes sobre una escala de 0 a 100 %, y la línea que los une muestra su distancia.",
+   "nota": "",
+   "desgloses": [
+    {
+     "rotulo": "Base",
+     "opciones": [
+      "Scopus",
+      "WoS",
+      "Latindex",
+      "SciELO"
+     ]
+    }
+   ],
+   "columnas": [
+    "Área",
+    "Artículos",
+    "% Scopus",
+    "% WoS",
+    "% Latindex",
+    "% SciELO",
+    "% acceso abierto"
+   ],
+   "sin_datos": false,
+   "verificado": true,
+   "url_relativa": "#no-categorizados/grafico-21"
+  },
+  {
+   "id": "no-categorizados/grafico-22",
+   "tipo": "grafico",
+   "ruta": "no-categorizados",
+   "ancla": "grafico-22",
+   "analisis": "Investigación fuera del SNI",
+   "numero": 22,
+   "titulo": "Producción por investigador, por área",
+   "bajada": "Ítems por cada 100 investigadores del área (artículos arbitrados, 2022–2026), no SNI",
+   "ficha": "No SNI · 2022–2026 (2026 parcial) · ítems por cada 100 investigadores del área · comparación: total de los no SNI",
+   "universo": "No SNI",
+   "periodo": "2022–2026 (2026 parcial)",
+   "capitulo": "produccion",
+   "capitulo_titulo": "Producción científica fuera del SNI",
+   "muestra": "Cuánto produce cada área en relación con la cantidad de personas que investigan en ella. Así se comparan áreas grandes y chicas en pie de igualdad.",
+   "observa": "En artículos arbitrados, el total es de 100,8 ítems por cada 100 investigadores. Ciencias Médicas y de la Salud registra 140,2, más que el total; Ingeniería y Tecnología, 54,9, menos que el total. Las diferencias reflejan también formas de publicar propias de cada campo, no solo intensidad de trabajo.",
+   "leer": "Cada barra es un área; la primera es el total. Con «Por 100 investigadores», el largo es la cantidad de ítems del tipo elegido por cada 100 investigadores del área; con «Cantidad», el total de ítems. El tipo de producción se elige arriba.",
+   "nota": "Ítems de 2022–2026 de cada tipo, divididos entre los investigadores del área (personas no SNI incluidas, por su área principal) y multiplicados por 100. Cada ítem cuenta una vez en su área; «Todas las publicaciones» suma los tipos de publicación, sin proyectos. Las áreas con menos de 5 investigadores no se publican.",
+   "desgloses": [
+    {
+     "rotulo": "Tipo de producción",
+     "opciones": [
+      "Todas las publicaciones",
+      "Artículos arbitrados",
+      "Otros artículos",
+      "Libros y capítulos",
+      "Trabajos en eventos",
+      "Documentos de trabajo",
+      "Producción técnica",
+      "Proyectos iniciados"
+     ]
+    },
+    {
+     "rotulo": "Indicador",
+     "opciones": [
+      "Por 100 investigadores",
+      "Cantidad"
+     ]
+    }
+   ],
+   "columnas": [
+    "Área",
+    "Ítems (2022–2026)",
+    "Investigadores",
+    "Por 100 investigadores"
+   ],
+   "sin_datos": false,
+   "verificado": true,
+   "url_relativa": "#no-categorizados/grafico-22"
+  },
+  {
+   "id": "no-categorizados/grafico-23",
+   "tipo": "grafico",
+   "ruta": "no-categorizados",
+   "ancla": "grafico-23",
+   "analisis": "Investigación fuera del SNI",
+   "numero": 23,
+   "titulo": "La evolución de los proyectos",
+   "bajada": "Proyectos iniciados cada año desde 1990, en total y según su financiamiento",
+   "ficha": "No SNI · 1990–2026 (2026 parcial)",
+   "universo": "No SNI",
+   "periodo": "1990–2026 (2026 parcial)",
+   "capitulo": "proyectos",
+   "capitulo_titulo": "Proyectos y financiamiento",
+   "muestra": "Cuántos proyectos con participación de personas no SNI comenzaron cada año, en total y según quién los financia: ANII, CSIC de la Udelar, fuentes internacionales, otras o ninguna declarada.",
+   "observa": "Se iniciaron 625 proyectos en 2025; el máximo fue en 2024. En los últimos cinco años completos, 42 % de los proyectos no declara financiador y 20 % tiene apoyo de la CSIC.",
+   "leer": "Cada línea es una fuente de financiamiento; la línea gruesa oscura es el total. El eje vertical es la cantidad de proyectos iniciados en el año.",
+   "nota": "Proyectos únicos (un proyecto declarado por varias personas no SNI cuenta una vez), según su año de inicio. La ausencia de financiador declarado no implica que el proyecto carezca de recursos.",
+   "desgloses": [],
+   "columnas": [
+    "Año",
+    "Total",
+    "ANII",
+    "ANII e internacional",
+    "CSIC (Udelar)",
+    "Internacional",
+    "Otros financiadores",
+    "Sin financiador declarado"
+   ],
+   "sin_datos": false,
+   "verificado": true,
+   "url_relativa": "#no-categorizados/grafico-23"
+  },
+  {
+   "id": "no-categorizados/grafico-24",
+   "tipo": "grafico",
+   "ruta": "no-categorizados",
+   "ancla": "grafico-24",
+   "analisis": "Investigación fuera del SNI",
+   "numero": 24,
+   "titulo": "Fuentes de financiamiento por área",
+   "bajada": "Proyectos en marcha según la fuente de financiamiento, total y por área. Cada cuadro equivale al 1 %.",
+   "ficha": "No SNI · a la fecha de corte (18/11/2026) · % sobre los proyectos en marcha del área",
+   "universo": "No SNI",
+   "periodo": "a la fecha de corte (18/11/2026)",
+   "capitulo": "proyectos",
+   "capitulo_titulo": "Proyectos y financiamiento",
+   "muestra": "Para los proyectos en marcha de cada área, qué parte declara financiamiento de ANII, de la CSIC, de fuentes internacionales, de otras fuentes o de ninguna.",
+   "observa": "La ANII tiene su mayor peso en Ingeniería y Tecnología (27 %) y la financiación internacional en Ciencias Naturales y Exactas (15 %). Humanidades es el área con más proyectos sin financiador declarado (37 %).",
+   "leer": "Seleccione un área con las pestañas.",
+   "nota": "Los porcentajes cuentan proyectos, no montos.",
+   "desgloses": [
+    {
+     "rotulo": "Grupo",
+     "opciones": [
+      "Total",
+      "Ciencias Agrícolas",
+      "Ciencias Médicas y de la Salud",
+      "Ciencias Naturales y Exactas",
+      "Ciencias Sociales",
+      "Humanidades",
+      "Ingeniería y Tecnología"
+     ]
+    }
+   ],
+   "columnas": [
+    "Área",
+    "ANII",
+    "ANII e internacional",
+    "CSIC (Udelar)",
+    "Internacional",
+    "Otros financiadores",
+    "Sin financiador declarado"
+   ],
+   "sin_datos": false,
+   "verificado": true,
+   "url_relativa": "#no-categorizados/grafico-24"
+  },
+  {
+   "id": "no-categorizados/grafico-25",
+   "tipo": "grafico",
+   "ruta": "no-categorizados",
+   "ancla": "grafico-25",
+   "analisis": "Investigación fuera del SNI",
+   "numero": 25,
+   "titulo": "Condiciones de trabajo y producción de mujeres y varones",
+   "bajada": "Indicadores de formación, dedicación y producción de mujeres y varones no SNI",
+   "ficha": "No SNI · a la fecha de corte (18/11/2026) · comparación: mujeres frente a varones",
+   "universo": "No SNI",
+   "periodo": "a la fecha de corte (18/11/2026)",
+   "capitulo": "genero",
+   "capitulo_titulo": "Brechas de género",
+   "muestra": "Las 4.499 mujeres y los 2.995 varones no SNI comparados en formación, dedicación, vínculos, producción y edad.",
+   "observa": "Las mujeres son mayoría (60 %), pero tienen menos doctorados (14 % frente a 17 %) y menos dedicación total (9 % frente a 12 %). En producción la distancia es menor: 1,2 artículos por persona frente a 1,5.",
+   "leer": "Cada fila tiene su propia escala. El punto rosa son las mujeres y el azul, los varones; la línea entre ambos es la brecha.",
+   "nota": "",
+   "desgloses": [],
+   "columnas": [
+    "Indicador",
+    "Mujeres",
+    "Varones"
+   ],
+   "sin_datos": false,
+   "verificado": true,
+   "url_relativa": "#no-categorizados/grafico-25"
+  },
+  {
+   "id": "no-categorizados/grafico-26",
+   "tipo": "grafico",
+   "ruta": "no-categorizados",
+   "ancla": "grafico-26",
+   "analisis": "Investigación fuera del SNI",
+   "numero": 26,
+   "titulo": "La brecha de género varía según el área",
+   "bajada": "Indicadores de mujeres y varones no SNI, total y por área",
+   "ficha": "No SNI · a la fecha de corte (18/11/2026) · comparación: mujeres frente a varones",
+   "universo": "No SNI",
+   "periodo": "a la fecha de corte (18/11/2026)",
+   "capitulo": "genero",
+   "capitulo_titulo": "Brechas de género",
+   "muestra": "Para cada área, un indicador de formación, dedicación, vínculo o producción, separado para mujeres y varones.",
+   "observa": "En doctorado, la mayor ventaja de los varones está en Ciencias Agrícolas (19 % en los varones, frente a 15 % en las mujeres) y la situación más favorable a las mujeres, en Ingeniería y Tecnología (14 % en las mujeres, frente a 12 % en los varones).",
+   "leer": "Seleccione un indicador. Cada fila es un área; el punto rosa son las mujeres y el azul, los varones.",
+   "nota": "",
+   "desgloses": [
+    {
+     "rotulo": "Indicador",
+     "opciones": [
+      "Doctorado",
+      "Dedicación total",
+      "Vínculo con empresas",
+      "Artículos por persona"
+     ]
+    }
+   ],
+   "columnas": [
+    "Área",
+    "Mujeres",
+    "Varones"
+   ],
+   "sin_datos": false,
+   "verificado": true,
+   "url_relativa": "#no-categorizados/grafico-26"
+  },
+  {
+   "id": "no-categorizados/grafico-27",
+   "tipo": "grafico",
+   "ruta": "no-categorizados",
+   "ancla": "grafico-27",
+   "analisis": "Investigación fuera del SNI",
+   "numero": 27,
+   "titulo": "Subáreas feminizadas y masculinizadas",
+   "bajada": "Porcentaje de mujeres por subárea, respecto de la paridad (subáreas con al menos 20 personas)",
+   "ficha": "No SNI · a la fecha de corte (18/11/2026) · % sobre las personas de la subárea con género informado",
+   "universo": "No SNI",
+   "periodo": "a la fecha de corte (18/11/2026)",
+   "capitulo": "genero",
+   "capitulo_titulo": "Brechas de género",
+   "muestra": "La proporción de mujeres en cada subárea del conocimiento entre las personas no SNI. Permite ver en qué campos la mayoría femenina se acentúa y en cuáles se invierte.",
+   "observa": "Aunque las mujeres son mayoría en el total, 11 de 39 subáreas tienen mayoría de varones, sobre todo en Ciencias Sociales y Ciencias Agrícolas. La más feminizada es Biotecnología Industrial (77 %) y la más masculinizada, Ingeniería Mecánica (17 %).",
+   "leer": "La línea central es la paridad (50 %). Las barras hacia la derecha son subáreas con mayoría de mujeres; hacia la izquierda, con mayoría de varones. Seleccione un área para filtrar.",
+   "nota": "",
+   "desgloses": [
+    {
+     "rotulo": "Área",
+     "opciones": [
+      "Total",
+      "Ingeniería y Tecnología",
+      "Ciencias Médicas y de la Salud",
+      "Humanidades",
+      "Ciencias Sociales",
+      "Ciencias Naturales y Exactas",
+      "Ciencias Agrícolas"
+     ]
+    }
+   ],
+   "columnas": [
+    "Subárea",
+    "Área",
+    "Mujeres",
+    "Varones",
+    "% mujeres"
+   ],
+   "sin_datos": false,
+   "verificado": true,
+   "url_relativa": "#no-categorizados/grafico-27"
+  },
+  {
+   "id": "no-categorizados/grafico-28",
+   "tipo": "grafico",
+   "ruta": "no-categorizados",
+   "ancla": "grafico-28",
+   "analisis": "Investigación fuera del SNI",
+   "numero": 28,
+   "titulo": "Composición por género de la autoría",
+   "bajada": "Publicaciones por año según el género de las personas no SNI que las registran",
+   "ficha": "No SNI · 1990–2026 (2026 parcial) · % sobre los artículos del año con algún autor identificado",
+   "universo": "No SNI",
+   "periodo": "1990–2026 (2026 parcial)",
+   "capitulo": "genero",
+   "capitulo_titulo": "Brechas de género",
+   "muestra": "Las publicaciones de cada año según si las registran solo mujeres, solo varones o ambos, entre las personas no SNI.",
+   "observa": "En 2025, 45 % de las publicaciones fue registrada solo por mujeres, frente a 44 % en 2000: el cambio acompaña la feminización de la población fuera del SNI.",
+   "leer": "Cada columna es un año, apilada por composición.",
+   "nota": "Se considera el género de los autores no SNI con evidencia de investigación reciente; los coautores externos no se cuentan, por lo que las publicaciones mixtas están subestimadas.",
+   "desgloses": [],
+   "columnas": [
+    "Año",
+    "Solo mujeres",
+    "Mixta",
+    "Solo varones"
+   ],
+   "sin_datos": false,
+   "verificado": true,
+   "url_relativa": "#no-categorizados/grafico-28"
+  },
+  {
+   "id": "no-categorizados/notas",
+   "tipo": "notas",
+   "ruta": "no-categorizados",
+   "ancla": "notas",
+   "analisis": "Investigación fuera del SNI",
+   "titulo": "Notas metodológicas · Investigación fuera del SNI",
+   "descripcion": "Fuente: Elaborado por UNE-CTI con base en datos de CVUy. Corresponde a los CV de personas que no integran el SNI y comparten su información con las instituciones vinculadas a CVUy; las comparaciones usan los CV del SNI. Universo: Se consideran «no SNI» las personas con CV de acceso abierto en CVUy que no integran el SNI y registran evidencia de investigación en los últimos cinco años. Todos los gráficos se refieren a ellas; la producción y los proyectos son los que declaran. Datos agregados: La página publica solo datos agregados, sin información de personas individuales, y no presenta comparaciones ni rankings entre instituciones. Cada gráfico permite ver su tabla, descargarla en CSV o copiar los datos. Ventanas y clasificaciones: «2022–2026» refiere a los últimos cinco años; las series anuales terminan en el último año completo. Las áreas siguen la clasificación de la OCDE según el área principal declarada; los sectores agrupan a las instituciones por su naturaleza.",
+   "apartados": [
+    "Fuente",
+    "Universo",
+    "Datos agregados",
+    "Ventanas y clasificaciones"
+   ],
+   "verificado": true,
+   "url_relativa": "#no-categorizados/notas"
+  },
+  {
+   "id": "produccion",
+   "tipo": "analisis",
+   "ruta": "produccion",
+   "ancla": null,
+   "analisis": "Producción científica",
+   "titulo": "Producción científica",
+   "descripcion": "Qué se investiga en Uruguay y cómo se produce: de las grandes áreas a los temas y los conceptos.",
+   "verificado": true,
+   "url_relativa": "#produccion"
+  },
+  {
+   "id": "produccion/cascada",
+   "tipo": "capitulo",
+   "ruta": "produccion",
+   "ancla": "cascada",
+   "analisis": "Producción científica",
+   "titulo": "Áreas y subáreas",
+   "descripcion": "La producción se ordena en dos niveles: las 6 áreas del conocimiento y sus 42 subáreas. Al elegir una subárea se abre su ficha: allí la disciplina que declaran los autores funciona como filtro (252 disciplinas) y se listan los conceptos más frecuentes, que muestran de qué trata. Lo que elija aquí —y los filtros de la barra superior— se mantiene en todo el recorrido. 277.526 ítems con estos filtros",
+   "temas": {
+    "areas": [
+     "Ciencias Agrícolas",
+     "Ciencias Médicas y de la Salud",
+     "Ciencias Naturales y Exactas",
+     "Ciencias Sociales",
+     "Humanidades",
+     "Ingeniería y Tecnología"
+    ],
+    "temas": [
+     "Agricultura, Silvicultura y Pesca",
+     "Biotecnología Agropecuaria",
+     "Ciencias Veterinarias",
+     "Otras Ciencias Agrícolas",
+     "Producción Animal y Lechería",
+     "Biotecnología de la Salud",
+     "Ciencias de la Salud",
+     "Medicina Básica",
+     "Medicina Clínica",
+     "Otras Ciencias Médicas",
+     "Ciencias Biológicas",
+     "Ciencias de la Computación e Información",
+     "Ciencias de la Tierra y relacionadas con el Medio Ambiente",
+     "Ciencias Físicas",
+     "Ciencias Químicas",
+     "Matemáticas",
+     "Otras Ciencias Naturales",
+     "Ciencia Política",
+     "Ciencias de la Educación",
+     "Comunicación y Medios",
+     "Derecho",
+     "Economía y Negocios",
+     "Geografía Económica y Social",
+     "Otras Ciencias Sociales",
+     "Psicología",
+     "Sociología",
+     "Arte",
+     "Filosofía, Ética y Religión",
+     "Historia y Arqueología",
+     "Lengua y Literatura",
+     "Otras Humanidades",
+     "Biotecnología del Medio Ambiente",
+     "Biotecnología Industrial",
+     "Ingeniería Civil",
+     "Ingeniería de los Materiales",
+     "Ingeniería del Medio Ambiente",
+     "Ingeniería Eléctrica, Ingeniería Electrónica e Ingeniería de la Información",
+     "Ingeniería Mecánica",
+     "Ingeniería Médica",
+     "Ingeniería Química",
+     "Nanotecnología",
+     "Otras Ingenierías y Tecnologías"
+    ]
+   },
+   "verificado": true,
+   "url_relativa": "#produccion/cascada"
+  },
+  {
+   "id": "produccion/tiempo",
+   "tipo": "capitulo",
+   "ruta": "produccion",
+   "ancla": "tiempo",
+   "analisis": "Producción científica",
+   "titulo": "Evolución y tipos de producción",
+   "descripcion": "Cómo crecieron año a año los temas y conceptos de la selección, y con qué tipos de producción se trabaja en cada uno: artículos, libros y capítulos, eventos y otros documentos, proyectos y líneas de investigación.",
+   "verificado": true,
+   "url_relativa": "#produccion/tiempo"
+  },
+  {
+   "id": "produccion/tendencias",
+   "tipo": "capitulo",
+   "ruta": "produccion",
+   "ancla": "tendencias",
+   "analisis": "Producción científica",
+   "titulo": "Tendencias por tema",
+   "descripcion": "La comparación entre dos quinquenios a elección: qué subáreas, disciplinas o conceptos de la selección ganan o pierden peso.",
+   "verificado": true,
+   "url_relativa": "#produccion/tendencias"
+  },
+  {
+   "id": "produccion/patentes",
+   "tipo": "capitulo",
+   "ruta": "produccion",
+   "ancla": "patentes",
+   "analisis": "Producción científica",
+   "titulo": "Patentes",
+   "descripcion": "Las personas del SNI y las no SNI declaran 364 patentes y modelos de utilidad entre 1990 y 2026. Aquí se ven por área en el tiempo y por tipo de protección.",
+   "verificado": true,
+   "url_relativa": "#produccion/patentes"
+  },
+  {
+   "id": "produccion/evolucion",
+   "tipo": "grafico",
+   "ruta": "produccion",
+   "ancla": "evolucion",
+   "analisis": "Producción científica",
+   "numero": null,
+   "titulo": "Cómo evoluciona cada área",
+   "bajada": "Ítems por año de los 6 áreas con más producción",
+   "ficha": "SNI y no SNI · período elegido en el filtro",
+   "universo": "SNI y no SNI",
+   "periodo": "período elegido en el filtro",
+   "capitulo": "tiempo",
+   "capitulo_titulo": "Evolución y tipos de producción",
+   "muestra": "La cantidad de ítems por año de cada uno de los áreas del mapa, con los filtros de la página (los tipos se pueden cambiar en el propio gráfico).",
+   "observa": "Comparando 2021–2025 con el quinquenio anterior, Humanidades es el que más creció (×1,1) y Ciencias Agrícolas, el que menos (×0,9).",
+   "leer": "El grosor de cada corriente es la cantidad de ítems de ese año; el grosor total, el volumen del nivel. Al elegir otro nodo en la cascada, el río se rearma con sus hijos.",
+   "nota": "Un ítem con varios conceptos aporta a cada uno de ellos. El último año puede estar incompleto.",
+   "desgloses": [],
+   "columnas": [
+    "Año",
+    "Ciencias Naturales y Exactas",
+    "Ciencias Sociales",
+    "Ciencias Agrícolas",
+    "Ciencias Médicas y de la Salud",
+    "Humanidades",
+    "Ingeniería y Tecnología"
+   ],
+   "sin_datos": false,
+   "verificado": true,
+   "url_relativa": "#produccion/evolucion"
+  },
+  {
+   "id": "produccion/composicion",
+   "tipo": "grafico",
+   "ruta": "produccion",
+   "ancla": "composicion",
+   "analisis": "Producción científica",
+   "numero": null,
+   "titulo": "Cómo se produce en cada área",
+   "bajada": "Tipo de producción de los áreas, en cinco grupos. El valor de la derecha es el porcentaje de artículos.",
+   "ficha": "SNI y no SNI · período elegido en el filtro · % sobre los ítems del área, tema o concepto",
+   "universo": "SNI y no SNI",
+   "periodo": "período elegido en el filtro",
+   "capitulo": "tiempo",
+   "capitulo_titulo": "Evolución y tipos de producción",
+   "muestra": "Qué parte de los ítems de cada área son artículos, libros y capítulos, eventos y otros documentos, proyectos o líneas de investigación. Con «Detalle» se abre un grupo en sus tipos.",
+   "observa": "Artículos pesa más en Ciencias Médicas y de la Salud (36 %) y menos en Ingeniería y Tecnología (19 %). Las formas de producir cambian entre campos: no todas se miden con artículos.",
+   "leer": "Cada barra suma 100 %. Con «Grupos», los tramos son los cinco grupos de producción; al elegir un grupo, los tramos son sus tipos (por ejemplo, artículos arbitrados y no arbitrados). Las barras se ordenan según el peso del primer tramo. Los tipos marcados arriba son los mismos filtros de toda la pági",
+   "nota": "",
+   "desgloses": [
+    {
+     "rotulo": "Detalle",
+     "opciones": [
+      "Grupos",
+      "Artículos",
+      "Libros y capítulos",
+      "Eventos y otros documentos",
+      "Proyectos"
+     ]
+    }
+   ],
+   "columnas": [
+    "Área",
+    "Artículos",
+    "Libros y capítulos",
+    "Eventos y otros documentos",
+    "Proyectos",
+    "Líneas de investigación"
+   ],
+   "sin_datos": false,
+   "verificado": true,
+   "url_relativa": "#produccion/composicion"
+  },
+  {
+   "id": "produccion/prod-por-investigador",
+   "tipo": "grafico",
+   "ruta": "produccion",
+   "ancla": "prod-por-investigador",
+   "analisis": "Producción científica",
+   "numero": null,
+   "titulo": "Producción por investigador, por área",
+   "bajada": "Ítems por cada 100 investigadores del área (artículos arbitrados, 2022–2026), SNI y no SNI",
+   "ficha": "SNI y no SNI · 2022–2026 (2026 parcial) · ítems por cada 100 investigadores del área · comparación: total del país",
+   "universo": "SNI y no SNI",
+   "periodo": "2022–2026 (2026 parcial)",
+   "capitulo": "tiempo",
+   "capitulo_titulo": "Evolución y tipos de producción",
+   "muestra": "Cuánto produce cada área en relación con la cantidad de personas que investigan en ella. Así se comparan áreas grandes y chicas en pie de igualdad.",
+   "observa": "En artículos arbitrados, el total es de 170,3 ítems por cada 100 investigadores. Ciencias Médicas y de la Salud registra 200,3, más que el total; Ingeniería y Tecnología, 118,3, menos que el total. Las diferencias reflejan también formas de publicar propias de cada campo, no solo intensidad de trabajo.",
+   "leer": "Cada barra es un área; la primera es el total. Con «Por 100 investigadores», el largo es la cantidad de ítems del tipo elegido por cada 100 investigadores del área; con «Cantidad», el total de ítems. El tipo de producción se elige arriba.",
+   "nota": "Ítems de 2022–2026 de cada tipo, divididos entre los investigadores del área (personas del SNI y no SNI, por su área principal) y multiplicados por 100. Cada ítem cuenta una vez en su área; «Todas las publicaciones» suma los tipos de publicación, sin proyectos. Las áreas con menos de 5 investigadores no se publican.",
+   "desgloses": [
+    {
+     "rotulo": "Tipo de producción",
+     "opciones": [
+      "Todas las publicaciones",
+      "Artículos arbitrados",
+      "Otros artículos",
+      "Libros y capítulos",
+      "Trabajos en eventos",
+      "Documentos de trabajo",
+      "Producción técnica",
+      "Proyectos iniciados"
+     ]
+    },
+    {
+     "rotulo": "Indicador",
+     "opciones": [
+      "Por 100 investigadores",
+      "Cantidad"
+     ]
+    }
+   ],
+   "columnas": [
+    "Área",
+    "Ítems (2022–2026)",
+    "Investigadores",
+    "Por 100 investigadores"
+   ],
+   "sin_datos": false,
+   "verificado": true,
+   "url_relativa": "#produccion/prod-por-investigador"
+  },
+  {
+   "id": "produccion/temas-crecen",
+   "tipo": "grafico",
+   "ruta": "produccion",
+   "ancla": "temas-crecen",
+   "analisis": "Producción científica",
+   "numero": null,
+   "titulo": "Qué temas crecen en el país",
+   "bajada": "Ítems por tema en 2001–2005 y en 2021–2025; la flecha marca si subió o cayó",
+   "ficha": "SNI y no SNI · 2001–2005 frente a 2021–2025",
+   "universo": "SNI y no SNI",
+   "periodo": "2001–2005 frente a 2021–2025",
+   "capitulo": "tendencias",
+   "capitulo_titulo": "Tendencias por tema",
+   "muestra": "Cómo cambió la producción de los principales temas del país entre dos quinquenios que usted elige, desde 2001 hasta el último quinquenio completo.",
+   "observa": "Entre 2001–2005 y 2021–2025, 16 de 16 temas crecieron. El que más creció es Ciencias de la Educación (+354 %).",
+   "leer": "Cada fila es un tema. La marca gris es la cantidad de ítems en el primer quinquenio y la flecha llega a la del segundo: azul y hacia la derecha si creció, terracota y hacia la izquierda si cayó. A la derecha, el cambio en porcentaje y los ítems del segundo quinquenio.",
+   "nota": "",
+   "desgloses": [
+    {
+     "rotulo": "Comparar",
+     "opciones": [
+      "1991–1995",
+      "1996–2000",
+      "2001–2005",
+      "2006–2010",
+      "2011–2015",
+      "2016–2020"
+     ]
+    },
+    {
+     "rotulo": "con",
+     "opciones": [
+      "1991–1995",
+      "1996–2000",
+      "2001–2005",
+      "2006–2010",
+      "2011–2015",
+      "2016–2020",
+      "2021–2025"
+     ]
+    }
+   ],
+   "columnas": [
+    "Tema",
+    "2001–2005",
+    "2021–2025"
+   ],
+   "sin_datos": false,
+   "verificado": true,
+   "url_relativa": "#produccion/temas-crecen"
+  },
+  {
+   "id": "produccion/patentes-anio",
+   "tipo": "grafico",
+   "ruta": "produccion",
+   "ancla": "patentes-anio",
+   "analisis": "Producción científica",
+   "numero": null,
+   "titulo": "Patentes por área en el tiempo",
+   "bajada": "Patentes de invención y modelos de utilidad por año, por área del conocimiento",
+   "ficha": "SNI y no SNI · período elegido en el filtro",
+   "universo": "SNI y no SNI",
+   "periodo": "período elegido en el filtro",
+   "capitulo": "patentes",
+   "capitulo_titulo": "Patentes",
+   "muestra": "Cuántas patentes declaran cada año los investigadores, según el área del conocimiento.",
+   "observa": "Ciencias Naturales y Exactas reúne el 46 % de las patentes. El año con más patentes es 2006 (21). En los últimos cinco años se declararon 52, el 14 % de las del período.",
+   "leer": "Cada columna es un año y se divide por área. Al elegir un área arriba, el gráfico muestra solo esa área.",
+   "nota": "",
+   "desgloses": [],
+   "columnas": [
+    "Año",
+    "Ciencias Agrícolas",
+    "Ciencias Médicas y de la Salud",
+    "Ciencias Naturales y Exactas",
+    "Ciencias Sociales",
+    "Humanidades",
+    "Ingeniería y Tecnología"
+   ],
+   "sin_datos": false,
+   "verificado": true,
+   "url_relativa": "#produccion/patentes-anio"
+  },
+  {
+   "id": "produccion/patentes-tipo",
+   "tipo": "grafico",
+   "ruta": "produccion",
+   "ancla": "patentes-tipo",
+   "analisis": "Producción científica",
+   "numero": null,
+   "titulo": "Tipo de protección",
+   "bajada": "Patentes y modelos de utilidad, por área del conocimiento",
+   "ficha": "SNI y no SNI · período elegido en el filtro · % sobre las patentes y registros declarados",
+   "universo": "SNI y no SNI",
+   "periodo": "período elegido en el filtro",
+   "capitulo": "patentes",
+   "capitulo_titulo": "Patentes",
+   "muestra": "Qué tipo de protección se registra: patente o modelo de utilidad (mejoras de forma o función de un objeto, con una protección más corta).",
+   "observa": "El 94 % son patentes y el 6 %, modelos de utilidad.",
+   "leer": "La primera fila es el total; las siguientes, cada área. Cada barra se divide según el tipo de protección y su largo es la cantidad.",
+   "nota": "",
+   "desgloses": [],
+   "columnas": [
+    "Área",
+    "Patente",
+    "Modelo de utilidad",
+    "Total"
+   ],
+   "sin_datos": false,
+   "verificado": true,
+   "url_relativa": "#produccion/patentes-tipo"
+  },
+  {
+   "id": "produccion/notas",
+   "tipo": "notas",
+   "ruta": "produccion",
+   "ancla": "notas",
+   "analisis": "Producción científica",
+   "titulo": "Notas metodológicas · Producción científica",
+   "descripcion": "Fuente: Elaborado por UNE-CTI con base en datos de CVUy. CV de 2.457 personas del SNI y 7.524 no SNI con evidencia de investigación reciente. Publicaciones, proyectos y líneas de investigación; la producción repetida entre CV se cuenta una vez. Áreas, subáreas, disciplinas y conceptos: La navegación tiene dos niveles: el área y la subárea, que son los declarados en cada ítem o, si faltan, los principales de sus autores (clasificación de la OCDE que usa CVUy). La disciplina declarada no es un nivel: funciona como filtro dentro de la ficha de cada subárea. Los conceptos muestran de qué trata la producción: son las palabras clave declaradas o, cuando no las hay, las expresiones que más caracterizan los títulos. Se muestran hasta 8 conceptos por disciplina, con al menos 5 ítems cada uno. Patentes: Patentes de invención y modelos de utilidad declarados en los registros de propiedad intelectual de CVUy, que cuelgan del producto o proceso patentado. Los registros de cultivares, derechos de obtentor, software y derechos de autor no se cuentan como patentes. Instituciones: Cada publicación, línea o patente se asocia a la institución principal que tenía cada autor en el año del ítem (según sus vínculos laborales de ese año; si ese año no declara vínculos, la del año anterior). Cada proyecto se asocia a su unidad ejecutora declarada y, si no la declara, a la institución principal de sus autores en el año de inicio. Es la producción de los investigadores vinculados a la institución: refl",
+   "apartados": [
+    "Fuente",
+    "Áreas, subáreas, disciplinas y conceptos",
+    "Patentes",
+    "Instituciones",
+    "Datos agregados"
+   ],
+   "verificado": true,
+   "url_relativa": "#produccion/notas"
+  },
+  {
+   "id": "ecosistema",
+   "tipo": "analisis",
+   "ruta": "ecosistema",
+   "ancla": null,
+   "analisis": "Ecosistema institucional",
+   "titulo": "Ecosistema institucional",
+   "descripcion": "Dónde se concentran las capacidades de investigación, en qué se especializan las instituciones y cómo se vinculan entre sí",
+   "verificado": true,
+   "url_relativa": "#ecosistema"
+  },
+  {
+   "id": "ecosistema/eco-panorama",
+   "tipo": "capitulo",
+   "ruta": "ecosistema",
+   "ancla": "eco-panorama",
+   "analisis": "Ecosistema institucional",
+   "titulo": "Investigadores por institución",
+   "descripcion": "Dónde trabajan las personas que investigan y cómo se componen sus equipos. Una persona con vínculos en varias instituciones cuenta en cada una.",
+   "verificado": true,
+   "url_relativa": "#ecosistema/eco-panorama"
+  },
+  {
+   "id": "ecosistema/eco-especializacion",
+   "tipo": "capitulo",
+   "ruta": "ecosistema",
+   "ancla": "eco-especializacion",
+   "analisis": "Ecosistema institucional",
+   "titulo": "Áreas de producción",
+   "descripcion": "En qué áreas del conocimiento producen los investigadores de cada institución, frente al conjunto. En Producción científica cada área muestra sus temas; aquí cada institución muestra su perfil por área.",
+   "verificado": true,
+   "url_relativa": "#ecosistema/eco-especializacion"
+  },
+  {
+   "id": "ecosistema/eco-produccion",
+   "tipo": "capitulo",
+   "ruta": "ecosistema",
+   "ancla": "eco-produccion",
+   "analisis": "Ecosistema institucional",
+   "titulo": "Producción y funciones",
+   "descripcion": "Cómo evolucionó la producción registrada por los investigadores de cada institución, en cantidad y en relación con la cantidad de investigadores.",
+   "verificado": true,
+   "url_relativa": "#ecosistema/eco-produccion"
+  },
+  {
+   "id": "ecosistema/eco-vinculos",
+   "tipo": "capitulo",
+   "ruta": "ecosistema",
+   "ancla": "eco-vinculos",
+   "analisis": "Ecosistema institucional",
+   "titulo": "Vínculos entre instituciones",
+   "descripcion": "Las instituciones se conectan a través de sus investigadores: artículos firmados en conjunto, personas con vínculos en más de una institución, proyectos compartidos y financiamiento.",
+   "verificado": true,
+   "url_relativa": "#ecosistema/eco-vinculos"
+  },
+  {
+   "id": "ecosistema/eco-ficha",
+   "tipo": "capitulo",
+   "ruta": "ecosistema",
+   "ancla": "eco-ficha",
+   "analisis": "Ecosistema institucional",
+   "titulo": "Ficha institucional",
+   "descripcion": "La síntesis de cada institución: once indicadores de sus investigadores y de su producción, frente al total de las instituciones.",
+   "verificado": true,
+   "url_relativa": "#ecosistema/eco-ficha"
+  },
+  {
+   "id": "ecosistema/eco-investigadores-inst",
+   "tipo": "grafico",
+   "ruta": "ecosistema",
+   "ancla": "eco-investigadores-inst",
+   "analisis": "Ecosistema institucional",
+   "numero": 1,
+   "titulo": "Cuántos investigadores tiene cada institución",
+   "bajada": "Investigadores del SNI y no SNI con vínculo laboral en cada institución, agrupadas por tipo",
+   "ficha": "SNI y no SNI · a la fecha de corte (18/11/2026)",
+   "universo": "SNI y no SNI",
+   "periodo": "a la fecha de corte (18/11/2026)",
+   "capitulo": "eco-panorama",
+   "capitulo_titulo": "Investigadores por institución",
+   "muestra": "Cuántos investigadores, del SNI y fuera de él, trabajan en cada institución, agrupadas por tipo de institución.",
+   "observa": "La Universidad de la República reúne 6.993 investigadores (1.846 del SNI). Le siguen Instituciones del exterior (1.430), Empresas (1.371) y Otros organismos públicos (755). En conjunto, las instituciones suman 3.886 vínculos de investigadores del SNI y 10.810 de no SNI.",
+   "leer": "Cada círculo es una institución y su superficie crece con la cantidad de investigadores; el núcleo oscuro son los del SNI. Las instituciones se ordenan de mayor a menor dentro de cada tipo.",
+   "nota": "Una persona con vínculos en varias instituciones cuenta en cada una: los totales de las instituciones suman más que el número de personas. Los grupos de 1 a 4 personas no se publican.",
+   "desgloses": [
+    {
+     "rotulo": "Vista",
+     "opciones": [
+      "Círculos",
+      "Ranking"
+     ]
+    }
+   ],
+   "columnas": [
+    "Institución",
+    "Tipo",
+    "SNI",
+    "No SNI",
+    "Total"
+   ],
+   "sin_datos": false,
+   "verificado": true,
+   "url_relativa": "#ecosistema/eco-investigadores-inst"
+  },
+  {
+   "id": "ecosistema/eco-investigadores-ranking",
+   "tipo": "grafico",
+   "ruta": "ecosistema",
+   "ancla": "eco-investigadores-ranking",
+   "analisis": "Ecosistema institucional",
+   "numero": 1,
+   "titulo": "Cuántos investigadores tiene cada institución",
+   "bajada": "Investigadores del SNI y fuera del SNI con vínculo laboral en cada institución, ordenadas por total",
+   "ficha": "SNI y no SNI · a la fecha de corte (18/11/2026)",
+   "universo": "SNI y no SNI",
+   "periodo": "a la fecha de corte (18/11/2026)",
+   "capitulo": "eco-panorama",
+   "capitulo_titulo": "Investigadores por institución",
+   "muestra": "Las mismas cifras de los círculos, ordenadas por total para comparar con precisión.",
+   "observa": "Universidad de la República reúne 6.993 investigadores (1.846 del SNI y 5.147 fuera del SNI).",
+   "leer": "Cada barra empieza en cero: el tramo oscuro son las personas del SNI y el claro, las de fuera del SNI. Hacé clic en una institución para destacarla en todos los gráficos.",
+   "nota": "Una persona con vínculos en varias instituciones cuenta en cada una: los totales de las instituciones suman más que el número de personas. Los grupos de 1 a 4 personas no se publican.",
+   "desgloses": [
+    {
+     "rotulo": "Vista",
+     "opciones": [
+      "Círculos",
+      "Ranking"
+     ]
+    }
+   ],
+   "columnas": [
+    "Institución",
+    "Tipo",
+    "SNI",
+    "Fuera del SNI",
+    "Total"
+   ],
+   "sin_datos": false,
+   "vista_de": "ecosistema/eco-investigadores-inst",
+   "verificado": true,
+   "url_relativa": "#ecosistema/eco-investigadores-ranking"
+  },
+  {
+   "id": "ecosistema/eco-capacidades-humanas",
+   "tipo": "grafico",
+   "ruta": "ecosistema",
+   "ancla": "eco-capacidades-humanas",
+   "analisis": "Ecosistema institucional",
+   "numero": 2,
+   "titulo": "Cuántos investigadores reúne cada tipo de institución y quiénes son",
+   "bajada": "Investigadores del SNI y no SNI con vínculo laboral en cada tipo de institución: cantidad y porcentaje del total",
+   "ficha": "SNI y no SNI · a la fecha de corte (18/11/2026) · % sobre los investigadores de todas las instituciones (en «Investigadores») o del grupo (en los demás indicadores)",
+   "universo": "SNI y no SNI",
+   "periodo": "a la fecha de corte (18/11/2026)",
+   "capitulo": "eco-panorama",
+   "capitulo_titulo": "Investigadores por institución",
+   "muestra": "Cuántos investigadores, del SNI y fuera de él, trabajan en cada tipo de institución y, con el indicador, quiénes son: cuántos tienen doctorado, cuántas son mujeres, qué edad tienen y en qué nivel del SNI están. Al ser porcentajes, la Udelar se compara en pie de igualdad con instituciones más chicas.",
+   "observa": "Las instituciones reúnen a 2.457 investigadores del SNI y 7.524 no SNI. Las universidades públicas concentran el 77 % de los del SNI y el 70 % de los no SNI; le siguen instituciones del exterior (28 %) y institutos de investigación (16 %).",
+   "leer": "Cada fila es un grupo: primero el conjunto de las instituciones; debajo, cada tipo y, si hay una elegida, la institución. El punto azul son los investigadores del SNI y el naranja, los de fuera del SNI; la línea entre ambos es la diferencia. A la derecha, el porcentaje y la base: las personas con el",
+   "nota": "Porcentajes sobre las personas con el dato informado. Cada persona cuenta una vez por tipo de institución; si trabaja en instituciones de tipos distintos, cuenta en cada tipo. Los grupos de 1 a 4 personas no se publican.",
+   "desgloses": [
+    {
+     "rotulo": "Indicador",
+     "opciones": [
+      "Investigadores",
+      "Con doctorado",
+      "Mujeres",
+      "Menores de 45 años",
+      "65 años o más",
+      "Niveles II, III y emérito",
+      "Nivel de iniciación"
+     ]
+    }
+   ],
+   "columnas": [
+    "Grupo",
+    "Investigadores · SNI",
+    "Personas del SNI",
+    "Investigadores · no SNI",
+    "Personas no SNI"
+   ],
+   "sin_datos": false,
+   "verificado": true,
+   "url_relativa": "#ecosistema/eco-capacidades-humanas"
+  },
+  {
+   "id": "ecosistema/eco-areas-inst",
+   "tipo": "grafico",
+   "ruta": "ecosistema",
+   "ancla": "eco-areas-inst",
+   "analisis": "Ecosistema institucional",
+   "numero": 3,
+   "titulo": "En qué áreas se concentra la producción",
+   "bajada": "Compará la distribución por áreas de los institutos de investigación con el conjunto analizado en CVUy. Cada eje muestra qué porcentaje de sus ítems con área corresponde a esa área",
+   "ficha": "SNI y no SNI · producción desde 1990 · % sobre los ítems con área de la institución o del tipo · comparación: conjunto analizado en CVUy",
+   "universo": "SNI y no SNI",
+   "periodo": "producción desde 1990",
+   "capitulo": "eco-especializacion",
+   "capitulo_titulo": "Áreas de producción",
+   "muestra": "En qué áreas del conocimiento producen los investigadores de cada tipo de institución o de cada institución, frente al conjunto analizado en CVUy. Es la producción de sus investigadores, no de la institución: muestra las capacidades presentes en ella.",
+   "observa": "Los investigadores vinculados a los institutos de investigación tienen el 51 % de su producción en Ciencias Agrícolas (14.850 ítems), más que el 16 % que esa área tiene en el conjunto; en cambio, Ciencias Sociales pesa menos que en el conjunto: 1 % frente a 25 %.",
+   "leer": "Cuanto más lejos del centro está el punto, mayor es el peso del área. Compará los dos puntos del mismo eje: la línea ciruela es el tipo de institución elegido y la gris punteada, el conjunto analizado en CVUy. La escala es la misma para todas las selecciones. Debajo, los valores exactos y la diferen",
+   "nota": "Refleja las capacidades presentes en la institución más que lo que la institución hace: cada publicación, línea o patente se asigna a la institución principal de cada autor en el año en que se hizo, aunque pudo hacerse para otra; cada proyecto, a su unidad ejecutora declarada. Los tipos de institución suman la producción de los investigadores de todas sus instituciones; un ítem con autores de vari",
+   "desgloses": [
+    {
+     "rotulo": "Vista",
+     "opciones": [
+      "Perfil radial",
+      "Comparar áreas e instituciones"
+     ]
+    },
+    {
+     "rotulo": "Institución o tipo a explorar",
+     "opciones": [
+      "Universidades públicas (todas)",
+      "Universidades privadas (todas)",
+      "Institutos de investigación (todas)",
+      "Organismos públicos (todas)",
+      "Empresas y sociedad civil (todas)",
+      "Instituciones del exterior (todas)",
+      "Universidad de la República",
+      "Universidad Tecnológica",
+      "Universidad Católica del Uruguay",
+      "Universidad ORT Uruguay",
+      "Universidad de Montevideo",
+      "Universidad CLAEH",
+      "Educación primaria y secundaria privada",
+      "Universidad de la Empresa",
+      "Instituto Nacional de Investigación Agropecuaria",
+      "Instituto de Investigaciones Biológicas Clemente Estable",
+      "Institut Pasteur de Montevideo",
+      "Laboratorio Tecnológico del Uruguay",
+      "Otros organismos públicos",
+      "Administración Nacional de Educación Pública",
+      "Ministerio de Ganadería, Agricultura y Pesca",
+      "Ministerio de Educación y Cultura",
+      "Administración de Servicios de Salud del Estado",
+      "Ministerio de Salud Pública",
+      "Intendencia de Montevideo",
+      "Empresas",
+      "Organizaciones sin fines de lucro",
+      "Instituciones del exterior"
+     ]
+    },
+    {
+     "rotulo": "Medida",
+     "opciones": [
+      "% de su producción",
+      "Veces el peso en el conjunto",
+      "Cantidad"
+     ]
+    }
+   ],
+   "columnas": [
+    "Institución o grupo",
+    "Ciencias Naturales y Exactas (%)",
+    "Ciencias Médicas y de la Salud (%)",
+    "Ciencias Agrícolas (%)",
+    "Ingeniería y Tecnología (%)",
+    "Ciencias Sociales (%)",
+    "Humanidades (%)",
+    "Ítems con área"
+   ],
+   "sin_datos": false,
+   "verificado": true,
+   "url_relativa": "#ecosistema/eco-areas-inst"
+  },
+  {
+   "id": "ecosistema/eco-escala-esp",
+   "tipo": "grafico",
+   "ruta": "ecosistema",
+   "ancla": "eco-escala-esp",
+   "analisis": "Ecosistema institucional",
+   "numero": 3,
+   "titulo": "Índice de especialización de cada institución por área del conocimiento",
+   "bajada": "Cuántas veces pesa cada área en la producción de los investigadores de cada institución, frente a su peso en el país; se destaca el área más fuerte de cada una",
+   "ficha": "SNI y no SNI · producción desde 1990 · comparación: peso del área en el país (1× = igual)",
+   "universo": "SNI y no SNI",
+   "periodo": "producción desde 1990",
+   "capitulo": "eco-especializacion",
+   "capitulo_titulo": "Áreas de producción",
+   "muestra": "En qué áreas se especializa cada institución: si sus investigadores producen en un área más o menos de lo que esa área pesa en el país. Las instituciones se agrupan por tipo.",
+   "observa": "Los perfiles más especializados son los de Administración de Servicios de Salud del Estado (Médicas y de la Salud, 6,2× lo que pesa en el país), Instituto Nacional de Investigación Agropecuaria (Agrícolas, 5,8× lo que pesa en el país), Ministerio de Salud Pública (Médicas y de la Salud, 5,4× lo que pesa en el país). La Universidad de la República queda cerca de «igual que el país» en todas las áre",
+   "leer": "Cada fila es una institución y cada punto, un área. La línea punteada es «igual que el país»: a la derecha, el área pesa más en la institución que en el país (el doble, 4 veces…); a la izquierda, menos. El punto grande con su valor es el área más fuerte de cada institución o, si elige un área, esa á",
+   "nota": "Instituciones con al menos 300 ítems de producción de sus investigadores, agrupadas por tipo. El eje es logarítmico: «la mitad» y «el doble» están a la misma distancia de «igual que el país».",
+   "desgloses": [
+    {
+     "rotulo": "Vista",
+     "opciones": [
+      "Perfil radial",
+      "Comparar áreas e instituciones"
+     ]
+    },
+    {
+     "rotulo": "Destacar un área",
+     "opciones": [
+      "El área más fuerte de cada una",
+      "Naturales y Exactas",
+      "Médicas y de la Salud",
+      "Agrícolas",
+      "Ingeniería y Tecnología",
+      "Sociales",
+      "Humanidades"
+     ]
+    }
+   ],
+   "columnas": [
+    "Tipo",
+    "Institución",
+    "Naturales y Exactas",
+    "Médicas y de la Salud",
+    "Agrícolas",
+    "Ingeniería y Tecnología",
+    "Sociales",
+    "Humanidades"
+   ],
+   "sin_datos": false,
+   "vista_de": "ecosistema/eco-areas-inst",
+   "verificado": true,
+   "url_relativa": "#ecosistema/eco-escala-esp"
+  },
+  {
+   "id": "ecosistema/eco-produccion-anual",
+   "tipo": "grafico",
+   "ruta": "ecosistema",
+   "ancla": "eco-produccion-anual",
+   "analisis": "Ecosistema institucional",
+   "numero": 4,
+   "titulo": "La producción de las instituciones, año a año",
+   "bajada": "Publicaciones, por año, de cada tipo de institución, 1990–2026 (2026: año en curso)",
+   "ficha": "SNI y no SNI · 1990–2026 (2026 parcial)",
+   "universo": "SNI y no SNI",
+   "periodo": "1990–2026 (2026 parcial)",
+   "capitulo": "eco-produccion",
+   "capitulo_titulo": "Producción y funciones",
+   "muestra": "Cómo evolucionó desde 1990 la producción de los investigadores de cada tipo de institución y, al abrir un tipo, de cada institución: publicaciones, artículos arbitrados o proyectos iniciados.",
+   "observa": "Entre 2016–2020 y 2021–2025, las publicaciones crecieron más en empresas y sociedad civil (+24 %) y menos en instituciones del exterior (-8 %).",
+   "leer": "Cada panel es un tipo de institución o, al abrir un tipo, una institución. «Por 100 investigadores» relaciona la producción con el tamaño del grupo. En «Escala propia» cada panel usa su propio máximo, para comparar formas; en «Común», todos comparten la escala, para comparar tamaños.",
+   "nota": "2026 es el año en curso a la fecha de corte: su valor es parcial y se dibuja punteado. Un ítem con autores de varias instituciones cuenta en cada una; el tipo de institución suma sus instituciones con al menos 50 ítems en el período.",
+   "desgloses": [
+    {
+     "rotulo": "Medida",
+     "opciones": [
+      "Publicaciones",
+      "Artículos arbitrados",
+      "Proyectos iniciados"
+     ]
+    },
+    {
+     "rotulo": "Indicador",
+     "opciones": [
+      "Cantidad",
+      "Por 100 investigadores"
+     ]
+    },
+    {
+     "rotulo": "Escala",
+     "opciones": [
+      "Propia de cada panel",
+      "Común"
+     ]
+    }
+   ],
+   "columnas": [
+    "Institución o tipo",
+    "1990",
+    "1991",
+    "1992",
+    "1993",
+    "1994",
+    "1995",
+    "1996",
+    "1997",
+    "1998",
+    "1999",
+    "2000",
+    "2001",
+    "2002",
+    "2003",
+    "2004",
+    "2005",
+    "2006",
+    "2007",
+    "2008",
+    "2009",
+    "2010",
+    "2011",
+    "2012",
+    "2013",
+    "2014",
+    "2015",
+    "2016",
+    "2017",
+    "2018",
+    "2019",
+    "2020",
+    "2021",
+    "2022",
+    "2023",
+    "2024",
+    "2025",
+    "2026"
+   ],
+   "sin_datos": false,
+   "verificado": true,
+   "url_relativa": "#ecosistema/eco-produccion-anual"
+  },
+  {
+   "id": "ecosistema/eco-vinculos-matriz",
+   "tipo": "grafico",
+   "ruta": "ecosistema",
+   "ancla": "eco-vinculos-matriz",
+   "analisis": "Ecosistema institucional",
+   "numero": 5,
+   "titulo": "Quién se vincula con quién",
+   "bajada": "Copublicaciones y proyectos conjuntos de investigadores vinculados a cada par de instituciones, agrupadas por tipo",
+   "ficha": "SNI y no SNI · a la fecha de corte (18/11/2026)",
+   "universo": "SNI y no SNI",
+   "periodo": "a la fecha de corte (18/11/2026)",
+   "capitulo": "eco-vinculos",
+   "capitulo_titulo": "Vínculos entre instituciones",
+   "muestra": "Las relaciones entre instituciones, según tres tipos de vínculo: la cooperación científica (sus investigadores publican o hacen proyectos juntos), las personas que comparten y el financiamiento (una financia proyectos que ejecuta la otra).",
+   "observa": "El vínculo más intenso une a Udelar y Exterior (8.397 copublicaciones · 5 proyectos conjuntos). Le siguen Udelar y Empresas y Udelar y Otros org. públicos.",
+   "leer": "Las instituciones se agrupan por tipo (franjas de color arriba y líneas de separación). En cooperación y personas, filas y columnas son las mismas instituciones y el punto en el cruce crece con la intensidad del vínculo. En financiamiento, las filas son las fuentes —entre ellas la ANII y el PEDECIBA",
+   "nota": "",
+   "desgloses": [
+    {
+     "rotulo": "Vista",
+     "opciones": [
+      "Matriz",
+      "Ranking"
+     ]
+    },
+    {
+     "rotulo": "Vínculo",
+     "opciones": [
+      "Cooperación científica",
+      "Personas compartidas",
+      "Financiamiento"
+     ]
+    }
+   ],
+   "columnas": [
+    "Institución",
+    "Institución",
+    "Copublicaciones + 20 × proyectos conjuntos"
+   ],
+   "sin_datos": false,
+   "verificado": true,
+   "url_relativa": "#ecosistema/eco-vinculos-matriz"
+  },
+  {
+   "id": "ecosistema/eco-conexiones",
+   "tipo": "grafico",
+   "ruta": "ecosistema",
+   "ancla": "eco-conexiones",
+   "analisis": "Ecosistema institucional",
+   "numero": 5,
+   "titulo": "Entre qué instituciones colaboran los investigadores",
+   "bajada": "Publicaciones y líneas con autores vinculados a las dos instituciones (las 15 parejas con más trabajo conjunto)",
+   "ficha": "SNI y no SNI · a la fecha de corte (18/11/2026)",
+   "universo": "SNI y no SNI",
+   "periodo": "a la fecha de corte (18/11/2026)",
+   "capitulo": "eco-vinculos",
+   "capitulo_titulo": "Vínculos entre instituciones",
+   "muestra": "Cómo se conectan las instituciones a través de sus investigadores: cuántas publicaciones y líneas comparten personas vinculadas a una y a otra, y en qué áreas.",
+   "observa": "La pareja de instituciones cuyos investigadores más colaboran es Exterior – Udelar (8.402 ítems en común), sobre todo en Ciencias Naturales y Exactas.",
+   "leer": "Cada barra es una pareja de instituciones (o, si eligió una institución, cada institución con la que trabaja) y su largo es la cantidad de ítems en común. Elija un área para ver con quién se trabaja en ella.",
+   "nota": "Se cuentan los ítems con autores vinculados a las dos instituciones (su institución principal en el año del ítem); los proyectos cuentan solo en su unidad ejecutora y no suman aquí. Un ítem con tres instituciones suma en cada pareja. Es colaboración entre investigadores, no necesariamente un acuerdo entre las instituciones. Se omiten las combinaciones con menos de 5 ítems.",
+   "desgloses": [
+    {
+     "rotulo": "Vista",
+     "opciones": [
+      "Matriz",
+      "Ranking"
+     ]
+    },
+    {
+     "rotulo": "Área",
+     "opciones": [
+      "Todas",
+      "Ciencias Naturales y Exactas",
+      "Ciencias Médicas y de la Salud",
+      "Ciencias Agrícolas",
+      "Ingeniería y Tecnología",
+      "Ciencias Sociales",
+      "Humanidades"
+     ]
+    }
+   ],
+   "columnas": [
+    "Institución",
+    "Institución",
+    "Ítems en común",
+    "Ciencias Naturales y Exactas",
+    "Ciencias Médicas y de la Salud",
+    "Ciencias Agrícolas",
+    "Ingeniería y Tecnología",
+    "Ciencias Sociales",
+    "Humanidades"
+   ],
+   "sin_datos": false,
+   "vista_de": "ecosistema/eco-vinculos-matriz",
+   "verificado": true,
+   "url_relativa": "#ecosistema/eco-conexiones"
+  },
+  {
+   "id": "ecosistema/eco-perfil-inst",
+   "tipo": "grafico",
+   "ruta": "ecosistema",
+   "ancla": "eco-perfil-inst",
+   "analisis": "Ecosistema institucional",
+   "numero": 6,
+   "titulo": "Perfil de los investigadores de cada institución",
+   "bajada": "Indicadores de las personas que investigan en cada institución y de la producción de esas personas, frente al total de las instituciones",
+   "ficha": "SNI y no SNI · a la fecha de corte (18/11/2026) · % sobre los investigadores de la institución · comparación: total de las instituciones",
+   "universo": "SNI y no SNI",
+   "periodo": "a la fecha de corte (18/11/2026)",
+   "capitulo": "eco-ficha",
+   "capitulo_titulo": "Ficha institucional",
+   "muestra": "El perfil de cada institución en once indicadores: cuántas de sus personas integran el SNI, si es su lugar principal de trabajo, cuántos doctores forma, cuánto y cómo publican sus investigadores, y cuántos proyectos y líneas tienen.",
+   "observa": "",
+   "leer": "Elija la institución en la lista (o con las flechas, o en el selector de arriba). Cada indicador tiene su propia escala: la línea vertical es el total y el punto, la institución elegida —azul si está por encima, ocre si está por debajo—. Los puntos tenues son las demás instituciones.",
+   "nota": "Instituciones con al menos 10 personas del SNI. «—» indica un valor de 1 a 4 (por ejemplo, de 1 a 4 doctores formados en la institución), que se oculta para proteger los datos personales. Total: cociente de las sumas de todas las instituciones (los porcentajes de artículos, ponderados por artículos); como una persona o un artículo puede estar en varias instituciones, no es exactamente el promedio ",
+   "desgloses": [],
+   "columnas": [
+    "Institución",
+    "Personas del SNI",
+    "Personas no SNI",
+    "% del SNI entre sus investigadores",
+    "% del SNI con esta como institución principal",
+    "% del SNI con vínculos en otras instituciones",
+    "Doctores formados por cada 100 personas del SNI",
+    "Artículos (últimos 5 años) por persona del SNI",
+    "Artículos (últimos 5 años) por persona no SNI",
+    "% de artículos en WoS o Scopus",
+    "% de artículos en acceso abierto",
+    "% de artículos con otras instituciones",
+    "Proyectos en marcha por persona del SNI",
+    "Líneas de investigación por persona del SNI"
+   ],
+   "sin_datos": false,
+   "verificado": true,
+   "url_relativa": "#ecosistema/eco-perfil-inst"
+  },
+  {
+   "id": "ecosistema/notas",
+   "tipo": "notas",
+   "ruta": "ecosistema",
+   "ancla": "notas",
+   "analisis": "Ecosistema institucional",
+   "titulo": "Notas metodológicas · Ecosistema institucional",
+   "descripcion": "Fuente: Elaborado por UNE-CTI con base en datos de CVUy. CV de las 2.457 personas del SNI y de las no SNI con evidencia de investigación reciente. Instituciones: las de los vínculos laborales activos, la institución principal y las instituciones de referencia declaradas. Instituciones: Se agrupan bajo una misma clave los nombres con que aparece cada institución en CVUy. Los organismos públicos menores, las empresas, las organizaciones sin fines de lucro y las instituciones del exterior se muestran como grupos. El PEDECIBA y la ANII no se cuentan como instituciones de personas ni de producción: el 99 % de las personas del SNI que declaran el PEDECIBA tiene además un vínculo activo con otra institución, casi siempre como colaborador y con pocas horas, y el vínculo con la ANII corresponde a la categorización en el SNI o al financiamiento de proyectos. Contarlos duplicaría personas y producción. Ambos se mantienen como fuentes de financiamiento. Personas: Personas del SNI y no SNI con vínculo laboral activo en cada institución. Una persona con vínculos en varias instituciones cuenta en cada una. Capacidades humanas: Nivel del SNI, máxima formación concluida, género y tramo de edad de las personas con vínculo laboral activo o con la institución como principal. Cada persona cuenta una vez por tipo de institución; si trabaja en instituciones de tipos distintos, cuenta en cada tipo. El nivel del SNI solo existe para las personas del SNI. Tipo de producción: Reparto de la producción d",
+   "apartados": [
+    "Fuente",
+    "Instituciones",
+    "Personas",
+    "Capacidades humanas",
+    "Tipo de producción",
+    "Funciones",
+    "Áreas y conexiones",
+    "Agregación"
+   ],
+   "verificado": true,
+   "url_relativa": "#ecosistema/notas"
+  },
+  {
+   "id": "inicio",
+   "tipo": "inicio",
+   "ruta": "inicio",
+   "ancla": null,
+   "analisis": "Inicio",
+   "titulo": "Inicio · Ciencia uruguaya",
+   "descripcion": "UNIDAD NACIONAL DE EVALUACIÓN VERSIÓN PILOTO La ciencia uruguaya Una mirada a partir de los investigadores. Los datos provienen de CVUy, la herramienta nacional en la que las personas que investigan en Uruguay registran y actualizan su currículum: formación, cargos, proyectos, publicaciones y otras producciones. BUSCÁ EN CIENCIA URUGUAY Buscar Por ejemplo: ¿Cómo se compara la formación dentro y fuera del SNI? Mujeres por nivel del SNI Patentes por año ¿Qué instituciones colaboran más? Explorar los análisis ↓ Solo se publican datos agregados: no hay nombres, documentos ni información de personas individuales. diversidad arroz mejoramiento CUATRO ANÁLISIS Elija por dónde empezar ANÁLISIS 1 Sistema Nacional de Investigadores 0 personas en el SNI Quiénes integran el SNI, cómo se formaron, qué producen, cómo se financian, por dónde circulan y qué brechas de género persisten. 21 gráficos en 6 secciones · Cubre el 99,8 % del SNI Entrar al análisis → ANÁLISIS 2 Investigación fuera del SNI 0 personas con evidencia de investigación reciente Las personas con evidencia de investigación reciente en CVUy que no integran el SNI: quiénes son, cómo se formaron, dónde trabajan y qué producen. 27 grá",
+   "verificado": true,
+   "url_relativa": "#inicio"
+  }
+ ],
+ "retirados": [
+  {
+   "titulo": "Tipos de actividad declarada",
+   "ruta": "no-categorizados",
+   "retirado": "2026-11-27",
+   "motivo": "Gráfico retirado del análisis Fuera del SNI el 27/11/2026.",
+   "alternativa": "Quiénes investigan fuera del SNI"
+  }
+ ],
+ "glosario": [
+  {
+   "termino": "Fuera del SNI",
+   "equivalentes": [
+    "No SNI",
+    "no categorizados",
+    "personas no categorizadas",
+    "investigación fuera del SNI"
+   ],
+   "definicion": "Personas con CV en CVUy que no integran el SNI y registran evidencia de investigación en los últimos cinco años (criterio de inclusión 05)."
+  },
+  {
+   "termino": "SNI",
+   "equivalentes": [
+    "Sistema Nacional de Investigadores",
+    "categorizados"
+   ],
+   "definicion": "Investigadores categorizados en el SNI: activos, asociados y eméritos. «Solo activos» es un filtro de la portada."
+  },
+  {
+   "termino": "Patentes",
+   "equivalentes": [
+    "patentes únicas",
+    "patentes de invención y modelos de utilidad"
+   ],
+   "definicion": "Patentes de invención y modelos de utilidad declarados en CVUy, sin duplicados: una patente declarada por varios inventores cuenta una vez. No incluye cultivares, software ni derechos de autor."
+  },
+  {
+   "termino": "Registros de propiedad intelectual",
+   "equivalentes": [
+    "registros que mencionan patentes",
+    "patentes y registros declarados"
+   ],
+   "definicion": "Todas las declaraciones de propiedad intelectual de los CV (base del gráfico «Tipo de protección»); no es lo mismo que las patentes únicas."
+  },
+  {
+   "termino": "Ítem único",
+   "definicion": "Una publicación o un proyecto declarado en varios CV cuenta una vez (por DOI o título normalizado, tipo y año)."
+  },
+  {
+   "termino": "Género",
+   "equivalentes": [
+    "sexo",
+    "mujeres y varones"
+   ],
+   "definicion": "Género declarado en CVUy."
+  },
+  {
+   "termino": "Ventana reciente",
+   "definicion": "Los cinco años calendario hasta la fecha de corte (2022–2026); el último año es parcial."
+  },
+  {
+   "termino": "Fecha de corte",
+   "definicion": "Fecha de referencia de los datos; un dato «a la fecha de corte» no es una serie anual."
+  }
+ ]
+}

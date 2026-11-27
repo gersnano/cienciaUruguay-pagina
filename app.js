@@ -19994,6 +19994,16 @@ const xi =
       limites: [ut, "Solicitar no es obtener: el CV no distingue siempre entre patentes solicitadas y concedidas."],
     },
   },
+  pq = {
+    calculo: [
+      "Cada persona se clasifica en un solo grupo, en este orden: 1) con producción científica en 2022–2026; 2) en formación de doctorado o maestría; 3) perfil tecnológico (producción técnica reciente, patentes, o vínculo con empresas con proyectos); 4) actividad de I+D actual (líneas, proyectos o tutorías en marcha) sin producción reciente; 5) docencia o cargo académico sin producción reciente; 6) con producción solo anterior; 7) sin producción ni vínculo científico.",
+      "Cada cuadro es el 1 % de las personas.",
+    ],
+    decisiones: [
+      "El primer criterio que se cumple define el grupo: los grupos no se superponen y el orden expresa una jerarquía de intensidad investigadora.",
+    ],
+    limites: [ut, "La tipología depende de lo que la persona registra: actividad no cargada en el CV no se ve."],
+  },
   hq = {
     calculo: [
       "Grupos excluyentes según los vínculos laborales activos: solo en el sector privado; privado y academia; privado y otros sectores; vínculo privado solo en el pasado; sin vínculo privado.",
@@ -20645,6 +20655,7 @@ function Me({
 }) {
   var At;
   const E = B.useContext(_j),
+    vista8 = B.useContext(VistaCtx8),
     M = h ? h + E : void 0,
     A = m ?? (M ? `grafico-${M}` : vj(e)),
     rutaFicha8 = B.useContext(Kr),
@@ -20733,7 +20744,7 @@ function Me({
     return null;
   const ft = l.jsxs(l.Fragment, {
     children: [
-      X && g && l.jsx("div", { className: "figura__controles", children: g }),
+      X && (g || vista8) && l.jsxs("div", { className: "figura__controles", children: [vista8, g] }),
       X
         ? l.jsx(ln, {
             mode: "wait",
@@ -20927,11 +20938,139 @@ const FICHAS = {
   "produccion|Patentes": { periodo: P_ELEGIDO },
   "produccion|Tipo de protección": { periodo: P_ELEGIDO, base: "las patentes y registros declarados" },
   "ecosistema|Cuántos investigadores tiene cada institución": { base: null, comp: null },
+  "ecosistema|Cuántos investigadores tiene cada institución ": { base: null, comp: null },
   "ecosistema|Cuántos investigadores reúne cada tipo": { base: "los investigadores de todas las instituciones (en «Investigadores») o del grupo (en los demás indicadores)" },
   "ecosistema|Índice de especialización": { periodo: "producción desde 1990", comp: "peso del área en el país (1× = igual)" },
-  "ecosistema|En qué áreas producen": { periodo: "producción desde 1990", base: "la producción del tipo de institución o de la institución", comp: "total del país" },
+  "ecosistema|En qué áreas se concentra la producción": { periodo: "producción desde 1990", base: "los ítems con área de la institución o del tipo", comp: "conjunto analizado en CVUy" },
   "ecosistema|Perfil de los investigadores de cada institución": { base: "los investigadores de la institución", comp: "total de las instituciones" },
 };
+// ---- Ecosistema: piezas con dos vistas (27/11/2026) ----
+// Cada pieza muestra un solo gráfico con un selector «Vista»; el selector entra en los controles del gráfico
+// por contexto. Las anclas de los gráficos anteriores siguen llevando a la vista equivalente.
+const VistaCtx8 = B.createContext(null);
+function useVista8(inicial, anclasAlternativa) {
+  const desdeHash = () => (anclasAlternativa.some((x) => location.hash.endsWith(`/${x}`)) ? 1 : 0);
+  const [v, setV] = B.useState(() => (desdeHash() ? 1 : inicial));
+  B.useEffect(() => {
+    const f = () => desdeHash() && setV(1);
+    return (window.addEventListener("hashchange", f), () => window.removeEventListener("hashchange", f));
+  }, []);
+  return [v, setV];
+}
+function PiezaConVistas8({ vistas, inicial = 0, numero }) {
+  const otras = vistas.slice(1).flatMap((x) => x.anclas);
+  const [v, setV] = useVista8(inicial, otras);
+  const ctl = l.jsx(it, { etiqueta: "Vista", valor: v, onCambio: setV, opciones: vistas.map((x, i) => ({ valor: i, texto: x.nombre })) });
+  const actual = vistas[v];
+  const alias = vistas.filter((_, i) => i !== v).flatMap((x) => x.anclas);
+  return l.jsxs(l.Fragment, {
+    children: [
+      alias.map((id) => l.jsx("span", { id, className: "ancla8", "aria-hidden": "true" }, id)),
+      l.jsx(VistaCtx8.Provider, { value: ctl, children: l.jsx(actual.C, { numero }) }),
+    ],
+  });
+}
+function Instituciones8({ numero }) {
+  return l.jsx(PiezaConVistas8, { numero, vistas: [
+    { nombre: "Círculos", C: CF, anclas: ["eco-investigadores-inst"] },
+    { nombre: "Ranking", C: RankingInst8, anclas: ["eco-investigadores-ranking"] },
+  ] });
+}
+function Areas8({ numero }) {
+  return l.jsx(PiezaConVistas8, { numero, vistas: [
+    { nombre: "Perfil radial", C: gF, anclas: ["eco-areas-inst", "grafico-5"] },
+    { nombre: "Comparar áreas e instituciones", C: TF, anclas: ["eco-escala-esp", "grafico-4"] },
+  ] });
+}
+function Vinculos8({ numero }) {
+  return l.jsx(PiezaConVistas8, { numero, vistas: [
+    { nombre: "Matriz", C: cF, anclas: ["eco-vinculos-matriz", "grafico-6"] },
+    { nombre: "Ranking", C: vF, anclas: ["eco-conexiones", "grafico-7"] },
+  ] });
+}
+// Ranking de instituciones: barras desde cero ordenadas por total, con SNI y fuera del SNI y la cifra exacta.
+function RankingInst8({ numero: e }) {
+  const t = $a(),
+    a = Po();
+  if (!a) return null;
+  const filas = a.lista.map((x) => ({ x, ...eo(x) })).filter((r) => r.tot >= ((t.datos.meta && t.datos.meta.minimo) || 5)).sort((p, q) => q.tot - p.tot),
+    max = Math.max(1, ...filas.map((r) => r.tot)),
+    sel = t.inst,
+    top = filas[0];
+  return l.jsx(Me, {
+    numero: e,
+    id: "eco-investigadores-ranking",
+    titulo: "Cuántos investigadores tiene cada institución",
+    bajada: "Investigadores del SNI y fuera del SNI con vínculo laboral en cada institución, ordenadas por total",
+    metodo: uo.investigadoresInst,
+    amplia: !0,
+    tabla: {
+      columnas: [
+        { clave: "nombre", titulo: "Institución" },
+        { clave: "g", titulo: "Tipo" },
+        { clave: "sni", titulo: "SNI", num: !0, formato: k },
+        { clave: "nc", titulo: "Fuera del SNI", num: !0, formato: k },
+        { clave: "tot", titulo: "Total", num: !0, formato: k },
+      ],
+      filas: filas.map((r) => ({ nombre: r.x.nombre, g: Si(r.x.tipo), sni: r.sni, nc: r.nosni, tot: r.tot })),
+    },
+    nota: "Una persona con vínculos en varias instituciones cuenta en cada una: los totales de las instituciones suman más que el número de personas. Los grupos de 1 a 4 personas no se publican.",
+    muestra: l.jsx("p", { children: "Las mismas cifras de los círculos, ordenadas por total para comparar con precisión." }),
+    leer: l.jsx("p", { children: "Cada barra empieza en cero: el tramo oscuro son las personas del SNI y el claro, las de fuera del SNI. Hacé clic en una institución para destacarla en todos los gráficos." }),
+    observamos: top
+      ? l.jsxs("p", { children: [l.jsx("strong", { children: top.x.nombre }), " reúne ", k(top.tot), " investigadores (", k(top.sni), " del SNI y ", k(top.nosni), " fuera del SNI)."] })
+      : null,
+    children: l.jsxs("div", {
+      className: "ranking8",
+      children: [
+        l.jsxs("ul", {
+          className: "leyenda ranking8__leyenda",
+          children: [
+            l.jsxs("li", { children: [l.jsx("span", { className: "leyenda__marca", style: { background: je.azul } }), " SNI"] }),
+            l.jsxs("li", { children: [l.jsx("span", { className: "leyenda__marca", style: { background: xF } }), " Fuera del SNI"] }),
+          ],
+        }),
+        l.jsx("ol", {
+          className: "ranking8__lista",
+          children: filas.map((r) =>
+            l.jsx(
+              "li",
+              {
+                className: `ranking8__fila${sel === r.x.clave ? " ranking8__fila--sel" : ""}${sel && sel !== r.x.clave ? " ranking8__fila--tenue" : ""}`,
+                children: l.jsxs("button", {
+                  type: "button",
+                  onClick: () => t.setInst(r.x.clave),
+                  "aria-pressed": sel === r.x.clave,
+                  children: [
+                    l.jsxs("span", {
+                      className: "ranking8__nombre",
+                      title: r.x.nombre,
+                      children: [
+                        r.x.corto ?? r.x.nombre,
+                        (["Empresas", "Exterior", "Sociedad civil"].includes(r.x.tipo) || /^(Otros|Otras)\b/.test(r.x.nombre)) &&
+                          l.jsx("small", { className: "ranking8__grupo", children: r.x.tipo === "Exterior" ? "exterior · grupo" : "grupo" }),
+                      ],
+                    }),
+                    l.jsxs("span", {
+                      className: "ranking8__barra",
+                      children: [
+                        l.jsx("i", { style: { width: `${(100 * r.sni) / max}%`, background: je.azul } }),
+                        l.jsx("i", { style: { width: `${(100 * r.nosni) / max}%`, background: xF } }),
+                      ],
+                    }),
+                    l.jsxs("span", { className: "ranking8__valor", children: [l.jsx("b", { children: k(r.tot) }), ` · ${k(r.sni)} SNI · ${k(r.nosni)} fuera`] }),
+                  ],
+                }),
+              },
+              r.x.clave,
+            ),
+          ),
+        }),
+      ],
+    }),
+  });
+}
+
 function fichaDeFigura(met, hojas, titulo, bajada, activos, ruta) {
   const txt = (x) => (typeof x == "string" ? x : ""),
     clave = Object.keys(FICHAS).find((k) => { const [r, t] = k.split("|"); return r === ruta && txt(titulo).startsWith(t); }),
@@ -20975,7 +21114,8 @@ function fichaTexto8(partes) {
   return (partes ?? []).map((x) => (typeof x == "string" ? x : x && x.props ? String(x.props.children ?? "") : "")).join("");
 }
 function enlaceFigura8(ruta, id) {
-  return `${location.origin}${location.pathname}#${ruta ? `${ruta}/` : ""}${id}`;
+  const q = ruta === "ecosistema" ? location.search : "";
+  return `${location.origin}${location.pathname}${q}#${ruta ? `${ruta}/` : ""}${id}`;
 }
 function fechaDMA8(f) {
   return f ? String(f).split("-").reverse().join("/") : "";
@@ -22635,6 +22775,7 @@ function dD({ secciones: e = [], activo: t, analisis: a }) {
                     l.jsx("strong", { children: "Elija uno de los cuatro análisis" }),
                   ],
                 }),
+            l.jsx(Buscador8, {}),
             e.length > 0 &&
               l.jsxs("button", {
                 type: "button",
@@ -22777,14 +22918,6 @@ function Hm({ antetitulo: e, titulo: t, subtitulo: a, bajada: i, acciones: s, ci
             transition: { duration: 0.7, delay: 0.08, ease: Qe },
             children: l.jsx(mD, { texto: (y == null ? void 0 : y.nombre) ?? t }),
           }),
-          y &&
-            l.jsxs(pe.p, {
-              className: "sitio-portada__universo",
-              initial: { opacity: 0 },
-              animate: { opacity: 1 },
-              transition: { duration: 0.6, delay: 0.1 },
-              children: [l.jsx("span", { children: "Universo" }), " ", Tj(y, f)],
-            }),
           l.jsx(pe.p, {
             className: "sitio-portada__subtitulo",
             initial: { opacity: 0, y: 16 },
@@ -22792,12 +22925,22 @@ function Hm({ antetitulo: e, titulo: t, subtitulo: a, bajada: i, acciones: s, ci
             transition: { duration: 0.7, delay: 0.12, ease: Qe },
             children: g,
           }),
-          l.jsx(pe.p, {
-            className: "sitio-portada__bajada",
+          !g &&
+            h &&
+            l.jsx(pe.p, {
+              className: "sitio-portada__bajada",
+              initial: { opacity: 0, y: 16 },
+              animate: { opacity: 1, y: 0 },
+              transition: { duration: 0.7, delay: 0.16, ease: Qe },
+              children: h,
+            }),
+          // 3) el buscador, protagonista, antes del recuadro de cobertura
+          l.jsx(pe.div, {
+            className: "sitio-portada__buscador",
             initial: { opacity: 0, y: 16 },
             animate: { opacity: 1, y: 0 },
-            transition: { duration: 0.7, delay: 0.16, ease: Qe },
-            children: h,
+            transition: { duration: 0.7, delay: 0.18, ease: Qe },
+            children: l.jsx(Buscador8, { variante: "destacado" }),
           }),
           u,
           l.jsx(pe.div, {
@@ -23015,12 +23158,17 @@ function km({ bloques: e }) {
 }
 // ---- Tres hallazgos al inicio de cada análisis (26/11/2026) ----
 // Se toman en vivo de la primera frase de «Qué se observa» de tres gráficos elegidos, así se actualizan solos
-// con los datos. Cada uno enlaza a su gráfico.
+// con los datos. Cada uno enlaza a su gráfico (con un destino informativo cuando está definido).
+const ENLACES_HALLAZGOS8 = {
+  "Cuántos investigadores tiene cada": "Ver investigadores por institución",
+  "En qué áreas se concentra": "Explorar el perfil por áreas",
+  "Quién se vincula con quién": "Ver vínculos de colaboración",
+};
 const HALLAZGOS8 = {
   sni: ["La participación de las mujeres disminuye", "La formación doctoral se realiza cada vez más", "Cuántos investigadores trabajaron en el exterior"],
   "no-categorizados": ["El SNI y los no SNI en diez", "Una población más joven", "La producción, dentro y fuera del SNI"],
   produccion: ["Cómo evoluciona cada área", "Qué temas crecen", "Producción por investigador"],
-  ecosistema: ["Cuántos investigadores tiene cada", "En qué áreas producen", "Quién se vincula con quién"],
+  ecosistema: ["Cuántos investigadores tiene cada", "En qué áreas se concentra", "Quién se vincula con quién"],
 };
 function primeraFrase8(t) {
   const x = String(t).replace(/\s+/g, " ").trim(),
@@ -23049,7 +23197,7 @@ function Hallazgos8({ ruta }) {
         const txt = paso && (paso.querySelector(".lado-paso__texto") || {}).textContent;
         if (!txt || !txt.trim()) continue;
         const num = ((f.querySelector(".figura__numero") || {}).textContent || "").match(/\d+/);
-        out.push({ id: f.id, frase: primeraFrase8(txt), numero: num ? num[0] : null, titulo: f.getAttribute("data-toc") });
+        out.push({ id: f.id, frase: primeraFrase8(txt), numero: num ? num[0] : null, titulo: f.getAttribute("data-toc"), enlace: ENLACES_HALLAZGOS8[t] || null });
       }
       setItems(out);
       out.length < titulos.length && intentos++ < 20 && setTimeout(leer, 600);
@@ -23079,7 +23227,7 @@ function Hallazgos8({ ruta }) {
                   l.jsxs("a", {
                     className: "hallazgos8__enlace",
                     href: `#${ruta}/${it.id}`,
-                    children: [it.numero ? `Ver gráfico ${it.numero}` : `Ver «${it.titulo}»`, " →"],
+                    children: [it.enlace || (it.numero ? `Ver gráfico ${it.numero}` : `Ver «${it.titulo}»`), " →"],
                   }),
                 ],
               },
@@ -23186,6 +23334,511 @@ function Descargas8() {
           ),
         ),
       }),
+    ],
+  });
+}
+
+// Motor del buscador de Ciencia Uruguay (compartido por el sitio y el flujo de n8n).
+// Sin dependencias: normaliza la consulta, reconoce sinónimos, puntúa las ubicaciones del índice,
+// detecta contenido retirado y ambigüedades, y valida que una ubicación responda la consulta con el
+// universo, el período y el desglose pedidos. El texto de este archivo se copia tal cual en los nodos
+// de código de n8n y en app.js (función crearMotorBuscador8): si se cambia aquí, regenerar ambos.
+function crearMotorBuscador8() {
+  const MOTIVOS = ['indicador no disponible', 'período no disponible', 'desagregación no disponible', 'grupo no disponible', 'contenido retirado', 'tema no cubierto'];
+  const norm = (s) => String(s == null ? '' : s).normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z0-9ñ%]+/g, ' ').trim();
+  const VACIAS = new Set('a al como cual cuales cuanto cuantos cuantas cuanta de del el la las los lo en entre es esta este estos estas hay me mi muestra muestran para por que quien quienes se segun ser son sobre su sus un una uno unos y o con sin datos dato informacion ver quiero saber puedo tienen tiene grafico graficos mas menos cuantas'.split(' '));
+  // Conceptos: clave -> variantes (normalizadas al compararse).
+  const CONCEPTOS = {
+    nosni: ['no sni', 'fuera del sni', 'fuera sni', 'no categorizad', 'sin categorizar', 'fuera del sistema', 'no estan en el sni', 'no integran el sni', 'no pertenecen al sni', 'no son del sni', 'no categorizados'],
+    sni: ['sni', 'sistema nacional de investigadores', 'categorizados', 'investigadores categorizados'],
+    activos: ['activos', 'categoria activo', 'solo activos'],
+    genero: ['sexo', 'genero', 'mujeres', 'mujer', 'investigadoras', 'cientificas', 'femenina', 'varones', 'varon', 'hombres', 'hombre', 'femenino', 'masculino', 'brecha', 'paridad', 'tijera'],
+    formacion: ['formacion', 'doctorado', 'doctores', 'doctor', 'maestria', 'posgrado', 'titulo', 'phd', 'nivel educativo', 'estudios', 'grado academico'],
+    edad: ['edad', 'jovenes', 'joven', 'mayores', 'envejecimiento', 'relevo', 'menores de', 'anos de edad', 'piramide'],
+    nivel: ['nivel del sni', 'niveles', 'nivel', 'iniciacion', 'nivel i', 'nivel ii', 'nivel iii', 'emerito', 'categoria', 'categorias'],
+    produccion: ['produccion', 'publicaciones', 'publicacion', 'articulos', 'articulo', 'papers', 'paper', 'libros', 'capitulos', 'eventos', 'congresos', 'producen', 'publican'],
+    patentes: ['patente', 'patentes', 'modelo de utilidad', 'modelos de utilidad', 'propiedad intelectual', 'invencion', 'invenciones'],
+    proyectos: ['proyectos', 'proyecto', 'proyectos de investigacion'],
+    financiamiento: ['financiamiento', 'financia', 'fondos', 'anii', 'csic', 'financiador', 'financiadores'],
+    territorio: ['territorio', 'territorial', 'region', 'regiones', 'departamento', 'departamentos', 'interior', 'montevideo', 'geografic',
+      'artigas', 'canelones', 'cerro largo', 'colonia', 'durazno', 'flores', 'florida', 'lavalleja', 'maldonado', 'paysandu', 'rio negro', 'rivera', 'rocha', 'salto', 'san jose', 'soriano', 'tacuarembo', 'treinta y tres'],
+    exterior: ['exterior', 'extranjero', 'afuera', 'diaspora', 'retorno', 'volvieron', 'emigr', 'internacional', 'otros paises', 'movilidad internacional'],
+    instituciones: ['institucion', 'instituciones', 'universidad', 'universidades', 'udelar', 'universidad de la republica', 'instituto', 'institutos', 'inia', 'pasteur', 'iibce', 'latu', 'utec', 'ort', 'catolica', 'organismo'],
+    area: ['area', 'areas', 'disciplina', 'disciplinas', 'campo', 'subarea', 'subareas', 'ciencias sociales', 'humanidades', 'ingenieria', 'medicas', 'salud', 'agricolas', 'naturales', 'exactas'],
+    tesis: ['tesis', 'tutoria', 'tutorias', 'direccion de tesis', 'tutor', 'dirigen'],
+    lineas: ['lineas de investigacion', 'linea de investigacion', 'lineas'],
+    vinculos: ['vinculos', 'vinculo', 'colaboracion', 'colaboran', 'copublicacion', 'copublicaciones', 'red', 'redes', 'conexiones', 'quien con quien'],
+    empresas: ['empresa', 'empresas', 'sector privado', 'privado', 'privados', 'industria'],
+    sector: ['sector', 'sectores', 'academia', 'sector publico', 'insercion laboral', 'donde trabajan', 'trabajo', 'empleo'],
+    dedicacion: ['dedicacion', 'dedicacion total', 'horas', 'carga horaria'],
+    tiempo: ['evolucion', 'tendencia', 'tendencias', 'crecimiento', 'crece', 'crecen', 'por ano', 'anual', 'serie', 'historico', 'en el tiempo', 'cambio'],
+    por_investigador: ['por investigador', 'por persona', 'per capita', 'relativo', 'normalizado', 'productividad', 'por cada 100', 'tasa'],
+    visibilidad: ['wos', 'scopus', 'web of science', 'acceso abierto', 'indexacion', 'indexadas', 'visibilidad', 'scielo', 'revistas'],
+    metodologia: ['metodologia', 'como se calcula', 'criterio', 'criterios', 'definicion', 'fuente', 'notas metodologicas', 'universo', 'quienes cuentan', 'cobertura'],
+    temas: ['tema', 'temas', 'conceptos', 'concepto', 'palabras clave'],
+    especializacion: ['especializacion', 'especializada', 'especializadas', 'perfil por area', 'indice de especializacion'],
+    salarios: ['salario', 'salarios', 'sueldo', 'sueldos', 'ingresos', 'remuneracion', 'remuneraciones', 'ganan', 'cobran', 'incentivo economico'],
+    citas: ['citas', 'citaciones', 'impacto', 'factor de impacto', 'indice h'],
+    total: ['cuantos son', 'cuantos hay', 'total', 'cantidad de investigadores', 'cuantas personas', 'cuantos investigadores'],
+  };
+  const PAT = Object.fromEntries(Object.entries(CONCEPTOS).map(([k, vs]) => [k, vs.map(norm)]));
+  function conceptos(texto) {
+    const t = ` ${norm(texto)} `;
+    const out = new Set();
+    for (const [k, vs] of Object.entries(PAT)) for (const v of vs) if (t.includes(` ${v}`)) { out.add(k); break; }
+    // «fuera del SNI» contiene «sni»: no marcar SNI solo por eso.
+    if (out.has('nosni')) { const sinNo = t.replace(/no sni|fuera del sni|fuera sni|no integran el sni|no estan en el sni|no son del sni|no pertenecen al sni/g, ' '); if (!/ sni| sistema nacional| categorizados(?! )/.test(sinNo.replace(/no categorizad\w*/g, ' '))) out.delete('sni'); }
+    return out;
+  }
+  const palabras = (texto) => norm(texto).split(' ').filter((w) => w.length > 2 && !VACIAS.has(w));
+  function textoEntrada(e) {
+    const d = (e.desgloses || []).map((x) => `${x.rotulo} ${(x.opciones || []).slice(0, 30).join(' ')}`).join(' ');
+    const t = e.temas ? `${(e.temas.areas || []).join(' ')} ${(e.temas.temas || []).slice(0, 120).join(' ')}` : '';
+    return { titulo: e.titulo || '', medio: `${e.bajada || ''} ${e.capitulo_titulo || ''} ${(e.columnas || []).join(' ')} ${d}`,
+      resto: `${e.muestra || ''} ${e.descripcion || ''} ${e.ficha || ''} ${e.leer || ''} ${e.nota || ''} ${t} ${(e.apartados || []).join(' ')}` };
+  }
+  function prepararIndice(indice) {
+    const entradas = (indice.entradas || []).filter((e) => e.verificado !== false);
+    for (const e of entradas) {
+      const t = textoEntrada(e);
+      e._c = conceptos(`${t.titulo} ${t.medio} ${t.resto}`);
+      e._ct = conceptos(`${t.titulo} ${e.bajada || ''}`);
+      e._cti = conceptos(t.titulo);
+      e._wt = new Set(palabras(t.titulo)); e._wm = new Set(palabras(t.medio)); e._wr = new Set(palabras(t.resto));
+      const u = norm(e.universo);
+      e._univ = e.ruta === 'no-categorizados' ? (/sni y no sni/.test(u) ? 'ambos' : 'nosni') : e.ruta === 'sni' ? (/no sni/.test(u) ? 'ambos' : 'sni') :
+        (/sni y no sni/.test(u) || e.ruta === 'produccion' || e.ruta === 'ecosistema') ? 'ambos' : 'todos';
+    }
+    return { ...indice, entradas };
+  }
+  function universoPedido(c) { return c.has('nosni') && c.has('sni') ? 'ambos' : c.has('nosni') ? 'nosni' : c.has('sni') ? 'sni' : null; }
+  function retirado(indice, consulta) {
+    const q = norm(consulta);
+    return (indice.retirados || []).find((r) => { const w = palabras(r.titulo); return w.length && w.every((x) => q.includes(x.slice(0, Math.max(4, x.length - 2)))); }) || null;
+  }
+  // Puntaje de cada ubicación para una consulta.
+  function buscar(indiceP, consulta, max = 25) {
+    const c = conceptos(consulta), w = palabras(consulta), up = universoPedido(c);
+    const conTema = [...c].filter((k) => !['sni', 'nosni', 'activos', 'total'].includes(k));
+    const res = [];
+    for (const e of indiceP.entradas) {
+      let s = 0;
+      for (const k of conTema) { if (e._ct.has(k)) s += 6; else if (e._c.has(k)) s += 3; }
+      for (const x of w) { const r = x.slice(0, Math.max(4, x.length - 2)); const en = (set) => [...set].some((y) => y.startsWith(r));
+        if (en(e._wt)) s += 4; else if (en(e._wm)) s += 2; else if (en(e._wr)) s += 1; }
+      if (up) { if (e._univ === up) s += 5; else if (up === 'ambos' && e._univ !== 'ambos') s -= 4; else if (up !== 'ambos' && e._univ === 'ambos') s += 1; else if (e._univ !== 'todos') s -= 6; }
+      if (c.has('total') && /cuantos|quienes integran|quienes investigan|cifras/.test(norm(e.titulo))) s += 4;
+      if (conTema.length > 1 && conTema.every((k) => e._cti.has(k))) s += 5;         // el título cubre todo lo pedido
+      if (c.has('instituciones') && e.ruta === 'ecosistema') s += 3;                    // instituciones: análisis de Ecosistema
+      s += e.tipo === 'grafico' ? 1.5 : e.tipo === 'capitulo' ? 0.5 : e.tipo === 'notas' ? (c.has('metodologia') ? 6 : -2) : -1;
+      if (e.sin_datos) s -= 2;
+      if (s > 0) res.push({ e, s: Math.round(s * 10) / 10 });
+    }
+    return res.sort((a, b) => b.s - a.s).slice(0, max);
+  }
+  // Ambigüedad que cambia el resultado: el mismo indicador existe para el SNI y para fuera del SNI y la
+  // consulta no dice cuál.
+  function ambiguedad(consulta, res) {
+    const c = conceptos(consulta);
+    if (universoPedido(c) || res.length < 2) return null;
+    const [a, b] = res;
+    if (a.s - b.s > 3) return null;
+    const par = [a.e, b.e].map((x) => x._univ).sort().join('|');
+    if (par !== 'nosni|sni') return null;
+    return { pregunta: '¿Sobre qué grupo querés la información?', opciones: ['El SNI', 'Fuera del SNI', 'Comparar ambos'] };
+  }
+  // Pedido estructurado a partir de una interpretación (de la IA o local).
+  const ANIOS = (s) => (String(s || '').match(/\b(19[6-9]\d|20[0-4]\d)\b/g) || []).map(Number);
+  function rangoEntrada(e, fechaCorte) {
+    const p = norm(e.periodo), corte = fechaCorte ? parseInt(fechaCorte, 10) : 2026;
+    if (/periodo elegido|filtro/.test(p)) return [1990, corte];
+    const a = ANIOS(e.periodo); if (a.length >= 2) return [Math.min(...a), Math.max(...a)];
+    if (/fecha de corte/.test(p)) { const b = ANIOS(e.bajada + ' ' + e.titulo); return b.length >= 2 ? [Math.min(...b), Math.max(...b)] : null; }
+    return null;
+  }
+  // ¿La ubicación responde con el universo, período y desglose pedidos? Devuelve null si sí, o el motivo.
+  function validar(e, pedido, fechaCorte) {
+    if (!e) return { motivo: 'indicador no disponible', detalle: 'La ubicación elegida no existe en el índice.' };
+    const g = pedido.grupo ? norm(pedido.grupo) : '';
+    const quiere = /ambos|compar|dentro y fuera|sni y no sni/.test(g) ? 'ambos' : /no sni|fuera|no categ/.test(g) ? 'nosni' : /\bsni\b/.test(g) ? 'sni' : null;
+    if (quiere && e._univ !== 'todos') {
+      const ok = quiere === e._univ || (quiere !== 'ambos' && e._univ === 'ambos');
+      if (!ok) return { motivo: 'grupo no disponible', detalle: `La ubicación es de ${e.universo || e.analisis}, no de ${pedido.grupo}.` };
+    }
+    const anios = ANIOS(pedido.periodo);
+    if (anios.length) {
+      const r = rangoEntrada(e, fechaCorte);
+      if (r && anios.some((y) => y < r[0] || y > r[1])) return { motivo: 'período no disponible', detalle: `Cubre ${r[0]}–${r[1]}; se pidió ${pedido.periodo}.` };
+    }
+    const d = norm(pedido.desglose);
+    if (d && !/^(ninguno|no|total|sin desglose|general)$/.test(d)) {
+      const cd = conceptos(pedido.desglose);
+      const dz = (e.desgloses || []).map((x) => `${x.rotulo} ${x.opciones.length <= 20 ? x.opciones.join(' ') : ''}`).join(' ');
+      const ed = conceptos(`${dz} ${(e.columnas || []).join(' ')} ${e.titulo} ${e.bajada || ''}`);
+      const palabrasD = palabras(pedido.desglose);
+      const textoD = norm(`${dz} ${(e.columnas || []).join(' ')} ${e.titulo} ${e.bajada || ''}`);
+      const ok = (cd.size && [...cd].every((k) => ed.has(k))) || (!cd.size && palabrasD.every((x) => textoD.includes(x.slice(0, Math.max(4, x.length - 2)))));
+      if (!ok) return { motivo: 'desagregación no disponible', detalle: `No se puede desglosar por ${pedido.desglose}.` };
+    }
+    return null;
+  }
+  // Búsqueda completa sin IA (respaldo del sitio y prueba).
+  function resolverLocal(indiceP, consulta) {
+    const q = String(consulta || '').trim();
+    if (q.length < 2) return { estado: 'vacia' };
+    const ret = retirado(indiceP, q);
+    if (ret) {
+      const alt = indiceP.entradas.find((e) => e.titulo === ret.alternativa && e.ruta === ret.ruta);
+      return { estado: 'sin_resultado', motivo: 'contenido retirado', falta: ret.motivo, cercano: alt ? ficha(alt) : null };
+    }
+    const res = buscar(indiceP, q, 8);
+    // Temas que CVUy no registra: no se ofrece un gráfico como si respondiera.
+    const cq = conceptos(q);
+    if (cq.has('salarios')) return { estado: 'sin_resultado', motivo: 'tema no cubierto', falta: 'El portal no tiene información sobre salarios o ingresos: CVUy no los registra.', cercano: null };
+    if (cq.has('citas')) return { estado: 'sin_resultado', motivo: 'indicador no disponible', falta: 'El portal tiene la producción y su indexación, pero no las citas recibidas.', cercano: res[0] ? ficha(res[0].e) : null };
+    if (!res.length || res[0].s < 6) return { estado: 'sin_resultado', motivo: 'tema no cubierto', falta: 'No hay una ubicación del portal que coincida con la consulta.', cercano: res[0] ? ficha(res[0].e) : null };
+    const amb = ambiguedad(q, res);
+    if (amb) return { estado: 'aclaracion', aclaracion: amb, alternativas: res.slice(0, 2).map((r) => ficha(r.e)) };
+    // Desgloses pedidos (territorio, género, edad…): el resultado tiene que tenerlos.
+    const c = conceptos(q), up = universoPedido(c);
+    const DIM = { territorio: 'territorio', genero: 'genero', edad: 'edad', nivel: 'nivel', sector: 'sector', empresas: 'empresas', dedicacion: 'dedicacion' };
+    const pedido = { grupo: up === 'nosni' ? 'no SNI' : up === 'sni' ? 'SNI' : up === 'ambos' ? 'ambos' : '',
+      desglose: Object.keys(DIM).filter((k) => c.has(k)).map((k) => DIM[k]).join(' ') };
+    const buenos = res.filter((r) => r.s >= res[0].s * 0.5 && !validar(r.e, pedido));
+    if (!buenos.length) {
+      const v = validar(res[0].e, pedido) || { motivo: 'indicador no disponible', detalle: '' };
+      return { estado: 'sin_resultado', motivo: v.motivo, falta: v.detalle, cercano: ficha(res[0].e) };
+    }
+    return { estado: 'resultado', resultado: ficha(buenos[0].e), alternativas: buenos.slice(1, 4).filter((r) => r.s >= buenos[0].s * 0.6).map((r) => ficha(r.e)) };
+  }
+  function ficha(e) {
+    return { id: e.id, titulo: e.titulo, url_relativa: e.url_relativa, analisis: e.analisis, capitulo: e.capitulo_titulo || '', numero: e.numero || null,
+      tipo: e.tipo, universo: e.universo || '', periodo: e.periodo || '' };
+  }
+  // Versión compacta de una ubicación para pasarle a la IA.
+  function compacta(e) {
+    return { id: e.id, tipo: e.tipo, titulo: e.titulo, analisis: e.analisis, capitulo: e.capitulo_titulo || undefined, universo: e.universo || undefined,
+      periodo: e.periodo || undefined, base: (e.ficha || '').split(' · ').slice(2).join(' · ') || undefined, bajada: e.bajada || undefined,
+      desgloses: (e.desgloses || []).map((d) => `${d.rotulo}: ${d.opciones.slice(0, 12).join(', ')}${d.opciones.length > 12 ? '…' : ''}`),
+      columnas: e.columnas && e.columnas.length ? e.columnas.slice(0, 14) : undefined, muestra: (e.muestra || e.descripcion || '').slice(0, 260) || undefined,
+      sin_datos: e.sin_datos || undefined };
+  }
+  // Datos personales fuera de la consulta antes de guardarla.
+  function anonimizar(t) {
+    return String(t || '').replace(/[\w.+-]+@[\w-]+\.[\w.]+/g, '[correo]').replace(/https?:\/\/\S+/g, '[enlace]')
+      .replace(/\b\d\.?\d{3}\.?\d{3}-?\d\b/g, '[documento]').replace(/(\+?598\s?)?\b0?9\d[\s-]?\d{3}[\s-]?\d{3}\b/g, '[teléfono]')
+      .replace(/\b\d{7,}\b/g, '[número]').replace(/\s+/g, ' ').trim().slice(0, 300);
+  }
+  // Agrupación determinística de consultas sin resultado (respaldo de la agrupación con IA).
+  function claveGrupo(f) {
+    const DIMS = ['nivel', 'genero', 'edad', 'territorio', 'area', 'sector', 'instituciones', 'total', 'tiempo', 'sni', 'nosni', 'activos'];
+    let c = [...conceptos(`${f.tema || ''} ${f.indicador || ''}`)].filter((k) => !DIMS.includes(k));
+    if (!c.length) c = [...conceptos(f.consulta || '')].filter((k) => !DIMS.includes(k));
+    const g = norm(f.grupo); const u = /ambos|compar/.test(g) ? 'ambos' : /no sni|fuera|no categ/.test(g) ? 'nosni' : /sni/.test(g) ? 'sni' : '';
+    const d = f.motivo === 'desagregación no disponible' ? [...conceptos(f.desglose || '')].sort().join('+') : '';
+    // Temas fuera de la cobertura (salarios, citas): no importa el grupo.
+    const fuera = f.motivo === 'tema no cubierto' || f.motivo === 'indicador no disponible';
+    // Desglose faltante: lo que define el grupo es el desglose pedido, no cómo se nombra el dato.
+    const base = c.sort().join('+') || (f.motivo === 'desagregación no disponible' && d ? 'cantidad' : norm(f.indicador || f.consulta).split(' ').slice(0, 2).join(' '));
+    return [f.motivo || '', base, fuera ? '' : u, d].join('|');
+  }
+  return { MOTIVOS, norm, conceptos, palabras, prepararIndice, buscar, ambiguedad, retirado, validar, resolverLocal, ficha, compacta, anonimizar, claveGrupo, universoPedido, rangoEntrada };
+}
+
+// ---- Buscador «Buscá en Ciencia Uruguay» (27/11/2026) ----
+// Con la dirección del flujo de n8n configurada (textos.json → sitio.buscador_url) la IA interpreta la
+// consulta y elige entre ubicaciones verificadas del índice (datos/indice.json); el sitio vuelve a
+// comprobar que la ubicación exista antes de mostrar el enlace. Sin dirección, o si el servicio falla
+// (error técnico), resuelve con el motor local por coincidencia de palabras y no registra nada.
+const MOTOR8 = crearMotorBuscador8();
+let INDICE8 = null;
+function cargarIndice8() {
+  return (
+    INDICE8 ||
+    (INDICE8 = fetch(new URL("datos/indice.json", document.baseURI), { cache: "no-cache" })
+      .then((r) => (r.ok ? r.json() : Promise.reject(new Error(`índice ${r.status}`))))
+      .then((j) => MOTOR8.prepararIndice(j))
+      .catch((e) => {
+        INDICE8 = null;
+        throw e;
+      }))
+  );
+}
+function idConsulta8(texto) {
+  // El mismo texto en la misma visita reusa el identificador: un reintento no duplica la fila.
+  const clave = `buscador8:${MOTOR8.norm(texto)}`;
+  try {
+    const v = sessionStorage.getItem(clave);
+    if (v) return v;
+    const n = (crypto.randomUUID && crypto.randomUUID()) || `${Date.now()}-${Math.random().toString(36).slice(2)}`;
+    sessionStorage.setItem(clave, n);
+    return n;
+  } catch {
+    return `${Date.now()}-${Math.random().toString(36).slice(2)}`;
+  }
+}
+const MOTIVO_TEXTO8 = {
+  "indicador no disponible": "El portal no tiene ese indicador.",
+  "período no disponible": "El portal tiene el tema, pero no para ese período.",
+  "desagregación no disponible": "El portal tiene el tema, pero no con ese desglose.",
+  "grupo no disponible": "El portal tiene el tema, pero no para ese grupo.",
+  "contenido retirado": "Ese contenido se retiró del portal.",
+  "tema no cubierto": "El portal no trata ese tema.",
+};
+async function consultarIA8(url, cuerpo) {
+  const ctl = new AbortController(),
+    t = setTimeout(() => ctl.abort(), 25e3);
+  try {
+    const r = await fetch(url, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(cuerpo), signal: ctl.signal });
+    if (!r.ok) throw new Error(`servicio ${r.status}`);
+    const j = await r.json();
+    if (!j || !["resultado", "aclaracion", "sin_resultado", "vacia"].includes(j.estado)) throw new Error(j && j.estado === "error" ? j.detalle || "error del servicio" : "respuesta inválida");
+    return j;
+  } finally {
+    clearTimeout(t);
+  }
+}
+// Registro de consultas (textos.json → sitio.registro_url: aplicación web de Apps Script de la planilla).
+// Se envía cada búsqueda, con o sin resultado, ya anonimizada; no se envían las vacías ni las [prueba].
+// Envío sin respuesta (no-cors): si la planilla no responde, la búsqueda sigue igual.
+function registrarConsulta8(url, consulta, aclaracion, r, ruta) {
+  if (!url || !r || /^\s*\[prueba\]/i.test(consulta) || !["resultado", "sin_resultado", "aclaracion"].includes(r.estado)) return !1;
+  const texto = aclaracion ? `${aclaracion.consulta} ${aclaracion.opcion}` : consulta,
+    mostrado = r.estado === "resultado" ? r.resultado : r.estado === "sin_resultado" ? r.cercano : null,
+    it = r.interpretacion || {},
+    cs = MOTOR8.conceptos(texto),
+    up = MOTOR8.universoPedido(cs),
+    dims = ["territorio", "genero", "edad", "nivel", "sector", "empresas", "dedicacion"].filter((k) => cs.has(k)).join(" "),
+    grupo = it.grupo || (up === "nosni" ? "no SNI" : up === "sni" ? "SNI" : up === "ambos" ? "ambos" : "");
+  const cuerpo = {
+    id_consulta: idConsulta8(texto),
+    consulta: MOTOR8.anonimizar(texto),
+    resultado: r.estado === "resultado" ? "con resultado" : r.estado === "sin_resultado" ? "sin resultado" : "pidió aclaración",
+    motivo: r.estado === "sin_resultado" ? r.motivo || "" : "",
+    que_falta: r.estado === "sin_resultado" ? MOTOR8.anonimizar(r.falta || "") : "",
+    se_mostro: mostrado ? mostrado.titulo : r.estado === "aclaracion" ? r.aclaracion.pregunta : "",
+    enlace: mostrado ? mostrado.url_relativa : "",
+    alternativas: (r.alternativas || []).map((f) => f.titulo).join(" / "),
+    aclaracion: aclaracion ? `${aclaracion.pregunta} → ${aclaracion.opcion}` : "",
+    busqueda: r.modo === "ia" ? "IA" : "palabras",
+    pagina: (typeof location != "undefined" && location.hash.replace(/^#/, "").split(/[/?]/)[0]) || ruta || "inicio",
+    clave_grupo: r.estado === "sin_resultado" ? MOTOR8.claveGrupo({ motivo: r.motivo, consulta: texto, tema: it.tema || "", indicador: it.indicador || "", grupo, desglose: it.desglose || dims }) : "",
+  };
+  try {
+    fetch(url, { method: "POST", mode: "no-cors", keepalive: !0, headers: { "Content-Type": "text/plain;charset=utf-8" }, body: JSON.stringify(cuerpo) }).catch(() => {});
+  } catch {}
+  return !0;
+}
+// Solo se muestran ubicaciones que estén en el índice publicado (el enlace sale del índice, no del servicio).
+function verificarRespuesta8(ind, r) {
+  const porId = new Map(ind.entradas.map((e) => [e.id, e]));
+  const fijar = (x) => (x && porId.has(x.id) ? MOTOR8.ficha(porId.get(x.id)) : null);
+  if (r.estado === "resultado") {
+    const res = fijar(r.resultado);
+    if (!res) throw new Error("ubicación fuera del índice");
+    return { ...r, resultado: { ...res, explicacion: r.resultado.explicacion || "" }, alternativas: (r.alternativas || []).map(fijar).filter(Boolean).slice(0, 3) };
+  }
+  if (r.estado === "sin_resultado") return { ...r, cercano: fijar(r.cercano) };
+  if (r.estado === "aclaracion") return { ...r, alternativas: (r.alternativas || []).map(fijar).filter(Boolean) };
+  return r;
+}
+function EnlaceResultado8({ f, cerrar, principal }) {
+  if (!f) return null;
+  const meta = [f.analisis, f.capitulo, f.numero ? `Gráfico ${f.numero}` : f.tipo === "notas" ? "Notas metodológicas" : null].filter(Boolean).join(" · ");
+  return l.jsxs("a", {
+    className: `buscador8__enlace${principal ? " buscador8__enlace--principal" : ""}`,
+    href: f.url_relativa,
+    onClick: () => cerrar(),
+    children: [
+      l.jsx("span", { className: "buscador8__titulo", children: f.titulo }),
+      meta && l.jsx("span", { className: "buscador8__meta", children: meta }),
+    ],
+  });
+}
+// Preguntas de ejemplo que se alternan dentro del buscador destacado (verificadas contra el índice).
+const PREGUNTAS8 = {
+  sni: ["¿Cuántas mujeres hay por nivel del SNI?", "¿Dónde se doctoraron en el SNI?", "¿Qué área del SNI publica más por persona?",
+    "¿Cuántos del SNI trabajaron afuera?", "¿Cómo creció la producción del SNI?", "¿Cuánto publica el SNI en acceso abierto?", "¿Cuántos investigadores hay en Montevideo?"],
+  "no-categorizados": ["¿Cómo es la formación fuera del SNI?", "¿Cuántas personas investigan fuera del SNI?", "¿Cuántos fuera del SNI están en empresas?"],
+  produccion: ["¿Qué temas de investigación crecen más?", "¿Cuántas patentes se registran por año?"],
+  ecosistema: ["¿Qué instituciones colaboran más?", "¿Cuántos investigadores tiene el INIA?", "¿En qué se especializa cada institución?"],
+};
+const INVITACION8 = "¿Qué querés saber sobre la ciencia en Uruguay?";
+function preguntasDe8(ruta) {
+  const mezclar = (a) => a.map((x) => [Math.random(), x]).sort((p, q) => p[0] - q[0]).map((x) => x[1]);
+  const propias = PREGUNTAS8[ruta] || [],
+    resto = Object.entries(PREGUNTAS8).filter(([k]) => k !== ruta).flatMap(([, v]) => v);
+  return ruta && propias.length ? [...mezclar(propias), ...mezclar(resto)] : mezclar(resto);
+}
+// Invitación y preguntas que aparecen y cambian cada 3,5 s mientras el campo está vacío.
+function useInvitacion8(activo, ruta) {
+  const lista = B.useMemo(() => preguntasDe8(ruta), [ruta]),
+    [i, setI] = B.useState(-1);
+  B.useEffect(() => {
+    if (!activo) return;
+    const quieto = typeof matchMedia != "undefined" && matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (quieto) return;
+    const t = setInterval(() => setI((x) => (x + 1) % lista.length), 3500);
+    return () => clearInterval(t);
+  }, [activo, lista]);
+  return i < 0 ? { texto: INVITACION8, pregunta: null, clave: "inv" } : { texto: lista[i], pregunta: lista[i], clave: `p${i}` };
+}
+function Buscador8({ variante: variante8 = "cabecera" } = {}) {
+  const destacado = variante8 === "destacado",
+    ruta8 = B.useContext(Kr) || "inicio",
+    campoId = `buscador8-${B.useId().replace(/[^\w-]/g, "")}`;
+  const [q, setQ] = B.useState(""),
+    [estado, setEstado] = B.useState(null),
+    [cargando, setCargando] = B.useState(!1),
+    [abierto, setAbierto] = B.useState(!1),
+    caja = B.useRef(null),
+    url = (tm().buscador_url || (typeof window != "undefined" && window.CIENCIA_BUSCADOR_URL) || "").trim(),
+    registroUrl = (tm().registro_url || (typeof window != "undefined" && window.CIENCIA_REGISTRO_URL) || "").trim(),
+    cerrar = () => setAbierto(!1),
+    invita = useInvitacion8(destacado && !q, ruta8 === "inicio" ? null : ruta8);
+  // Mientras el buscador destacado está a la vista, el de la cabecera se oculta (aparece al bajar).
+  B.useEffect(() => {
+    if (!destacado || !caja.current || typeof IntersectionObserver == "undefined") return;
+    const io = new IntersectionObserver(([x]) => document.body.classList.toggle("buscador8-destacado-visible", x.isIntersecting), { rootMargin: "-80px 0px 0px 0px" });
+    io.observe(caja.current);
+    return () => (io.disconnect(), document.body.classList.remove("buscador8-destacado-visible"));
+  }, [destacado]);
+  B.useEffect(() => {
+    const fuera = (ev) => caja.current && !caja.current.contains(ev.target) && setAbierto(!1),
+      esc = (ev) => ev.key === "Escape" && setAbierto(!1);
+    return (document.addEventListener("pointerdown", fuera), document.addEventListener("keydown", esc), () => {
+      (document.removeEventListener("pointerdown", fuera), document.removeEventListener("keydown", esc));
+    });
+  }, []);
+  const buscar = async (texto, aclaracion) => {
+    const consulta = String(texto || "").trim();
+    if (consulta.length < 2) return;
+    (setCargando(!0), setAbierto(!0));
+    let ind;
+    try {
+      ind = await cargarIndice8();
+    } catch {
+      (setEstado({ estado: "error", detalle: "No se pudo cargar el índice del portal." }), setCargando(!1));
+      return;
+    }
+    const local = () => MOTOR8.resolverLocal(ind, aclaracion ? `${aclaracion.consulta} ${aclaracion.opcion}` : consulta);
+    let r;
+    if (url)
+      try {
+        r = { ...verificarRespuesta8(ind, await consultarIA8(url, { consulta, id_consulta: idConsulta8(aclaracion ? `${aclaracion.consulta} ${aclaracion.opcion}` : consulta), aclaracion: aclaracion || null, origen: "web" })), modo: "ia" };
+      } catch (e) {
+        r = { ...local(), modo: "local", aviso: "No pudimos usar el buscador con IA (error técnico). Te mostramos el resultado por coincidencia de palabras." };
+      }
+    else r = { ...local(), modo: "local" };
+    const registrada = registrarConsulta8(registroUrl, consulta, aclaracion, r, ruta8);
+    (setEstado({ ...r, consulta, registrada: registrada || r.registrada }), setCargando(!1));
+  };
+  const e = estado;
+  return l.jsxs("div", {
+    ref: caja,
+    className: `buscador8 buscador8--${variante8}`,
+    children: [
+      l.jsxs("form", {
+        role: "search",
+        className: "buscador8__form",
+        onSubmit: (ev) => {
+          ev.preventDefault();
+          // Campo vacío en el buscador destacado: se busca la pregunta de ejemplo que se está mostrando.
+          if (!q.trim() && destacado && invita.pregunta) (setQ(invita.pregunta), buscar(invita.pregunta));
+          else buscar(q);
+        },
+        children: [
+          l.jsx("label", { className: "buscador8__rotulo", htmlFor: campoId, children: destacado ? INVITACION8 : "Buscá en Ciencia Uruguay" }),
+          destacado &&
+            !q &&
+            l.jsx("span", { className: "buscador8__invita", "aria-hidden": "true", children: l.jsx("span", { className: "buscador8__invita-texto", children: invita.texto }, invita.clave) }),
+          l.jsx("input", {
+            id: campoId,
+            className: "buscador8__campo",
+            type: "search",
+            value: q,
+            maxLength: 300,
+            placeholder: destacado ? "" : "¿Qué querés saber?",
+            autoComplete: "off",
+            onFocus: () => {
+              (cargarIndice8().catch(() => {}), e && setAbierto(!0));
+            },
+            onChange: (ev) => setQ(ev.target.value),
+          }),
+          l.jsx("button", {
+            type: "submit",
+            className: "buscador8__boton",
+            "aria-label": "Buscar",
+            children: l.jsxs("svg", {
+              viewBox: "0 0 24 24",
+              width: 16,
+              height: 16,
+              "aria-hidden": "true",
+              children: [
+                l.jsx("circle", { cx: 10.5, cy: 10.5, r: 6.5, fill: "none", stroke: "currentColor", strokeWidth: 2 }),
+                l.jsx("path", { d: "M15.5 15.5 21 21", stroke: "currentColor", strokeWidth: 2, strokeLinecap: "round" }),
+              ],
+            }),
+          }),
+        ],
+      }),
+      abierto &&
+        (cargando || e) &&
+        l.jsx("div", {
+          className: "buscador8__panel",
+          role: "region",
+          "aria-live": "polite",
+          "aria-label": "Resultado de la búsqueda",
+          children: cargando
+            ? l.jsx("p", { className: "buscador8__nota", children: "Buscando…" })
+            : l.jsxs(l.Fragment, {
+                children: [
+                  e.aviso && l.jsx("p", { className: "buscador8__aviso", children: e.aviso }),
+                  e.estado === "resultado" &&
+                    l.jsxs(l.Fragment, {
+                      children: [
+                        l.jsx(EnlaceResultado8, { f: e.resultado, cerrar, principal: !0 }),
+                        e.resultado.explicacion && l.jsx("p", { className: "buscador8__nota", children: e.resultado.explicacion }),
+                        e.alternativas && e.alternativas.length > 0 &&
+                          l.jsxs("div", {
+                            className: "buscador8__otros",
+                            children: [
+                              l.jsx("p", { className: "buscador8__rotulo-visible", children: "También puede servirte" }),
+                              e.alternativas.map((f) => l.jsx(EnlaceResultado8, { f, cerrar }, f.id)),
+                            ],
+                          }),
+                      ],
+                    }),
+                  e.estado === "aclaracion" &&
+                    l.jsxs(l.Fragment, {
+                      children: [
+                        l.jsx("p", { className: "buscador8__pregunta", children: e.aclaracion.pregunta }),
+                        l.jsx("div", {
+                          className: "buscador8__opciones",
+                          children: e.aclaracion.opciones.map((o) =>
+                            l.jsx("button", { type: "button", className: "buscador8__opcion", onClick: () => buscar(e.consulta, { consulta: e.consulta, pregunta: e.aclaracion.pregunta, opcion: o }), children: o }, o),
+                          ),
+                        }),
+                      ],
+                    }),
+                  e.estado === "sin_resultado" &&
+                    l.jsxs(l.Fragment, {
+                      children: [
+                        l.jsx("p", { className: "buscador8__pregunta", children: MOTIVO_TEXTO8[e.motivo] || "No encontramos esa información en el portal." }),
+                        e.falta && l.jsx("p", { className: "buscador8__nota", children: e.falta }),
+                        e.cercano &&
+                          l.jsxs("div", {
+                            className: "buscador8__otros",
+                            children: [l.jsx("p", { className: "buscador8__rotulo-visible", children: "Lo más cercano" }), l.jsx(EnlaceResultado8, { f: e.cercano, cerrar })],
+                          }),
+                        e.registrada && l.jsx("p", { className: "buscador8__nota", children: "Registramos la consulta, sin datos personales, para evaluar nuevo contenido." }),
+                      ],
+                    }),
+                  e.estado === "error" && l.jsx("p", { className: "buscador8__pregunta", children: e.detalle || "No pudimos completar la búsqueda." }),
+                  e.modo === "local" && !e.aviso && e.estado !== "error" && l.jsx("p", { className: "buscador8__pie", children: "Búsqueda por coincidencia de palabras." }),
+                ],
+              }),
+        }),
     ],
   });
 }
@@ -23702,8 +24355,9 @@ function yD({
   nombreVarones: i = "Hombres",
   etiquetaTotal: s = "Total",
   etiquetaSelector: c = "Grupo",
+  inicial: ini8,
 }) {
-  const [u, f] = B.useState(t[0] ?? s),
+  const [u, f] = B.useState(ini8 ?? s),
     { caja: p, mostrar: m, ocultar: g, nodo: h } = bt(),
     y = (N, E) => {
       var M, A;
@@ -23726,7 +24380,7 @@ function yD({
         className: "serie__controles",
         role: "tablist",
         "aria-label": c,
-        children: [...t, s].map((N) =>
+        children: (ini8 ? [...t, s] : [s, ...t]).map((N) =>
           l.jsxs(
             "button",
             {
@@ -34794,18 +35448,21 @@ function fS({ tipo: e, ejemplo: t = !1, soloSni: a = !1, ncLineas: i = null }) {
         role: "note",
         children: [
           l.jsx(R_, {}),
-          l.jsxs("p", { className: "cobertura__cifra", children: [l.jsx("strong", { children: "99,8 %" }), " del SNI"] }),
-          l.jsx(R0, { pct: 100, color: "#ffcd00" }),
-          l.jsxs("p", {
-            className: "cobertura__texto",
+          // Cobertura integrada: la cifra destacada a la izquierda y la explicación al lado (sin barra).
+          l.jsxs("div", {
+            className: "cobertura__linea8",
             children: [
-              "Este análisis cubre al 99,8 % de los investigadores que integran el Sistema Nacional de Investigadores: ",
-              l.jsx("b", { children: k(s.sni) }),
-              " CV registrados en CVUy",
-              u === "activos" ? " de investigadores en categoría Activo" : " (activos, asociados y eméritos)",
-              ". Fecha de consulta de CVUy: ",
-              vu(c),
-              ".",
+              l.jsx("p", { className: "cobertura__numero8", children: "99,8 %" }),
+              l.jsxs("p", {
+                className: "cobertura__texto",
+                children: [
+                  l.jsx("strong", { children: "del SNI en este análisis" }),
+                  l.jsx("br", {}),
+                  k(s.sni),
+                  " CV registrados en CVUy",
+                  u === "activos" ? " de investigadores en categoría Activo." : " (activos, asociados y eméritos).",
+                ],
+              }),
             ],
           }),
         ],
@@ -34823,7 +35480,7 @@ function fS({ tipo: e, ejemplo: t = !1, soloSni: a = !1, ncLineas: i = null }) {
             l.jsx("p", {
               className: "cobertura__texto",
               children:
-                "Este análisis cubre a las personas fuera del SNI que actualizaron su CV en CVUy en los últimos 24 meses. Incluye solo los perfiles que comparten su información con las instituciones vinculadas a CVUy: porque lo tienen habilitado en su configuración de privacidad o porque lo autorizaron cuando la UNE se lo solicitó.",
+                "Incluye solo los perfiles que comparten su información con las instituciones vinculadas a CVUy (por su configuración de privacidad o porque lo autorizaron cuando la UNE se lo solicitó).",
             }),
           ],
         })
@@ -35295,7 +35952,7 @@ function jU({ numero: e } = {}) {
 }
 const L0 = ["Menos de 35", "35 a 44", "45 a 54", "55 a 64", "65 y más"];
 function SU({ numero: e } = {}) {
-  const t = { [Sn]: {}, [jn]: {} },
+  const t = { [jn]: {}, [Sn]: {} },
     a = (s, c) => {
       var u;
       for (const f of c) {
@@ -35343,7 +36000,7 @@ function SU({ numero: e } = {}) {
         " en el SNI, y las mujeres son mayoría en todos los tramos menores de 65 años. Es la cantera de la que se nutre el sistema.",
       ],
     }),
-    children: l.jsx(yD, { tramos: L0, niveles: [Sn, jn], valores: t, nombreVarones: "Varones" }),
+    children: l.jsx(yD, { tramos: L0, niveles: [Sn, jn], valores: t, nombreVarones: "Varones", inicial: Sn }),
   });
 }
 const xf = ["Academia", "Sector público no académico", "Sector privado", "Exterior", "No informado"];
@@ -35356,10 +36013,11 @@ function NU({ numero: e } = {}) {
       }
       return c;
     },
-    noSni = { etiqueta: Sn, valores: t(ge("NC:D02")) },
-    sni = { etiqueta: jn, valores: t(ge("D02")) },
-    a = [noSni, sni],
-    i = (grupo, sector) => (100 * grupo.valores[sector]) / xU(grupo);
+    a = [
+      { etiqueta: jn, valores: t(ge("D02")) },
+      { etiqueta: Sn, valores: t(ge("NC:D02")) },
+    ],
+    i = (s, c) => (100 * a[s].valores[c]) / xU(a[s]);
   return l.jsx(Me, {
     numero: e ?? 7,
     titulo: "Sector de la institución principal, dentro y fuera del SNI",
@@ -35368,7 +36026,7 @@ function NU({ numero: e } = {}) {
     esqueleto: "barras",
     tabla: {
       columnas: [{ clave: "etiqueta", titulo: "Grupo" }, ...xf.map((s) => ({ clave: s, titulo: s, num: !0, formato: k }))],
-      filas: a.map((s) => ({ etiqueta: s.etiqueta, ...s.valores })),
+      filas: [...a].reverse().map((s) => ({ etiqueta: s.etiqueta, ...s.valores })),
     },
     muestra: l.jsx("p", {
       children:
@@ -35380,18 +36038,18 @@ function NU({ numero: e } = {}) {
     observamos: l.jsxs("p", {
       children: [
         "La academia sigue siendo el lugar principal, pero con menos peso fuera del SNI (",
-        l.jsx("strong", { children: H(i(noSni, "Academia")) }),
+        l.jsx("strong", { children: H(i(1, "Academia")) }),
         " frente a ",
-        H(i(sni, "Academia")),
+        H(i(0, "Academia")),
         "). Entre los no SNI gana espacio el sector público no académico (",
-        H(i(noSni, "Sector público no académico")),
+        H(i(1, "Sector público no académico")),
         ") y el privado (",
-        H(i(noSni, "Sector privado")),
+        H(i(1, "Sector privado")),
         ").",
       ],
     }),
     children: l.jsx(fu, {
-      filas: a,
+      filas: [...a].reverse(),
       series: xf.map((s, c) => ({ nombre: s, color: ["#25408d", "#0072bc", "#e87722", "#7ab800", "#dfe5ec"][c] })),
     }),
   });
@@ -35477,9 +36135,10 @@ function CU({ numero: e } = {}) {
       var j;
       return We((j = x.find((S) => le(S, "anio") === _)) == null ? void 0 : j[a]);
     },
-    noSni = { nombre: Sn, color: np, valores: m.map((x) => g(p, x)) },
-    sni = { nombre: jn, color: tp, valores: m.map((x) => g(f, x)) },
-    h = [noSni, sni],
+    h = [
+      { nombre: jn, color: tp, valores: m.map((x) => g(f, x)) },
+      { nombre: Sn, color: np, valores: m.map((x) => g(p, x)) },
+    ],
     y = m.at(-1);
   return l.jsx(Me, {
     numero: e ?? 1,
@@ -35494,7 +36153,7 @@ function CU({ numero: e } = {}) {
         { clave: "nc", titulo: Sn, num: !0, formato: s.formato },
         { clave: "sni", titulo: jn, num: !0, formato: s.formato },
       ],
-      filas: m.map((x, _) => ({ anio: x, nc: noSni.valores[_], sni: sni.valores[_] })),
+      filas: m.map((x, _) => ({ anio: x, sni: h[0].valores[_], nc: h[1].valores[_] })),
     },
     nota: "Las publicaciones de cada grupo se cuentan una vez, pero un trabajo firmado por personas de los dos grupos aparece en ambas series. El año en curso no se muestra.",
     muestra: l.jsx("p", {
@@ -35515,7 +36174,7 @@ function CU({ numero: e } = {}) {
         " del SNI. Fuera del sistema se publica en volumen comparable, pero con menor proporción de artículos en revistas indexadas internacionalmente.",
       ],
     }),
-    children: l.jsx(ml, { anios: m, series: h, formato: s.formato }, a),
+    children: l.jsx(ml, { anios: m, series: [...h].reverse(), formato: s.formato }, a),
   });
 }
 function MU({ numero: e } = {}) {
@@ -36807,7 +37466,17 @@ function YU({ numero: e }) {
     children: l.jsx(Os, { filas: c, nombres: ["Mujeres", "Varones"], colores: [Nn.Mujeres, Nn.Hombres], max: i.max }, t),
   });
 }
-const U_ = {
+const XU = {
+    "Investigador/a con producción reciente": je.azul,
+    "Actividad de I+D sin producción reciente": je.azulMedio,
+    "Perfil tecnológico o de innovación": je.celeste,
+    "En formación de posgrado": je.salvia,
+    "Docencia o trabajo académico sin producción reciente": je.oliva,
+    "Trayectoria con producción histórica, sin actividad reciente": je.arena,
+    "Bajo interés: sin producción ni vínculo científico": je.terracota,
+    "Bajo interés: CV desactualizado": je.grisClaro,
+  },
+  U_ = {
     "Solo sector privado": je.terracota,
     "Privado y academia": je.ocre,
     "Privado y otros sectores": je.arena,
@@ -36839,6 +37508,49 @@ const xS = (e, t) => {
     ...a.map((i) => ({ nombre: i, valores: Object.fromEntries(t.filter((s) => s[0] === i).map((s) => [s[1], s[2]])) })),
   ];
 };
+function QU({ numero: e }) {
+  const t = bS();
+  if (!t) return null;
+  const a = t.tipologia,
+    i = Object.values(a.total).reduce((u, f) => u + f, 0),
+    s = (u) => (100 * (a.total[u] ?? 0)) / i,
+    c = s("Bajo interés: sin producción ni vínculo científico");
+  return l.jsx(Me, {
+    metodo: pq,
+    universo: "nc",
+    numero: e,
+    titulo: "Tipos de actividad declarada",
+    bajada: "Personas no SNI con CV vigente según la actividad que declaran. Cada cuadro equivale al 1 %.",
+    fuente: "Fuente: CVUy · no_categorizados.json (tipología)",
+    tabla: {
+      columnas: [
+        { clave: "tipo", titulo: "Perfil" },
+        { clave: "n", titulo: "Personas", num: !0, formato: k },
+      ],
+      filas: a.orden.map((u) => ({ tipo: u, n: a.total[u] })),
+    },
+    nota: `${t.meta.incluidos != null ? `${k(t.meta.incluidos)} personas no SNI incluidas por el criterio de inclusión (evidencia de investigación en ${(t.meta.ventana || []).join("–") || "los últimos cinco años"})` : `${k(t.meta.vigentes)} personas con CV actualizado en los últimos ${t.meta.meses} meses`}, según su CV en CVUy. La tipología combina la producción reciente, los vínculos y la formación en curso.`,
+    muestra: l.jsx("p", {
+      children:
+        "Una clasificación de las personas no SNI según lo que muestran sus CV: si producen, si hacen I+D sin publicar, si se están formando, si hacen docencia o si su CV no refleja actividad científica.",
+    }),
+    leer: l.jsx("p", {
+      children:
+        "La grilla tiene 100 cuadros; los tonos azules son perfiles con actividad de investigación, los verdes y ocres, perfiles en formación o docencia, y el terracota, perfiles sin producción ni vínculo científico. Seleccione un área en las pestañas.",
+    }),
+    observamos: l.jsxs("p", {
+      children: [
+        l.jsx("strong", { children: H(s("Investigador/a con producción reciente")) }),
+        " de los perfiles corresponde a personas con producción reciente y ",
+        H(s("En formación de posgrado")),
+        " a personas en formación de posgrado. En el otro extremo, ",
+        H(c),
+        " tiene el CV vigente pero sin producción ni vínculo científico.",
+      ],
+    }),
+    children: l.jsx(Ei, { grupos: xS(a.total, a.por_area), categorias: a.orden.map((u) => ({ nombre: u, color: XU[u] ?? je.gris })) }),
+  });
+}
 function ZU({ numero: e }) {
   const t = bS();
   if (!t) return null;
@@ -39977,12 +40689,15 @@ function QB() {
   return (
     B.useEffect(() => {
       if (e) return;
+      // Palabras de entrada: unas pocas al cargar, escalonadas; después la flor queda quieta (solo responde al cursor).
+      let n8 = 0;
       const V = W2(Date.now() % 9973),
         R = setInterval(() => {
+          if (++n8 > 4) return clearInterval(R);
           if (Date.now() - m.current < 2500) return;
           const U = t.conPalabra[Math.floor(V() * t.conPalabra.length)];
           c((G) => [...G.slice(-3), { b: U, t: Date.now() }]);
-        }, 1500);
+        }, 700);
       return () => clearInterval(R);
     }, [e, t]),
     B.useEffect(() => {
@@ -40184,6 +40899,13 @@ function ZB() {
               animate: { opacity: 1, y: 0 },
               transition: { duration: 0.7, delay: 0.75, ease: Qe },
               children: e.lema ?? "Una mirada a partir de los investigadores.",
+            }),
+            l.jsx(pe.div, {
+              className: "heroe__buscador8",
+              initial: { opacity: 0, y: 12 },
+              animate: { opacity: 1, y: 0 },
+              transition: { duration: 0.7, delay: 0.85, ease: Qe },
+              children: l.jsx(Buscador8, { variante: "destacado" }),
             }),
             l.jsx(pe.p, {
               className: "heroe__bajada",
@@ -40517,9 +41239,25 @@ function oF(e) {
   return { ...e, instituciones: [...t.values()], porClave: t, anios: a.filter((i) => i < e.meta.ventana[1]) };
 }
 const OS = B.createContext(null);
+function instDelEnlace8(e) {
+  try {
+    const v = new URLSearchParams(location.search).get("inst");
+    return v && e.porClave && e.porClave.get(v) ? v : null;
+  } catch {
+    return null;
+  }
+}
 function iF({ datos: e, children: t }) {
-  const [a, i] = B.useState(null),
-    [s, c] = B.useState([Math.max(e.anios[0], 2e3), e.anios.at(-1)]),
+  const [a, i] = B.useState(() => instDelEnlace8(e));
+  // La institución elegida queda en el enlace (?inst=clave): «Copiar enlace» y la barra de direcciones la comparten.
+  B.useEffect(() => {
+    try {
+      const u = new URL(location.href);
+      a ? u.searchParams.set("inst", a) : u.searchParams.delete("inst");
+      u.href !== location.href && history.replaceState(history.state, "", u.href);
+    } catch {}
+  }, [a]);
+  const [s, c] = B.useState([Math.max(e.anios[0], 2e3), e.anios.at(-1)]),
     u = B.useMemo(() => {
       const [f, p] = s;
       return {
@@ -40699,6 +41437,7 @@ function cF({ numero: e }) {
     L = O ? Z.filter((w) => w.f === O || w.c === O) : Z;
   return l.jsx(Me, {
     numero: e,
+    id: "eco-vinculos-matriz",
     metodo: uo.vinculos,
     titulo: "Quién se vincula con quién",
     bajada:
@@ -40939,9 +41678,36 @@ function uF() {
         insts: a.filter((u) => Si(u.tipo) === c).sort((u, f) => i(f) - i(u) || u.nombre.localeCompare(f.nombre, "es")),
       }))
       .filter((c) => c.insts.length);
+  // Buscador de instituciones por nombre o sigla; los grupos agregados se identifican como tales.
+  const esGrupo8 = (x) => ["Empresas", "Exterior", "Sociedad civil"].includes(x.tipo) || /^(Otros|Otras)\b/.test(x.nombre),
+    rotulo8 = (x) => `${x.nombre}${x.clave && x.clave !== x.nombre ? ` (${x.clave})` : ""}${esGrupo8(x) ? " · grupo agregado" : ""}`,
+    normal8 = (v) => String(v || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim(),
+    elegir8 = (v, final) => {
+      const q = normal8(v);
+      if (!q) return;
+      const exacta = a.find((x) => normal8(rotulo8(x)) === q || normal8(x.clave) === q || normal8(x.nombre) === q);
+      const parcial = final ? a.find((x) => normal8(x.nombre).includes(q) || normal8(x.clave).startsWith(q)) : null;
+      const x = exacta || parcial;
+      x && e.fijarInst(x.clave);
+    };
   return l.jsxs("div", {
     className: "jardin-selector",
     children: [
+      l.jsxs("label", {
+        className: "selector jardin-buscar8",
+        children: [
+          l.jsx("span", { className: "selector__rotulo", children: "Buscar una institución" }),
+          l.jsx("input", {
+            type: "search",
+            list: "eco-instituciones8",
+            placeholder: "Nombre o sigla",
+            className: "jardin-buscar8__campo",
+            onChange: (ev) => elegir8(ev.target.value, !1),
+            onKeyDown: (ev) => ev.key === "Enter" && (ev.preventDefault(), elegir8(ev.currentTarget.value, !0), (ev.currentTarget.value = "")),
+          }),
+          l.jsx("datalist", { id: "eco-instituciones8", children: a.map((x) => l.jsx("option", { value: rotulo8(x) }, x.clave)) }),
+        ],
+      }),
       l.jsxs("label", {
         className: "selector",
         children: [
@@ -40950,7 +41716,7 @@ function uF() {
             value: e.inst ?? "",
             onChange: (c) => e.fijarInst(c.target.value || null),
             children: [
-              l.jsx("option", { value: "", children: "Total · todas las instituciones" }),
+              l.jsx("option", { value: "", children: "Panorama general · todas las instituciones" }),
               s.map((c) =>
                 l.jsx(
                   "optgroup",
@@ -40972,10 +41738,17 @@ function uF() {
             initial: { opacity: 0, x: -6 },
             animate: { opacity: 1, x: 0 },
             exit: { opacity: 0 },
-            children: "Ver el total ✕",
+            children: "Volver al panorama ✕",
           }),
       }),
-      l.jsx("p", { className: "jardin-selector__ayuda", children: "Todos los gráficos siguen a la institución elegida." }),
+      l.jsx("p", {
+        className: "jardin-selector__ayuda",
+        children: e.actual
+          ? l.jsxs(l.Fragment, {
+              children: [l.jsx("strong", { children: e.actual.corto ?? e.actual.nombre }), ` destacada en el panorama · ${Si(e.actual.tipo)}`],
+            })
+          : "Panorama general: elegí una institución para destacarla en cada gráfico.",
+      }),
     ],
   });
 }
@@ -41046,7 +41819,7 @@ function hF({ series: e, medida: t, maxPct: a, ancho: i, mostrar: s, ocultar: c 
                     T.nombre,
                     ": ",
                     H(T.pct[A]),
-                    T.pais ? "" : ` · ${B0(T.esp[A])} el país · ${k(T.n[A] ?? 0)} ítems`,
+                    T.pais ? "" : ` · ${B0(T.esp[A])} el conjunto · ${k(T.n[A] ?? 0)} ítems`,
                   ],
                 },
                 T.clave,
@@ -41112,8 +41885,8 @@ function hF({ series: e, medida: t, maxPct: a, ancho: i, mostrar: s, ocultar: c 
                     }),
                     t === "pct" &&
                       (u
-                        ? l.jsxs("tspan", { x: D, dy: 13, className: "tela__valor-pais", children: ["país ", H(e[0].pct[M])] })
-                        : l.jsxs("tspan", { className: "tela__valor-pais", children: [" · país ", H(e[0].pct[M])] })),
+                        ? l.jsxs("tspan", { x: D, dy: 13, className: "tela__valor-pais", children: ["conjunto ", H(e[0].pct[M])] })
+                        : l.jsxs("tspan", { className: "tela__valor-pais", children: [" · conjunto ", H(e[0].pct[M])] })),
                   ],
                 }),
               ],
@@ -41144,7 +41917,7 @@ function hF({ series: e, medida: t, maxPct: a, ancho: i, mostrar: s, ocultar: c 
                 {
                   className: "tela__punto",
                   initial: !1,
-                  animate: { cx: Math.sin(Ta(T)) * P, cy: -Math.cos(Ta(T)) * P, r: N(M.n[A] ?? 0) },
+                  animate: { cx: Math.sin(Ta(T)) * P, cy: -Math.cos(Ta(T)) * P, r: 4.5 },
                   transition: { duration: 0.7, ease: Qe },
                   style: { fill: _i(A, T), stroke: M.color },
                   onPointerMove: (D) => E(D, A),
@@ -41228,7 +42001,7 @@ function gF({ numero: e }) {
         return [J, Array.isArray(j) ? (((te = j.find((X) => X.area === J)) == null ? void 0 : te.n) ?? 0) : Number(j[J] ?? 0)];
       }),
     ),
-    N = { clave: "pais", nombre: "Total del país", color: eg, pais: !0, ...F0(S) };
+    N = { clave: "pais", nombre: "Conjunto analizado en CVUy", color: eg, pais: !0, ...F0(S) };
   N.esp = Object.fromEntries(Xe.map((J) => [J, 1]));
   const E = (J) => ({ ...J, esp: Object.fromEntries(Xe.map((te) => [te, N.pct[te] ? J.pct[te] / N.pct[te] : null])) }),
     M = (J) => Object.fromEntries(Xe.map((te) => [te, J.areas_prod[te].n])),
@@ -41237,16 +42010,16 @@ function gF({ numero: e }) {
         const X = a.lista.filter(($) => te.includes($.tipo) && $.n > 0),
           F = X.filter(($) => $.n >= Sf).sort(($, W) => W.n - $.n),
           se = Object.fromEntries(Xe.map(($) => [$, Xt(X, (W) => W.areas_prod[$].n)]));
-        return { g: J, insts: F, cant: X.length, serie: E({ clave: `g:${J}`, nombre: J, color: dF, ...F0(se) }) };
+        return { g: J, insts: F, cant: X.length, serie: E({ clave: `g:${J}`, nombre: J, color: "#8e3a80", ...F0(se) }) };
       })
       .filter((J) => J.insts.length),
-    T = (J) => E({ clave: `i:${J.clave}`, nombre: J.corto ?? J.nombre, largo: J.nombre, color: fF, ...F0(M(J)) }),
+    T = (J) => E({ clave: `i:${J.clave}`, nombre: J.corto ?? J.nombre, largo: J.nombre, color: "#8e3a80", ...F0(M(J)) }),
     D = f.startsWith("i:") ? a.lista.find((J) => `i:${J.clave}` === f) : null,
     O =
       (D ? A.find((J) => J.insts.includes(D)) : A.find((J) => J.serie.clave === f)) ??
       A.find((J) => J.g === "Institutos de investigación") ??
       A[0],
-    z = [N, O.serie, ...(D ? [T(D)] : [])],
+    z = [N, D ? T(D) : O.serie],
     Z = z[z.length - 1],
     L = Math.max(20, Math.ceil(Math.max(...z.flatMap((J) => Xe.map((te) => J.pct[te]))) / 10) * 10),
     zN = z.filter((J) => !J.pais),
@@ -41266,25 +42039,33 @@ function gF({ numero: e }) {
     U = (J) => {
       (p(J), J.startsWith("i:") ? t.fijarInst(J.slice(2)) : t.inst && t.fijarInst(null));
     },
-    G = [N, ...A.map((J) => J.serie), ...A.flatMap((J) => J.insts.map(T))];
+    G = [N, ...A.map((J) => J.serie), ...A.flatMap((J) => J.insts.map(T))],
+    L8 = Math.max(20, Math.ceil(Math.max(...G.flatMap((J) => Xe.map((te) => J.pct[te] || 0))) / 10) * 10),
+    // Datos exactos junto al radial: % de la entidad, % de la referencia y diferencia en puntos porcentuales.
+    filas8 = Xe.map((J) => ({ a: J, v: Z.pct[J], r: N.pct[J], d: Z.pct[J] - N.pct[J] })),
+    mayor8 = [...filas8].sort((J, te) => te.v - J.v)[0],
+    difmax8 = [...filas8].sort((J, te) => te.d - J.d)[0];
   return l.jsx(Me, {
     numero: e,
     id: "eco-areas-inst",
-    titulo: "En qué áreas producen los investigadores vinculados a cada institución",
-    bajada: `${m === "esp" ? "Peso de cada área frente al país (1× = igual que el país)" : m === "n" ? "Cantidad de ítems por área del conocimiento" : "Reparto por área del conocimiento"} de la producción de los investigadores con vínculo laboral en ${D ? D.nombre : O.g.toLowerCase()}${m === "n" ? "" : ", frente al total del país"}`,
+    titulo: "En qué áreas se concentra la producción",
+    bajada:
+      m === "pct"
+        ? `Compará la distribución por áreas de ${D ? D.nombre : `los ${O.g.toLowerCase()}`} con el conjunto analizado en CVUy. Cada eje muestra qué porcentaje de sus ítems con área corresponde a esa área`
+        : `${m === "esp" ? "Peso de cada área frente al conjunto (1× = igual peso)" : "Cantidad de ítems por área del conocimiento"} en la producción de los investigadores con vínculo laboral en ${D ? D.nombre : O.g.toLowerCase()}`,
     metodo: uo.areas,
     amplia: !0,
     controles: l.jsxs("div", {
       className: "niveles-controles",
       children: [
-        l.jsx(Hc, { etiqueta: "Comparar con el país", valor: f, onCambio: U, grupos: R }),
+        l.jsx(Hc, { etiqueta: "Institución o tipo a explorar", valor: f, onCambio: U, grupos: R }),
         l.jsx(it, {
           etiqueta: "Medida",
           valor: m,
           onCambio: g,
           opciones: [
             { valor: "pct", texto: "% de su producción" },
-            { valor: "esp", texto: "Veces el peso en el país" },
+            { valor: "esp", texto: "Veces el peso en el conjunto" },
             { valor: "n", texto: "Cantidad" },
           ],
         }),
@@ -41293,23 +42074,23 @@ function gF({ numero: e }) {
     tabla: {
       columnas: [
         { clave: "nombre", titulo: "Institución o grupo" },
-        ...Xe.map((J) => ({ clave: J, titulo: m === "n" ? `${J} (ítems)` : `${J} (%)`, num: !0, formato: m === "n" ? k : H })),
+        ...Xe.map((J) => ({ clave: J, titulo: m === "n" ? `${J} (ítems)` : m === "esp" ? `${J} (× el conjunto)` : `${J} (%)`, num: !0, formato: m === "n" ? k : m === "esp" ? ze : H })),
         { clave: "n", titulo: "Ítems con área", num: !0, formato: k },
       ],
-      filas: G.map((J) => ({ nombre: J.largo ?? J.nombre, ...(m === "n" ? J.n : J.pct), n: J.tot })),
+      filas: G.map((J) => ({ nombre: J.largo ?? J.nombre, ...(m === "n" ? J.n : m === "esp" ? J.esp : J.pct), n: J.tot })),
     },
     nota: `Refleja las capacidades presentes en la institución más que lo que la institución hace: cada publicación, línea o patente se asigna a la institución principal de cada autor en el año en que se hizo, aunque pudo hacerse para otra; cada proyecto, a su unidad ejecutora declarada. Los tipos de institución suman la producción de los investigadores de todas sus instituciones; un ítem con autores de varias instituciones del grupo cuenta en cada una. Se muestran por separado las instituciones con al menos ${k(Sf)} ítems.`,
     muestra: l.jsx("p", {
       children:
-        "En qué áreas del conocimiento producen los investigadores de cada tipo de institución o de cada institución, frente al total del país. Es la producción de sus investigadores, no de la institución: muestra las capacidades presentes en ella.",
+        "En qué áreas del conocimiento producen los investigadores de cada tipo de institución o de cada institución, frente al conjunto analizado en CVUy. Es la producción de sus investigadores, no de la institución: muestra las capacidades presentes en ella.",
     }),
     leer: l.jsxs("p", {
       children: [
-        "Cada eje es un área. La forma gris es el total del país y la ",
-        D ? "naranja es la institución elegida (la azul, su tipo de institución)" : "azul es el tipo de institución elegido",
-        ": donde se estira más allá de la gris, el área pesa más que en el país. El tamaño de cada punto indica la cantidad de ítems en esa área. Abajo, la misma figura en pequeño para cada institución del grupo.",
-        m === "esp" ? " En «Veces el peso en el país», el círculo marcado es 1× (igual que el país); la escala es logarítmica." : "",
-        m === "n" ? " En «Cantidad», cada eje mide ítems (no porcentajes) y no se dibuja el país, porque su volumen es de otra escala; cada flor pequeña usa su propia escala." : "",
+        "Cuanto más lejos del centro está el punto, mayor es el peso del área. Compará los dos puntos del mismo eje: la línea ciruela es ",
+        D ? "la institución elegida" : "el tipo de institución elegido",
+        " y la gris punteada, el conjunto analizado en CVUy. La escala es la misma para todas las selecciones. Debajo, los valores exactos y la diferencia en puntos porcentuales; abajo, la misma figura en pequeño para cada institución del grupo.",
+        m === "esp" ? " En «Veces el peso en el conjunto», el círculo marcado es 1× (igual peso que en el conjunto); la escala es logarítmica." : "",
+        m === "n" ? " En «Cantidad», cada eje mide ítems (no porcentajes) y no se dibuja el conjunto, porque su volumen es de otra escala; cada flor pequeña usa su propia escala." : "",
       ],
     }),
     observamos: l.jsxs("p", {
@@ -41325,9 +42106,9 @@ function gF({ numero: e }) {
         ` (${k(Z.n[I.a] ?? 0)} ítems), `,
         I.d > 1 ? "más que el " : "cerca del ",
         H(N.pct[I.a]),
-        " que esa área tiene en el país",
+        " que esa área tiene en el conjunto",
         V.d < -1
-          ? l.jsxs(l.Fragment, { children: ["; en cambio, ", V.a, " pesa menos que en el país: ", H(Z.pct[V.a]), " frente a ", H(N.pct[V.a]), "."] })
+          ? l.jsxs(l.Fragment, { children: ["; en cambio, ", V.a, " pesa menos que en el conjunto: ", H(Z.pct[V.a]), " frente a ", H(N.pct[V.a]), "."] })
           : ".",
       ],
     }),
@@ -41356,7 +42137,31 @@ function gF({ numero: e }) {
         l.jsxs("div", {
           ref: i,
           className: "tela-lienzo",
-          children: [l.jsx(hF, { series: m === "n" ? zN : z, medida: m, maxPct: m === "n" ? maxN8 : L, ancho: Math.min(x, 760), mostrar: s, ocultar: c }), u],
+          children: [l.jsx(hF, { series: m === "n" ? zN : z, medida: m, maxPct: m === "n" ? maxN8 : L8, ancho: Math.min(x, 760), mostrar: s, ocultar: c }), u],
+        }),
+        // Datos exactos por área: % de la entidad, % del conjunto y diferencia en puntos porcentuales.
+        l.jsxs("table", {
+          className: "tela-filas8",
+          children: [
+            l.jsx("thead", { children: l.jsxs("tr", { children: [l.jsx("th", { children: "Área" }), l.jsx("th", { children: Z.largo ?? Z.nombre }), l.jsx("th", { children: "Conjunto" }), l.jsx("th", { children: "Diferencia" })] }) }),
+            l.jsx("tbody", {
+              children: filas8.map((x) =>
+                l.jsxs(
+                  "tr",
+                  {
+                    className: `${x === mayor8 ? "tela-filas8--mayor" : ""}${x === difmax8 && x.d > 0 ? " tela-filas8--dif" : ""}`,
+                    children: [
+                      l.jsx("td", { children: x.a }),
+                      l.jsx("td", { children: H(x.v) }),
+                      l.jsx("td", { children: H(x.r) }),
+                      l.jsx("td", { className: x.d >= 0 ? "mas" : "menos", children: `${x.d >= 0 ? "+" : "−"}${ze(Math.abs(x.d))} pp` }),
+                    ],
+                  },
+                  x.a,
+                ),
+              ),
+            }),
+          ],
         }),
         l.jsxs("p", {
           className: "ecs-grupo__titulo tela-titulo",
@@ -41379,7 +42184,7 @@ function gF({ numero: e }) {
                 "aria-pressed": !D,
                 onClick: () => U(O.serie.clave),
                 children: [
-                  l.jsx(a8, { s: O.serie, pais: N, medida: m, maxPct: L }),
+                  l.jsx(a8, { s: O.serie, pais: N, medida: m, maxPct: L8 }),
                   l.jsx("span", { className: "tela-flor__nombre", children: "Todo el grupo" }),
                   l.jsxs("small", { children: [k(O.serie.tot), " ítems"] }),
                 ],
@@ -41397,7 +42202,7 @@ function gF({ numero: e }) {
                     onClick: () => U(te.clave),
                     title: J.nombre,
                     children: [
-                      l.jsx(a8, { s: te, pais: N, medida: m, maxPct: L }),
+                      l.jsx(a8, { s: te, pais: N, medida: m, maxPct: L8 }),
                       l.jsx("span", { className: "tela-flor__nombre", children: J.corto ?? J.nombre }),
                       l.jsxs("small", { children: [k(te.tot), " ítems"] }),
                     ],
@@ -41621,8 +42426,48 @@ function bF({ numero: e }) {
       proy_sni: u((E) => E.proyectos_marcha || 0) / (f || 1),
       lineas_sni: u((E) => E.lineas || 0) / (f || 1),
     },
-    h = c.find((E) => E.clave === t.inst) ?? c[0],
-    y = h ? eo(h.i) : null;
+    h = c.find((E) => E.clave === t.inst) ?? null,
+    y = h ? eo(h.i) : null,
+    // Estados de la ficha: sin selección, o institución sin ficha (por debajo del umbral). Nunca otra institución en su lugar.
+    sinFicha8 = !!t.inst && !h,
+    elegida8 = t.inst ? a.lista.find((E) => E.clave === t.inst) : null,
+    estado8 = sinFicha8
+      ? l.jsxs("div", {
+          className: "ficha8-estado",
+          role: "status",
+          children: [
+            l.jsxs("p", { className: "ficha8-estado__titulo", children: ["Ficha no disponible para ", (elegida8 && (elegida8.nombre || elegida8.clave)) || t.inst] }),
+            l.jsxs("p", {
+              children: [
+                `La ficha se publica para instituciones con al menos ${i} personas del SNI`,
+                elegida8 ? ` (tiene ${k(eo(elegida8).sni)})` : "",
+                ", para que los indicadores no dependan de muy pocas personas. Sí aparece en ",
+                l.jsx("a", { href: an("ecosistema", "eco-investigadores-inst"), children: "Investigadores por institución" }),
+                " y, si tiene producción registrada, en ",
+                l.jsx("a", { href: an("ecosistema", "eco-areas-inst"), children: "Áreas" }),
+                " y ",
+                l.jsx("a", { href: an("ecosistema", "eco-vinculos-matriz"), children: "Vínculos" }),
+                ".",
+              ],
+            }),
+            l.jsx("button", { type: "button", className: "ficha8-estado__boton", onClick: () => t.fijarInst(null), children: "Volver al panorama" }),
+          ],
+        })
+      : !h
+        ? l.jsxs("div", {
+            className: "ficha8-estado",
+            children: [
+              l.jsx("p", { className: "ficha8-estado__titulo", children: "Elegí una institución para ver su ficha" }),
+              l.jsxs("div", {
+                className: "ficha8-estado__atajos",
+                children: [
+                  c.slice(0, 8).map((E) => l.jsx("button", { type: "button", className: "buscador8__ejemplo", onClick: () => t.fijarInst(E.clave), children: E.i.corto ?? E.etiqueta }, E.clave)),
+                  l.jsx("a", { href: "#eco-institucion", className: "ficha8-estado__buscar", children: "o buscala por nombre o sigla" }),
+                ],
+              }),
+            ],
+          })
+        : null;
   return l.jsx(Me, {
     numero: e,
     id: "eco-perfil-inst",
@@ -41675,7 +42520,7 @@ function bF({ numero: e }) {
           ],
         })
       : null,
-    children: l.jsx(tv, {
+    children: estado8 || l.jsx(tv, {
       grupos: c,
       columnas: o8,
       total: g,
@@ -41892,7 +42737,7 @@ function _F({ numero: e }) {
     }),
     leer: l.jsx("p", {
       children:
-        "Cada arco es un grupo: el exterior, el conjunto de las instituciones; hacia adentro, cada tipo y, si hay una elegida, la institución. Los arcos se abren desde la vertical como un abanico: cuanto más se abren, mayor es el porcentaje (un cuarto de vuelta es el 100 %). En «Investigadores», el porcentaje es la parte del total que trabaja en el grupo. El arco grueso azul son los investigadores del SNI y la línea fina con punto naranja, los no SNI.",
+        "Cada fila es un grupo: primero el conjunto de las instituciones; debajo, cada tipo y, si hay una elegida, la institución. El punto azul son los investigadores del SNI y el naranja, los de fuera del SNI; la línea entre ambos es la diferencia. A la derecha, el porcentaje y la base: las personas con el dato. En «Investigadores», el porcentaje es la parte del total que trabaja en el grupo.",
     }),
     observamos:
       x.total && I != null && I.sni
@@ -41982,131 +42827,60 @@ function _F({ numero: e }) {
             }),
         ],
       }),
+      // Puntos apareados sobre 0–100 %: SNI y fuera del SNI por tipo de institución (reemplaza los arcos).
       l.jsxs("div", {
         ref: (X) => {
           (c(X), (f.current = X));
         },
-        className: "eco-arcos",
+        className: "puntos8",
         style: { position: "relative" },
         children: [
-          l.jsxs("svg", {
-            width: T,
-            height: O,
-            role: "img",
-            "aria-label": `${x.nombre} por tipo de institución`,
-            children: [
-              w.map((X) => {
-                const [F, se] = Z(A + 14, X),
-                  [$, W] = Z(A + 26, X);
-                return l.jsxs(
-                  "g",
-                  {
+          l.jsxs("div", {
+            className: "puntos8__eje",
+            "aria-hidden": "true",
+            children: [l.jsx("span", {}), l.jsx("div", { className: "puntos8__marcas", children: w.map((X) => l.jsx("span", { style: { left: `${X}%` }, children: `${X} %` }, X)) }), l.jsx("span", {})],
+          }),
+          j.map((X) => {
+            const val = (v, grupo) =>
+              x.soloSni && grupo === "no"
+                ? l.jsx("span", { className: "puntos8__na", children: "no aplica" })
+                : v
+                  ? l.jsxs("span", { children: [H(v.pct), l.jsx("small", { children: ` de ${k(v.n)}` })] })
+                  : l.jsx("span", { className: "puntos8__na", children: "sin dato" });
+            const a1 = X.sni ? X.sni.pct : null,
+              a2 = X.no ? X.no.pct : null;
+            return l.jsxs(
+              "div",
+              {
+                className: `puntos8__fila${X.total ? " puntos8__fila--total" : ""}${X.inst ? " puntos8__fila--inst" : ""}`,
+                onPointerMove: (W) =>
+                  p(
+                    W,
+                    l.jsxs(l.Fragment, {
+                      children: [
+                        l.jsx("b", { children: X.nombre }),
+                        l.jsx("br", {}),
+                        X.sni ? l.jsxs(l.Fragment, { children: ["SNI: ", H(X.sni.pct), x.total ? ` (${k(X.sni.n)} personas)` : ` (${k(Math.round((X.sni.pct * X.sni.n) / 100))} de ${k(X.sni.n)} personas con el dato)`, l.jsx("br", {})] }) : "SNI: sin dato",
+                        x.soloSni ? null : X.no ? l.jsxs(l.Fragment, { children: ["Fuera del SNI: ", H(X.no.pct), x.total ? ` (${k(X.no.n)} personas)` : ` (${k(Math.round((X.no.pct * X.no.n) / 100))} de ${k(X.no.n)} personas con el dato)`] }) : "Fuera del SNI: sin dato",
+                      ],
+                    }),
+                  ),
+                onPointerLeave: m,
+                children: [
+                  l.jsx("span", { className: "puntos8__nombre", children: X.nombre }),
+                  l.jsxs("span", {
+                    className: "puntos8__pista",
                     children: [
-                      l.jsx("line", { x1: P, y1: D, x2: F, y2: se, className: "eco-arcos__guia" }),
-                      l.jsxs("text", {
-                        x: $,
-                        y: W,
-                        textAnchor: X === 0 ? "middle" : "start",
-                        dominantBaseline: "middle",
-                        className: "eco-arcos__guia-txt",
-                        children: [X, " %"],
-                      }),
+                      a1 != null && a2 != null && l.jsx("span", { className: "puntos8__tramo", style: { left: `${Math.min(a1, a2)}%`, width: `${Math.abs(a1 - a2)}%` } }),
+                      a2 != null && l.jsx(pe.span, { className: "puntos8__punto puntos8__punto--no", initial: !1, animate: { left: `${a2}%` }, transition: { duration: 0.6, ease: Qe } }),
+                      a1 != null && l.jsx(pe.span, { className: "puntos8__punto puntos8__punto--sni", initial: !1, animate: { left: `${a1}%` }, transition: { duration: 0.6, ease: Qe } }),
                     ],
-                  },
-                  X,
-                );
-              }),
-              j.map((X, F) => {
-                const se = A - F * E,
-                  $ = !h || h === X.clave;
-                return l.jsxs(
-                  "g",
-                  {
-                    opacity: $ ? 1 : 0.25,
-                    onPointerEnter: () => y(X.clave),
-                    onPointerLeave: () => {
-                      (y(null), m());
-                    },
-                    onPointerMove: (W) =>
-                      p(
-                        W,
-                        l.jsxs(l.Fragment, {
-                          children: [
-                            l.jsx("b", { children: X.nombre }),
-                            l.jsx("br", {}),
-                            X.sni
-                              ? l.jsxs(l.Fragment, { children: ["SNI: ", H(X.sni.pct), x.total ? ` (${k(X.sni.n)} personas)` : ` (${k(Math.round((X.sni.pct * X.sni.n) / 100))} de ${k(X.sni.n)} personas)`, l.jsx("br", {})] })
-                              : null,
-                            X.no ? l.jsxs(l.Fragment, { children: ["No SNI: ", H(X.no.pct), x.total ? ` (${k(X.no.n)} personas)` : ` (${k(Math.round((X.no.pct * X.no.n) / 100))} de ${k(X.no.n)} personas)`] }) : null,
-                          ],
-                        }),
-                      ),
-                    children: [
-                      l.jsx("path", { d: `M${P},${D - se} A${se},${se} 0 0 1 ${P + se},${D}`, className: "eco-arcos__pista" }),
-                      l.jsx("text", {
-                        x: P - 12,
-                        y: D - se,
-                        textAnchor: "end",
-                        dominantBaseline: "middle",
-                        className: `eco-arcos__nombre${X.total ? " eco-arcos__nombre--total" : ""}${X.inst ? " eco-arcos__nombre--inst" : ""}`,
-                        children: S && X.nombre.length > 16 ? `${X.nombre.slice(0, 15)}…` : X.nombre,
-                      }),
-                      X.color && l.jsx("circle", { cx: P - 5, cy: D - se, r: 3, fill: X.color }),
-                      X.no &&
-                        l.jsxs(l.Fragment, {
-                          children: [
-                            l.jsx(
-                              pe.path,
-                              {
-                                d: L(se + 5, X.no.pct),
-                                className: "eco-arcos__no",
-                                initial: { pathLength: 0 },
-                                animate: { pathLength: 1 },
-                                transition: { duration: 0.9, delay: F * 0.06, ease: Qe },
-                              },
-                              `no-${i}`,
-                            ),
-                            l.jsx(
-                              pe.circle,
-                              {
-                                r: 4,
-                                fill: xF,
-                                initial: { cx: Z(se + 5, 0)[0], cy: Z(se + 5, 0)[1] },
-                                animate: { cx: Z(se + 5, X.no.pct)[0], cy: Z(se + 5, X.no.pct)[1] },
-                                transition: { duration: 0.9, delay: F * 0.06, ease: Qe },
-                              },
-                              `pn-${i}`,
-                            ),
-                          ],
-                        }),
-                      X.sni &&
-                        l.jsxs(l.Fragment, {
-                          children: [
-                            l.jsx(
-                              pe.path,
-                              {
-                                d: L(se - 3, X.sni.pct),
-                                className: `eco-arcos__sni${X.inst ? " eco-arcos__sni--inst" : ""}`,
-                                initial: { pathLength: 0 },
-                                animate: { pathLength: 1 },
-                                transition: { duration: 0.9, delay: F * 0.06, ease: Qe },
-                              },
-                              `s-${i}`,
-                            ),
-                            l.jsx("text", {
-                              x: Z(se - 3, X.sni.pct)[0] + 6,
-                              y: Z(se - 3, X.sni.pct)[1] - 7,
-                              className: "eco-arcos__val",
-                              children: x.total ? `${k(X.sni.n)} · ${H(X.sni.pct)}` : H(X.sni.pct),
-                            }),
-                          ],
-                        }),
-                    ],
-                  },
-                  X.clave,
-                );
-              }),
-            ],
+                  }),
+                  l.jsxs("span", { className: "puntos8__valores", children: [l.jsx("span", { className: "puntos8__v puntos8__v--sni", children: val(X.sni, "sni") }), l.jsx("span", { className: "puntos8__v puntos8__v--no", children: val(X.no, "no") })] }),
+                ],
+              },
+              X.clave,
+            );
           }),
           g,
         ],
@@ -42839,19 +43613,23 @@ function MF({ numero: e }) {
           : null,
       ],
     }),
+    // La tabla y el CSV usan la misma unidad que el gráfico (cantidad o ítems por 100 investigadores).
     tabla: {
       columnas: [
         { clave: "nombre", titulo: "Institución o tipo" },
-        ...N.map((Y) => ({ clave: String(Y), titulo: String(Y), num: !0, formato: k })),
+        ...(porInv ? [{ clave: "inv", titulo: "Investigadores (a la fecha de corte)", num: !0, formato: k }] : []),
+        ...N.map((Y) => ({ clave: String(Y), titulo: porInv ? `${Y} (por 100 inv.)` : String(Y), num: !0, formato: porInv ? ze : k })),
       ],
       filas: [
-        ...P.map((Y) => ({ nombre: `${Y.g} (todas)`, ...Object.fromEntries(N.map((ue, ve) => [String(ue), Y.v[ve]])) })),
+        ...P.map((Y) => ({ nombre: `${Y.g} (todas)`, ...(porInv ? { inv: Y.inv } : {}),
+          ...Object.fromEntries(N.map((ue, ve) => [String(ue), porInv ? (Y.inv >= 5 ? (100 * Y.v[ve]) / Y.inv : null) : Y.v[ve]])) })),
         ...P.flatMap((Y) =>
-          Y.miembros.map((ue) => ({ nombre: ue.largo, ...Object.fromEntries(N.map((ve, ye) => [String(ve), ue.v[ye]])) })),
+          Y.miembros.map((ue) => ({ nombre: ue.largo, ...(porInv ? { inv: ue.inv } : {}),
+            ...Object.fromEntries(N.map((ve, ye) => [String(ve), porInv ? (ue.inv >= 5 ? (100 * ue.v[ye]) / ue.inv : null) : ue.v[ye]])) })),
         ),
       ],
     },
-    nota: `${E} es el año en curso a la fecha de corte: su valor es parcial y se dibuja punteado. Un ítem con autores de varias instituciones cuenta en cada una; el tipo de institución suma sus instituciones con al menos 50 ítems en el período.`,
+    nota: `${E} es el año en curso a la fecha de corte: su valor es parcial y se dibuja punteado. Un ítem con autores de varias instituciones cuenta en cada una; el tipo de institución suma sus instituciones con al menos 50 ítems en el período.${porInv ? " Por 100 investigadores: el denominador son los investigadores del SNI y fuera del SNI con vínculo en la institución a la fecha de corte, el mismo para todos los años; se calcula solo con al menos 5 investigadores." : ""}`,
     muestra: l.jsxs("p", {
       children: [
         "Cómo evolucionó desde ",
@@ -43358,58 +44136,55 @@ function TF({ numero: e }) {
   });
 }
 function wF() {
-  return l.jsx("div", { className: "eco-pegado", children: l.jsx("div", { className: "sitio-contenedor", children: l.jsx(uF, {}) }) });
+  return l.jsx("div", { className: "eco-pegado", id: "eco-institucion", children: l.jsx("div", { className: "sitio-contenedor", children: l.jsx(uF, {}) }) });
 }
 const yc = ({ id: e, children: t }) => l.jsx("a", { href: an(e), children: t }),
   zS = [
     {
       id: "eco-panorama",
-      titulo: "Investigadores y producción por institución",
-      corto: "Investigadores",
+      titulo: "Investigadores por institución",
+      corto: "Personas",
       Intro: () =>
-        l.jsxs("p", {
-          children: [
-            "Los análisis anteriores describieron a las personas que investigan: las del ",
-            l.jsx(yc, { id: "sni", children: "Sistema Nacional de Investigadores" }),
-            ", las que ",
-            l.jsx(yc, { id: "no-categorizados", children: "investigan fuera de él" }),
-            " y ",
-            l.jsx(yc, { id: "produccion", children: "lo que producen" }),
-            ". Este análisis las ubica en las instituciones donde trabajan. El punto de partida es la visión de conjunto: cuántos investigadores tiene cada institución y cada tipo de institución, quiénes son y cómo evolucionó su producción, también en relación con la cantidad de investigadores.",
-          ],
+        l.jsx("p", {
+          children:
+            "Dónde trabajan las personas que investigan y cómo se componen sus equipos. Una persona con vínculos en varias instituciones cuenta en cada una.",
         }),
-      Cuerpo: () =>
-        l.jsxs(l.Fragment, {
-          children: [l.jsx(CF, { numero: 1 }), l.jsx(_F, { numero: 2 }), l.jsx(MF, { numero: 3 })],
-        }),
+      Cuerpo: () => l.jsxs(l.Fragment, { children: [l.jsx(Instituciones8, { numero: 1 }), l.jsx(_F, { numero: 2 })] }),
     },
     {
       id: "eco-especializacion",
-      titulo: "Áreas y especialización",
-      corto: "Especialización",
+      titulo: "Áreas de producción",
+      corto: "Áreas",
       Intro: () =>
         l.jsxs("p", {
           children: [
-            "Junto a la Universidad de la República, que trabaja en todas las áreas, varias instituciones concentran su producción en un área: la agropecuaria, la salud, la ingeniería o las humanidades. En ",
+            "En qué áreas del conocimiento producen los investigadores de cada institución, frente al conjunto. En ",
             l.jsx(yc, { id: "produccion", children: "Producción científica" }),
-            " cada área mostró sus instituciones; aquí cada institución muestra su perfil por área.",
+            " cada área muestra sus temas; aquí cada institución muestra su perfil por área.",
           ],
         }),
-      Cuerpo: () => l.jsxs(l.Fragment, { children: [l.jsx(TF, { numero: 4 }), l.jsx(gF, { numero: 5 })] }),
+      Cuerpo: () => l.jsx(Areas8, { numero: 3 }),
+    },
+    {
+      id: "eco-produccion",
+      titulo: "Producción y funciones",
+      corto: "Producción y funciones",
+      Intro: () =>
+        l.jsx("p", {
+          children: "Cómo evolucionó la producción registrada por los investigadores de cada institución, en cantidad y en relación con la cantidad de investigadores.",
+        }),
+      Cuerpo: () => l.jsx(MF, { numero: 4 }),
     },
     {
       id: "eco-vinculos",
       titulo: "Vínculos entre instituciones",
       corto: "Vínculos",
       Intro: () =>
-        l.jsxs("p", {
-          children: [
-            "Las instituciones se conectan a través de sus investigadores: personas con vínculo en más de una institución, artículos firmados en conjunto, proyectos compartidos y proyectos que una institución financia y otra ejecuta. En el ",
-            l.jsx(yc, { id: "sni", children: "análisis del SNI" }),
-            " la circulación se describió entre sectores; aquí se observa entre instituciones.",
-          ],
+        l.jsx("p", {
+          children:
+            "Las instituciones se conectan a través de sus investigadores: artículos firmados en conjunto, personas con vínculos en más de una institución, proyectos compartidos y financiamiento.",
         }),
-      Cuerpo: () => l.jsxs(l.Fragment, { children: [l.jsx(cF, { numero: 6 }), l.jsx(vF, { numero: 7 })] }),
+      Cuerpo: () => l.jsx(Vinculos8, { numero: 5 }),
     },
     {
       id: "eco-ficha",
@@ -43418,9 +44193,9 @@ const yc = ({ id: e, children: t }) => l.jsx("a", { href: an(e), children: t }),
       Intro: () =>
         l.jsx("p", {
           children:
-            "La síntesis de cada institución en un solo lugar: once indicadores de sus investigadores y de su producción, frente al total de las instituciones. Elija la institución en el selector de la página o en la lista.",
+            "La síntesis de cada institución: once indicadores de sus investigadores y de su producción, frente al total de las instituciones.",
         }),
-      Cuerpo: () => l.jsx(bF, { numero: 8 }),
+      Cuerpo: () => l.jsx(bF, { numero: 6 }),
     },
   ];
 function IF() {
@@ -43450,13 +44225,22 @@ function OF({ datos: e }) {
       l.jsx(Hm, {
         antetitulo: `Informe de datos · Fecha de consulta: ${vu(t)}`,
         titulo: "Ecosistema institucional",
-        subtitulo:
-          "Las instituciones de la investigación en Uruguay vistas desde sus investigadores: panorama de investigadores y producción, áreas y especialización, vínculos y ficha de cada institución",
+        subtitulo: "Dónde se concentran las capacidades de investigación, en qué se especializan las instituciones y cómo se vinculan entre sí",
+        aviso: l.jsxs("p", {
+          className: "eco-universo8",
+          children: [
+            l.jsx("span", { className: "eco-universo8__rotulo", children: "Universo" }),
+            "Personas del SNI y personas fuera del SNI con evidencia de actividad investigadora en CVUy, a la fecha de corte ",
+            fechaDMA8(Yt && Yt.meta ? Yt.meta.fecha_corte : ""),
+            ". Una persona puede estar vinculada a más de una institución. ",
+            l.jsx("a", { href: an("ecosistema", "notas"), children: "Ver la definición" }),
+          ],
+        }),
         bajada:
           "Cuarto nivel del análisis, después del Sistema Nacional de Investigadores, la investigación fuera del SNI y la producción científica. Muestra cómo se distribuyen las capacidades de investigación entre las instituciones, qué funciones cumplen, en qué áreas se especializan, cómo se vinculan y qué temas emergen. Seleccione una institución: todas las visualizaciones la siguen.",
         acciones: [
-          { href: "#eco-panorama", texto: "Comenzar el recorrido" },
-          { href: "#notas", texto: "Notas metodológicas" },
+          { href: "#eco-panorama", texto: "Ver panorama" },
+          { href: "#eco-institucion", texto: "Buscar una institución" },
         ],
         cifras: [
           [e.instituciones.filter((s) => s.personas >= e.meta.minimo).length, "instituciones y grupos con personas del SNI", !1],

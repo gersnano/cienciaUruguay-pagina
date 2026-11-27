@@ -355,8 +355,8 @@
    "intro": "El SNI está prácticamente en paridad: 49 % son mujeres. Pero la paridad del total convive con diferencias en los niveles más altos, en algunos indicadores de trayectoria y en el liderazgo de proyectos. Este capítulo reúne los indicadores de género del diagnóstico."
   },
   "no-categorizados/depuracion": {
-   "titulo": "Universo y actividad",
-   "intro": "Este análisis reúne a las personas que registran su trayectoria en CVUy sin integrar el SNI y que actualizaron su CV en los últimos 24 meses: 10.063 personas, a las que aquí se llama «no SNI». Todos los gráficos se refieren a ellas. Este primer capítulo las compara con el SNI y muestra qué tipo de actividad declaran."
+   "titulo": "Universo",
+   "intro": "Este análisis reúne a las personas que registran su trayectoria en CVUy sin integrar el SNI y que actualizaron su CV en los últimos 24 meses: 10.063 personas, a las que aquí se llama «no SNI». Todos los gráficos se refieren a ellas. Este primer capítulo las compara con el SNI."
   },
   "no-categorizados/personas": {
    "titulo": "Quiénes son",
@@ -549,13 +549,6 @@
    "muestra": "Diez rasgos de las 10.063 personas no SNI con CV vigente frente a las 2.447 del SNI: género, edad, formación, dedicación, vínculos, producción y proyectos.",
    "leer": "Cada fila tiene su propia escala. El punto celeste son los no SNI y el azul, el SNI; la distancia entre ambos es la diferencia entre las dos comunidades.",
    "nota": "Los promedios que no están en las cifras clave se calculan ponderando las áreas por su cantidad de investigadores."
-  },
-  "no-categorizados/grafico-2": {
-   "titulo": "Tipos de actividad declarada",
-   "bajada": "Personas no SNI con CV vigente según la actividad que declaran. Cada cuadro equivale al 1 %.",
-   "muestra": "Una clasificación de las personas no SNI según lo que muestran sus CV: si producen, si hacen I+D sin publicar, si se están formando, si hacen docencia o si su CV no refleja actividad científica.",
-   "leer": "La grilla tiene 100 cuadros; los tonos azules son perfiles con actividad de investigación, los verdes y ocres, perfiles en formación o docencia, y el terracota, perfiles sin producción ni vínculo científico. Seleccione un área en las pestañas.",
-   "nota": "7.771 personas con CV actualizado en los últimos 24 meses, según la planilla No_SNI.xlsx. La tipología combina la producción reciente, los vínculos y la formación en curso."
   },
   "no-categorizados/grafico-3": {
    "titulo": "Quiénes investigan fuera del SNI",

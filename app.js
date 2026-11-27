@@ -19994,16 +19994,6 @@ const xi =
       limites: [ut, "Solicitar no es obtener: el CV no distingue siempre entre patentes solicitadas y concedidas."],
     },
   },
-  pq = {
-    calculo: [
-      "Cada persona se clasifica en un solo grupo, en este orden: 1) con producción científica en 2022–2026; 2) en formación de doctorado o maestría; 3) perfil tecnológico (producción técnica reciente, patentes, o vínculo con empresas con proyectos); 4) actividad de I+D actual (líneas, proyectos o tutorías en marcha) sin producción reciente; 5) docencia o cargo académico sin producción reciente; 6) con producción solo anterior; 7) sin producción ni vínculo científico.",
-      "Cada cuadro es el 1 % de las personas.",
-    ],
-    decisiones: [
-      "El primer criterio que se cumple define el grupo: los grupos no se superponen y el orden expresa una jerarquía de intensidad investigadora.",
-    ],
-    limites: [ut, "La tipología depende de lo que la persona registra: actividad no cargada en el CV no se ve."],
-  },
   hq = {
     calculo: [
       "Grupos excluyentes según los vínculos laborales activos: solo en el sector privado; privado y academia; privado y otros sectores; vínculo privado solo en el pasado; sin vínculo privado.",
@@ -23713,7 +23703,7 @@ function yD({
   etiquetaTotal: s = "Total",
   etiquetaSelector: c = "Grupo",
 }) {
-  const [u, f] = B.useState(s),
+  const [u, f] = B.useState(t[0] ?? s),
     { caja: p, mostrar: m, ocultar: g, nodo: h } = bt(),
     y = (N, E) => {
       var M, A;
@@ -23736,7 +23726,7 @@ function yD({
         className: "serie__controles",
         role: "tablist",
         "aria-label": c,
-        children: [s, ...t].map((N) =>
+        children: [...t, s].map((N) =>
           l.jsxs(
             "button",
             {
@@ -35269,8 +35259,8 @@ function jU({ numero: e } = {}) {
     tabla: {
       columnas: [
         { clave: "nivel", titulo: "Nivel" },
-        { clave: "sni", titulo: jn, num: !0, formato: k },
         { clave: "nc", titulo: Sn, num: !0, formato: k },
+        { clave: "sni", titulo: jn, num: !0, formato: k },
       ],
       filas: bf.map((c) => ({ nivel: c, sni: a[c], nc: i[c] })),
     },
@@ -35296,8 +35286,8 @@ function jU({ numero: e } = {}) {
     }),
     children: l.jsx(Ei, {
       grupos: [
-        { nombre: jn, valores: a },
         { nombre: Sn, valores: i },
+        { nombre: jn, valores: a },
       ],
       categorias: bf.map((c, u) => ({ nombre: c, color: ["#25408d", "#0072bc", "#00a3e0", "#7ab800", "#c5d0db"][u] })),
     }),
@@ -35305,7 +35295,7 @@ function jU({ numero: e } = {}) {
 }
 const L0 = ["Menos de 35", "35 a 44", "45 a 54", "55 a 64", "65 y más"];
 function SU({ numero: e } = {}) {
-  const t = { [jn]: {}, [Sn]: {} },
+  const t = { [Sn]: {}, [jn]: {} },
     a = (s, c) => {
       var u;
       for (const f of c) {
@@ -35353,7 +35343,7 @@ function SU({ numero: e } = {}) {
         " en el SNI, y las mujeres son mayoría en todos los tramos menores de 65 años. Es la cantera de la que se nutre el sistema.",
       ],
     }),
-    children: l.jsx(yD, { tramos: L0, niveles: [jn, Sn], valores: t, nombreVarones: "Varones" }),
+    children: l.jsx(yD, { tramos: L0, niveles: [Sn, jn], valores: t, nombreVarones: "Varones" }),
   });
 }
 const xf = ["Academia", "Sector público no académico", "Sector privado", "Exterior", "No informado"];
@@ -35366,11 +35356,10 @@ function NU({ numero: e } = {}) {
       }
       return c;
     },
-    a = [
-      { etiqueta: jn, valores: t(ge("D02")) },
-      { etiqueta: Sn, valores: t(ge("NC:D02")) },
-    ],
-    i = (s, c) => (100 * a[s].valores[c]) / xU(a[s]);
+    noSni = { etiqueta: Sn, valores: t(ge("NC:D02")) },
+    sni = { etiqueta: jn, valores: t(ge("D02")) },
+    a = [noSni, sni],
+    i = (grupo, sector) => (100 * grupo.valores[sector]) / xU(grupo);
   return l.jsx(Me, {
     numero: e ?? 7,
     titulo: "Sector de la institución principal, dentro y fuera del SNI",
@@ -35391,13 +35380,13 @@ function NU({ numero: e } = {}) {
     observamos: l.jsxs("p", {
       children: [
         "La academia sigue siendo el lugar principal, pero con menos peso fuera del SNI (",
-        l.jsx("strong", { children: H(i(1, "Academia")) }),
+        l.jsx("strong", { children: H(i(noSni, "Academia")) }),
         " frente a ",
-        H(i(0, "Academia")),
+        H(i(sni, "Academia")),
         "). Entre los no SNI gana espacio el sector público no académico (",
-        H(i(1, "Sector público no académico")),
+        H(i(noSni, "Sector público no académico")),
         ") y el privado (",
-        H(i(1, "Sector privado")),
+        H(i(noSni, "Sector privado")),
         ").",
       ],
     }),
@@ -35488,10 +35477,9 @@ function CU({ numero: e } = {}) {
       var j;
       return We((j = x.find((S) => le(S, "anio") === _)) == null ? void 0 : j[a]);
     },
-    h = [
-      { nombre: jn, color: tp, valores: m.map((x) => g(f, x)) },
-      { nombre: Sn, color: np, valores: m.map((x) => g(p, x)) },
-    ],
+    noSni = { nombre: Sn, color: np, valores: m.map((x) => g(p, x)) },
+    sni = { nombre: jn, color: tp, valores: m.map((x) => g(f, x)) },
+    h = [noSni, sni],
     y = m.at(-1);
   return l.jsx(Me, {
     numero: e ?? 1,
@@ -35503,10 +35491,10 @@ function CU({ numero: e } = {}) {
     tabla: {
       columnas: [
         { clave: "anio", titulo: "Año" },
-        { clave: "sni", titulo: jn, num: !0, formato: s.formato },
         { clave: "nc", titulo: Sn, num: !0, formato: s.formato },
+        { clave: "sni", titulo: jn, num: !0, formato: s.formato },
       ],
-      filas: m.map((x, _) => ({ anio: x, sni: h[0].valores[_], nc: h[1].valores[_] })),
+      filas: m.map((x, _) => ({ anio: x, nc: noSni.valores[_], sni: sni.valores[_] })),
     },
     nota: "Las publicaciones de cada grupo se cuentan una vez, pero un trabajo firmado por personas de los dos grupos aparece en ambas series. El año en curso no se muestra.",
     muestra: l.jsx("p", {
@@ -35565,8 +35553,8 @@ function MU({ numero: e } = {}) {
     tabla: {
       columnas: [
         { clave: "q", titulo: "Quinquenio" },
-        { clave: "sni", titulo: `${jn} (%)`, num: !0, formato: H },
         { clave: "nc", titulo: `${Sn} (%)`, num: !0, formato: H },
+        { clave: "sni", titulo: `${jn} (%)`, num: !0, formato: H },
       ],
       filas: [{ q: "Total · todas las cohortes", sni: i.total, nc: s.total }, ...c.map((p) => ({ q: p, sni: i[p], nc: s[p] }))],
     },
@@ -35598,8 +35586,8 @@ function MU({ numero: e } = {}) {
       formato: H,
       yMax: 100,
       series: [
-        { nombre: jn, color: tp, puntos: u(i) },
         { nombre: Sn, color: np, puntos: u(s) },
+        { nombre: jn, color: tp, puntos: u(i) },
       ],
     }),
   });
@@ -36819,17 +36807,7 @@ function YU({ numero: e }) {
     children: l.jsx(Os, { filas: c, nombres: ["Mujeres", "Varones"], colores: [Nn.Mujeres, Nn.Hombres], max: i.max }, t),
   });
 }
-const XU = {
-    "Investigador/a con producción reciente": je.azul,
-    "Actividad de I+D sin producción reciente": je.azulMedio,
-    "Perfil tecnológico o de innovación": je.celeste,
-    "En formación de posgrado": je.salvia,
-    "Docencia o trabajo académico sin producción reciente": je.oliva,
-    "Trayectoria con producción histórica, sin actividad reciente": je.arena,
-    "Bajo interés: sin producción ni vínculo científico": je.terracota,
-    "Bajo interés: CV desactualizado": je.grisClaro,
-  },
-  U_ = {
+const U_ = {
     "Solo sector privado": je.terracota,
     "Privado y academia": je.ocre,
     "Privado y otros sectores": je.arena,
@@ -36861,49 +36839,6 @@ const xS = (e, t) => {
     ...a.map((i) => ({ nombre: i, valores: Object.fromEntries(t.filter((s) => s[0] === i).map((s) => [s[1], s[2]])) })),
   ];
 };
-function QU({ numero: e }) {
-  const t = bS();
-  if (!t) return null;
-  const a = t.tipologia,
-    i = Object.values(a.total).reduce((u, f) => u + f, 0),
-    s = (u) => (100 * (a.total[u] ?? 0)) / i,
-    c = s("Bajo interés: sin producción ni vínculo científico");
-  return l.jsx(Me, {
-    metodo: pq,
-    universo: "nc",
-    numero: e,
-    titulo: "Tipos de actividad declarada",
-    bajada: "Personas no SNI con CV vigente según la actividad que declaran. Cada cuadro equivale al 1 %.",
-    fuente: "Fuente: CVUy · no_categorizados.json (tipología)",
-    tabla: {
-      columnas: [
-        { clave: "tipo", titulo: "Perfil" },
-        { clave: "n", titulo: "Personas", num: !0, formato: k },
-      ],
-      filas: a.orden.map((u) => ({ tipo: u, n: a.total[u] })),
-    },
-    nota: `${t.meta.incluidos != null ? `${k(t.meta.incluidos)} personas no SNI incluidas por el criterio de inclusión (evidencia de investigación en ${(t.meta.ventana || []).join("–") || "los últimos cinco años"})` : `${k(t.meta.vigentes)} personas con CV actualizado en los últimos ${t.meta.meses} meses`}, según su CV en CVUy. La tipología combina la producción reciente, los vínculos y la formación en curso.`,
-    muestra: l.jsx("p", {
-      children:
-        "Una clasificación de las personas no SNI según lo que muestran sus CV: si producen, si hacen I+D sin publicar, si se están formando, si hacen docencia o si su CV no refleja actividad científica.",
-    }),
-    leer: l.jsx("p", {
-      children:
-        "La grilla tiene 100 cuadros; los tonos azules son perfiles con actividad de investigación, los verdes y ocres, perfiles en formación o docencia, y el terracota, perfiles sin producción ni vínculo científico. Seleccione un área en las pestañas.",
-    }),
-    observamos: l.jsxs("p", {
-      children: [
-        l.jsx("strong", { children: H(s("Investigador/a con producción reciente")) }),
-        " de los perfiles corresponde a personas con producción reciente y ",
-        H(s("En formación de posgrado")),
-        " a personas en formación de posgrado. En el otro extremo, ",
-        H(c),
-        " tiene el CV vigente pero sin producción ni vínculo científico.",
-      ],
-    }),
-    children: l.jsx(Ei, { grupos: xS(a.total, a.por_area), categorias: a.orden.map((u) => ({ nombre: u, color: XU[u] ?? je.gris })) }),
-  });
-}
 function ZU({ numero: e }) {
   const t = bS();
   if (!t) return null;
@@ -36957,23 +36892,20 @@ const Z2 = () =>
 function ProdPorInvNC8({ numero: e }) {
   return l.jsx(ProdPorInv8, { numero: e, filas: ge("NC:C04_produccion_por"), universo: "no SNI", quien: "personas no SNI incluidas, por su área principal" });
 }
-let KU = 0;
-const JU = (e) => ({ ...e, figuras: e.figuras.map((t) => [++KU, t[1], t[2]]) }),
-  _S = [
+const _S = [
     {
       id: "depuracion",
-      titulo: "Universo y actividad",
+      titulo: "Universo",
       corto: "Universo",
       figuras: [
         [1, "El SNI y los no SNI en diez indicadores", _U],
-        [0, "Tipos de actividad declarada", QU],
       ],
       Intro: () =>
         l.jsxs("p", {
           children: [
             "Este análisis reúne a las personas que registran su trayectoria en CVUy sin integrar el SNI y que actualizaron su CV en los últimos 24 meses: ",
             l.jsx("strong", { children: k(St("Investigadores con CV vigente")) }),
-            " personas, a las que aquí se llama «no SNI». Todos los gráficos se refieren a ellas. Este primer capítulo las compara con el SNI y muestra qué tipo de actividad declaran.",
+            " personas, a las que aquí se llama «no SNI». Todos los gráficos se refieren a ellas. Este primer capítulo las compara con el SNI.",
           ],
         }),
     },
@@ -36982,10 +36914,10 @@ const JU = (e) => ({ ...e, figuras: e.figuras.map((t) => [++KU, t[1], t[2]]) }),
       titulo: "Quiénes son",
       corto: "Personas",
       figuras: [
-        [4, "Quiénes investigan fuera del SNI", AU],
-        [5, "Cada área y sector tiene un perfil propio", TU],
-        [6, "Una población más joven y con más mujeres", SU],
-        [7, "Edad por área, dentro y fuera del SNI", EU],
+        [3, "Quiénes investigan fuera del SNI", AU],
+        [4, "Cada área y sector tiene un perfil propio", TU],
+        [5, "Una población más joven y con más mujeres", SU],
+        [6, "Edad por área, dentro y fuera del SNI", EU],
       ],
       Intro: () =>
         l.jsxs("p", {
@@ -37003,12 +36935,12 @@ const JU = (e) => ({ ...e, figuras: e.figuras.map((t) => [++KU, t[1], t[2]]) }),
       titulo: "Formación",
       corto: "Formación",
       figuras: [
-        [8, "Formación máxima, dentro y fuera del SNI", jU],
-        [9, "Predominan la maestría y el grado", wU],
-        [10, "Una comunidad en formación de posgrado", IU],
-        [11, "Doctorados obtenidos en Uruguay, por cohorte", MU],
-        [12, "Dónde obtuvieron el doctorado", OU],
-        [13, "Dirección de tesis por área", qU],
+        [7, "Formación máxima, dentro y fuera del SNI", jU],
+        [8, "Predominan la maestría y el grado", wU],
+        [9, "Una comunidad en formación de posgrado", IU],
+        [10, "Doctorados obtenidos en Uruguay, por cohorte", MU],
+        [11, "Dónde obtuvieron el doctorado", OU],
+        [12, "Dirección de tesis por área", qU],
       ],
       Intro: () =>
         l.jsxs("p", {
@@ -37024,10 +36956,10 @@ const JU = (e) => ({ ...e, figuras: e.figuras.map((t) => [++KU, t[1], t[2]]) }),
       titulo: "Inserción laboral",
       corto: "Inserción laboral",
       figuras: [
-        [14, "Sector de la institución principal, dentro y fuera del SNI", NU],
-        [15, "Sector de inserción laboral por área", DU],
-        [17, "Vínculo con empresas y dedicación por área", RU],
-        [0, "Vínculo con el sector privado", ZU],
+        [13, "Sector de la institución principal, dentro y fuera del SNI", NU],
+        [14, "Sector de inserción laboral por área", DU],
+        [15, "Vínculo con empresas y dedicación por área", RU],
+        [16, "Vínculo con el sector privado", ZU],
       ],
       Intro: () =>
         l.jsxs("p", {
@@ -37052,12 +36984,12 @@ const JU = (e) => ({ ...e, figuras: e.figuras.map((t) => [++KU, t[1], t[2]]) }),
           "Esta sección cuenta lo que declaran las personas que investigan fuera del SNI. La producción de todo el sistema —SNI y fuera del SNI, sin duplicados— se explora en el análisis",
       },
       figuras: [
-        [18, "La producción, dentro y fuera del SNI", CU],
-        [19, "La evolución de la producción", LU],
-        [20, "Tipos de producción a lo largo del tiempo", zU],
-        [21, "La producción 2022–2026, por tipo y calidad", $U],
-        [22, "Indexación y acceso abierto por área", PU],
-        [23, "Producción por investigador, por área", ProdPorInvNC8],
+        [17, "La producción, dentro y fuera del SNI", CU],
+        [18, "La evolución de la producción", LU],
+        [19, "Tipos de producción a lo largo del tiempo", zU],
+        [20, "La producción 2022–2026, por tipo y calidad", $U],
+        [21, "Indexación y acceso abierto por área", PU],
+        [22, "Producción por investigador, por área", ProdPorInvNC8],
       ],
       Intro: () =>
         l.jsxs("p", {
@@ -37077,8 +37009,8 @@ const JU = (e) => ({ ...e, figuras: e.figuras.map((t) => [++KU, t[1], t[2]]) }),
       titulo: "Proyectos y financiamiento",
       corto: "Proyectos",
       figuras: [
-        [24, "Proyectos iniciados por año", UU],
-        [25, "Fuentes de financiamiento por área", BU],
+        [23, "Proyectos iniciados por año", UU],
+        [24, "Fuentes de financiamiento por área", BU],
       ],
       Intro: () =>
         l.jsxs("p", {
@@ -37110,10 +37042,10 @@ const JU = (e) => ({ ...e, figuras: e.figuras.map((t) => [++KU, t[1], t[2]]) }),
       titulo: "Brechas de género",
       corto: "Género",
       figuras: [
-        [26, "Condiciones de trabajo y producción de mujeres y varones", HU],
-        [27, "La brecha de género varía según el área", YU],
-        [28, "Subáreas feminizadas y masculinizadas", GU],
-        [29, "Composición por género de la autoría", kU],
+        [25, "Condiciones de trabajo y producción de mujeres y varones", HU],
+        [26, "La brecha de género varía según el área", YU],
+        [27, "Subáreas feminizadas y masculinizadas", GU],
+        [28, "Composición por género de la autoría", kU],
       ],
       Intro: () =>
         l.jsxs("p", {
@@ -37127,7 +37059,6 @@ const JU = (e) => ({ ...e, figuras: e.figuras.map((t) => [++KU, t[1], t[2]]) }),
         }),
     },
   ]
-    .map(JU)
     .map((e) => ({
       ...e,
       Cuerpo: () =>
